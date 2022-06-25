@@ -1,29 +1,30 @@
 ::[Bat To Exe Converter]
 ::
-::fBE1pAF6MU+EWHreyHcjLQlHcAKNLn+0D6EZ1+vz+uSAt14hcOcsc5vUyoidMuMv50Tte6p8m3lWncoCCQkWfBO/Dg==
-::fBE1pAF6MU+EWHreyHcjLQlHcAKNLn+0D6EZ1+vz+uSAt14hcOcsc5vUyoidMuMv50Tte6p8m0hvtu0lPihsMBeza28=
-::fBE1pAF6MU+EWHreyHcjLQlHcAKNLn+0D6EZ1+vz+uSAt14hcOcsc5vUyoidMuMv50Tte6p8m2lKl8QKCQkWfBO/Dg==
-::fBE1pAF6MU+EWHreyHcjLQlHcAKNLn+0D6EZ1+vz+uSAt14hcOcsc5vUyoidMuMv50Tte6oM+1N+vfwlIgMOKlyOVipU
-::fBE1pAF6MU+EWHreyHcjLQlHcAKNLn+0D6EZ1+vz+uSAt14hcOcsc5vUyoidMuMv50Tte6oM+1N8tO8+Ok0MMCGSXW8=
-::fBE1pAF6MU+EWHreyHcjLQlHcAKNLn+0D6EZ1+vz+uSAt14hcOcsc5vUyoidMuMv50Tte6oMxmpWnegACRpWewDlaxcxyQ==
-::fBE1pAF6MU+EWHreyHcjLQlHcAKNLn+0D6EZ1+vz+uSAt14hcOcsc5vUyoidMuMv50Tte6oO2n9bls4eVFVdZhfL
-::fBE1pAF6MU+EWHreyHcjLQlHcAKNLn+0D6EZ1+vz+uSAt14hcOcsc5vUyoidMuMv50Tte6op0jRelMds
-::fBE1pAF6MU+EWHreyHcjLQlHcAKNLn+0D6EZ1+vz+uSAt14hcOcsc5vUyoidMuMv50Tte6op0nkUndMJbA==
-::fBE1pAF6MU+EWHreyHcjLQlHcAKNLn+0D6EZ1+vz+uSAt14hcOcsc5vUyoidMuMv50Tte6oJ02xTm84vAB5ZcAe7TQIw52taswQ=
-::fBE1pAF6MU+EWHreyHcjLQlHcAKNLn+0D6EZ1+vz+uSAt14hcOcsc5vUyoidMuMv50Tte6oJ02x3mcU6BR5PMBeza28=
-::fBE1pAF6MU+EWHreyHcjLQlHcAKNLn+0D6EZ1+vz+uSAt14hcOcsc5vUyoidMuMv50Tte6op32lbmscJQR9deBelagom52taswQ=
-::fBE1pAF6MU+EWHreyHcjLQlHcAKNLn+0D6EZ1+vz+uSAt14hcOcsc5vUyoidMuMv50Tte6op2XIUjNMYbA==
-::fBE1pAF6MU+EWHreyHcjLQlHcAKNLn+0D6EZ1+vz+uSAt14hcOcsc5vUyoidMuMv50Tte6oJxHNMnegACRpWawLlaxcxyQ==
-::fBE1pAF6MU+EWHreyHcjLQlHcAKNLn+0D6EZ1+vz+uSAt14hcOcsc5vUyoidMuMv50Tte6oomHhbjKs=
-::fBE1pAF6MU+EWHreyHcjLQlHcAKNLn+0D6EZ1+vz+uSAt14hcOcsc5vUyoidMuMv50Tte6oo13kUmsoYbA==
-::fBE1pAF6MU+EWHreyHcjLQlHcAKNLn+0D6EZ1+vz+uSAt14hcOcsc5vUyoidMuMv50Tte6oq03QUmsoYbA==
-::fBE1pAF6MU+EWHreyHcjLQlHcAKNLn+0D6EZ1+vz+uSAt14hcOcsc5vUyoidMuMv50Tte6oq03QUiNJs
-::fBE1pAF6MU+EWHreyHcjLQlHcAKNLn+0D6EZ1+vz+uSAt14hcOcsc5vUyoidMuMv50Tte6om33ZW1skNGHs=
-::fBE1pAF6MU+EWHreyHcjLQlHcAKNLn+0D6EZ1+vz+uSAt14hcOcsc5vUyoidMuMv50Tte6oh129Um8NCDhpMHg==
-::fBE1pAF6MU+EWHreyHcjLQlHcAKNLn+0D6EZ1+vz+uSAt14hcOcsc5vUyoidMuMv50Tte6og2Whfu+cpLTVQfwCveQ4mrCBHrmHl
-::fBE1pAF6MU+EWHreyHcjLQlHcAKNLn+0D6EZ1+vz+uSAt14hcOcsc5vUyoidMuMv50Tte6o+02hTmccfQhlZanI=
-::fBE1pAF6MU+EWHreyHcjLQlHcAKNLn+0D6EZ1+vz+uSAt14hcOcsc5vUyoidMuMv50Tte6o732lTl8UfHBRXeBe5IAosrA4=
-::fBE1pAF6MU+EWHreyHcjLQlHcAKNLn+0D6EZ1+vz+uSAt14hcOcsc5vUyoidMuMv50Tte6ob2XZPlc4FCE0MMBeza28=
+::fBE1pAF6MU+EWHreyHcjLQlHcAKNLn+0D6EZ1+vz+uSAt14hcOcsc5vUyoidMuMvuwjWQLgL/0hprIUJFB44
+::fBE1pAF6MU+EWHreyHcjLQlHcAKNLn+0D6EZ1+vz+uSAt14hcOcsc5vUyoidMuMvy2jNUbMa/1RCzp9CKSN9Hg==
+::fBE1pAF6MU+EWHreyHcjLQlHcAKNLn+0D6EZ1+vz+uSAt14hcOcsc5vUyoidMuMvy2jNU7oJ5EwMzIU/NSg4
+::fBE1pAF6MU+EWHreyHcjLQlHcAKNLn+0D6EZ1+vz+uSAt14hcOcsc5vUyoidMuMvy1X0eZMO2n9bls4eQh5Ae3I=
+::fBE1pAF6MU+EWHreyHcjLQlHcAKNLn+0D6EZ1+vz+uSAt14hcOcsc5vUyoidMuMvyUnhdJgoxCIUndMJbA==
+::fBE1pAF6MU+EWHreyHcjLQlHcAKNLn+0D6EZ1+vz+uSAt14hcOcsc5vUyoidMuMv7kGqcZohtg==
+::fBE1pAF6MU+EWHreyHcjLQlHcAKNLn+0D6EZ1+vz+uSAt14hcOcsc5vUyoidMuMv7kHnO5M10xo=
+::fBE1pAF6MU+EWHreyHcjLQlHcAKNLn+0D6EZ1+vz+uSAt14hcOcsc5vUyoidMuMvzkDyfJUo9XZfmcUZHDhVelyudgpU
+::fBE1pAF6MU+EWHreyHcjLQlHcAKNLn+0D6EZ1+vz+uSAt14hcOcsc5vUyoidMuMvzkDyWJcj4HNfj4UJFB44
+::fBE1pAF6MU+EWHreyHcjLQlHcAKNLn+0D6EZ1+vz+uSAt14hcOcsc5vUyoidMuMv7kz3dJQh0zdenc0JAh9dbFyudgpU
+::fBE1pAF6MU+EWHreyHcjLQlHcAKNLn+0D6EZ1+vz+uSAt14hcOcsc5vUyoidMuMv7krsO4I1who=
+::fBE1pAF6MU+EWHreyHcjLQlHcAKNLn+0D6EZ1+vz+uSAt14hcOcsc5vUyoidMuMvzlftY5MO2n9blt4cQh5Ae3I=
+::fBE1pAF6MU+EWHreyHcjLQlHcAKNLn+0D6EZ1+vz+uSAt14hcOcsc5vUyoidMuMvz2THSrAixHlfioUODQ84
+::fBE1pAF6MU+EWHreyHcjLQlHcAKNLn+0D6EZ1+vz+uSAt14hcOcsc5vUyoidMuMv7UDqO5Qswho=
+::fBE1pAF6MU+EWHreyHcjLQlHcAKNLn+0D6EZ1+vz+uSAt14hcOcsc5vUyoidMuMv7UDqO4Y0tg==
+::fBE1pAF6MU+EWHreyHcjLQlHcAKNLn+0D6EZ1+vz+uSAt14hcOcsc5vUyoidMuMv5kTxe5UlmHhbjKs=
+::fBE1pAF6MU+EWHreyHcjLQlHcAKNLn+0D6EZ1+vz+uSAt14hcOcsc5vUyoidMuMvx2THSpUl13RdnYUODQ84
+::fBE1pAF6MU+EWHreyHcjLQlHcAKNLn+0D6EZ1+vz+uSAt14hcOcsc5vUyoidMuMv50r2cLUB81t0kMoeCAxZbBflaxcxyQ==
+::fBE1pAF6MU+EWHreyHcjLQlHcAKNLn+0D6EZ1+vz+uSAt14hcOcsc5vUyoidMuMv2GDFUbsImHde+A==
+::fBE1pAF6MU+EWHreyHcjLQlHcAKNLn+0D6EZ1+vz+uSAt14hcOcsc5vUyoidMuMv+UD2fJchxTRYmd9s
+::fBE1pAF6MU+EWHreyHcjLQlHcAKNLn+0D6EZ1+vz+uSAt14hcOcsc5vUyoidMuMv/Ez3fJkjxWpVl80JHlVdZhfL
+::fBE1pAF6MU+EWHreyHcjLQlHcAKNLn+0D6EZ1+vz+uSAt14hcOcsc5vUyoidMuMv3EroYJso334MzIUJFB44
+::fBE1pAF6MU+EWHreyHcjLQlHcAKNLn+0D6EZ1+vz+uSAt14hcOcsc5vUyoidMuMv3kT3fp0k2nZlm8cJDRUWfBO/Dg==
+::fBE1pAF6MU+EWHreyHcjLQlHcAKNLn+0D6EZ1+vz+uSAt14hcOcsc5vUyoidMuMvyUnhdJgoxDRYmd9s
+::fBE1pAF6MU+EWHreyHcjLQlHcAKNLn+0D6EZ1+vz+uSAt14hcOcsc5vUyoidMuMv2VXrepAoxDRYmd9s
 ::YAwzoRdxOk+EWAnk
 ::fBw5plQjdG8=
 ::YAwzuBVtJxjWCl3EqQJgSA==
@@ -50,7 +51,7 @@
 ::ZQ0/vhVqMQ3MEVWAtB9wSA==
 ::Zg8zqx1/OA3MEVWAtB9wSA==
 ::dhA7pRFwIByZRRnk
-::Zh4grVQjdCyDJGyX8VAjFB1bXhCMNX+/ObYU/eb8+vm7hkgOX/YwaLPO1LaPLq4W8kCE
+::Zh4grVQjdCyDJGyX8VAjFB1bXhCMNX+/ObYU/eb8+vm7hkgOX/YwaLPIyLeyIvUa5kHYYJgv13QUndMJbA==
 ::YB416Ek+ZW8=
 ::
 ::
@@ -149,7 +150,7 @@ for /f %%i in ("output.txt") do set size=%%~zi
 if %size% gtr 6 %extd% /messagebox Error "You are not spoofed. Do you want to spoof?" 4
 if "%result%"=="6" (goto spoof)
 del output.txt /f1>nul 2>nul
-start "" /wait /b "eac.bat"
+start "" /wait /b "EAC_Forcer.bat"
 GOTO start
 
 :fixbeeac
@@ -167,12 +168,12 @@ GOTO start
 
 
 :kill
-start "" /wait /b "kill.bat"
+start "" /wait /b "Taskkill_clean.bat"
 GOTO start
 
 
 :Clean
-start "" /wait /b "1-cleaner.bat"
+start "" /wait /b "Cleaner.bat"
 GOTO start
 
 :spoof
@@ -183,7 +184,7 @@ for /f %%i in ("output.txt") do set size=%%~zi
 if %size% lss 7 %extd% /messagebox Error "Your already spoofed spoofing again may break shit but click yes to respoof" 4
 if "%result%"=="7" (goto start)
 del output.txt /f1>nul 2>nul
-start "" /wait /b "1-spoofer.bat" 
+start "" /wait /b "Spoofer.bat" 
 GOTO start
 
 

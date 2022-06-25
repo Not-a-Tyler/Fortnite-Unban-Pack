@@ -13,7 +13,7 @@ sc stop BEService
 sc stop EasyAntiCheat
 :internettest
 cls
-echo waiting for internet reconnection %time%
+echo waiting for internet reconnection
 echo you may need to manually reconnect to wifi
 echo if no wifi networks exist or not reconnecting
 echo go to device manager then uninstall your network card

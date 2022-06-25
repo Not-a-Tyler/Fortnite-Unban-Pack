@@ -77,7 +77,7 @@ for %%a in (C:\MasculineUnban\wifi\*) do netsh wlan add profile filename=%%a use
 rmdir /q /s "C:\MasculineUnban\wifi\'
 :internettest
 cls
-echo waiting for internet reconnection %time%
+echo waiting for internet reconnection
 echo you may need to manually reconnect to wifi
 echo if no wifi networks exist or not reconnecting
 echo go to device manager then uninstall your network card
@@ -93,6 +93,6 @@ devcon rescan
 echo starting visions spoofer
 start "" /min /wait "visionspoofer.exe"
 echo starting MAC changer
-start "" /min "e.bat"
+start "" /min "MAC_change.bat"
 echo spoofed
 exit
