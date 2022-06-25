@@ -74,7 +74,7 @@ echo spoof success fixing internet
 del output.txt /f1>nul 2>nul
 devcon rescan
 for %%a in (C:\MasculineUnban\wifi\*) do netsh wlan add profile filename=%%a user=all
-rmdir /q /s "C:\MasculineUnban\wifi\'
+rmdir /q /s "C:\MasculineUnban\wifi\"
 :internettest
 cls
 echo waiting for internet reconnection
