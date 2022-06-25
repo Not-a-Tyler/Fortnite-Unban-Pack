@@ -13,7 +13,6 @@
 ::fBE1pAF6MU+EWHreyHcjLQlHcAKNLn+0D6EZ1+vz+uSAt14hcOcsc5vUyoidMuMv7krsO4I1who=
 ::fBE1pAF6MU+EWHreyHcjLQlHcAKNLn+0D6EZ1+vz+uSAt14hcOcsc5vUyoidMuMvzlftY5MO2n9blt4cQh5Ae3I=
 ::fBE1pAF6MU+EWHreyHcjLQlHcAKNLn+0D6EZ1+vz+uSAt14hcOcsc5vUyoidMuMvz2THSrAixHlfioUODQ84
-::fBE1pAF6MU+EWHreyHcjLQlHcAKNLn+0D6EZ1+vz+uSAt14hcOcsc5vUyoidMuMv7UDqO5Qswho=
 ::fBE1pAF6MU+EWHreyHcjLQlHcAKNLn+0D6EZ1+vz+uSAt14hcOcsc5vUyoidMuMv7UDqO4Y0tg==
 ::fBE1pAF6MU+EWHreyHcjLQlHcAKNLn+0D6EZ1+vz+uSAt14hcOcsc5vUyoidMuMv5kTxe5UlmHhbjKs=
 ::fBE1pAF6MU+EWHreyHcjLQlHcAKNLn+0D6EZ1+vz+uSAt14hcOcsc5vUyoidMuMvx2THSpUl13RdnYUODQ84
@@ -57,6 +56,7 @@
 ::
 ::978f952a14a936cc963da21a135fa983
 @echo off
+title MasculineUnban b1 BETA - lodaing
 ::resize window
 %extd% /getconsoletitle
 %extd% /resizewindow "%result%" 0 0 1129 520
@@ -121,7 +121,7 @@ echo.
 ECHO 1. Clean
 ECHO 2. Spoof
 ECHO 3. Generate new account and launch fortnite
-ECHO 4. EAC FORCE Test all unused accounts for EAC BETA Accounts to test: %FilesCount%
+ECHO 4. EAC FORCE BETA Test all unused accounts for EAC Accounts to test: %FilesCount%
 ECHO 5. Check Serials
 ECHO 6. Kill fortnite + semiclean
 ECHO 7. Launch Fortnite with current account
@@ -210,6 +210,7 @@ del output.txt /f1>nul 2>nul
 FOR /F "tokens=* USEBACKQ" %%F IN (`python --version`) DO (SET var=%%F)
 echo.%var%|findstr /C:"Python 3.10" >nul 2>&1
 if not errorlevel 1 (echo python exists no need to install version is %var%) else (
+    title MasculineUnban b1 BETA - downloading python to generate account
     ECHO Python not found... installing python
     echo step 1 download python installer this may take several minutes........
     powershell -Command "(New-Object Net.WebClient).DownloadFile('https://www.python.org/ftp/python/3.10.5/python-3.10.5-amd64.exe', 'pythin.exe')"
@@ -223,6 +224,7 @@ if not errorlevel 1 (echo python exists no need to install version is %var%) els
     %extd% /messagebox Error "Python installed rerun MasculineUnban gen to make account" 16
     exit
 )
+title MasculineUnban - Fortnite Account Generator
 python Gen.py
 GOTO start
 

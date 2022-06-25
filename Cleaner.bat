@@ -86,7 +86,7 @@ reg delete "HKEY_CURRENT_USER\Software\Epic Games" /f 1>nul 2>nul
 cls
 echo Just relax and don't touch anything, no user intervention is necessary.
 
-title MasculineUnban - Cleaner -First run of cleaner only - backing up drivers
+title MasculineUnban - Cleaner - First run of cleaner only - backing up drivers
 
 if exist "c:\MasculineUnban\driverbackup" goto skipbackup
 echo since this is your first run of MasculineUnban backing up drivers just in case
