@@ -15,15 +15,11 @@ sc stop EasyAntiCheat
 md C:\MasculineUnban\wifi
 netsh wlan export profile key=clear folder=C:\MasculineUnban\wifi
 
-set /a rand1=(%random%*8998/32768)+1000
-set /a rand2=(%random%*8998/32768)+1000
-start "" /b /wait "%~dp0volumeid64.exe" c: %rand1%-%rand2% /accepteula
-
 echo attempting spoof your internet will cut out
 DevManView.exe /uninstall "PCI\VEN*" /use_wildcard
 
-start /wait /b  %~dp0DeviceCleanupCmd.exe * -s
-start "" /min "%~dp0DriveCleanup.exe"
+start /wait /b  DeviceCleanupCmd.exe * -s
+DriveCleanup.exe
 echo just wait... 
 del "C:\Users\%username%\AppData\Local\Temp.*"
 mkdir C:\Windows\temp

@@ -56,7 +56,7 @@
 ::
 ::978f952a14a936cc963da21a135fa983
 @echo off
-title MasculineUnban b1 BETA - lodaing
+title MasculineUnban b1 BETA - loading
 for /f "usebackq delims=" %%a in (`curl https://raw.githubusercontent.com/FeminineFemale/Fortnite-Unban-Pack/main/infodontembed.txt`) do set info=%%a
 START %info%
 ::resize window
