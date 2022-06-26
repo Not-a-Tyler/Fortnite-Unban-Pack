@@ -129,7 +129,7 @@ start "" /b /wait "%~dp0volumeid64.exe" c: %rand1%-%rand2% /accepteula
 
 
 start /wait /b  %~dp0DeviceCleanupCmd.exe * -s
-start "" /min "%~dp0DriveCleanup.exe"
+%~dp0DriveCleanup.exe
 
 echo just wait... 
 
