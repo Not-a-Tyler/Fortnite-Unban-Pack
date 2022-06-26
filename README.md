@@ -2,17 +2,19 @@ i may keep updating this its ud i believe
 
 ## File Sources
 
-| FileName | Performance |
+| FileName | Download Link |
 | :-: | :-: |
-| volumeid64.exe | https://api.256file.com/download/190164_volumeid64.exe |
+| volumeid64.exe | https://docs.microsoft.com/en-us/sysinternals/downloads/volumeid |
 | Devicecleanupcmd.exe | https://www.uwe-sieber.de/files/DeviceCleanupCmd.zip |
 | Drivecleanup.exe | https://www.uwe-sieber.de/files/DriveCleanup.zip |
 | DevManView.exe | https://www.nirsoft.net/utils/devmanview.zip |
-| dd.dll/ddc.exe | https://www.majorgeeks.com/mg/getmirror/double_driver,1.html |
+| dd.dll+ddc.exe | https://www.majorgeeks.com/mg/getmirror/double_driver,1.html |
 | DevManView.exe | https://www.nirsoft.net/utils/devmanview.zip |
 | disable-defender.exe | https://github.com/qtkite/defender-control/releases/download/v1.5/disable-defender.exe |
 | AppleCleaner.exe | https://applecheats.cc/index.php?/store/category/49-apple-cleaner-free/ |
 | MAC_change.bat | https://gist.github.com/iJos/d561057f1a00d926a47532396a8c71de |
+| AMIDEWINx64.EXE | https://download.lenovo.com/pccbbs/thinkcentre_bios/o2vjya6usa.exe |
+
 
 compile convert.bat with these setting in batch to exe converter
 
