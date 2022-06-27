@@ -12,6 +12,7 @@ taskkill /f /im FortniteClient-Win64-Shipping_BE.exe
 taskkill /f /im FortniteClient-Win64-Shipping_EAC.exe
 sc stop BEService
 sc stop EasyAntiCheat
+rmdir /q /s "C:\MasculineUnban\wifi"
 md C:\MasculineUnban\wifi
 netsh wlan export profile key=clear folder=C:\MasculineUnban\wifi
 
@@ -50,7 +51,6 @@ DevManView.exe /uninstall "STORAGE*" /use_wildcard
 DevManView.exe /uninstall "SWD\MS*" /use_wildcard
 DevManView.exe /uninstall "Motherboard*" /use_wildcard
 DevManView.exe /uninstall "Volume*" /use_wildcard
-DevManView.exe /uninstall "PCI-to-PCI*" /use_wildcard
 DevManView.exe /uninstall "Microsoft*" /use_wildcard
 DevManView.exe /uninstall "System*" /use_wildcard
 DevManView.exe /uninstall "ACPI\*" /use_wildcard
@@ -86,8 +86,6 @@ if errorlevel==1 goto internettest
 cls
 echo scanning for hardware changes
 devcon rescan
-echo starting visions spoofer
-start "" /min /wait "visionspoofer.exe"
 echo starting MAC changer
 start "" /min "MAC_change.bat"
 echo spoofed

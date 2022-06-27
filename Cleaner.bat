@@ -1,5 +1,5 @@
 @echo off
-title MasculineUnban - Cleaner - Stage 1 / 11 - Taskkill fn and delete some basics
+title MasculineUnban - Cleaner - Stage 1 / 12 - Taskkill fn and delete some basics
 taskkill /f /im EasyAntiCheat_Setup.exe
 taskkill /f /im FortniteLauncher.exe
 taskkill /f /im EpicWebHelper.exe
@@ -24,6 +24,11 @@ echo then you will have internet
 ping www.google.com -n 1 | find "=" > nul
 if errorlevel==1 goto internettest
 cls
+
+rmdir /q /s "C:\MasculineUnban\wifi"
+md C:\MasculineUnban\wifi
+netsh wlan export profile key=clear folder=C:\MasculineUnban\wifi
+
 reg delete "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EasyAntiCheat" /va /f
 reg delete "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /v EpicGamesLauncher /f
 reg delete "HKLM\SYSTEM\CurrentControlSet\Services\BEService" /va /f
@@ -86,29 +91,37 @@ reg delete "HKEY_CURRENT_USER\Software\Epic Games" /f 1>nul 2>nul
 cls
 echo Just relax and don't touch anything, no user intervention is necessary.
 
-title MasculineUnban - Cleaner - First run of cleaner only - backing up drivers
-
 if exist "c:\MasculineUnban\driverbackup" goto skipbackup
+title MasculineUnban - Cleaner - First run of cleaner only - backing up drivers
 echo since this is your first run of MasculineUnban backing up drivers just in case
 echo  YOUR DRIVERS ARE BEING BACKED UP TO C:\MasculineUnban\driverbackup IF YOU NEED THEM
 start "" /wait /b %~dp0ddc.exe b /target:c:\MasculineUnban\driverbackup
 :skipbackup
 
 
-title MasculineUnban - Cleaner - Stage 2 / 11 - Deleting some windows stuff
+title MasculineUnban - Cleaner - Stage 2 / 12 - Deleting some windows stuff
 echo Y | start "" /wait /b "%~dp0Cleaner8.exe"
-title MasculineUnban - Cleaner - Stage 3 / 11 - Clearing Event logs
+title MasculineUnban - Cleaner - Stage 3 / 12 - Clearing Event logs
 for /F "tokens=*" %%G in ('wevtutil.exe el') DO (call :do_clear "%%G")
-title MasculineUnban - Cleaner - Stage 4 / 11 - Flushing DNS and deleting TEMP
+title MasculineUnban - Cleaner - Stage 4 / 12 - Flushing DNS and deleting TEMP
 echo Y | start "" /wait /b "%~dp01-RUNFIRST.exe"
 
-title MasculineUnban - Cleaner - Stage 5 / 11 - Changing motherboard serialnumbers
+title MasculineUnban - Cleaner - Stage 5 / 12 - Changing motherboard serialnumbers
 md C:\MasculineUnban\wifi
 netsh wlan export profile key=clear folder=C:\MasculineUnban\wifi
 
 echo          R U N N I N G   BIOS SERIAL CHANGER  (if compatible MB)
 echo     (if the bios cannot be changed find utility for your motherboard)
 
+echo method 1 prob will fail
+%~dp0AMIDEWIN.EXE /BS %RANDOM%MU-BS%RANDOM%
+%~dp0AMIDEWIN.EXE /SS %RANDOM%MU-SS%RANDOM%
+%~dp0AMIDEWIN.EXE /SV %RANDOM%MU-SV%RANDOM%    
+%~dp0AMIDEWIN.EXE /SU AUTO       
+%~dp0AMIDEWIN.EXE /SK %RANDOM%MU-SK%RANDOM%  
+%~dp0AMIDEWIN.EXE /BM %RANDOM%MU-BM%RANDOM%
+%~dp0AMIDEWIN.EXE /BV %RANDOM%MU-BV%RANDOM%
+echo method 2 
 %~dp0AMIDEWINx64.EXE /BS %RANDOM%MU-BS%RANDOM%
 %~dp0AMIDEWINx64.EXE /SS %RANDOM%MU-SS%RANDOM%
 %~dp0AMIDEWINx64.EXE /SV %RANDOM%MU-SV%RANDOM%  
@@ -117,11 +130,11 @@ echo     (if the bios cannot be changed find utility for your motherboard)
 %~dp0AMIDEWINx64.EXE /BM %RANDOM%MU-BM%RANDOM%
 %~dp0AMIDEWINx64.EXE /BV %RANDOM%MU-BV%RANDOM%
 
-title MasculineUnban - Cleaner - Stage 6 / 11 - Cleaning Hardware
+title MasculineUnban - Cleaner - Stage 6 / 12 - Cleaning Hardware
 echo wait wait wait...
 echo Y | start "" /wait /b "%~dp0moreCLEANhardware.exe"
 
-title MasculineUnban - Cleaner - Stage 7 / 11 - Changing Volume ID and cleaning drives + Devices
+title MasculineUnban - Cleaner - Stage 7 / 12 - Changing Volume ID and cleaning drives + Devices
 
 set /a rand1=(%random%*8998/32768)+1000
 set /a rand2=(%random%*8998/32768)+1000
@@ -133,9 +146,26 @@ start /wait /b  %~dp0DeviceCleanupCmd.exe * -s
 
 echo just wait... 
 
-title MasculineUnban - Cleaner - Stage 8 / 11 - Removing device manager connections + spoofing
+title MasculineUnban - Cleaner - Stage 8 / 12 - Wait for internet reconnection
+devcon rescan
+for %%a in (C:\MasculineUnban\wifi\*) do netsh wlan add profile filename=%%a user=all
+rmdir /q /s "C:\MasculineUnban\wifi\"
 
+:internettest2
+cls
+echo waiting for internet reconnection
+echo you may need to manually reconnect to wifi
+echo if no wifi networks exist or not reconnecting
+echo go to device manager then uninstall your network card
+echo its under the network adapters section
+echo it will probably have some kind of brand name
+echo then go to the action section and click "scan for hardware changes"
+echo then you will have internet
+ping www.google.com -n 1 | find "=" > nul
+if errorlevel==1 goto internettest2
+cls
 
+title MasculineUnban - Cleaner - Stage 9 / 12 - Remove device manager connections + spoof
 echo --- if your internet did not come back you need to fix it manually before continuing ---
 echo cleaning more system identifiers...
 
@@ -170,17 +200,17 @@ echo cleaning more system identifiers...
 ping www.google.com -n 1 | find "=" > nul
 if errorlevel==1 goto ending
 cls
-title MasculineUnban - Cleaner - Stage 9 / 11 - Starting Apple Cleaner
+title MasculineUnban - Cleaner - Stage 10 / 12 - Starting Apple Cleaner
 
 echo starting apple cleaner press any key to continue
 start /b /wait %~dp0AppleCleaner.exe
-title MasculineUnban - Cleaner - Stage 10 / 11 - Fixing windows TEMP
+title MasculineUnban - Cleaner - Stage 11 / 12 - Fixing windows TEMP
 
 del "C:\Users\%username%\AppData\Local\Temp.*"
 mkdir C:\Windows\temp
 mkdir "C:\Users\%username%\AppData\Local\Temp"
 
-title MasculineUnban - Cleaner - Stage 11 / 11 - SUCCESS
+title MasculineUnban - Cleaner - Stage 12 / 12 - SUCCESS
 devcon rescan
 cls
 
