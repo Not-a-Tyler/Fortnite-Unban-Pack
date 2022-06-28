@@ -5,7 +5,7 @@ i may keep updating this its ud i believe
 | FileName | Download Link |
 | :-: | :-: |
 | volumeid64.exe | https://docs.microsoft.com/en-us/sysinternals/downloads/volumeid |
-| Devicecleanupcmd.exe | https://www.uwe-sieber.de/files/DeviceCleanupCmd.zip |
+| Devicecleanupcmd.exe | https://www.uwe-sieber.de/misc_tools_e.html |
 | Drivecleanup.exe | https://www.uwe-sieber.de/drivetools_e.html |
 | DevManView.exe | https://www.nirsoft.net/utils/device_manager_view.html |
 | dd.dll+ddc.exe | https://www.majorgeeks.com/files/details/double_driver.html |
