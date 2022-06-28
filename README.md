@@ -12,7 +12,7 @@ i may keep updating this its ud i believe
 | disable-defender.exe | https://github.com/qtkite/defender-control/releases/ |
 | AppleCleaner.exe | https://applecheats.cc/index.php?/store/category/49-apple-cleaner-free/ |
 | MAC_change.bat | https://gist.github.com/iJos/d561057f1a00d926a47532396a8c71de |
-| AMIDEWINx64.EXE | https://download.lenovo.com/pccbbs/thinkcentre_bios/o2vjya6usa.exe |
+| AMIDEWIN+UCORE | https://download.lenovo.com/pccbbs/thinkcentre_bios/o2vjya6usa.exe |
 
 
 compile convert.bat with these setting in batch to exe converter
