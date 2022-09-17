@@ -1,23 +1,18 @@
-from __future__ import print_function
 if __name__ == '__main__':
     print("attempting to make an epic account fully automatically")
     import os
     import os.path
-    import ctypes
-    MB_OK = 0
-    MB_ICONSTOP = MB_ICONERROR = MB_ICONHAND = 0x10
-    MB_SYSTEMMODAL = 0x1000
-    def MsgBox(text, style, title):
-        return ctypes.windll.user32.MessageBoxW(None, text, title, style)
     try:
-        import legendary;import undetected_chromedriver
+        import legendary
+        import undetected_chromedriver
     except:
-        os.system('pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org undetected_chromedriver');os.system('pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org legendary-gl')
+        os.system('pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org undetected_chromedriver')
+        os.system('pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org legendary-gl')
     try:
         open('C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe')
     except:
         print("brave browser not found..... installing brave")
-        os.system('powershell -Command "(New-Object Net.WebClient).DownloadFile(\'https://referrals.brave.com/latest/BraveBrowserSetup.exe\', \'install_brave.exe\')"')
+        os.system('curl https://referrals.brave.com/latest/BraveBrowserSetup.exe --output install_brave.exe')
         os.system('install_brave.exe')
         os.system('taskkill /f /im brave.exe')
         os.remove('install_brave.exe')
@@ -38,9 +33,7 @@ if __name__ == '__main__':
     options = uc.ChromeOptions()
     if input('type "y" for custom username, ENTER key for random : ') == 'y': username = input('username : ')
     else: username = f"a{''.join(random.sample(string.ascii_lowercase + string.digits, 15))}"
-
     options.binary_location = "C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe"
-
     firstname = f"A{''.join(random.sample(string.ascii_lowercase + string.digits, 14))}"
     lastname = f"L{''.join(random.sample(string.ascii_lowercase + string.digits, 14))}"
     password = f"A{''.join(random.sample(string.ascii_lowercase + string.digits, 15))}&*"
@@ -48,10 +41,8 @@ if __name__ == '__main__':
     def switch(x):
         windows = driver.window_handles
         driver.switch_to.window(windows[x])
-    try:
-        driver = uc.Chrome(options=options, service_log_path=os.devnull)
-    except:
-        os.system('ctypes.windll.user32.MessageBoxW(0, "Failed setting chromedriver. Make sure you have internet and have normal google chrome downloaded", 1)');exit()
+    try:driver = uc.Chrome(options=options, service_log_path=os.devnull)
+    except:print("failed setting driver make sure u have internet")
     wait = WebDriverWait(driver, 3000)
     print("Cooking up an epic account 4u")
     print("creating interia.pl account")
@@ -108,9 +99,9 @@ if __name__ == '__main__':
     wait.until(EC.visibility_of_element_located((By.ID, "password"))).send_keys(password)
     print("waiting for user to complete interia.pl captcha")
 
-    
+    switch(1)
     print("waiting for user to complete epicgames captcha")
-    wait.until(EC.visibility_of_element_located((By.XPATH, "//*[contains(text(), 'Verify email')]")))
+    wait.until(EC.visibility_of_element_located((By.XPATH, "//*[contains(text(), 'Please verify your email')]")))
     print("verifying email address")
     switch(0)
     print("waiting to recieve verification email")
@@ -122,15 +113,16 @@ if __name__ == '__main__':
     print("waiting until SID visible")
     wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, '[style="word-wrap: break-word; white-space: pre-wrap;"]')))
     sid = driver.page_source[219:-22]
+    print(f"sid is {sid}")
     random = random.randint(1,10000)
     print("deleting any old accounts if present")
     os.system('rmdir /q /s "C:\\Users\\%username%\\.config\\legendary"')
     os.system(f"legendary auth --sid {sid}")
     driver.get("https://store.epicgames.com/en-US/p/fortnite")
     print("adding fortnite to your list of games")
-    wait.until(EC.visibility_of_element_located([By.XPATH,'/html/body/div[1]/div/div[4]/main/div[2]/div/div/div/div[2]/div[4]/div/aside/div/div/div[4]/div/button'])).click()
+    wait.until(EC.visibility_of_element_located([By.XPATH,'/html/body/div[1]/div/div[4]/main/div[2]/div/div/div/div[2]/div[4]/div/aside/div/div/div[6]/div/button'])).click()
     wait.until(EC.visibility_of_element_located((By.ID, "agree"))).click()
-    wait.until(EC.visibility_of_element_located((By.XPATH, '/html/body/div[5]/div/div/div/div[2]/div/div[2]/button'))).click()
+    wait.until(EC.visibility_of_element_located((By.XPATH, '/html/body/div[6]/div/div/div/div[2]/div/div[2]/button'))).click()
     currenttime = time.strftime("%b-%d-%Y %I:%M")
     print(f"{email}:{password} Username:{username} FirstName:{firstname} LastName:{lastname} Time:{currenttime}\n")
     with open(f"C:\\MasculineUnban\\saved_accounts.txt", "a") as f:

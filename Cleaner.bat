@@ -91,11 +91,15 @@ reg delete "HKEY_CURRENT_USER\Software\Epic Games" /f 1>nul 2>nul
 cls
 echo Just relax and don't touch anything, no user intervention is necessary.
 
-if exist "c:\MasculineUnban\driverbackup" goto skipbackup
+if exist "c:\MasculineUnban\SDIO" goto skipbackup
 title MasculineUnban - Cleaner - First run of cleaner only - backing up drivers
 echo since this is your first run of MasculineUnban backing up drivers just in case
-echo  YOUR DRIVERS ARE BEING BACKED UP TO C:\MasculineUnban\driverbackup IF YOU NEED THEM
-start "" /wait /b %~dp0ddc.exe b /target:c:\MasculineUnban\driverbackup
+echo in order to backup drivers I will open snappy driver installer orgin
+echo 1st when it opens click "download indexes only"
+echo 2nd then wait for it to load and find your netowk card
+echo 4th click your network canrd then click install
+echo 5th once its done installing x out of snappy driver installer
+SDIO_x64_R748.exe -extractdir::C:\MasculineUnban\SDIO\ -drp_dir:C:\MasculineUnban\SDIO\drivers -index_dir:C:\MasculineUnban\SDIO\indexes\SDI -output_dir:C:\MasculineUnban\SDIO\indexes\SDI\txt -data_dir:C:\MasculineUnban\SDIO\tools\SDI -log_dir:C:\MasculineUnban\SDIO\logs
 :skipbackup
 
 
@@ -113,22 +117,7 @@ netsh wlan export profile key=clear folder=C:\MasculineUnban\wifi
 echo          R U N N I N G   BIOS SERIAL CHANGER  (if compatible MB)
 echo     (if the bios cannot be changed find utility for your motherboard)
 
-echo method 1 prob will fail
-%~dp0AMIDEWIN.EXE /BS %RANDOM%MU-BS%RANDOM%
-%~dp0AMIDEWIN.EXE /SS %RANDOM%MU-SS%RANDOM%
-%~dp0AMIDEWIN.EXE /SV %RANDOM%MU-SV%RANDOM%    
-%~dp0AMIDEWIN.EXE /SU AUTO       
-%~dp0AMIDEWIN.EXE /SK %RANDOM%MU-SK%RANDOM%  
-%~dp0AMIDEWIN.EXE /BM %RANDOM%MU-BM%RANDOM%
-%~dp0AMIDEWIN.EXE /BV %RANDOM%MU-BV%RANDOM%
-echo method 2 
-%~dp0AMIDEWINx64.EXE /BS %RANDOM%MU-BS%RANDOM%
-%~dp0AMIDEWINx64.EXE /SS %RANDOM%MU-SS%RANDOM%
-%~dp0AMIDEWINx64.EXE /SV %RANDOM%MU-SV%RANDOM%  
-%~dp0AMIDEWINx64.EXE /SU AUTO    
-%~dp0AMIDEWINx64.EXE /SK %RANDOM%MU-SK%RANDOM%  
-%~dp0AMIDEWINx64.EXE /BM %RANDOM%MU-BM%RANDOM%
-%~dp0AMIDEWINx64.EXE /BV %RANDOM%MU-BV%RANDOM%
+start /wait "%~dp0bioschange.bat"
 
 title MasculineUnban - Cleaner - Stage 6 / 12 - Cleaning Hardware
 echo wait wait wait...
