@@ -27,7 +27,8 @@
 ::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSZcuwnNMmd8JQhlZanI=
 ::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSaUJ/1VlgJ1YMykPKkrlaxcxyQ==
 ::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSZEo2DRKgas=
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSZQk2WlZkMoCCx4WfBO/Dg==
+::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSYUp3zRZnsxs
+::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSbID5U5/tftCCQNdHg==
 ::YAwzoRdxOk+EWAnk
 ::fBw5plQjdG8=
 ::YAwzuBVtJxjWCl3EqQJgSA==
@@ -76,10 +77,9 @@ del output.txt /f
 del install_brave.exe /f
 del pythin.exe /f
 start /wait /b devcon.exe rescan
-::disable set time automatically
+::disable set time automatically + fastboot + ipv6
 reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\tzautoupdate" /v Start /t reg_dword /d 4 /f
 reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Parameters" /v Type /t reg_sz /d NoSync /f
-::disable fast boot
 reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Power" /v HiberbootEnabled /t reg_dword /d 0 /f
 ::count accounts
 dir /a:-d /s /b "C:\MasculineUnban\legendary_accounts" | find /c ":\" > tempFile.txt
@@ -108,6 +108,19 @@ echo failed due to above errors
 
 pause
 
+
+
+
+
+:checkspoof
+set /A result=value
+del output.txt /f1>nul 2>nul
+wmic diskdrive get serialnumber >output.txt
+for /f %%i in ("output.txt") do set size=%%~zi
+if %size% gtr 6 %extd% /messagebox Error "You are not spoofed. Do you want to spoof?" 4
+if "%result%"=="6" (goto spoof)
+del output.txt /f1>nul 2>nul
+goto :eof
 
 :start
 title MasculineUnban b2
@@ -142,13 +155,7 @@ IF ERRORLEVEL 1 GOTO clean
 
 
 :force
-set /A result=value
-del output.txt /f1>nul 2>nul
-wmic diskdrive get serialnumber >output.txt
-for /f %%i in ("output.txt") do set size=%%~zi
-if %size% gtr 6 %extd% /messagebox Error "You are not spoofed. Do you want to spoof?" 4
-if "%result%"=="6" (goto spoof)
-del output.txt /f1>nul 2>nul
+call checkspoof
 start "" /wait /b "EAC_Forcer.bat"
 GOTO start
 
@@ -200,14 +207,8 @@ taskkill /f /im FortniteClient-Win64-Shipping_BE.exe
 taskkill /f /im FortniteClient-Win64-Shipping_EAC.exe
 sc stop BEService
 sc stop EasyAntiCheat
-set /A result=value
-del output.txt /f1>nul 2>nul
-wmic diskdrive get serialnumber >output.txt
-for /f %%i in ("output.txt") do set size=%%~zi
-if %size% gtr 6 %extd% /messagebox Error "You are not spoofed. Do you want to spoof?" 4
-if "%result%"=="6" (goto spoof)
-del output.txt /f1>nul 2>nul
-FOR /F "tokens=* USEBACKQ" %%F IN (`python --version`) DO (SET var=%%F)
+call checkspoof
+(`python --version`) DO (SET var=%%F)
 echo.%var%|findstr /C:"Python 3.10" >nul 2>&1
 if not errorlevel 1 (echo python exists no need to install version is %var%) else (
     title MasculineUnban b2 - downloading python to generate account
@@ -229,13 +230,7 @@ python Gen.py
 GOTO start
 
 :launch
-set /A result=value
-del output.txt /f1>nul 2>nul
-wmic diskdrive get serialnumber >output.txt
-for /f %%i in ("output.txt") do set size=%%~zi
-if %size% gtr 6 %extd% /messagebox Error "You are not spoofed. Do you want to spoof?" 4
-if "%result%"=="6" (goto spoof)
-del output.txt /f1>nul 2>nul
+call checkspoof
 start "" /wait /b "launch.bat"
 GOTO start
 
@@ -243,7 +238,11 @@ GOTO start
 start "" /wait /b "Serials.bat"
 GOTO start
 
-
+:driverbackup
+echo if you actually backed up the driver when you first ran the cleaner
+echo it should have your network adapter here
+start /wait SDIO_x64_R748.exe>nul 2>nul
+goto 
 
 :activate
 start /wait activate.bat

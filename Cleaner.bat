@@ -79,66 +79,81 @@ del "%userprofile%\.config\legendary\aliases.json" /f
 rmdir /q /s "%userprofile%\.config\legendary\tmp"
 rmdir /q /s "%userprofile%\.config\legendary\metadata"
 rmdir /q /s "%userprofile%\.config\legendary\manifests"
-reg delete "HKEY_CURRENT_USER\Software\Epic Games\Unreal Engine\Hardware Survey" /f 1>nul 2>nul
-reg delete "HKEY_CURRENT_USER\Software\Epic Games\Unreal Engine\Identifiers" /f 1>nul 2>nul
-reg delete "HKU\S-1-5-21-860440266-1445122309-108474356-1001\Software\Epic Games\Unreal Engine\Identifiers" /va /f 1>nul 2>nul
-reg delete "HKU\S-1-5-21-860440266-1445122309-108474356-1001\Software\Epic Games\Unreal Engine\Hardware Survey" /va /f 1>nul 2>nul
-reg delete "HKEY_CURRENT_USER\Software\Epic Games" /f 1>nul 2>nul
-reg delete "HKU\S-1-5-21-860440266-1445122309-108474356-1001\Software\Epic Games" /f 1>nul 2>nul
-REG ADD HKLM\SYSTEM\CurrentControlSet\Control\ComputerName\ComputerName /v ComputerName /t REG_SZ /d %random% /f 1>nul 2>nul
-REG ADD HKLM\SYSTEM\CurrentControlSet\Control\ComputerName\ActiveComputerName /v ComputerName /t REG_SZ /d %random% /f 1>nul 2>nul
-reg delete "HKEY_CURRENT_USER\Software\Epic Games" /f 1>nul 2>nul
+reg delete "HKEY_CURRENT_USER\Software\Epic Games\Unreal Engine\Hardware Survey" /f
+reg delete "HKEY_CURRENT_USER\Software\Epic Games\Unreal Engine\Identifiers" /f
+reg delete "HKU\S-1-5-21-860440266-1445122309-108474356-1001\Software\Epic Games\Unreal Engine\Identifiers" /va /f
+reg delete "HKU\S-1-5-21-860440266-1445122309-108474356-1001\Software\Epic Games\Unreal Engine\Hardware Survey" /va /f
+reg delete "HKEY_CURRENT_USER\Software\Epic Games" /f
+reg delete "HKU\S-1-5-21-860440266-1445122309-108474356-1001\Software\Epic Games" /f
+REG ADD HKLM\SYSTEM\CurrentControlSet\Control\ComputerName\ComputerName /v ComputerName /t REG_SZ /d %random% /f
+REG ADD HKLM\SYSTEM\CurrentControlSet\Control\ComputerName\ActiveComputerName /v ComputerName /t REG_SZ /d %random% /f
+reg delete "HKEY_CURRENT_USER\Software\Epic Games" /f
 cls
 echo Just relax and don't touch anything, no user intervention is necessary.
 
-if exist "c:\MasculineUnban\SDIO" goto skipbackup
+if exist "C:\MasculineUnban\SDIO\" goto skipbackup
 title MasculineUnban - Cleaner - First run of cleaner only - backing up drivers
+cls
 echo since this is your first run of MasculineUnban backing up drivers just in case
 echo in order to backup drivers I will open snappy driver installer orgin
 echo 1st when it opens click "download indexes only"
 echo 2nd then wait for it to load and find your netowk card
 echo 4th click your network canrd then click install
 echo 5th once its done installing x out of snappy driver installer
-SDIO_x64_R748.exe -extractdir::C:\MasculineUnban\SDIO\ -drp_dir:C:\MasculineUnban\SDIO\drivers -index_dir:C:\MasculineUnban\SDIO\indexes\SDI -output_dir:C:\MasculineUnban\SDIO\indexes\SDI\txt -data_dir:C:\MasculineUnban\SDIO\tools\SDI -log_dir:C:\MasculineUnban\SDIO\logs
+start /wait SDIO_x64_R748.exe>nul 2>nul
 :skipbackup
 
 
 title MasculineUnban - Cleaner - Stage 2 / 12 - Deleting some windows stuff
-echo Y | start "" /wait /b "%~dp0Cleaner8.exe"
+echo Y | start "" /wait /b Cleaner8.exe
 title MasculineUnban - Cleaner - Stage 3 / 12 - Clearing Event logs
 for /F "tokens=*" %%G in ('wevtutil.exe el') DO (call :do_clear "%%G")
 title MasculineUnban - Cleaner - Stage 4 / 12 - Flushing DNS and deleting TEMP
-echo Y | start "" /wait /b "%~dp01-RUNFIRST.exe"
+echo Y | start "" /wait /b DNSTEMP.exe
 
 title MasculineUnban - Cleaner - Stage 5 / 12 - Changing motherboard serialnumbers
-md C:\MasculineUnban\wifi
-netsh wlan export profile key=clear folder=C:\MasculineUnban\wifi
+
 
 echo          R U N N I N G   BIOS SERIAL CHANGER  (if compatible MB)
 echo     (if the bios cannot be changed find utility for your motherboard)
 
-start /wait "%~dp0bioschange.bat"
+FOR %%x in (IVN,IV,ID,SM,SP,SV,SS,SK,SF,BM,BP,BV,BS,BT,BLC,CM,CT,CV,CS,CA,CO,CH,CPC,CSK,PSN,PAT,PPN) do (
+     echo attempting to do %%x
+     start /b AMIDEWINx64.EXE /%%x MASCULINE%random%  > file1.txt
+     taskkill /f /im AMIDEWINx64.EXE
+     type file1.txt
+     del /f file1.txt
+     echo done with %%x
+    )
+
+FOR %%x in (IVN,IV,ID,SM,SP,SV,SS,SK,SF,BM,BP,BV,BS,BT,BLC,CM,CT,CV,CS,CA,CO,CH,CPC,CSK,PSN,PAT,PPN) do (
+     echo attempting to do %%x
+     start /b AMIDEWIN.EXE /%%x MASCULINE%random%  > file1.txt
+     taskkill /f /im AMIDEWIN.EXE
+     type file1.txt
+     del /f file1.txt
+     echo done with %%x
+    )
 
 title MasculineUnban - Cleaner - Stage 6 / 12 - Cleaning Hardware
 echo wait wait wait...
-echo Y | start "" /wait /b "%~dp0moreCLEANhardware.exe"
+echo Y | start "" /wait /b moreCLEANhardware.exe
 
 title MasculineUnban - Cleaner - Stage 7 / 12 - Changing Volume ID and cleaning drives + Devices
 
 set /a rand1=(%random%*8998/32768)+1000
 set /a rand2=(%random%*8998/32768)+1000
-start "" /b /wait "%~dp0volumeid64.exe" c: %rand1%-%rand2% /accepteula
+start "" /b /wait volumeid64.exe c: %rand1%-%rand2% /accepteula
 
 
-start /wait /b  %~dp0DeviceCleanupCmd.exe * -s
-%~dp0DriveCleanup.exe
+start /wait /b  DeviceCleanupCmd.exe * -s
+DriveCleanup.exe
 
 echo just wait... 
 
 title MasculineUnban - Cleaner - Stage 8 / 12 - Wait for internet reconnection
 devcon rescan
 for %%a in (C:\MasculineUnban\wifi\*) do netsh wlan add profile filename=%%a user=all
-rmdir /q /s "C:\MasculineUnban\wifi\"
 
 :internettest2
 cls
@@ -158,30 +173,30 @@ title MasculineUnban - Cleaner - Stage 9 / 12 - Remove device manager connection
 echo --- if your internet did not come back you need to fix it manually before continuing ---
 echo cleaning more system identifiers...
 
-%~dp0DevManView.exe /uninstall "Realtek*" /use_wildcard
-%~dp0DevManView.exe /uninstall "WAN Miniport*" /use_wildcard
-%~dp0DevManView.exe /uninstall "Disk drive*" /use_wildcard
-%~dp0DevManView.exe /uninstall "C:\"
-%~dp0DevManView.exe /uninstall "D:\"
-%~dp0DevManView.exe /uninstall "E:\"
-%~dp0DevManView.exe /uninstall "F:\"
-%~dp0DevManView.exe /uninstall "G:\"
-%~dp0DevManView.exe /uninstall "Disk"
-%~dp0DevManView.exe /uninstall "disk"
-%~dp0DevManView.exe /uninstall "Disk&*" /use_wildcard
-%~dp0DevManView.exe /uninstall "SWD\WPDBUSENUM*" /use_wildcard
-%~dp0DevManView.exe /uninstall "USBSTOR*" /use_wildcard
-%~dp0DevManView.exe /uninstall "SCSI\Disk*" /use_wildcard
-%~dp0DevManView.exe /uninstall "STORAGE*" /use_wildcard
-%~dp0DevManView.exe /uninstall "SWD\MS*" /use_wildcard
-%~dp0DevManView.exe /uninstall "Motherboard*" /use_wildcard
-%~dp0DevManView.exe /uninstall "Volume*" /use_wildcard
-%~dp0DevManView.exe /uninstall "PCI-to-PCI*" /use_wildcard
-%~dp0DevManView.exe /uninstall "Microsoft*" /use_wildcard
-%~dp0DevManView.exe /uninstall "System*" /use_wildcard
-%~dp0DevManView.exe /uninstall "ACPI\*" /use_wildcard
-%~dp0DevManView.exe /uninstall "Remote*" /use_wildcard
-%~dp0DevManView.exe /uninstall "Standard*" /use_wildcard
+DevManView.exe /uninstall "Realtek*" /use_wildcard
+DevManView.exe /uninstall "WAN Miniport*" /use_wildcard
+DevManView.exe /uninstall "Disk drive*" /use_wildcard
+DevManView.exe /uninstall "C:\"
+DevManView.exe /uninstall "D:\"
+DevManView.exe /uninstall "E:\"
+DevManView.exe /uninstall "F:\"
+DevManView.exe /uninstall "G:\"
+DevManView.exe /uninstall "Disk"
+DevManView.exe /uninstall "disk"
+DevManView.exe /uninstall "Disk&*" /use_wildcard
+DevManView.exe /uninstall "SWD\WPDBUSENUM*" /use_wildcard
+DevManView.exe /uninstall "USBSTOR*" /use_wildcard
+DevManView.exe /uninstall "SCSI\Disk*" /use_wildcard
+DevManView.exe /uninstall "STORAGE*" /use_wildcard
+DevManView.exe /uninstall "SWD\MS*" /use_wildcard
+DevManView.exe /uninstall "Motherboard*" /use_wildcard
+DevManView.exe /uninstall "Volume*" /use_wildcard
+DevManView.exe /uninstall "PCI-to-PCI*" /use_wildcard
+DevManView.exe /uninstall "Microsoft*" /use_wildcard
+DevManView.exe /uninstall "System*" /use_wildcard
+DevManView.exe /uninstall "ACPI\*" /use_wildcard
+DevManView.exe /uninstall "Remote*" /use_wildcard
+DevManView.exe /uninstall "Standard*" /use_wildcard
 
 
 
@@ -192,7 +207,7 @@ cls
 title MasculineUnban - Cleaner - Stage 10 / 12 - Starting Apple Cleaner
 
 echo starting apple cleaner press any key to continue
-start /b /wait %~dp0AppleCleaner.exe
+start /b /wait AppleCleaner.exe
 title MasculineUnban - Cleaner - Stage 11 / 12 - Fixing windows TEMP
 
 del "C:\Users\%username%\AppData\Local\Temp.*"
@@ -200,7 +215,7 @@ mkdir C:\Windows\temp
 mkdir "C:\Users\%username%\AppData\Local\Temp"
 
 title MasculineUnban - Cleaner - Stage 12 / 12 - SUCCESS
-devcon rescan
+devcon.exe rescan
 cls
 
 color 02
