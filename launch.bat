@@ -67,7 +67,7 @@ reg delete "HKEY_CURRENT_USER\Software\Epic Games" /f 1>nul 2>nul
 
 
 echo launching
-legendary import --disable-check Fortnite "C:\Program Files\Epic Games\Fortnite"
+::legendary import --disable-check Fortnite "C:\Program Files\Epic Games\Fortnite"
 legendary launch fortnite --skip-version-check
 echo launched fortnite (hopefully)
 

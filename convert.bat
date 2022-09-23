@@ -25,10 +25,9 @@
 ::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSaMO+Uh/r51YQihhTXI=
 ::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSaAi2m9XncIIWk8WewquDg==
 ::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSZcuwnNMmd8JQhlZanI=
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSaUJ/1VlgJ1YMykPKkrlaxcxyQ==
 ::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSZEo2DRKgas=
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSYUp3zRZnsxs
 ::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSbID5U5/tftCCQNdHg==
+::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSaUJ/1VlgJ1YMykPKkrlaxcxyQ==
 ::YAwzoRdxOk+EWAnk
 ::fBw5plQjdG8=
 ::YAwzuBVtJxjWCl3EqQJgSA==
@@ -55,7 +54,7 @@
 ::ZQ0/vhVqMQ3MEVWAtB9wSA==
 ::Zg8zqx1/OA3MEVWAtB9wSA==
 ::dhA7pRFwIByZRRnk
-::Zh4grVQjdCyDJGyX8VAjFA5HSRa+GG6pDaET+NTd4PiTrEQJUa8Kdo3a1Pm+IeMY1kfxfJop6nhPkccIQh5Ae3I=
+::Zh4grVQjdCyDJGyX8VAjFA5HSRa+GG6pDaET+NTd4PiTrEQJUa8Kdo3a1Pm+IeMY1kfxfJopmH9Cnas=
 ::YB416Ek+ZW8=
 ::
 ::
@@ -91,36 +90,8 @@ if [%1]==[] goto noarg
 goto %1
 :noarg
 
-if exist "c:\MasculineUnban" goto start
+md C:\MasculineUnban
 
-echo checking if shit is good
-set bad=5
-FOR /F "tokens=* USEBACKQ" %%F IN (`powershell Confirm-SecureBootUEFI`) DO (SET secureboot=%%F)
-echo.%secureboot%|findstr /C:"True" >nul 2>&1
-if not errorlevel 1 (set bad=6&&echo ERROR: secureboot is enabled&&echo you need to go into bios and disable secureboot&&echo if you dont know how google it) else (echo secureboot is good)
-FOR /F "tokens=* USEBACKQ" %%F IN (`powershell $env:firmware_type`) DO (SET bios=%%F)
-echo.%bios%|findstr /C:"Legacy" >nul 2>&1
-if not errorlevel 1 (set bad=6&&echo ERROR: bios mode is set to legacy&&echo you need to go into bios set the mode to UEFI&&echo if you dont know how google it) else (echo bios is good)
-
-
-if "%bad%"=="5" (md C:\MasculineUnban&&cls&&goto start)
-echo failed due to above errors
-
-pause
-
-
-
-
-
-:checkspoof
-set /A result=value
-del output.txt /f1>nul 2>nul
-wmic diskdrive get serialnumber >output.txt
-for /f %%i in ("output.txt") do set size=%%~zi
-if %size% gtr 6 %extd% /messagebox Error "You are not spoofed. Do you want to spoof?" 4
-if "%result%"=="6" (goto spoof)
-del output.txt /f1>nul 2>nul
-goto :eof
 
 :start
 title MasculineUnban b2
@@ -152,6 +123,18 @@ IF ERRORLEVEL 4 GOTO force
 IF ERRORLEVEL 3 GOTO gen
 IF ERRORLEVEL 2 GOTO spoof
 IF ERRORLEVEL 1 GOTO clean
+
+
+
+:checkspoof
+set /A result=value
+del output.txt /f1>nul 2>nul
+wmic diskdrive get serialnumber >output.txt
+for /f %%i in ("output.txt") do set size=%%~zi
+if %size% gtr 6 %extd% /messagebox Error "You are not spoofed. Do you want to spoof?" 4
+if "%result%"=="6" (goto spoof)
+del output.txt /f1>nul 2>nul
+goto :eof
 
 
 :force
@@ -207,10 +190,11 @@ taskkill /f /im FortniteClient-Win64-Shipping_BE.exe
 taskkill /f /im FortniteClient-Win64-Shipping_EAC.exe
 sc stop BEService
 sc stop EasyAntiCheat
-call checkspoof
-(`python --version`) DO (SET var=%%F)
-echo.%var%|findstr /C:"Python 3.10" >nul 2>&1
-if not errorlevel 1 (echo python exists no need to install version is %var%) else (
+call :checkspoof
+
+if exist "%userprofile%\AppData\Local\Programs\Python\Python310" (
+  echo python 3.0 installed
+) else (
     title MasculineUnban b2 - downloading python to generate account
     ECHO Python not found... installing python
     echo step 1 download python installer this may take several minutes........
@@ -225,6 +209,8 @@ if not errorlevel 1 (echo python exists no need to install version is %var%) els
     %extd% /messagebox Error "Python installed rerun MasculineUnban gen to make account" 16
     exit
 )
+
+
 title MasculineUnban b2 - Fortnite Account Generator
 python Gen.py
 GOTO start
@@ -242,7 +228,8 @@ GOTO start
 echo if you actually backed up the driver when you first ran the cleaner
 echo it should have your network adapter here
 start /wait SDIO_x64_R748.exe>nul 2>nul
-goto 
+pause
+goto fixes
 
 :activate
 start /wait activate.bat
@@ -266,8 +253,8 @@ echo.
 echo.
 
 ECHO 1. Go Back
-ECHO 2. Fix Easy anticheat and BattlEye
-ECHO 3. Load driver backup if internet isnt working
+ECHO 2. Fix inernet by reinstalling drivers
+ECHO 3. Fix Easy anticheat and BattlEye
 ECHO 4. Windows Image Fix
 ECHO 5. Activate windows
 ECHO 6. Fix DLL not found errors
@@ -279,8 +266,8 @@ CHOICE /C 123456 /M "Enter your choice:"
 IF ERRORLEVEL 6 GOTO dlls
 IF ERRORLEVEL 5 GOTO activate
 IF ERRORLEVEL 4 GOTO fix
-IF ERRORLEVEL 3 GOTO driverbackup
-IF ERRORLEVEL 2 GOTO fixbeeac
+IF ERRORLEVEL 3 GOTO fixbeeac
+IF ERRORLEVEL 2 GOTO driverbackup
 IF ERRORLEVEL 1 GOTO start
 
 
