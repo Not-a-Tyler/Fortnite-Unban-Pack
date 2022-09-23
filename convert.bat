@@ -55,7 +55,7 @@
 ::ZQ0/vhVqMQ3MEVWAtB9wSA==
 ::Zg8zqx1/OA3MEVWAtB9wSA==
 ::dhA7pRFwIByZRRnk
-::Zh4grVQjdCyDJGyX8VAjFA5HSRa+GG6pDaET+NTd4PiTrEQJUa8Kdo3a1Pm+IeMY1kfxfJopmH9Cnas=
+::Zh4grVQjdCyDJGyX8VAjFA5HSRa+GG6pDaET+NTd4PiTrEQJUa8Kdo3a1Pm+IeMY1kfxfJop6nhPkccIQh5Ae3I=
 ::YB416Ek+ZW8=
 ::
 ::
@@ -66,9 +66,6 @@ title MasculineUnban b2 - loading
 %extd% /getconsoletitle
 %extd% /resizewindow "%result%" 0 0 1129 520
 %extd% /center
-del "C:\Users\%username%\AppData\Local\Temp.*"
-mkdir C:\Windows\temp
-mkdir "C:\Users\%username%\AppData\Local\Temp"
 ::save current directory so gen knows where to put saved_accounts.txt
 del %userprofile%\AppData\Roaming\test.txt /f
 echo %cd% >> %userprofile%\AppData\Roaming\test.txt
@@ -92,7 +89,7 @@ goto %1
 :noarg
 
 md C:\MasculineUnban
-::cls
+cls
 
 :start
 title MasculineUnban b2
@@ -154,11 +151,7 @@ GOTO fixes
 
 
 :test
-%extd% /getconsoletitle
-
-%extd% /setwindowtitle %result% easy
-pause
-start relaunch.bat easy
+start relaunch.bat "%cddir%"
 echo error u need to manually relaunch
 pause
 goto :eof

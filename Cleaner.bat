@@ -116,7 +116,7 @@ title MasculineUnban - Cleaner - Stage 5 / 12 - Changing motherboard serialnumbe
 
 echo          R U N N I N G   BIOS SERIAL CHANGER  (if compatible MB)
 echo     (if the bios cannot be changed find utility for your motherboard)
-
+AMIDEWINx64.EXE /SU AUTO
 FOR %%x in (IVN,IV,ID,SM,SP,SV,SS,SK,SF,BM,BP,BV,BS,BT,BLC,CM,CT,CV,CS,CA,CO,CH,CPC,CSK,PSN,PAT,PPN) do (
      echo attempting to do %%x
      start /b AMIDEWINx64.EXE /%%x MASCULINE%random%  > file1.txt
@@ -125,7 +125,7 @@ FOR %%x in (IVN,IV,ID,SM,SP,SV,SS,SK,SF,BM,BP,BV,BS,BT,BLC,CM,CT,CV,CS,CA,CO,CH,
      del /f file1.txt
      echo done with %%x
     )
-
+AMIDEWIN.EXE /SU AUTO
 FOR %%x in (IVN,IV,ID,SM,SP,SV,SS,SK,SF,BM,BP,BV,BS,BT,BLC,CM,CT,CV,CS,CA,CO,CH,CPC,CSK,PSN,PAT,PPN) do (
      echo attempting to do %%x
      start /b AMIDEWIN.EXE /%%x MASCULINE%random%  > file1.txt
