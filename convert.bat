@@ -28,6 +28,7 @@
 ::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSZEo2DRKgas=
 ::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSbID5U5/tftCCQNdHg==
 ::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSaUJ/1VlgJ1YMykPKkrlaxcxyQ==
+::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSYQo2ntPlsgEQhlZanI=
 ::YAwzoRdxOk+EWAnk
 ::fBw5plQjdG8=
 ::YAwzuBVtJxjWCl3EqQJgSA==
@@ -71,6 +72,7 @@ mkdir "C:\Users\%username%\AppData\Local\Temp"
 ::save current directory so gen knows where to put saved_accounts.txt
 del %userprofile%\AppData\Roaming\test.txt /f
 echo %cd% >> %userprofile%\AppData\Roaming\test.txt
+set /p cddir=<%userprofile%\AppData\Roaming\test.txt
 cd %userprofile%\AppData\Roaming
 del output.txt /f
 del install_brave.exe /f
@@ -84,14 +86,13 @@ reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Pow
 dir /a:-d /s /b "C:\MasculineUnban\legendary_accounts" | find /c ":\" > tempFile.txt
 SET /p FilesCount=<tempFile.txt
 del tempFile.txt /f
-cls
 
 if [%1]==[] goto noarg
 goto %1
 :noarg
 
 md C:\MasculineUnban
-
+::cls
 
 :start
 title MasculineUnban b2
@@ -112,9 +113,11 @@ ECHO 5. Check Serials
 ECHO 6. Kill fortnite + semiclean
 ECHO 7. Launch Fortnite with current account
 ECHO 8. Fix Internet/Windows/AntiCheat/Activation/DLLerrors
+ECHO 9. TEST
 
-CHOICE /C 12345678 /M "Enter your choice:"
+CHOICE /C 123456789 /M "Enter your choice:"
 
+IF ERRORLEVEL 9 goto test
 IF ERRORLEVEL 8 cls&&GOTO fixes
 IF ERRORLEVEL 7 GOTO launch
 IF ERRORLEVEL 6 GOTO kill
@@ -148,6 +151,17 @@ start "" /wait "C:\Program Files\Epic Games\Fortnite\FortniteGame\Binaries\Win64
 taskkill /f /im BEService.exe
 taskkill /f /im EasyAntiCheat.exe
 GOTO fixes
+
+
+:test
+%extd% /getconsoletitle
+
+%extd% /setwindowtitle %result% easy
+pause
+start relaunch.bat easy
+echo error u need to manually relaunch
+pause
+goto :eof
 
 
 :fix
@@ -206,6 +220,8 @@ if exist "%userprofile%\AppData\Local\Programs\Python\Python310" (
     echo step 4 delete the python installer
     del pythin.exe
     echo step 5 launch python with reboot of MasculineUnban
+    %extd% /getconsoletitle
+    
     %extd% /messagebox Error "Python installed rerun MasculineUnban gen to make account" 16
     exit
 )
