@@ -1,4 +1,6 @@
 if __name__ == '__main__':
+    username = 'unknown'
+    wusername = False
     print("attempting to make an epic account fully automatically")
     import os
     import os.path
@@ -31,7 +33,7 @@ if __name__ == '__main__':
     except:
         c = "C:\MasculineUnban\\testing.txt"
     options = uc.ChromeOptions()
-    if input('type "y" for custom username, ENTER key for random : ') == 'y': username = input('username : ')
+    if input('type "y" for custom username, ENTER key for random : ') == 'y': wusername = True
     else: username = f"a{''.join(random.sample(string.ascii_lowercase + string.digits, 15))}"
     options.binary_location = "C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe"
     firstname = f"A{''.join(random.sample(string.ascii_lowercase + string.digits, 14))}"
@@ -87,18 +89,44 @@ if __name__ == '__main__':
     wait.until(EC.visibility_of_element_located((By.ID, "name"))).send_keys(firstname)
     print("typeing in other info")
     driver.find_element(By.ID, "lastName").send_keys(lastname)
-    driver.find_element(By.ID, "displayName").send_keys(username)
     driver.find_element(By.ID, "email").send_keys(email.lower())
     driver.find_element(By.ID, "password").send_keys(password)
     driver.find_element(By.ID, "tos").click()
     print("waiting for continue button")
-    wait.until(EC.visibility_of_element_located((By.XPATH, "//*[contains(text(), 'Continue')]"))).click()
+    if wusername == False:
+        driver.find_element(By.ID, "displayName").send_keys(username)
+        wait.until(EC.visibility_of_element_located((By.XPATH, "//*[contains(text(), 'Continue')]"))).click()
+    else:
+        wait.until(EC.visibility_of_element_located((By.XPATH, "/html/body/div[4]/div/div[1]/h1"))).click()
     print("completing interia account")
     switch(0)
     wait.until(EC.visibility_of_element_located((By.ID, "email"))).send_keys(email)
     wait.until(EC.visibility_of_element_located((By.ID, "password"))).send_keys(password)
     print("waiting for user to complete interia.pl captcha")
-
+    wait.until(EC.visibility_of_element_located((By.XPATH, "/html/body/div[1]/div[1]/div[1]/form/button")))
+    get_url = driver.current_url
+    while True:
+        if get_url != driver.current_url:
+            if driver.current_url.find('logowanie') != -1:
+                wait.until(EC.visibility_of_element_located((By.ID, "password"))).send_keys(password)
+                get_url = driver.current_url
+                continue
+            break
+        time.sleep(0.2)
+    print('done')
+    while True:
+        try:
+            driver.find_element(By.XPATH, "/html/body/div[3]/div/div/div/div[2]/button[2]").click()
+            wait.until(EC.visibility_of_element_located((By.XPATH, "/html/body/div[3]/div/div/div/div[2]/button[2]"))).click()
+            break
+        except:
+            pass
+        try:
+            driver.find_element(By.XPATH, "/html/body/div[2]/div[3]/div/div[2]/div/div[2]/div/div").click()
+            break
+        except:
+            pass
+        time.sleep(0.1)
     switch(1)
     print("waiting for user to complete epicgames captcha")
     wait.until(EC.visibility_of_element_located((By.XPATH, "//*[contains(text(), 'Please verify your email')]")))
@@ -113,17 +141,15 @@ if __name__ == '__main__':
     print("waiting until authcode visible")
     wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, '[style="word-wrap: break-word; white-space: pre-wrap;"]')))
     print("getting authcode")
-    print(driver.page_source)
     authcode = driver.page_source[245:-33]
     print(f"sid is {authcode}")
-    input()
     random = random.randint(1,10000)
     print("deleting any old accounts if present")
     os.system('rmdir /q /s "C:\\Users\\%username%\\.config\\legendary"')
     os.system(f"legendary auth --code {authcode}")
     driver.get("https://store.epicgames.com/en-US/p/fortnite")
     print("adding fortnite to your list of games")
-    wait.until(EC.visibility_of_element_located([By.XPATH,'/html/body/div[1]/div/div[4]/main/div[2]/div/div/div/div[2]/div[4]/div/aside/div/div/div[6]/div/button'])).click()
+    wait.until(EC.visibility_of_element_located((By.XPATH,'/html/body/div[1]/div/div[4]/main/div[2]/div/div/div/div[2]/div[4]/div/aside/div/div/div[6]/div/button'))).click()
     wait.until(EC.visibility_of_element_located((By.ID, "agree"))).click()
     wait.until(EC.visibility_of_element_located((By.XPATH, '/html/body/div[6]/div/div/div/div[2]/div/div[2]/button'))).click()
     currenttime = time.strftime("%b-%d-%Y %I:%M")

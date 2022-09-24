@@ -83,8 +83,8 @@ echo movin %~1
 MOVE %~1 "C:\Users\%username%\.config\legendary\user.json"
 
 echo launching
-legendary import --disable-check Fortnite "C:\Program Files\Epic Games\Fortnite"
-legendary launch fortnite --skip-version-check
+legendary import --disable-check Fortnite "C:\Users\user\Games\Fortnite"
+legendary launch Fortnite --skip-version-check
 echo launched (hopefully)
 
 PING localhost -n 2 >NUL
