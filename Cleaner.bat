@@ -1,5 +1,5 @@
 @echo off
-title MasculineUnban - Cleaner - Stage 1 / 12 - Taskkill fn and delete some basics
+title MasculineUnban - Cleaner - Stage 1 / 10 - Taskkill fn and delete some basics
 taskkill /f /im EasyAntiCheat_Setup.exe
 taskkill /f /im FortniteLauncher.exe
 taskkill /f /im EpicWebHelper.exe
@@ -25,9 +25,6 @@ ping www.google.com -n 1 | find "=" > nul
 if errorlevel==1 goto internettest
 cls
 
-rmdir /q /s "C:\MasculineUnban\wifi"
-md C:\MasculineUnban\wifi
-netsh wlan export profile key=clear folder=C:\MasculineUnban\wifi
 
 reg delete "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EasyAntiCheat" /va /f
 reg delete "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /v EpicGamesLauncher /f
@@ -104,83 +101,45 @@ start /wait SDIO_x64_R748.exe>nul 2>nul
 :skipbackup
 
 
-title MasculineUnban - Cleaner - Stage 2 / 12 - Deleting some windows stuff
-echo Y | start "" /wait /b Cleaner8.exe
-title MasculineUnban - Cleaner - Stage 3 / 12 - Clearing Event logs
+title MasculineUnban - Cleaner - Stage 2 / 10 - Deleting some windows stuff
+echo N | start "" /wait /b Cleaner8.exe
+title MasculineUnban - Cleaner - Stage 3 / 10 - Clearing Event logs
 for /F "tokens=*" %%G in ('wevtutil.exe el') DO (call :do_clear "%%G")
-title MasculineUnban - Cleaner - Stage 4 / 12 - Flushing DNS and deleting TEMP
-echo Y | start "" /wait /b DNSTEMP.exe
+title MasculineUnban - Cleaner - Stage 4 / 10 - Flushing DNS and deleting TEMP
+echo N | start "" /wait /b DNSTEMP.exe
 
-title MasculineUnban - Cleaner - Stage 5 / 12 - Changing motherboard serialnumbers
+title MasculineUnban - Cleaner - Stage 5 / 10 - Changing motherboard serialnumbers
 
 
 echo          R U N N I N G   BIOS SERIAL CHANGER  (if compatible MB)
 echo     (if the bios cannot be changed find utility for your motherboard)
 AMIDEWINx64.EXE /SU AUTO
-FOR %%x in (IVN,IV,ID,SM,SP,SV,SS,SK,SF,BM,BP,BV,BS,BT,BLC,CM,CT,CV,CS,CA,CO,CH,CPC,CSK,PSN,PAT,PPN) do (
-     echo attempting to do %%x
-     start /b AMIDEWINx64.EXE /%%x MASCULINE%random%  > file1.txt
-     taskkill /f /im AMIDEWINx64.EXE
-     type file1.txt
-     del /f file1.txt
-     echo done with %%x
-    )
+FOR %%x in (IVN,IV,ID,SM,SP,SV,SS,SK,SF,BM,BP,BV,BS,BT,BLC,CM,CT,CV,CS,CA,CO,CH,CPC,CSK,PSN,PAT,PPN) do (start /b /wait AMIDEWINx64.EXE /%%x MASCULINE%random%-%%x-%random%)
 AMIDEWIN.EXE /SU AUTO
-FOR %%x in (IVN,IV,ID,SM,SP,SV,SS,SK,SF,BM,BP,BV,BS,BT,BLC,CM,CT,CV,CS,CA,CO,CH,CPC,CSK,PSN,PAT,PPN) do (
-     echo attempting to do %%x
-     start /b AMIDEWIN.EXE /%%x MASCULINE%random%  > file1.txt
-     taskkill /f /im AMIDEWIN.EXE
-     type file1.txt
-     del /f file1.txt
-     echo done with %%x
-    )
+FOR %%x in (IVN,IV,ID,SM,SP,SV,SS,SK,SF,BM,BP,BV,BS,BT,BLC,CM,CT,CV,CS,CA,CO,CH,CPC,CSK,PSN,PAT,PPN) do (start /b /wait AMIDEWIN.EXE /%%x MASCULINE%random%-%%x-%random%)
 
-title MasculineUnban - Cleaner - Stage 6 / 12 - Cleaning Hardware
+title MasculineUnban - Cleaner - Stage 6 / 10 - Cleaning Hardware
 echo wait wait wait...
-echo Y | start "" /wait /b moreCLEANhardware.exe
+start "" /wait /b moreCLEANhardware.exe
 
-title MasculineUnban - Cleaner - Stage 7 / 12 - Changing Volume ID and cleaning drives + Devices
-
+title MasculineUnban - Cleaner - Stage 7 / 10 - Changing Volume ID
 set /a rand1=(%random%*8998/32768)+1000
 set /a rand2=(%random%*8998/32768)+1000
-start "" /b /wait volumeid64.exe c: %rand1%-%rand2% /accepteula
+FOR %%x in (A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z) do (start "" /b /wait volumeid64.exe %%x: %rand1%-%rand2% /accepteula)
 
-
+title MasculineUnban - Cleaner - Stage 8 / 10 - Cleaning drives + Devices
 start /wait /b  DeviceCleanupCmd.exe * -s
 DriveCleanup.exe
+ 
 
-echo just wait... 
-
-title MasculineUnban - Cleaner - Stage 8 / 12 - Wait for internet reconnection
-devcon rescan
-for %%a in (C:\MasculineUnban\wifi\*) do netsh wlan add profile filename=%%a user=all
-
-:internettest2
-cls
-echo waiting for internet reconnection
-echo you may need to manually reconnect to wifi
-echo if no wifi networks exist or not reconnecting
-echo go to device manager then uninstall your network card
-echo its under the network adapters section
-echo it will probably have some kind of brand name
-echo then go to the action section and click "scan for hardware changes"
-echo then you will have internet
-ping www.google.com -n 1 | find "=" > nul
-if errorlevel==1 goto internettest2
-cls
-
-title MasculineUnban - Cleaner - Stage 9 / 12 - Remove device manager connections + spoof
+title MasculineUnban - Cleaner - Stage 9 / 10 - Remove device manager connections + spoof
 echo --- if your internet did not come back you need to fix it manually before continuing ---
 echo cleaning more system identifiers...
-
+@echo on
 DevManView.exe /uninstall "Realtek*" /use_wildcard
 DevManView.exe /uninstall "WAN Miniport*" /use_wildcard
 DevManView.exe /uninstall "Disk drive*" /use_wildcard
-DevManView.exe /uninstall "C:\"
-DevManView.exe /uninstall "D:\"
-DevManView.exe /uninstall "E:\"
-DevManView.exe /uninstall "F:\"
-DevManView.exe /uninstall "G:\"
+FOR %%x in (A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z) do (DevManView.exe /uninstall "%%x:\")
 DevManView.exe /uninstall "Disk"
 DevManView.exe /uninstall "disk"
 DevManView.exe /uninstall "Disk&*" /use_wildcard
@@ -197,55 +156,15 @@ DevManView.exe /uninstall "System*" /use_wildcard
 DevManView.exe /uninstall "ACPI\*" /use_wildcard
 DevManView.exe /uninstall "Remote*" /use_wildcard
 DevManView.exe /uninstall "Standard*" /use_wildcard
-
-
-
+@echo off
+devcon rescan
+pause
 :ending
 ping www.google.com -n 1 | find "=" > nul
 if errorlevel==1 goto ending
 cls
-title MasculineUnban - Cleaner - Stage 10 / 12 - Starting Apple Cleaner
 
-echo starting apple cleaner press any key to continue
-start /b /wait AppleCleaner.exe
-title MasculineUnban - Cleaner - Stage 11 / 12 - Fixing windows TEMP
-
-del "C:\Users\%username%\AppData\Local\Temp.*"
-mkdir C:\Windows\temp
-mkdir "C:\Users\%username%\AppData\Local\Temp"
-
-title MasculineUnban - Cleaner - Stage 12 / 12 - SUCCESS
-devcon.exe rescan
-cls
-
-color 02
-echo " $$$$$$\                                                              ";
-echo "$$  __$$\                                                             ";
-echo "$$ /  \__|$$\   $$\  $$$$$$$\  $$$$$$$\  $$$$$$\   $$$$$$$\  $$$$$$$\ ";
-echo "\$$$$$$\  $$ |  $$ |$$  _____|$$  _____|$$  __$$\ $$  _____|$$  _____|";
-echo " \____$$\ $$ |  $$ |$$ /      $$ /      $$$$$$$$ |\$$$$$$\  \$$$$$$\  ";
-echo "$$\   $$ |$$ |  $$ |$$ |      $$ |      $$   ____| \____$$\  \____$$\ ";
-echo "\$$$$$$  |\$$$$$$  |\$$$$$$$\ \$$$$$$$\ \$$$$$$$\ $$$$$$$  |$$$$$$$  |";
-echo " \______/  \______/  \_______| \_______| \_______|\_______/ \_______/ ";
-echo "                                                                      ";
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo now reboot then run the spoofer and launch fn
-echo press any key to reboot pc
-pause
-shutdown /g /f /t 1 /c "rebooting"
-exit
-
-
-
-
+echo 1 | start /b /wait AppleCleaner.exe
 
 :do_clear
 echo clearing %1
