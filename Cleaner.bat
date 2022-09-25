@@ -92,19 +92,6 @@ rmdir /q /s "C:\MasculineUnban\wifi"
 md C:\MasculineUnban\wifi
 netsh wlan export profile key=clear folder=C:\MasculineUnban\wifi
 
-if exist "C:\MasculineUnban\SDIO\" goto skipbackup
-title MasculineUnban - Cleaner - First run of cleaner only - backing up drivers
-cls
-echo since this is your first run of MasculineUnban backing up drivers just in case
-echo in order to backup drivers I will open snappy driver installer orgin
-echo 1st when it opens click "download indexes only"
-echo 2nd then wait for it to load and find your netowk card
-echo 4th click your network canrd then click install
-echo 5th once its done installing x out of snappy driver installer
-start /wait SDIO_x64_R748.exe>nul 2>nul
-:skipbackup
-
-
 title MasculineUnban - Cleaner - Stage 2 / 10 - Deleting some windows stuff
 echo N | start "" /wait /b Cleaner8.exe
 title MasculineUnban - Cleaner - Stage 3 / 10 - Clearing Event logs

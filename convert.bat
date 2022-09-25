@@ -21,7 +21,6 @@
 ::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSZsixH95tO4tIhNZbBa8bx0x52taswQ=
 ::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSYQo2ntPlsgEQhlZanI=
 ::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSYQoxX9Op8oIDQtMewC4IAosrA4=
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSaUJ/1VlgJ1YMykPKkrlaxcxyQ==
 ::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSYUoxHNblNhCDhpMHg==
 ::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSaU92XVcndlCDhpMHg==
 ::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSaIsxXFRkccAMxhUexOlIA01vQ4=
@@ -101,28 +100,27 @@ echo.
 echo.
 echo.
 
-ECHO 1. Clean
-ECHO 2. Spoof
+ECHO 1. Spoof
+ECHO 2. Clean
 ECHO 3. Generate new account and launch fortnite
-ECHO 4. EAC FORCE BETA Test all unused accounts for EAC Accounts to test: %FilesCount%
-ECHO 5. Check Serials
-ECHO 6. Kill fortnite + semiclean
-ECHO 7. Launch Fortnite with current account
-ECHO 8. Fix Internet/Windows/AntiCheat/Activation/DLLerrors
+ECHO 4. Launch Fortnite with current account
+ECHO 5. EAC FORCE BETA Test all unused accounts for EAC Accounts to test: %FilesCount%
+ECHO 6. Check Serials
+ECHO 7. Kill fortnite + semiclean
+ECHO 8. Fix Windows/AntiCheat/Activation/DLLerrors
 ECHO 9. TEST
 
 CHOICE /C 123456789 /M "Enter your choice:"
 
 IF ERRORLEVEL 9 goto test
 IF ERRORLEVEL 8 cls&&GOTO fixes
-IF ERRORLEVEL 7 GOTO launch
-IF ERRORLEVEL 6 GOTO kill
-IF ERRORLEVEL 5 GOTO serials
-IF ERRORLEVEL 4 GOTO force
+IF ERRORLEVEL 7 GOTO kill
+IF ERRORLEVEL 6 GOTO serials
+IF ERRORLEVEL 5 GOTO force
+IF ERRORLEVEL 4 GOTO launch
 IF ERRORLEVEL 3 GOTO gen
-IF ERRORLEVEL 2 GOTO spoof
-IF ERRORLEVEL 1 GOTO clean
-
+IF ERRORLEVEL 2 GOTO clean
+IF ERRORLEVEL 1 GOTO spoof
 
 
 :checkspoof
@@ -227,12 +225,6 @@ GOTO start
 start "" /wait /b "Serials.bat"
 GOTO start
 
-:driverbackup
-echo if you actually backed up the driver when you first ran the cleaner
-echo it should have your network adapter here
-start /wait SDIO_x64_R748.exe>nul 2>nul
-pause
-goto fixes
 
 :activate
 start /wait activate.bat
@@ -256,23 +248,17 @@ echo.
 echo.
 
 ECHO 1. Go Back
-ECHO 2. Fix inernet by reinstalling drivers
-ECHO 3. Fix Easy anticheat and BattlEye
-ECHO 4. Windows Image Fix
-ECHO 5. Activate windows
-ECHO 6. Fix DLL not found errors
+ECHO 2. Fix Easy anticheat and BattlEye
+ECHO 3. Windows Image Fix
+ECHO 4. Activate windows
+ECHO 5. Fix DLL not found errors
 
 
-CHOICE /C 123456 /M "Enter your choice:"
+CHOICE /C 12345 /M "Enter your choice:"
 
 
-IF ERRORLEVEL 6 GOTO dlls
-IF ERRORLEVEL 5 GOTO activate
-IF ERRORLEVEL 4 GOTO fix
-IF ERRORLEVEL 3 GOTO fixbeeac
-IF ERRORLEVEL 2 GOTO driverbackup
+IF ERRORLEVEL 5 GOTO dlls
+IF ERRORLEVEL 4 GOTO activate
+IF ERRORLEVEL 3 GOTO fix
+IF ERRORLEVEL 2 GOTO fixbeeac
 IF ERRORLEVEL 1 GOTO start
-
-
-echo u broke it somehow
-goto START
