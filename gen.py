@@ -9,7 +9,7 @@ if __name__ == '__main__':
         import undetected_chromedriver
     except:
         os.system('C:\MasculineUnban\Python\Scripts\pip.exe install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org undetected_chromedriver')
-        os.system('C:\MasculineUnban\Python\Scripts\pip.exe --trusted-host pypi.python.org --trusted-host files.pythonhosted.org legendary-gl')
+        os.system('C:\MasculineUnban\Python\Scripts\pip.exe install --trusted-host pypi.python.org --trusted-host files.pythonhosted.org legendary-gl')
     try:
         open('C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe')
     except:
@@ -122,6 +122,12 @@ if __name__ == '__main__':
             break
         time.sleep(0.2)
     print('done')
+    switch(1)
+    print("waiting for user to complete epicgames captcha")
+    wait.until(EC.visibility_of_element_located((By.XPATH, "//*[contains(text(), 'Please verify your email')]")))
+    print("verifying email address")
+    switch(0)
+    print("waiting to recieve verification email")
     while True:
         try:
             driver.find_element(By.XPATH, "/html/body/div[3]/div/div/div/div[2]/button[2]").click()
@@ -134,14 +140,6 @@ if __name__ == '__main__':
             break
         except:
             pass
-        time.sleep(0.1)
-    switch(1)
-    print("waiting for user to complete epicgames captcha")
-    wait.until(EC.visibility_of_element_located((By.XPATH, "//*[contains(text(), 'Please verify your email')]")))
-    print("verifying email address")
-    switch(0)
-    print("waiting to recieve verification email")
-    time.sleep(2)
     wait.until(EC.visibility_of_element_located((By.XPATH, "//*[contains(text(), 'Epic Games')]"))).click()
     print("getting verification code from email")
     time.sleep(5)
@@ -160,7 +158,16 @@ if __name__ == '__main__':
     print("adding fortnite to your list of games")
     wait.until(EC.visibility_of_element_located((By.XPATH,'/html/body/div[1]/div/div[4]/main/div[2]/div/div/div/div[2]/div[4]/div/aside/div/div/div[6]/div/button'))).click()
     wait.until(EC.visibility_of_element_located((By.ID, "agree"))).click()
-    wait.until(EC.visibility_of_element_located((By.XPATH, '/html/body/div[6]/div/div/div/div[2]/div/div[2]/button'))).click()
+    print("trying to click accept")
+    while True:
+        try:
+            driver.find_element(By.XPATH, '/html/body/div[6]/div/div/div/div[2]/div/div[2]/button').click()
+            break
+        except:pass
+        try:
+           driver.find_element(By.XPATH, '/html/body/div[7]/div/div/div/div[2]/div/div[2]/button').click()
+           break
+        except:pass
     currenttime = time.strftime("%b-%d-%Y %I:%M")
     print(f"{email}:{password} Username:{username} FirstName:{firstname} LastName:{lastname} Time:{currenttime}\n")
     with open(f"C:\\MasculineUnban\\saved_accounts.txt", "a") as f:
@@ -170,5 +177,13 @@ if __name__ == '__main__':
     print("Saved Account to saved_accounts.txt")
     print("waiting untill place order button exists SIKE PRESS IT YOURSELF BITCH")
     print("waiting untill order confirmed screen appears to launch fn")
-    wait.until(EC.visibility_of_element_located((By.XPATH, "/html/body/div[6]/div/div/div[2]/div/div/div/div[2]/div[3]/button")))
+    while True:
+        try:
+            driver.find_element(By.XPATH, '/html/body/div[7]/div/div/div[2]/div/div/div/div[2]/div[3]/button').click()
+            break
+        except:pass
+        try:
+           driver.find_element(By.XPATH, '/html/body/div[6]/div/div/div[2]/div/div/div/div[2]/div[3]/button').click()
+           break
+        except:pass
     os.system("start /wait /b launch.bat")
