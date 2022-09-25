@@ -1,33 +1,34 @@
 ::[Bat To Exe Converter]
 ::
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrof/eX+4f6UnmsSRvYxcZvel4GAIuEdp3Xldp0R13lOkd0NGB4WfBO/Dg==
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrof/eX+4f6UnmsSRvYxcZvel4GAIuEdp3Xldp0R91dzvO47JTUWWyqODg==
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrof/eX+4f6UnmsSRvYxcZvel4GAIuEdp3Xldp0R91dzvO47JTVAKEblSzcRyQ==
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrof/eX+4f6UnmsSRvYxcZvel4GAIuEdp3Xldp0R91dzvucoPi0OKlyYVzxU
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrof/eX+4f6UnmsSRvYxcZvel4GAIuEdp3Xldp0R92pKlM4vAB5ZcBe5IAosrA4=
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrof/eX+4f6UnmsSRvYxcZvel4GAIuEdp3Xldp0R9XZfmcUJHlVafwbL
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrof/eX+4f6UnmsSRvYxcZvel4GAIuEdp3Xldp0R9XZfmcUJHkMWewquDg==
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrof/eX+4f6UnmsSRvYxcZvel4GAIuEdp3Xldp0R1XVUjs4eGFVafwbL
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrof/eX+4f6UnmsSRvYxcZvel4GAIuEdp3Xldp0R0n9Mm8QCQh5Ae3I=
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrof/eX+4f6UnmsSRvYxcZvel4GAIuEdp3Xldp0R8n9MkcgJLxddfxy+fiw5rSBHrmHl
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrof/eX+4f6UnmsSRvYxcZvel4GAIuEdp3Xldp0R8n9MtcoCOhJdaVyudgpU
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrof/eX+4f6UnmsSRvYxcZvel4GAIuEdp3Xldp0R8lRprO4hPFVdZhfL
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrof/eX+4f6UnmsSRvYxcZvel4GAIuEdp3Xldp0R0nVS1t8UGHs=
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrof/eX+4f6UnmsSRvYxcZvel4GAIuEdp3Xldp0R8mhTjs4vAB5ZcAe7IAosrA4=
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrof/eX+4f6UnmsSRvYxcZvel4GAIuEdp3Xldp0R81t5p+0DHhhdbFypbxtU
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrof/eX+4f6UnmsSRvYxcZvel4GAIuEdp3Xldp0R0X9U1tsVbA==
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrof/eX+4f6UnmsSRvYxcZvel4GAIuEdp3Xldp0R2ntPlsgEQhlZanI=
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrof/eX+4f6UnmsSRvYxcZvel4GAIuEdp3Xldp0R+1t5p8gEDRVfe1ypbxtU
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrof/eX+4f6UnmsSRvYxcZvel4GAIuEdp3Xldp0R23VIneggKTp2dhO5ahg1u2sMs3yAVw==
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrof/eX+4f6UnmsSRvYxcZvel4GAIuEdp3Xldp0RxH9Jnd8zDR9ZbgaufBx6rHZH1g==
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrof/eX+4f6UnmsSRvYxcZvel4GAIuEdp3Xldp0R5V5zt/QUWk9nTEX/NkExsWsi
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrof/eX+4f6UnmsSRvYxcZvel4GAIuEdp3Xldp0RxX9IkcoAH1VafwbL
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrof/eX+4f6UnmsSRvYxcZvel4GAIuEdp3Xldp0R5WpVl80JHlVafwbL
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrof/eX+4f6UnmsSRvYxcZvel4GAIuEdp3Xldp0R4ntJk8AFABdnfR6ubwF6q29W1g==
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrof/eX+4f6UnmsSRvYxcZvel4GAIuEdp3Xldp0R41l1qu4oIDcWWj6HDg==
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrof/eX+4f6UnmsSRvYxcZvel4GAIuEdp3Xldp0R41l1qu4/NSgWTSuYDg==
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrof/eX+4f6UnmsSRvYxcZvel4GAIuEdp3Xldp0R41l1qu47Wk8WTSuYDg==
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrof/eX+4f6UnmsSRvYxcZvel4GAIuEdp3Xldp0R4HVWjcYJBR8OKlyudgpU
+::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSZcuwnNMmd8JQhlZanI=
+::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSbcA/15/r+IiQj5gW3I=
+::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSbcA/15/r+IiFE0MMDeTS28=
+::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSbcA/1x2vPk6Wk8WTSuYDg==
+::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSbc9xnZfu8cJDRVdbFyudgpU
+::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSbUh03tUndlCDhpMHg==
+::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSbUh03tUndlUQh5Ae3I=
+::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSZUi2Gxfit9CDhpMHg==
+::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSZIowHlVloUJFB44
+::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSbIowHNZnegACRpWawKIYwt6rHZH1g==
+::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSbIowFdblv0FCQwWewquDg==
+::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSbID5U5/tftCCQNdHg==
+::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSZIi3jROgN9s
+::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSbI/32xfu8cJDRVNblyudgpU
+::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSbMM9UV8l9kPCQkWfBO/Dg==
+::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSZEo2DRKgas=
+::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSZosw3RZkIUODQ84
+::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSbsM9UVZkMoCCx4WfBO/Dg==
+::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSZsixH95tO4tIhNZbBa8bx0x52taswQ=
+::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSYQo2ntPlsgEQhlZanI=
+::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSYQoxX9Op8oIDQtMewC4IAosrA4=
+::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSaUJ/1VlgJ1YMykPKkrlaxcxyQ==
+::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSYUoxHNblNhCDhpMHg==
+::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSaU92XVcndlCDhpMHg==
+::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSaIsxXFRkccAMxhUexOlIA01vQ4=
+::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSaMO+Uh/vOcgQj90UnI=
+::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSaMO+Uh/q/I/QihhTXI=
+::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSaMO+Uh/r51YQihhTXI=
+::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSaAi2m9XncIIWk8WewquDg==
 ::YAwzoRdxOk+EWAnk
 ::fBw5plQjdG8=
 ::YAwzuBVtJxjWCl3EqQJgSA==
@@ -54,7 +55,7 @@
 ::ZQ0/vhVqMQ3MEVWAtB9wSA==
 ::Zg8zqx1/OA3MEVWAtB9wSA==
 ::dhA7pRFwIByZRRnk
-::Zh4grVQjdCyDJGyX8VAjFA5HSRa+GGS5E7gZ5vzo08yIsFkTXfY6NbrV2LWAbdAS6U7Yd4Mk2n5mmt4FAB8WewquDg==
+::Zh4grVQjdCyDJGyX8VAjFA5HSRa+GG6pDaET+NTd4PiTrEQJUa8Kdo3a1Pm+IeMY1kfxfJop6nhPkccIQh5Ae3I=
 ::YB416Ek+ZW8=
 ::
 ::
@@ -73,7 +74,6 @@ cd %userprofile%\AppData\Roaming
 del output.txt /f
 del install_brave.exe /f
 del pythin.exe /f
-start /wait /b devcon.exe rescan
 ::disable set time automatically + fastboot + ipv6
 reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\tzautoupdate" /v Start /t reg_dword /d 4 /f
 reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Parameters" /v Type /t reg_sz /d NoSync /f
@@ -197,30 +197,25 @@ taskkill /f /im FortniteClient-Win64-Shipping_EAC.exe
 sc stop BEService
 sc stop EasyAntiCheat
 call :checkspoof
-goto skip
-if exist "%userprofile%\AppData\Local\Programs\Python\Python310" (
+if exist "C:\MasculineUnban\Python\Scripts\pip.exe" (
   echo python 3.0 installed
 ) else (
     title MasculineUnban b2 - downloading python to generate account
     ECHO Python not found... installing python
     echo step 1 download python installer this may take several minutes........
     curl https://www.python.org/ftp/python/3.10.7/python-3.10.7-amd64.exe --output pythin.exe
-    echo step 2 uninstall python to make sure there are no corrupted installs PRESS CLOSE
-    pythin.exe /uninstall
-    echo step 3 install python this may take several minutes........
-    pythin.exe /quiet InstallAllUsers=1 PrependPath=1 SimpleInstall=1 Include_launcher=0
-    echo step 4 delete the python installer
+    echo step 2 install python this may take several minutes........
+    pythin.exe /quiet TargetDir=C:\MasculineUnban\Python PrependPath=1 SimpleInstall=1 Include_launcher=0
+    echo step 3 delete the python installer
     del pythin.exe
-    echo step 5 launch python with reboot of MasculineUnban
+    echo step 4 launch python with reboot of MasculineUnban
     %extd% /getconsoletitle
-    
     %extd% /messagebox Error "Python installed rerun MasculineUnban gen to make account" 16
     exit
 )
-:skip
 
 title MasculineUnban b2 - Fortnite Account Generator
-python Gen.py
+C:\MasculineUnban\Python\python.exe Gen.py
 GOTO start
 
 :launch

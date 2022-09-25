@@ -8,8 +8,8 @@ if __name__ == '__main__':
         import legendary
         import undetected_chromedriver
     except:
-        os.system('pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org undetected_chromedriver')
-        os.system('pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org legendary-gl')
+        os.system('C:\MasculineUnban\Python\Scripts\pip.exe install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org undetected_chromedriver')
+        os.system('C:\MasculineUnban\Python\Scripts\pip.exe --trusted-host pypi.python.org --trusted-host files.pythonhosted.org legendary-gl')
     try:
         open('C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe')
     except:
@@ -154,7 +154,8 @@ if __name__ == '__main__':
     random = random.randint(1,10000)
     print("deleting any old accounts if present")
     os.system('rmdir /q /s "C:\\Users\\%username%\\.config\\legendary"')
-    os.system(f"%userprofile%\AppData\Local\Programs\Python\Python310\Scripts\legendary.exe auth --code {authcode}")
+    print("trying to login")
+    os.system(f"C:\MasculineUnban\Python\Scripts\legendary.exe auth --code {authcode}")
     driver.get("https://store.epicgames.com/en-US/p/fortnite")
     print("adding fortnite to your list of games")
     wait.until(EC.visibility_of_element_located((By.XPATH,'/html/body/div[1]/div/div[4]/main/div[2]/div/div/div/div[2]/div[4]/div/aside/div/div/div[6]/div/button'))).click()

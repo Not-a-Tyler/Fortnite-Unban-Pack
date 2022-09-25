@@ -65,10 +65,9 @@ REG ADD HKLM\SYSTEM\CurrentControlSet\Control\ComputerName\ComputerName /v Compu
 REG ADD HKLM\SYSTEM\CurrentControlSet\Control\ComputerName\ActiveComputerName /v ComputerName /t REG_SZ /d %random% /f 1>nul 2>nul
 reg delete "HKEY_CURRENT_USER\Software\Epic Games" /f 1>nul 2>nul
 
+C:\MasculineUnban\Python\Scripts\legendary.exe import --disable-check Fortnite "C:\Program Files\Epic Games\Fortnite"
 
-echo launching
-%userprofile%\AppData\Local\Programs\Python\Python310\Scripts\legendary.exe import --disable-check Fortnite "C:\Users\user\Games\Fortnite"
-%userprofile%\AppData\Local\Programs\Python\Python310\Scripts\legendary.exe launch Fortnite --skip-version-check
+C:\MasculineUnban\Python\Scripts\legendary.exe launch Fortnite --skip-version-check
 echo launched fortnite (hopefully)
 
 PING localhost -n 2 >NUL
