@@ -152,6 +152,7 @@ devcon rescan
 title MasculineUnban - Cleaner - Stage 10 / 11 - Waiting for user to get done with apple cleaner
 cls
 echo waiting for you to close applecleaner to finish cleaning
+echo type N when the Terminate batch job appears
 start "" /wait AppleCleaner.exe
 title MasculineUnban - Cleaner - Stage 11 / 11 - SUCCESS
 cls
