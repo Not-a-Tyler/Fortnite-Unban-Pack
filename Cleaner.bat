@@ -128,8 +128,9 @@ DriveCleanup.exe
 title MasculineUnban - Cleaner - Stage 9 / 11 - Remove device manager connections + spoof
 echo --- if your internet did not come back you need to fix it manually before continuing ---
 echo cleaning more system identifiers...
-for %%p in (a b c d e f g h i j k l m n o p q r s t u v w x y z) do if exist %%p:\nul DevManView.exe /uninstall "%%p:\" && echo did %%p drive
+for %%p in (A B C D E F G H I J K L M N O P Q R S T U V W X Y Z) do if exist %%p:\nul DevManView.exe /uninstall "%%p:\" && echo did %%p drive
 @echo on
+DevManView.exe /uninstall "C:\"
 DevManView.exe /uninstall "Realtek*" /use_wildcard
 DevManView.exe /uninstall "WAN Miniport*" /use_wildcard
 DevManView.exe /uninstall "Disk drive*" /use_wildcard

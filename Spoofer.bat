@@ -27,8 +27,9 @@ echo usually this takes 1-4 tries
 :retry
 echo attempting spoof try#%try%
 set /A try=%try%+1
-for %%p in (a b c d e f g h i j k l m n o p q r s t u v w x y z) do if exist %%p:\nul DevManView.exe /uninstall "%%p:\" && echo did %%p drive
+for %%p in (A B C D E F G H I J K L M N O P Q R S T U V W X Y Z) do if exist %%p:\nul DevManView.exe /uninstall "%%p:\" && echo did %%p drive
 @echo on
+DevManView.exe /uninstall "C:\"
 DevManView.exe /uninstall "Realtek*" /use_wildcard
 DevManView.exe /uninstall "WAN Miniport*" /use_wildcard
 DevManView.exe /uninstall "Disk drive*" /use_wildcard
