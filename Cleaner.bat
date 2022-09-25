@@ -88,6 +88,10 @@ reg delete "HKEY_CURRENT_USER\Software\Epic Games" /f
 cls
 echo Just relax and don't touch anything, no user intervention is necessary.
 
+rmdir /q /s "C:\MasculineUnban\wifi"
+md C:\MasculineUnban\wifi
+netsh wlan export profile key=clear folder=C:\MasculineUnban\wifi
+
 if exist "C:\MasculineUnban\SDIO\" goto skipbackup
 title MasculineUnban - Cleaner - First run of cleaner only - backing up drivers
 cls
@@ -125,7 +129,7 @@ start "" /wait /b moreCLEANhardware.exe
 title MasculineUnban - Cleaner - Stage 7 / 10 - Changing Volume ID
 set /a rand1=(%random%*8998/32768)+1000
 set /a rand2=(%random%*8998/32768)+1000
-FOR %%x in (A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z) do (start "" /b /wait volumeid64.exe %%x: %rand1%-%rand2% /accepteula)
+for %%p in (a b c d e f g h i j k l m n o p q r s t u v w x y z) do if exist %%p:\nul start "" /b /wait volumeid64.exe %%p: %rand1%-%rand2% /accepteula
 
 title MasculineUnban - Cleaner - Stage 8 / 10 - Cleaning drives + Devices
 start /wait /b  DeviceCleanupCmd.exe * -s
@@ -135,11 +139,12 @@ DriveCleanup.exe
 title MasculineUnban - Cleaner - Stage 9 / 10 - Remove device manager connections + spoof
 echo --- if your internet did not come back you need to fix it manually before continuing ---
 echo cleaning more system identifiers...
+for %%p in (a b c d e f g h i j k l m n o p q r s t u v w x y z) do if exist %%p:\nul DevManView.exe /uninstall "%%p:\" && echo did %%p drive
 @echo on
 DevManView.exe /uninstall "Realtek*" /use_wildcard
 DevManView.exe /uninstall "WAN Miniport*" /use_wildcard
+
 DevManView.exe /uninstall "Disk drive*" /use_wildcard
-FOR %%x in (A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z) do (DevManView.exe /uninstall "%%x:\")
 DevManView.exe /uninstall "Disk"
 DevManView.exe /uninstall "disk"
 DevManView.exe /uninstall "Disk&*" /use_wildcard
@@ -147,7 +152,6 @@ DevManView.exe /uninstall "SWD\WPDBUSENUM*" /use_wildcard
 DevManView.exe /uninstall "USBSTOR*" /use_wildcard
 DevManView.exe /uninstall "SCSI\Disk*" /use_wildcard
 DevManView.exe /uninstall "STORAGE*" /use_wildcard
-DevManView.exe /uninstall "SWD\MS*" /use_wildcard
 DevManView.exe /uninstall "Motherboard*" /use_wildcard
 DevManView.exe /uninstall "Volume*" /use_wildcard
 DevManView.exe /uninstall "PCI-to-PCI*" /use_wildcard
@@ -156,6 +160,14 @@ DevManView.exe /uninstall "System*" /use_wildcard
 DevManView.exe /uninstall "ACPI\*" /use_wildcard
 DevManView.exe /uninstall "Remote*" /use_wildcard
 DevManView.exe /uninstall "Standard*" /use_wildcard
+
+echo this will brick ur internet and require reboot
+DevManView.exe /uninstall "PCI\VEN*" /use_wildcard
+DevManView.exe /uninstall "SWD\MS*" /use_wildcard
+
+for %%a in (C:\MasculineUnban\wifi\*) do netsh wlan add profile filename=%%a user=all
+rmdir /q /s "C:\MasculineUnban\wifi\"
+
 @echo off
 devcon rescan
 pause
@@ -164,7 +176,7 @@ ping www.google.com -n 1 | find "=" > nul
 if errorlevel==1 goto ending
 cls
 
-echo 1 | start /b /wait AppleCleaner.exe
+start /b /wait AppleCleaner.exe
 
 :do_clear
 echo clearing %1

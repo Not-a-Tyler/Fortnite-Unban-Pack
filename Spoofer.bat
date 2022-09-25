@@ -12,12 +12,6 @@ taskkill /f /im FortniteClient-Win64-Shipping_BE.exe
 taskkill /f /im FortniteClient-Win64-Shipping_EAC.exe
 sc stop BEService
 sc stop EasyAntiCheat
-rmdir /q /s "C:\MasculineUnban\wifi"
-md C:\MasculineUnban\wifi
-netsh wlan export profile key=clear folder=C:\MasculineUnban\wifi
-
-echo attempting spoof your internet will cut out
-DevManView.exe /uninstall "PCI\VEN*" /use_wildcard
 
 start /wait /b  DeviceCleanupCmd.exe * -s
 DriveCleanup.exe
@@ -31,16 +25,11 @@ echo usually this takes 1-4 tries
 :retry
 echo attempting spoof try#%try%
 set /A try=%try%+1
-
-
+for %%p in (a b c d e f g h i j k l m n o p q r s t u v w x y z) do if exist %%p:\nul DevManView.exe /uninstall "%%p:\" && echo did %%p drive
+@echo on
 DevManView.exe /uninstall "Realtek*" /use_wildcard
 DevManView.exe /uninstall "WAN Miniport*" /use_wildcard
 DevManView.exe /uninstall "Disk drive*" /use_wildcard
-DevManView.exe /uninstall "C:\"
-DevManView.exe /uninstall "D:\"
-DevManView.exe /uninstall "E:\"
-DevManView.exe /uninstall "F:\"
-DevManView.exe /uninstall "G:\"
 DevManView.exe /uninstall "Disk"
 DevManView.exe /uninstall "disk"
 DevManView.exe /uninstall "Disk&*" /use_wildcard
@@ -56,6 +45,7 @@ DevManView.exe /uninstall "System*" /use_wildcard
 DevManView.exe /uninstall "ACPI\*" /use_wildcard
 DevManView.exe /uninstall "Remote*" /use_wildcard
 DevManView.exe /uninstall "Standard*" /use_wildcard
+@echo off
 
 echo wait....
 PING localhost -n 15 >NUL
@@ -69,8 +59,6 @@ echo spoof success fixing internet
 
 del output.txt /f1>nul 2>nul
 devcon rescan
-for %%a in (C:\MasculineUnban\wifi\*) do netsh wlan add profile filename=%%a user=all
-rmdir /q /s "C:\MasculineUnban\wifi\"
 :internettest
 cls
 echo waiting for internet reconnection
