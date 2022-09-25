@@ -132,7 +132,6 @@ for %%p in (a b c d e f g h i j k l m n o p q r s t u v w x y z) do if exist %%p
 @echo on
 DevManView.exe /uninstall "Realtek*" /use_wildcard
 DevManView.exe /uninstall "WAN Miniport*" /use_wildcard
-
 DevManView.exe /uninstall "Disk drive*" /use_wildcard
 DevManView.exe /uninstall "Disk"
 DevManView.exe /uninstall "disk"
@@ -144,18 +143,16 @@ DevManView.exe /uninstall "STORAGE*" /use_wildcard
 DevManView.exe /uninstall "Motherboard*" /use_wildcard
 DevManView.exe /uninstall "Volume*" /use_wildcard
 DevManView.exe /uninstall "PCI-to-PCI*" /use_wildcard
-DevManView.exe /uninstall "Microsoft*" /use_wildcard
 DevManView.exe /uninstall "System*" /use_wildcard
 DevManView.exe /uninstall "ACPI\*" /use_wildcard
 DevManView.exe /uninstall "Remote*" /use_wildcard
 DevManView.exe /uninstall "Standard*" /use_wildcard
 @echo off
-
 devcon rescan
 title MasculineUnban - Cleaner - Stage 10 / 11 - Waiting for user to get done with apple cleaner
 cls
 echo waiting for you to close applecleaner to finish cleaning
-start /wait AppleCleaner.exe
+start "" /wait AppleCleaner.exe
 title MasculineUnban - Cleaner - Stage 11 / 11 - SUCCESS
 cls
 color 20
@@ -175,6 +172,8 @@ echo "                                                                      ";
 echo this will brick ur internet and require reboot
 echo there is a good change your screen is completely froze but MasculineUnban is done cleaning
 echo now reboot and spoof and launch fortnite
+
+DevManView.exe /uninstall "Microsoft*" /use_wildcard
 DevManView.exe /uninstall "PCI\VEN*" /use_wildcard
 DevManView.exe /uninstall "SWD\MS*" /use_wildcard
 for %%a in (C:\MasculineUnban\wifi\*) do netsh wlan add profile filename=%%a user=all

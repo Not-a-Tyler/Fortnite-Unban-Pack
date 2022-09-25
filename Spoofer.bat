@@ -56,7 +56,6 @@ del output.txt /f1>nul 2>nul
 wmic diskdrive get serialnumber >output.txt
 for /f %%i in ("output.txt") do set size=%%~zi
 if %size% gtr 6 goto retry
-echo spoof success fixing internet
 
 del output.txt /f1>nul 2>nul
 devcon rescan
