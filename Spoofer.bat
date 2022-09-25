@@ -13,6 +13,8 @@ taskkill /f /im FortniteClient-Win64-Shipping_EAC.exe
 sc stop BEService
 sc stop EasyAntiCheat
 
+DevManView.exe /uninstall "SWD\MS*" /use_wildcard
+
 start /wait /b  DeviceCleanupCmd.exe * -s
 DriveCleanup.exe
 echo just wait... 
@@ -37,7 +39,6 @@ DevManView.exe /uninstall "SWD\WPDBUSENUM*" /use_wildcard
 DevManView.exe /uninstall "USBSTOR*" /use_wildcard
 DevManView.exe /uninstall "SCSI\Disk*" /use_wildcard
 DevManView.exe /uninstall "STORAGE*" /use_wildcard
-DevManView.exe /uninstall "SWD\MS*" /use_wildcard
 DevManView.exe /uninstall "Motherboard*" /use_wildcard
 DevManView.exe /uninstall "Volume*" /use_wildcard
 DevManView.exe /uninstall "Microsoft*" /use_wildcard

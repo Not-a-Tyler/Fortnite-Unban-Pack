@@ -112,9 +112,8 @@ for /F "tokens=*" %%G in ('wevtutil.exe el') DO (call :do_clear "%%G")
 title MasculineUnban - Cleaner - Stage 4 / 10 - Flushing DNS and deleting TEMP
 echo N | start "" /wait /b DNSTEMP.exe
 
+
 title MasculineUnban - Cleaner - Stage 5 / 10 - Changing motherboard serialnumbers
-
-
 echo          R U N N I N G   BIOS SERIAL CHANGER  (if compatible MB)
 echo     (if the bios cannot be changed find utility for your motherboard)
 AMIDEWINx64.EXE /SU AUTO
@@ -125,11 +124,17 @@ FOR %%x in (IVN,IV,ID,SM,SP,SV,SS,SK,SF,BM,BP,BV,BS,BT,BLC,CM,CT,CV,CS,CA,CO,CH,
 title MasculineUnban - Cleaner - Stage 6 / 10 - Cleaning Hardware
 echo wait wait wait...
 start "" /wait /b moreCLEANhardware.exe
+echo this will brick ur internet and require reboot
+DevManView.exe /uninstall "PCI\VEN*" /use_wildcard
+DevManView.exe /uninstall "SWD\MS*" /use_wildcard
 
 title MasculineUnban - Cleaner - Stage 7 / 10 - Changing Volume ID
 set /a rand1=(%random%*8998/32768)+1000
 set /a rand2=(%random%*8998/32768)+1000
 for %%p in (a b c d e f g h i j k l m n o p q r s t u v w x y z) do if exist %%p:\nul start "" /b /wait volumeid64.exe %%p: %rand1%-%rand2% /accepteula
+set /a rand3=(%random%*8998/32768)+1000
+set /a rand4=(%random%*8998/32768)+1000
+start "" /b /wait volumeid64.exe C: %rand4%-%rand3% /accepteula
 
 title MasculineUnban - Cleaner - Stage 8 / 10 - Cleaning drives + Devices
 start /wait /b  DeviceCleanupCmd.exe * -s
@@ -161,21 +166,12 @@ DevManView.exe /uninstall "ACPI\*" /use_wildcard
 DevManView.exe /uninstall "Remote*" /use_wildcard
 DevManView.exe /uninstall "Standard*" /use_wildcard
 
-echo this will brick ur internet and require reboot
-DevManView.exe /uninstall "PCI\VEN*" /use_wildcard
-DevManView.exe /uninstall "SWD\MS*" /use_wildcard
 
 for %%a in (C:\MasculineUnban\wifi\*) do netsh wlan add profile filename=%%a user=all
 rmdir /q /s "C:\MasculineUnban\wifi\"
 
 @echo off
 devcon rescan
-pause
-:ending
-ping www.google.com -n 1 | find "=" > nul
-if errorlevel==1 goto ending
-cls
-
 start /b /wait AppleCleaner.exe
 
 :do_clear
