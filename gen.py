@@ -79,16 +79,24 @@ if __name__ == '__main__':
     driver.execute_script("window.open('');")
     driver.switch_to.window(driver.window_handles[1])
     driver.get("https://www.epicgames.com/id/register/date-of-birth?redirectUrl=https%3A//www.epicgames.com/id/api/redirect%3FclientId%3D34a02cf8f4414e29b15921876da36f9a%26responseType%3Dcode")
-    print("typeing in birthday")
-    wait.until(EC.visibility_of_element_located((By.ID, "month"))).click()
-    driver.find_element(By.XPATH, "//*[contains(text(), 'Jan')]").click()
-    driver.find_element(By.ID, "day").click()
-    driver.find_element(By.TAG_NAME, "li").click()
-    driver.find_element(By.ID, "year").send_keys("2000")
-    wait.until(EC.visibility_of_element_located((By.ID, 'continue'))).click()
-    wait.until(EC.visibility_of_element_located((By.ID, "name"))).send_keys(firstname)
+    print("determing if us or another country")
+    while True:
+        try:
+            driver.find_element(By.ID, "month").click()
+            driver.find_element(By.XPATH, "//*[contains(text(), 'Jan')]").click()
+            wait.until(EC.visibility_of_element_located((By.ID, "day"))).click()
+            driver.find_element(By.TAG_NAME, "li").click()
+            driver.find_element(By.ID, "year").send_keys("2000")
+            wait.until(EC.visibility_of_element_located((By.ID, 'continue'))).click()
+            wait.until(EC.visibility_of_element_located((By.ID, "name"))).send_keys(firstname)
+            break
+        except:pass
+        try:
+            driver.find_element(By.ID, "name").send_keys(firstname)
+            break
+        except:pass
     print("typeing in other info")
-    driver.find_element(By.ID, "lastName").send_keys(lastname)
+    wait.until(EC.visibility_of_element_located((By.ID, "lastName"))).send_keys(lastname)
     driver.find_element(By.ID, "email").send_keys(email.lower())
     driver.find_element(By.ID, "password").send_keys(password)
     driver.find_element(By.ID, "tos").click()
