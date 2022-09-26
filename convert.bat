@@ -197,7 +197,7 @@ taskkill /f /im FortniteClient-Win64-Shipping_EAC.exe
 sc stop BEService
 sc stop EasyAntiCheat
 call :checkspoof
-
+goto skip
 if exist "%userprofile%\AppData\Local\Programs\Python\Python310" (
   echo python 3.0 installed
 ) else (
@@ -217,7 +217,7 @@ if exist "%userprofile%\AppData\Local\Programs\Python\Python310" (
     %extd% /messagebox Error "Python installed rerun MasculineUnban gen to make account" 16
     exit
 )
-
+:skip
 
 title MasculineUnban b2 - Fortnite Account Generator
 python Gen.py
