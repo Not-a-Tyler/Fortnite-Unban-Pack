@@ -203,7 +203,7 @@ if exist "C:\MasculineUnban\Python\Scripts\pip.exe" (
     echo step 1 download python installer this may take several minutes........
     curl https://www.python.org/ftp/python/3.10.7/python-3.10.7-amd64.exe --output pythin.exe
     echo step 2 install python this may take several minutes........
-    pythin.exe /quiet TargetDir=C:\MasculineUnban\Python PrependPath=1 SimpleInstall=1 Include_launcher=0
+    pythin.exe TargetDir=C:\MasculineUnban\Python PrependPath=1 SimpleInstall=1 Include_launcher=0
     echo step 3 delete the python installer
     del pythin.exe
     echo step 4 launch python with reboot of MasculineUnban

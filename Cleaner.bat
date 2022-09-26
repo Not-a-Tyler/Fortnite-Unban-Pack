@@ -1,5 +1,5 @@
 @echo off
-title MasculineUnban - Cleaner - Stage 1 / 11 - Taskkill fn and delete some basics
+title MasculineUnban - Cleaner - Stage 1 / 10 - Taskkill fn and delete some basics
 taskkill /f /im EasyAntiCheat_Setup.exe
 taskkill /f /im FortniteLauncher.exe
 taskkill /f /im EpicWebHelper.exe
@@ -92,15 +92,15 @@ rmdir /q /s "C:\MasculineUnban\wifi"
 md C:\MasculineUnban\wifi
 netsh wlan export profile key=clear folder=C:\MasculineUnban\wifi
 
-title MasculineUnban - Cleaner - Stage 2 / 11 - Deleting some windows stuff
+title MasculineUnban - Cleaner - Stage 2 / 10 - Deleting some windows stuff
 echo N | start "" /wait /b Cleaner8.exe
-title MasculineUnban - Cleaner - Stage 3 / 11 - Clearing Event logs
+title MasculineUnban - Cleaner - Stage 3 / 10 - Clearing Event logs
 for /F "tokens=*" %%G in ('wevtutil.exe el') DO (call :do_clear "%%G")
-title MasculineUnban - Cleaner - Stage 4 / 11 - Flushing DNS and deleting TEMP
+title MasculineUnban - Cleaner - Stage 4 / 10 - Flushing DNS and deleting TEMP
 echo N | start "" /wait /b DNSTEMP.exe
 
 
-title MasculineUnban - Cleaner - Stage 5 / 11 - Changing motherboard serialnumbers
+title MasculineUnban - Cleaner - Stage 5 / 10 - Changing motherboard serialnumbers
 echo          R U N N I N G   BIOS SERIAL CHANGER  (if compatible MB)
 echo     (if the bios cannot be changed find utility for your motherboard)
 AMIDEWINx64.EXE /SU AUTO
@@ -108,11 +108,7 @@ FOR %%x in (IVN,IV,ID,SM,SP,SV,SS,SK,SF,BM,BP,BV,BS,BT,BLC,CM,CT,CV,CS,CA,CO,CH,
 AMIDEWIN.EXE /SU AUTO
 FOR %%x in (IVN,IV,ID,SM,SP,SV,SS,SK,SF,BM,BP,BV,BS,BT,BLC,CM,CT,CV,CS,CA,CO,CH,CPC,CSK,PSN,PAT,PPN) do (start /b /wait AMIDEWIN.EXE /%%x MASCULINE%random%-%%x-%random%)
 
-title MasculineUnban - Cleaner - Stage 6 / 11 - Cleaning Hardware
-echo wait wait wait...
-start "" /wait /b moreCLEANhardware.exe
-
-title MasculineUnban - Cleaner - Stage 7 / 11 - Changing Volume ID
+title MasculineUnban - Cleaner - Stage 6 / 10 - Changing Volume ID
 set /a rand1=(%random%*8998/32768)+1000
 set /a rand2=(%random%*8998/32768)+1000
 for %%p in (a b c d e f g h i j k l m n o p q r s t u v w x y z) do if exist %%p:\nul start "" /b /wait volumeid64.exe %%p: %rand1%-%rand2% /accepteula
@@ -120,12 +116,12 @@ set /a rand3=(%random%*8998/32768)+1000
 set /a rand4=(%random%*8998/32768)+1000
 start "" /b /wait volumeid64.exe C: %rand4%-%rand3% /accepteula
 
-title MasculineUnban - Cleaner - Stage 8 / 11 - Cleaning drives + Devices
+title MasculineUnban - Cleaner - Stage 7 / 10 - Cleaning drives + Devices
 start /wait /b  DeviceCleanupCmd.exe * -s
 DriveCleanup.exe
  
 
-title MasculineUnban - Cleaner - Stage 9 / 11 - Remove device manager connections + spoof
+title MasculineUnban - Cleaner - Stage 8 / 10 - Remove device manager connections + spoof
 echo --- if your internet did not come back you need to fix it manually before continuing ---
 echo cleaning more system identifiers...
 for %%p in (A B C D E F G H I J K L M N O P Q R S T U V W X Y Z) do if exist %%p:\nul DevManView.exe /uninstall "%%p:\" && echo did %%p drive
@@ -150,12 +146,12 @@ DevManView.exe /uninstall "Remote*" /use_wildcard
 DevManView.exe /uninstall "Standard*" /use_wildcard
 @echo off
 devcon rescan
-title MasculineUnban - Cleaner - Stage 10 / 11 - Waiting for user to get done with apple cleaner
+title MasculineUnban - Cleaner - Stage 9 / 10 - Waiting for user to get done with apple cleaner
 cls
 echo waiting for you to close applecleaner to finish cleaning
 echo type N when the Terminate batch job appears
 start "" /wait AppleCleaner.exe
-title MasculineUnban - Cleaner - Stage 11 / 11 - SUCCESS
+title MasculineUnban - Cleaner - Stage 10 / 10 - SUCCESS
 cls
 color 20
 
