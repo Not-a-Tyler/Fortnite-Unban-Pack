@@ -154,7 +154,7 @@ if __name__ == '__main__':
     random = random.randint(1,10000)
     print("deleting any old accounts if present")
     os.system('rmdir /q /s "C:\\Users\\%username%\\.config\\legendary"')
-    os.system(f"legendary auth --code {authcode}")
+    os.system(f"%userprofile%\AppData\Local\Programs\Python\Python310\Scripts\legendary.exe auth --code {authcode}")
     driver.get("https://store.epicgames.com/en-US/p/fortnite")
     print("adding fortnite to your list of games")
     wait.until(EC.visibility_of_element_located((By.XPATH,'/html/body/div[1]/div/div[4]/main/div[2]/div/div/div/div[2]/div[4]/div/aside/div/div/div[6]/div/button'))).click()

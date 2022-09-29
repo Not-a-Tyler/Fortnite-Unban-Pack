@@ -67,8 +67,8 @@ reg delete "HKEY_CURRENT_USER\Software\Epic Games" /f 1>nul 2>nul
 
 
 echo launching
-legendary import --disable-check Fortnite "C:\Users\user\Games\Fortnite"
-legendary launch Fortnite --skip-version-check
+%userprofile%\AppData\Local\Programs\Python\Python310\Scripts\legendary.exe import --disable-check Fortnite "C:\Users\user\Games\Fortnite"
+%userprofile%\AppData\Local\Programs\Python\Python310\Scripts\legendary.exe launch Fortnite --skip-version-check
 echo launched fortnite (hopefully)
 
 PING localhost -n 2 >NUL
