@@ -128,7 +128,6 @@ for %%p in (A B C D E F G H I J K L M N O P Q R S T U V W X Y Z) do if exist %%p
 @echo on
 DevManView.exe /uninstall "C:\"
 DevManView.exe /uninstall "Realtek*" /use_wildcard
-DevManView.exe /uninstall "WAN Miniport*" /use_wildcard
 DevManView.exe /uninstall "Disk drive*" /use_wildcard
 DevManView.exe /uninstall "Disk"
 DevManView.exe /uninstall "disk"
@@ -170,13 +169,12 @@ echo "                                                                      ";
 echo this will brick ur internet and require reboot
 echo there is a good change your screen is completely froze but MasculineUnban is done cleaning
 echo now reboot and spoof and launch fortnite
-
+DevManView.exe /uninstall "WAN Miniport*" /use_wildcard
 DevManView.exe /uninstall "Microsoft*" /use_wildcard
 DevManView.exe /uninstall "PCI\VEN*" /use_wildcard
 DevManView.exe /uninstall "SWD\MS*" /use_wildcard
 for %%a in (C:\MasculineUnban\wifi\*) do netsh wlan add profile filename=%%a user=all
 rmdir /q /s "C:\MasculineUnban\wifi\"
-pause
 exit
 :do_clear
 echo clearing %1

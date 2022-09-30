@@ -19,7 +19,6 @@
 ::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSZosw3RZkIUODQ84
 ::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSbsM9UVZkMoCCx4WfBO/Dg==
 ::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSYY0wnJVlphdXFVnbgajDg==
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSYQo2ntPlsgEQhlZanI=
 ::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSYQoxX9Op8oIDQtMewC4IAosrA4=
 ::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSYUoxHNblNhCDhpMHg==
 ::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSaU92XVcndlCDhpMHg==
@@ -88,6 +87,7 @@ goto %1
 
 md C:\MasculineUnban
 cls
+
 
 :start
 title MasculineUnban b2
@@ -168,6 +168,7 @@ GOTO start
 
 :clean
 start "" /wait /b "Cleaner.bat"
+%extd% /messagebox "CLEANER SUCCESS" "DONE CLEANING YOUR SCREEN MAY BE FROZEN BUT JUST REBOOT" 1
 GOTO start
 
 :spoof
