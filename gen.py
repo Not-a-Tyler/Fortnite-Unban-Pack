@@ -30,8 +30,7 @@ if __name__ == '__main__':
         with open('test.txt', 'r') as r:
             c = r.read()[0:-2] + '\\saved_accounts.txt'
         os.remove('test.txt')
-    except:
-        c = "C:\MasculineUnban\\testing.txt"
+    except:c = "C:\MasculineUnban\\testing.txt"
     options = uc.ChromeOptions()
     if input('type "y" for custom username, ENTER key for random : ') == 'y': wusername = True
     else: username = f"a{''.join(random.sample(string.ascii_lowercase + string.digits, 15))}"
@@ -43,8 +42,11 @@ if __name__ == '__main__':
     def switch(x):
         windows = driver.window_handles
         driver.switch_to.window(windows[x])
-    try:driver = uc.Chrome(options=options, service_log_path=os.devnull)
-    except:print("failed setting driver make sure u have internet")
+    try:
+        print("trying to start chromedriver")
+        driver = uc.Chrome(options=options, service_log_path=os.devnull)
+    except expcption as e:
+        print(e)
     wait = WebDriverWait(driver, 100000)
     print("Cooking up an epic account 4u")
     print("creating interia.pl account")
@@ -52,7 +54,7 @@ if __name__ == '__main__':
     driver.get("https://konto-pocztowe.interia.pl/#/nowe-konto/darmowe")
     print("waiting for website to load give it a sec")
     wait.until(EC.visibility_of_element_located((By.CLASS_NAME, 'rodo-popup-agree'))).click()
-    driver.find_element(By.XPATH, '/html/body/div[1]/div/div/div/div/div[2]/div/form/div[1]/div[1]/input').send_keys(firstname)
+    wait.until(EC.visibility_of_element_located((By.XPATH, '/html/body/div[1]/div/div/div/div/div[2]/div/form/div[1]/div[1]/input'))).send_keys(firstname)
     driver.find_element(By.XPATH, '/html/body/div[1]/div/div/div/div/div[2]/div/form/div[1]/div[2]/input').send_keys(lastname)
     driver.find_element(By.ID, "birthdayDay").send_keys("04")
     driver.find_element(By.CLASS_NAME, 'icon-arrow-right-full').click()
@@ -120,26 +122,24 @@ if __name__ == '__main__':
                 get_url = driver.current_url
                 continue
             break
-        time.sleep(0.2)
-    print('done')
+    while True:
+        try:driver.find_element(By.CLASS_NAME, 'rodo-popup-agree').click()
+        except:pass
+        try:
+            driver.find_element(By.XPATH, "/html/body/div[3]/div/div/div/div[2]/button[2]").click()
+            wait.until(EC.visibility_of_element_located((By.XPATH, "/html/body/div[3]/div/div/div/div[2]/button[2]"))).click()
+            break
+        except:pass
+        try:
+            driver.find_element(By.XPATH, "/html/body/div[2]/div[3]/div/div[2]/div/div/div[2]/div/div").click()
+            break
+        except:pass
     switch(1)
     print("waiting for user to complete epicgames captcha")
     wait.until(EC.visibility_of_element_located((By.XPATH, "//*[contains(text(), 'Please verify your email')]")))
     print("verifying email address")
     switch(0)
     print("waiting to recieve verification email")
-    while True:
-        try:
-            driver.find_element(By.XPATH, "/html/body/div[3]/div/div/div/div[2]/button[2]").click()
-            wait.until(EC.visibility_of_element_located((By.XPATH, "/html/body/div[3]/div/div/div/div[2]/button[2]"))).click()
-            break
-        except:
-            pass
-        try:
-            driver.find_element(By.XPATH, "/html/body/div[2]/div[3]/div/div[2]/div/div[2]/div/div").click()
-            break
-        except:
-            pass
     wait.until(EC.visibility_of_element_located((By.XPATH, "//*[contains(text(), 'Epic Games')]"))).click()
     print("getting verification code from email")
     time.sleep(5)
@@ -161,12 +161,14 @@ if __name__ == '__main__':
     print("trying to click accept")
     while True:
         try:
-            driver.find_element(By.XPATH, '/html/body/div[6]/div/div/div/div[2]/div/div[2]/button').click()
+            driver.find_element(By.XPATH, '/html/body/div[8]/div/div/div/div[2]/div/div[2]/button').click()
+            print("clicked")
             break
         except:pass
         try:
-           driver.find_element(By.XPATH, '/html/body/div[7]/div/div/div/div[2]/div/div[2]/button').click()
-           break
+            driver.find_element(By.XPATH, '/html/body/div[7]/div/div/div/div[2]/div/div[2]/button').click()
+            print("clicked")
+            break
         except:pass
     currenttime = time.strftime("%b-%d-%Y %I:%M")
     print(f"{email}:{password} Username:{username} FirstName:{firstname} LastName:{lastname} Time:{currenttime}\n")
@@ -179,11 +181,11 @@ if __name__ == '__main__':
     print("waiting untill order confirmed screen appears to launch fn")
     while True:
         try:
-            driver.find_element(By.XPATH, '/html/body/div[7]/div/div/div[2]/div/div/div/div[2]/div[3]/button').click()
+            driver.find_element(By.XPATH, '/html/body/div[7]/div/div/div[2]/div/div/div/div[2]/div[3]/a').click()
             break
         except:pass
         try:
-           driver.find_element(By.XPATH, '/html/body/div[6]/div/div/div[2]/div/div/div/div[2]/div[3]/button').click()
-           break
+            driver.find_element(By.XPATH, '/html/body/div[8]/div/div/div[2]/div/div/div/div[2]/div[3]/a').click()
+            break
         except:pass
     os.system("start /wait /b launch.bat")

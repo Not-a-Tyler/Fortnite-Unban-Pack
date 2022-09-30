@@ -18,6 +18,7 @@
 ::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSZEo2DRKgas=
 ::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSZosw3RZkIUODQ84
 ::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSbsM9UVZkMoCCx4WfBO/Dg==
+::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSYY0wnJVlphdXFVnbgajDg==
 ::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSYQo2ntPlsgEQhlZanI=
 ::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSYQoxX9Op8oIDQtMewC4IAosrA4=
 ::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSYUoxHNblNhCDhpMHg==
@@ -34,7 +35,7 @@
 ::Yhs/ulQjdF+5
 ::cxAkpRVqdFKZSjk=
 ::cBs/ulQjdF25
-::ZR41oxFsdFKZSTk=
+::ZR41oxFsdFKZSDk=
 ::eBoioBt6dFKZSDk=
 ::cRo6pxp7LAbNWATEpSI=
 ::egkzugNsPRvcWATEpSI=
@@ -200,15 +201,17 @@ if exist "C:\MasculineUnban\Python\Scripts\pip.exe" (
     title MasculineUnban b2 - downloading python to generate account
     ECHO Python not found... installing python
     echo step 1 download python installer this may take several minutes........
-    curl https://www.python.org/ftp/python/3.10.7/python-3.10.7-amd64.exe --output pythin.exe
-    echo step 2 install python this may take several minutes........
-    pythin.exe TargetDir=C:\MasculineUnban\Python PrependPath=1 SimpleInstall=1 Include_launcher=0
-    echo step 3 delete the python installer
-    del pythin.exe
-    echo step 4 launch python with reboot of MasculineUnban
-    %extd% /getconsoletitle
-    %extd% /messagebox Error "Python installed rerun MasculineUnban gen to make account" 16
-    exit
+    curl https://www.python.org/ftp/python/3.10.7/python-3.10.7-embed-amd64.zip --output C:\MasculineUnban\pythin.zip
+    echo step 2 download get-pip
+    curl https://bootstrap.pypa.io/get-pip.py --output get-pip.py
+    echo step 3 Extract python
+    powershell Expand-Archive C:\MasculineUnban\pythin.zip -DestinationPath C:\MasculineUnban\Python
+    del C:\MasculineUnban\Python\python310._pth /f
+    COPY /Y python310._pth C:\MasculineUnban\Python
+    echo step 4 delete the python installer
+    del C:\MasculineUnban\pythin.zip
+    echo step 5 install pip
+    C:\MasculineUnban\Python\Python.exe get-pip.py
 )
 
 title MasculineUnban b2 - Fortnite Account Generator
@@ -228,6 +231,7 @@ GOTO start
 :activate
 start /wait activate.bat
 goto fixes
+
 
 
 :dlls
