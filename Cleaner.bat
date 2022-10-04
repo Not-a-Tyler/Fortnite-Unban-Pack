@@ -23,7 +23,6 @@ echo then go to the action section and click "scan for hardware changes"
 echo then you will have internet
 ping www.google.com -n 1 | find "=" > nul
 if errorlevel==1 goto internettest
-cls
 
 
 reg delete "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EasyAntiCheat" /va /f
@@ -103,15 +102,27 @@ echo N | start "" /wait /b DNSTEMP.exe
 title MasculineUnban - Cleaner - Stage 5 / 10 - Changing motherboard serialnumbers
 echo          R U N N I N G   BIOS SERIAL CHANGER  (if compatible MB)
 echo     (if the bios cannot be changed find utility for your motherboard)
+
 AMIDEWINx64.EXE /SU AUTO
-FOR %%x in (IVN,IV,ID,SM,SP,SV,SS,SK,SF,BM,BP,BV,BS,BT,BLC,CM,CT,CV,CS,CA,CO,CH,CPC,CSK,PSN,PAT,PPN) do (start /b /wait AMIDEWINx64.EXE /%%x MASCULINE%random%-%%x-%random%)
+setlocal EnableDelayedExpansion
+set /A a=16807, s=40
+FOR %%x in (IVN,IV,ID,SM,SP,SV,SS,SK,SF,BM,BP,BV,BS,BT,BLC,CM,CT,CV,CS,CA,CO,CH,CPC,CSK,PSN,PAT,PPN) do (
+call :RandomGen
+start /b /wait AMIDEWINx64.EXE /%%x MASCULINE64!rand!-%%x-%random%
+)
 AMIDEWIN.EXE /SU AUTO
-FOR %%x in (IVN,IV,ID,SM,SP,SV,SS,SK,SF,BM,BP,BV,BS,BT,BLC,CM,CT,CV,CS,CA,CO,CH,CPC,CSK,PSN,PAT,PPN) do (start /b /wait AMIDEWIN.EXE /%%x MASCULINE%random%-%%x-%random%)
+FOR %%x in (IVN,IV,ID,SM,SP,SV,SS,SK,SF,BM,BP,BV,BS,BT,BLC,CM,CT,CV,CS,CA,CO,CH,CPC,CSK,PSN,PAT,PPN) do (
+call :RandomGen
+start /b /wait AMIDEWIN.EXE /%%x MASCULINE!rand!-%%x-%random%
+)
 
 title MasculineUnban - Cleaner - Stage 6 / 10 - Changing Volume ID
-set /a rand1=(%random%*8998/32768)+1000
-set /a rand2=(%random%*8998/32768)+1000
-for %%p in (a b c d e f g h i j k l m n o p q r s t u v w x y z) do if exist %%p:\nul start "" /b /wait volumeid64.exe %%p: %rand1%-%rand2% /accepteula
+for %%p in (a b c d e f g h i j k l m n o p q r s t u v w x y z) do (
+call :RandomGen
+set /a rand1=!rand!*8998/32768+1000
+set /a rand2=%random%*8998/32768+1000
+if exist %%p:\nul start "" /b /wait volumeid64.exe %%p: %rand1%-%rand2% /accepteula
+)
 set /a rand3=(%random%*8998/32768)+1000
 set /a rand4=(%random%*8998/32768)+1000
 start "" /b /wait volumeid64.exe C: %rand4%-%rand3% /accepteula
@@ -148,8 +159,13 @@ devcon rescan
 title MasculineUnban - Cleaner - Stage 9 / 10 - Waiting for user to get done with apple cleaner
 cls
 echo waiting for you to close applecleaner to finish cleaning
-echo type N when the Terminate batch job appears
-start "" /wait AppleCleaner.exe
+start "" AppleCleaner.exe
+:checkapple
+tasklist /fi "ImageName eq AppleCleaner.exe" /fo csv 2>NUL | find /I "AppleCleaner.exe">NUL
+if "%ERRORLEVEL%"=="1" GOTO appleclosed
+goto checkapple
+:appleclosed
+echo apple cleaner finished
 title MasculineUnban - Cleaner - Stage 10 / 10 - SUCCESS
 cls
 color 20
@@ -179,3 +195,13 @@ exit
 :do_clear
 echo clearing %1
 wevtutil.exe cl %1
+goto :eof
+
+:RandomGen
+set /A s*=a
+if %s% lss 0 (
+   rem Get result MOD (2^31-1)
+   set /A s+=0x80000000
+)
+set /A "rand=s & 0x7FFF"
+exit /B

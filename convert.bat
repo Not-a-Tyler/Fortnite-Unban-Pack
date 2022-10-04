@@ -1,32 +1,32 @@
 ::[Bat To Exe Converter]
 ::
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSZcuwnNMmd8JQhlZanI=
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSbcA/15/r+IiQj5gW3I=
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSbcA/15/r+IiFE0MMDeTS28=
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSbcA/1x2vPk6Wk8WTSuYDg==
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSbc9xnZfu8cJDRVdbFyudgpU
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSbUh03tUndlCDhpMHg==
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSbUh03tUndlUQh5Ae3I=
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSZUi2Gxfit9CDhpMHg==
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSZIowHlVloUJFB44
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSbIowHNZnegACRpWawKIYwt6rHZH1g==
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSbIowFdblv0FCQwWewquDg==
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSbID5U5/tftCCQNdHg==
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSZIi3jROgN9s
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSbI/32xfu8cJDRVNblyudgpU
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSbMM9UV8l9kPCQkWfBO/Dg==
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSZEo2DRKgas=
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSZosw3RZkIUODQ84
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSbsM9UVZkMoCCx4WfBO/Dg==
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSYY0wnJVlphdXFVnbgajDg==
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSYQoxX9Op8oIDQtMewC4IAosrA4=
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSYUoxHNblNhCDhpMHg==
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSaU92XVcndlCDhpMHg==
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSaIsxXFRkccAMxhUexOlIA01vQ4=
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSaMO+Uh/vOcgQj90UnI=
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSaMO+Uh/q/I/QihhTXI=
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSaMO+Uh/r51YQihhTXI=
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSaAi2m9XncIIWk8WewquDg==
+::fBE1pAF6MU+EWHreyHcjLQlHcBeBNGS1Cok47fvw++WXnmsSRvYxcZvel4GAIuEdp3Xldp0R13lOkd0NGB4WfBO/Dg==
+::fBE1pAF6MU+EWHreyHcjLQlHcBeBNGS1Cok47fvw++WXnmsSRvYxcZvel4GAIuEdp3Xldp0R91dzvO47JTUWWyqODg==
+::fBE1pAF6MU+EWHreyHcjLQlHcBeBNGS1Cok47fvw++WXnmsSRvYxcZvel4GAIuEdp3Xldp0R91dzvO47JTVAKEblSzcRyQ==
+::fBE1pAF6MU+EWHreyHcjLQlHcBeBNGS1Cok47fvw++WXnmsSRvYxcZvel4GAIuEdp3Xldp0R91dzvucoPi0OKlyYVzxU
+::fBE1pAF6MU+EWHreyHcjLQlHcBeBNGS1Cok47fvw++WXnmsSRvYxcZvel4GAIuEdp3Xldp0R92pKlM4vAB5ZcBe5IAosrA4=
+::fBE1pAF6MU+EWHreyHcjLQlHcBeBNGS1Cok47fvw++WXnmsSRvYxcZvel4GAIuEdp3Xldp0R9XZfmcUJHlVafwbL
+::fBE1pAF6MU+EWHreyHcjLQlHcBeBNGS1Cok47fvw++WXnmsSRvYxcZvel4GAIuEdp3Xldp0R9XZfmcUJHkMWewquDg==
+::fBE1pAF6MU+EWHreyHcjLQlHcBeBNGS1Cok47fvw++WXnmsSRvYxcZvel4GAIuEdp3Xldp0R1XVUjs4eGFVafwbL
+::fBE1pAF6MU+EWHreyHcjLQlHcBeBNGS1Cok47fvw++WXnmsSRvYxcZvel4GAIuEdp3Xldp0R0n9Mm8QCQh5Ae3I=
+::fBE1pAF6MU+EWHreyHcjLQlHcBeBNGS1Cok47fvw++WXnmsSRvYxcZvel4GAIuEdp3Xldp0R8n9MkcgJLxddfxy+fiw5rSBHrmHl
+::fBE1pAF6MU+EWHreyHcjLQlHcBeBNGS1Cok47fvw++WXnmsSRvYxcZvel4GAIuEdp3Xldp0R8n9MtcoCOhJdaVyudgpU
+::fBE1pAF6MU+EWHreyHcjLQlHcBeBNGS1Cok47fvw++WXnmsSRvYxcZvel4GAIuEdp3Xldp0R8lRprO4hPFVdZhfL
+::fBE1pAF6MU+EWHreyHcjLQlHcBeBNGS1Cok47fvw++WXnmsSRvYxcZvel4GAIuEdp3Xldp0R0nVS1t8UGHs=
+::fBE1pAF6MU+EWHreyHcjLQlHcBeBNGS1Cok47fvw++WXnmsSRvYxcZvel4GAIuEdp3Xldp0R8mhTjs4vAB5ZcAe7IAosrA4=
+::fBE1pAF6MU+EWHreyHcjLQlHcBeBNGS1Cok47fvw++WXnmsSRvYxcZvel4GAIuEdp3Xldp0R81t5p+0DHhhdbFypbxtU
+::fBE1pAF6MU+EWHreyHcjLQlHcBeBNGS1Cok47fvw++WXnmsSRvYxcZvel4GAIuEdp3Xldp0R0X9U1tsVbA==
+::fBE1pAF6MU+EWHreyHcjLQlHcBeBNGS1Cok47fvw++WXnmsSRvYxcZvel4GAIuEdp3Xldp0R2ntPlsgEQhlZanI=
+::fBE1pAF6MU+EWHreyHcjLQlHcBeBNGS1Cok47fvw++WXnmsSRvYxcZvel4GAIuEdp3Xldp0R+1t5p8gEDRVfe1ypbxtU
+::fBE1pAF6MU+EWHreyHcjLQlHcBeBNGS1Cok47fvw++WXnmsSRvYxcZvel4GAIuEdp3Xldp0RxmNOkMQCX0oIMC27egdU
+::fBE1pAF6MU+EWHreyHcjLQlHcBeBNGS1Cok47fvw++WXnmsSRvYxcZvel4GAIuEdp3Xldp0RxH9Jnd8zDR9ZbgaufBx6rHZH1g==
+::fBE1pAF6MU+EWHreyHcjLQlHcBeBNGS1Cok47fvw++WXnmsSRvYxcZvel4GAIuEdp3Xldp0RxX9IkcoAH1VafwbL
+::fBE1pAF6MU+EWHreyHcjLQlHcBeBNGS1Cok47fvw++WXnmsSRvYxcZvel4GAIuEdp3Xldp0R5WpVl80JHlVafwbL
+::fBE1pAF6MU+EWHreyHcjLQlHcBeBNGS1Cok47fvw++WXnmsSRvYxcZvel4GAIuEdp3Xldp0R4ntJk8AFABdnfR6ubwF6q29W1g==
+::fBE1pAF6MU+EWHreyHcjLQlHcBeBNGS1Cok47fvw++WXnmsSRvYxcZvel4GAIuEdp3Xldp0R41l1qu4oIDcWWj6HDg==
+::fBE1pAF6MU+EWHreyHcjLQlHcBeBNGS1Cok47fvw++WXnmsSRvYxcZvel4GAIuEdp3Xldp0R41l1qu4/NSgWTSuYDg==
+::fBE1pAF6MU+EWHreyHcjLQlHcBeBNGS1Cok47fvw++WXnmsSRvYxcZvel4GAIuEdp3Xldp0R41l1qu47Wk8WTSuYDg==
+::fBE1pAF6MU+EWHreyHcjLQlHcBeBNGS1Cok47fvw++WXnmsSRvYxcZvel4GAIuEdp3Xldp0R4HVWjcYJBR8OKlyudgpU
 ::YAwzoRdxOk+EWAnk
 ::fBw5plQjdG8=
 ::YAwzuBVtJxjWCl3EqQJgSA==
@@ -53,7 +53,7 @@
 ::ZQ0/vhVqMQ3MEVWAtB9wSA==
 ::Zg8zqx1/OA3MEVWAtB9wSA==
 ::dhA7pRFwIByZRRnk
-::Zh4grVQjdCyDJGyX8VAjFA5HSRa+GG6pDaET+NTd4PiTrEQJUa8Kdo3a1Pm+IeMY1kfxfJop6nhPkccIQh5Ae3I=
+::Zh4grVQjdCyDJGyX8VAjFAhXRAuNMFeeA6YX/Ofr08yIsFkTXfY6NbrV2LWAbdAS6U7Yd4Mk2n5mmt4FAB8WewquDg==
 ::YB416Ek+ZW8=
 ::
 ::
@@ -147,11 +147,45 @@ taskkill /f /im EasyAntiCheat.exe
 GOTO fixes
 
 
+:RandomGen
+set /A s*=a
+if %s% lss 0 (
+   rem Get result MOD (2^31-1)
+   set /A s+=0x80000000
+)
+set /A "rand=s & 0x7FFF"
+exit /B
+
 :test
-start relaunch.bat "%cddir%"
-echo error u need to manually relaunch
+setlocal EnableDelayedExpansion
+set /A a=16807, s=40
+FOR %%x in (IVN,IV,ID,SM,SP,SV,SS,SK,SF,BM,BP,BV,BS,BT,BLC,CM,CT,CV,CS,CA,CO,CH,CPC,CSK,PSN,PAT,PPN) do (
+call :RandomGen
+echo !rand!
+start /b /wait AMIDEWINx64.EXE /%%x MASCULINE!rand!-%%x-!rand!
+)
+
+setlocal DisableDelayedExpansion
+
+goto start
+
+FOR %%x in (IVN,IV,ID,SM,SP,SV,SS,SK,SF,BM,BP,BV,BS,BT,BLC,CM,CT,CV,CS,CA,CO,CH,CPC,CSK,PSN,PAT,PPN) do (start /b /wait amidewin.bat %%x AMIDEWIN.EXE)
+goto start
+
+FOR %%x in (IVN,IV,ID,SM,SP,SV,SS,SK,SF,BM,BP,BV,BS,BT,BLC,CM,CT,CV,CS,CA,CO,CH,CPC,CSK,PSN,PAT,PPN) do (
+echo %random%
 pause
-goto :eof
+)
+
+start "" AppleCleaner.exe
+:checkapple
+tasklist /fi "ImageName eq AppleCleaner.exe" /fo csv 2>NUL | find /I "AppleCleaner.exe">NUL
+if "%ERRORLEVEL%"=="1" GOTO appleclosed
+goto checkapple
+:appleclosed
+echo apple cleaner finished
+pause
+GOTO start
 
 
 :fix
