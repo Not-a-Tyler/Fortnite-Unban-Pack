@@ -4,17 +4,15 @@ def create_interia():
     driver.get("https://konto-pocztowe.interia.pl/#/nowe-konto/darmowe")
     print("waiting for website to load give it a sec")
     wait.until(EC.visibility_of_element_located((By.CLASS_NAME, 'rodo-popup-agree'))).click()
-    wait.until(EC.visibility_of_element_located(
-        (By.XPATH, '/html/body/div[1]/div/div/div/div/div[2]/div/form/div[1]/div[1]/input'))).send_keys(firstname)
-    driver.find_element(By.XPATH, '/html/body/div[1]/div/div/div/div/div[2]/div/form/div[1]/div[2]/input').send_keys(
-        lastname)
+    wait.until(EC.visibility_of_element_located((By.XPATH, '/html/body/div[1]/div/div/div/div/div[2]/div/form/div[1]/div[1]/input'))).send_keys(firstname)
+    driver.find_element(By.XPATH, '/html/body/div[1]/div/div/div/div/div[2]/div/form/div[1]/div[2]/input').send_keys(lastname)
     driver.find_element(By.ID, "birthdayDay").send_keys("04")
     driver.find_element(By.CLASS_NAME, 'icon-arrow-right-full').click()
     driver.find_element(By.CLASS_NAME, 'account-select__options__item').click()
     driver.find_element(By.ID, "birthdayYear").send_keys("2000")
     driver.find_element(By.XPATH, "//*[contains(text(), 'Płeć')]").click()
     time.sleep(.3)
-    driver.find_element(By.CLASS_NAME, 'account-select__options__item').click()
+    driver.find_element(By.CLASS_NAME, 'account-select_options__item').click()
     time.sleep(.3)
     driver.find_element(By.XPATH, "//*[contains(text(), 'Nazwa konta')]").click()
     time.sleep(.3)
@@ -161,30 +159,31 @@ if __name__ == '__main__':
     firstname = f"A{''.join(random.sample(string.ascii_lowercase + string.digits, 14))}"
     lastname = f"L{''.join(random.sample(string.ascii_lowercase + string.digits, 14))}"
     password = f"A{''.join(random.sample(string.ascii_lowercase + string.digits, 15))}&*"
-    print("what email service do you want to use? (interia, outlook, proton)")
-    print("interia is recommended")
-    print("1: interia")
-    print("2: outlook")
-    print("3: proton")
-    emailservice = input()
-    if emailservice == '1': email = f"{firstname}.{lastname}@interia.pl"
-    if emailservice == '2': email = f"{firstname}.{lastname}@outlook.com"
-    if emailservice == '3': email = f"{firstname}.{lastname}@proton.me"
+    print("what email service do you want to use?")
+    print("proton is recommended")
+    print("1: ProtonMail RECOMMENDED")
+    print("2: Interia")
+    print("3: outlook broken dont use")
+    emailservice = input("type your selection:")
+    if emailservice == '2': email = f"{firstname}.{lastname}@interia.pl"
+    if emailservice == '3': email = f"{firstname}.{lastname}@outlook.com"
+    if emailservice == '1': email = f"{firstname}.{lastname}@proton.me"
     print(email)
     def switch(x):
         windows = driver.window_handles
         driver.switch_to.window(windows[x])
     try:
         print("trying to start chromedriver")
+
         driver = uc.Chrome(options=options, service_log_path=os.devnull)
     except Exception as e:
         print(e)
         print("error")
     actions = ActionChains(driver)
     wait = WebDriverWait(driver, 100000)
-    if emailservice == '1': create_interia()
-    if emailservice == '2': create_outlook()
-    if emailservice == '3': create_proton()
+    if emailservice == '2': create_interia()
+    if emailservice == '3': create_outlook()
+    if emailservice == '1': create_proton()
     print(f"creating epic games account with username:{username} password:{password} email:{email}")
     driver.execute_script("window.open('');")
     driver.switch_to.window(driver.window_handles[1])
@@ -218,9 +217,9 @@ if __name__ == '__main__':
         wait.until(EC.visibility_of_element_located((By.XPATH, "/html/body/div[4]/div/div[1]/h1"))).click()
     print("completing interia account")
     switch(0)
-    if emailservice == '1': finish_interia()
-    if emailservice == '2': create_outlook()
-    if emailservice == '3': finish_proton()
+    if emailservice == '2': finish_interia()
+    if emailservice == '3': create_outlook()
+    if emailservice == '1': finish_proton()
     switch(1)
     print("waiting for user to complete epicgames captcha")
     wait.until(EC.visibility_of_element_located((By.XPATH, "//*[contains(text(), 'Please verify your email')]")))
