@@ -1,61 +1,13 @@
-if __name__ == '__main__':
-    username = 'unknown'
-    wusername = False
-    print("attempting to make an epic account fully automatically")
-    import os
-    import os.path
-    try:
-        import legendary
-        import undetected_chromedriver
-    except:
-        os.system('C:\MasculineUnban\Python\Scripts\pip.exe install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org undetected_chromedriver')
-        os.system('C:\MasculineUnban\Python\Scripts\pip.exe install --trusted-host pypi.python.org --trusted-host files.pythonhosted.org legendary-gl')
-    try:
-        open('C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe')
-    except:
-        print("brave browser not found..... installing brave")
-        os.system('curl https://referrals.brave.com/latest/BraveBrowserSetup.exe --output install_brave.exe')
-        os.system('install_brave.exe')
-        os.system('taskkill /f /im brave.exe')
-        os.remove('install_brave.exe')
-    import random
-    import string
-    import sys
-    import time
-    import undetected_chromedriver as uc
-    from selenium.webdriver.common.by import By
-    from selenium.webdriver.support import expected_conditions as EC
-    from selenium.webdriver.support.ui import WebDriverWait
-    try:
-        with open('test.txt', 'r') as r:
-            c = r.read()[0:-2] + '\\saved_accounts.txt'
-        os.remove('test.txt')
-    except:c = "C:\MasculineUnban\\testing.txt"
-    options = uc.ChromeOptions()
-    if input('type "y" for custom username, ENTER key for random : ') == 'y': wusername = True
-    else: username = f"a{''.join(random.sample(string.ascii_lowercase + string.digits, 15))}"
-    options.binary_location = "C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe"
-    firstname = f"A{''.join(random.sample(string.ascii_lowercase + string.digits, 14))}"
-    lastname = f"L{''.join(random.sample(string.ascii_lowercase + string.digits, 14))}"
-    password = f"A{''.join(random.sample(string.ascii_lowercase + string.digits, 15))}&*"
-    email = f"{firstname}.{lastname}@interia.pl"
-    def switch(x):
-        windows = driver.window_handles
-        driver.switch_to.window(windows[x])
-    try:
-        print("trying to start chromedriver")
-        driver = uc.Chrome(options=options, service_log_path=os.devnull)
-    except expcption as e:
-        print(e)
-    wait = WebDriverWait(driver, 100000)
-    print("Cooking up an epic account 4u")
+def create_interia():
     print("creating interia.pl account")
     print("waiting for browser to load give it a sec")
     driver.get("https://konto-pocztowe.interia.pl/#/nowe-konto/darmowe")
     print("waiting for website to load give it a sec")
     wait.until(EC.visibility_of_element_located((By.CLASS_NAME, 'rodo-popup-agree'))).click()
-    wait.until(EC.visibility_of_element_located((By.XPATH, '/html/body/div[1]/div/div/div/div/div[2]/div/form/div[1]/div[1]/input'))).send_keys(firstname)
-    driver.find_element(By.XPATH, '/html/body/div[1]/div/div/div/div/div[2]/div/form/div[1]/div[2]/input').send_keys(lastname)
+    wait.until(EC.visibility_of_element_located(
+        (By.XPATH, '/html/body/div[1]/div/div/div/div/div[2]/div/form/div[1]/div[1]/input'))).send_keys(firstname)
+    driver.find_element(By.XPATH, '/html/body/div[1]/div/div/div/div/div[2]/div/form/div[1]/div[2]/input').send_keys(
+        lastname)
     driver.find_element(By.ID, "birthdayDay").send_keys("04")
     driver.find_element(By.CLASS_NAME, 'icon-arrow-right-full').click()
     driver.find_element(By.CLASS_NAME, 'account-select__options__item').click()
@@ -77,6 +29,155 @@ if __name__ == '__main__':
     time.sleep(.3)
     driver.find_element(By.CLASS_NAME, 'btn').click()
     time.sleep(.3)
+
+def finish_interia():
+    wait.until(EC.visibility_of_element_located((By.ID, "email"))).send_keys(email)
+    wait.until(EC.visibility_of_element_located((By.ID, "password"))).send_keys(password)
+    print("waiting for user to complete interia.pl captcha")
+    wait.until(EC.visibility_of_element_located((By.XPATH, "/html/body/div[1]/div[1]/div[1]/form/button")))
+    get_url = driver.current_url
+    while True:
+        if get_url != driver.current_url:
+            if driver.current_url.find('logowanie') != -1:
+                wait.until(EC.visibility_of_element_located((By.ID, "password"))).send_keys(password)
+                get_url = driver.current_url
+                continue
+            break
+    while True:
+        try:driver.find_element(By.CLASS_NAME, 'rodo-popup-agree').click()
+        except:pass
+        try:
+            driver.find_element(By.XPATH, "/html/body/div[3]/div/div/div/div[2]/button[2]").click()
+            wait.until(EC.visibility_of_element_located((By.XPATH, "/html/body/div[3]/div/div/div/div[2]/button[2]"))).click()
+            break
+        except:pass
+        try:
+            driver.find_element(By.XPATH, "/html/body/div[2]/div[3]/div/div[2]/div/div/div[2]/div/div").click()
+            break
+        except:pass
+
+
+def create_proton():
+    driver.get('https://account.protonmail.com/signup?language=en')
+    wait.until(EC.visibility_of_element_located((By.ID, "password")))
+    for character in f"{firstname}.{lastname}":
+        actions.send_keys(character)
+        actions.perform()
+        time.sleep(0.1)
+    wait.until(EC.visibility_of_element_located((By.ID, "password"))).send_keys(password)
+    wait.until(EC.visibility_of_element_located((By.ID, "repeat-password"))).send_keys(password)
+    wait.until(EC.visibility_of_element_located((By.XPATH, "//button[contains(text(),'Create account')]"))).click()
+    wait.until(EC.visibility_of_element_located((By.XPATH, "//button[contains(text(),'Continue with Free')]"))).click()
+    print("waiting for user to complete captcha")
+    wait.until(EC.visibility_of_element_located((By.XPATH, "//button[contains(text(),'Next')]"))).click()
+    input()
+
+def create_outlook():
+    # Go to signup link
+    driver.get("https://signup.live.com/signup?lcid=1033&wa=wsignin1.0&rpsnv=13&ct=1665092252&rver=7.0.6737.0&wp=MBI_SSL&wreply=https%3a%2f%2foutlook.live.com%2fowa%2f%3fnlp%3d1%26signup%3d1%26RpsCsrfState%3dc369e093-b25b-695e-6ebf-73b540917382&id=292841&CBCXT=out&lw=1&fl=dob%2cflname%2cwld&cobrandid=90015&lic=1&uaid=66af4c279e5d4d52ad878a24edfcdb77")
+
+    print(f"Account creation started | {email}")
+
+    # Enter email
+    wait.until(EC.visibility_of_element_located((By.ID, "MemberName"))).send_keys(f"{firstname}.{lastname}")
+    # Click Next
+    wait.until(EC.visibility_of_element_located((By.ID, "iSignupAction"))).click()
+
+    # Enter password
+    wait.until(EC.visibility_of_element_located((By.ID, "PasswordInput"))).send_keys(password)
+    # Uncheck promotion checkbox
+    wait.until(EC.visibility_of_element_located((By.ID, "iOptinEmail"))).click()
+    # Click Next
+    wait.until(EC.visibility_of_element_located((By.ID, "iSignupAction"))).click()
+    wait.until(EC.visibility_of_element_located((By.ID, "FirstName"))).send_keys(firstname)
+    wait.until(EC.visibility_of_element_located((By.ID, "LastName"))).send_keys(lastname)
+    wait.until(EC.visibility_of_element_located((By.ID, "iSignupAction"))).click()
+    wait.until(EC.visibility_of_element_located((By.ID, "BirthDateCountryAccrualInputPane")))
+    # Select country
+    Select(driver.find_element(By.ID, "Country")).select_by_value("US")
+    # Select birthday month
+    Select(driver.find_element(By.ID, "BirthMonth")).select_by_value("1")
+    # Select birthday day
+    Select(driver.find_element(By.ID, "BirthDay")).select_by_value("1")
+    # Select birthday year
+    driver.find_element(By.ID, "BirthYear").send_keys("2000")
+    # Click Next
+
+    wait.until(EC.visibility_of_element_located((By.ID, "iSignupAction"))).click()
+    # Ask the user to manually complete the captcha
+    wait.until(EC.visibility_of_element_located((By.ID, "enforcementFrame"))).click()
+    print(f"Captcha completion required | {email}")
+    input()
+    print(f"Account created | {email}")
+
+
+
+if __name__ == '__main__':
+    username = 'unknown'
+    wusername = False
+    print("attempting to make an epic account fully automatically")
+    import os
+    import os.path
+    import random
+    import string
+    import sys
+    import time
+    try:
+        import legendary
+        import undetected_chromedriver as uc
+    except:
+        os.system('C:\MasculineUnban\Python\Scripts\pip.exe install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org undetected_chromedriver')
+        os.system('C:\MasculineUnban\Python\Scripts\pip.exe install --trusted-host pypi.python.org --trusted-host files.pythonhosted.org legendary-gl')
+    import legendary
+    import undetected_chromedriver as uc
+    from selenium.webdriver.common.by import By
+    from selenium.webdriver.common.action_chains import ActionChains
+    from selenium.webdriver.support import expected_conditions as EC
+    from selenium.webdriver.support.ui import WebDriverWait
+    try:
+        open('C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe')
+    except:
+        print("brave browser not found..... installing brave")
+        os.system('curl https://referrals.brave.com/latest/BraveBrowserSetup.exe --output install_brave.exe')
+        os.system('install_brave.exe')
+        os.system('taskkill /f /im brave.exe')
+        os.remove('install_brave.exe')
+    try:
+        with open('test.txt', 'r') as r:
+            c = r.read()[0:-2] + '\\saved_accounts.txt'
+        os.remove('test.txt')
+    except:c = "C:\MasculineUnban\\testing.txt"
+    options = uc.ChromeOptions()
+    if input('type "y" for custom username, ENTER key for random : ') == 'y': wusername = True
+    else: username = f"a{''.join(random.sample(string.ascii_lowercase + string.digits, 15))}"
+    options.binary_location = "C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe"
+    firstname = f"A{''.join(random.sample(string.ascii_lowercase + string.digits, 14))}"
+    lastname = f"L{''.join(random.sample(string.ascii_lowercase + string.digits, 14))}"
+    password = f"A{''.join(random.sample(string.ascii_lowercase + string.digits, 15))}&*"
+    print("what email service do you want to use? (interia, outlook, proton)")
+    print("interia is recommended")
+    print("1: interia")
+    print("2: outlook")
+    print("3: proton")
+    emailservice = input()
+    if emailservice == '1': email = f"{firstname}.{lastname}@interia.pl"
+    if emailservice == '2': email = f"{firstname}.{lastname}@outlook.com"
+    if emailservice == '3': email = f"{firstname}.{lastname}@proton.me"
+    print(email)
+    def switch(x):
+        windows = driver.window_handles
+        driver.switch_to.window(windows[x])
+    try:
+        print("trying to start chromedriver")
+        driver = uc.Chrome(options=options, service_log_path=os.devnull)
+    except Exception as e:
+        print(e)
+        print("error")
+    actions = ActionChains(driver)
+    wait = WebDriverWait(driver, 100000)
+    if emailservice == '1': create_interia()
+    if emailservice == '2': create_outlook()
+    if emailservice == '3': create_proton()
     print(f"creating epic games account with username:{username} password:{password} email:{email}")
     driver.execute_script("window.open('');")
     driver.switch_to.window(driver.window_handles[1])
@@ -110,30 +211,7 @@ if __name__ == '__main__':
         wait.until(EC.visibility_of_element_located((By.XPATH, "/html/body/div[4]/div/div[1]/h1"))).click()
     print("completing interia account")
     switch(0)
-    wait.until(EC.visibility_of_element_located((By.ID, "email"))).send_keys(email)
-    wait.until(EC.visibility_of_element_located((By.ID, "password"))).send_keys(password)
-    print("waiting for user to complete interia.pl captcha")
-    wait.until(EC.visibility_of_element_located((By.XPATH, "/html/body/div[1]/div[1]/div[1]/form/button")))
-    get_url = driver.current_url
-    while True:
-        if get_url != driver.current_url:
-            if driver.current_url.find('logowanie') != -1:
-                wait.until(EC.visibility_of_element_located((By.ID, "password"))).send_keys(password)
-                get_url = driver.current_url
-                continue
-            break
-    while True:
-        try:driver.find_element(By.CLASS_NAME, 'rodo-popup-agree').click()
-        except:pass
-        try:
-            driver.find_element(By.XPATH, "/html/body/div[3]/div/div/div/div[2]/button[2]").click()
-            wait.until(EC.visibility_of_element_located((By.XPATH, "/html/body/div[3]/div/div/div/div[2]/button[2]"))).click()
-            break
-        except:pass
-        try:
-            driver.find_element(By.XPATH, "/html/body/div[2]/div[3]/div/div[2]/div/div/div[2]/div/div").click()
-            break
-        except:pass
+    finish_interia()
     switch(1)
     print("waiting for user to complete epicgames captcha")
     wait.until(EC.visibility_of_element_located((By.XPATH, "//*[contains(text(), 'Please verify your email')]")))
