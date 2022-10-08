@@ -58,7 +58,7 @@ def finish_interia():
 
 
 def create_proton():
-    driver.get('https://account.protonmail.com/signup?language=en')
+    driver.get('https://account.proton.me/signup?plan=free&billing=12&minimumCycle=12&currency=USD&language=en')
     wait.until(EC.visibility_of_element_located((By.ID, "password")))
     for character in f"{firstname}.{lastname}":
         actions.send_keys(character)
@@ -67,10 +67,17 @@ def create_proton():
     wait.until(EC.visibility_of_element_located((By.ID, "password"))).send_keys(password)
     wait.until(EC.visibility_of_element_located((By.ID, "repeat-password"))).send_keys(password)
     wait.until(EC.visibility_of_element_located((By.XPATH, "//button[contains(text(),'Create account')]"))).click()
-    wait.until(EC.visibility_of_element_located((By.XPATH, "//button[contains(text(),'Continue with Free')]"))).click()
     print("waiting for user to complete captcha")
     wait.until(EC.visibility_of_element_located((By.XPATH, "//button[contains(text(),'Next')]"))).click()
-    input()
+    wait.until(EC.visibility_of_element_located((By.XPATH, "//button[contains(text(),'Maybe later')]"))).click()
+    wait.until(EC.visibility_of_element_located((By.XPATH, "//button[contains(text(),'Confirm')]"))).click()
+    wait.until(EC.visibility_of_element_located((By.XPATH, "/html/body/div[1]/div[3]/div/div/main/div[2]/ul/li[1]/button"))).click()
+
+
+def finish_proton():
+    wait.until(EC.visibility_of_element_located((By.XPATH, "/html/body/div[4]/dialog/div/div/div[3]/div/div/footer/button"))).click()
+    wait.until(EC.visibility_of_element_located((By.XPATH, "/html/body/div[4]/dialog/div/div/div[3]/div/div/footer/button[2]"))).click()
+    wait.until(EC.visibility_of_element_located((By.XPATH, "/html/body/div[4]/dialog/div/div/div[3]/div/div/footer/button[2]"))).click()
 
 def create_outlook():
     # Go to signup link
@@ -211,7 +218,9 @@ if __name__ == '__main__':
         wait.until(EC.visibility_of_element_located((By.XPATH, "/html/body/div[4]/div/div[1]/h1"))).click()
     print("completing interia account")
     switch(0)
-    finish_interia()
+    if emailservice == '1': finish_interia()
+    if emailservice == '2': create_outlook()
+    if emailservice == '3': finish_proton()
     switch(1)
     print("waiting for user to complete epicgames captcha")
     wait.until(EC.visibility_of_element_located((By.XPATH, "//*[contains(text(), 'Please verify your email')]")))

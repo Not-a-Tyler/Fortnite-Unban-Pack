@@ -65,14 +65,6 @@ rmdir /q /s "C:\Users\%username%\AppData\Local\NVIDIA Corporation\GfeSDK"
 rmdir /q /s "C:\Users\%username%\AppData\Local\UnrealEngine\5.0"
 rmdir /q /s "C:\Users\%username%\AppData\Local\CrashReportClient"
 rmdir /q /s "C:\Users\%username%\AppData\Local\FortniteGame"
-del "%userprofile%\.config\legendary\version.json" /f
-del "%userprofile%\.config\legendary\installed.json" /f
-del "%userprofile%\.config\legendary\config.ini" /f
-del "%userprofile%\.config\legendary\assets.json" /f
-del "%userprofile%\.config\legendary\aliases.json" /f
-rmdir /q /s "%userprofile%\.config\legendary\tmp"
-rmdir /q /s "%userprofile%\.config\legendary\metadata"
-rmdir /q /s "%userprofile%\.config\legendary\manifests"
 reg delete "HKEY_CURRENT_USER\Software\Epic Games\Unreal Engine\Hardware Survey" /f 1>nul 2>nul
 reg delete "HKEY_CURRENT_USER\Software\Epic Games\Unreal Engine\Identifiers" /f 1>nul 2>nul
 reg delete "HKU\S-1-5-21-860440266-1445122309-108474356-1001\Software\Epic Games\Unreal Engine\Identifiers" /va /f 1>nul 2>nul

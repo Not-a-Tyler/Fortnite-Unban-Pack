@@ -86,7 +86,7 @@ taskkill /f /im EpicGamesLauncher.exe
 taskkill /f /im FortniteClient-Win64-Shipping_BE.exe
 sc stop BEService
 
-MOVE C:\Users\%username%\.config\legendary\user.json "C:\MasculineUnban\legendary_accounts\%random%.%seed%"
+::MOVE C:\Users\%username%\.config\legendary\user.json "C:\MasculineUnban\legendary_accounts\%random%.%seed%"
 
 reg delete "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /v EpicGamesLauncher /f
 reg delete "HKLM\SYSTEM\CurrentControlSet\Services\BEService" /va /f
