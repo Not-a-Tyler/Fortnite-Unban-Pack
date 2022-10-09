@@ -1,48 +1,47 @@
 @echo off
 color c
-vssadmin delete shadows /all /Quiet
-reg delete "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EasyAntiCheat" /va /f
-reg delete "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /v EpicGamesLauncher /f
-reg delete "HKLM\SYSTEM\CurrentControlSet\Services\BEService" /va /f
-reg delete "HKLM\SYSTEM\ControlSet001\Services\BEService" /va /f
-reg delete "HKLM\SYSTEM\CurrentControlSet\Services\BEService" /va /f
-del "C:\Program Files (x86)\Common Files\BattlEye\BEService.exe" /f
-del "C:\Program Files (x86)\Common Files\BattlEye\BEService_fn.exe" /f
-del "C:\Users\%username%\AppData\Local\AMD\CN\GameReport\FortniteClient-Win64-Shipping.exe\gpa.bin" /f
-del "C:\Users\%username%\AppData\Local\AMD\DxCache\92b1da15789e5451b49097cdafa85ec0f45214d6b0df9e8d.bin" /f
-del "C:\Users\%username%\AppData\Local\AMD\DxCache\92b1da15789e5451e900a9bc20b57cd2f45214d6b0df9e8d.bin" /f
-del "C:\Users\%username%\AppData\Local\AMD\cl.cache\x64\Version 2.1 AMD-APP (3380.6).Ellesmere.cache" /f
-del "C:\Users\%username%\AppData\Local\D3DSCache\e4548a4577c56a84\52264C4C-172F-41B9-91B8-7F0C3B1E9021_VEN_1002&DEV_67DF&SUBSYS_C580&REV_E7.idx" /f
-del "C:\Users\%username%\AppData\Local\D3DSCache\e4548a4577c56a84\52264C4C-172F-41B9-91B8-7F0C3B1E9021_VEN_1002&DEV_67DF&SUBSYS_C580&REV_E7.lock" /f
-del "C:\Users\%username%\AppData\Local\D3DSCache\e4548a4577c56a84\52264C4C-172F-41B9-91B8-7F0C3B1E9021_VEN_1002&DEV_67DF&SUBSYS_C580&REV_E7.val" /f
-rmdir /q /s "C:\Users\%username%\AppData\Local\EpicGamesLauncher\Saved\webcache_4430\Cache\f_00010e'
-del "C:\Users\%username%\AppData\Local\EpicGamesLauncher\Saved\webcache_4430\IndexedDB\https_launcher.store.epicgames.com_0.indexeddb.leveldb\000036.log" /f
-del "C:\Users\%username%\AppData\Local\EpicGamesLauncher\Saved\webcache_4430\IndexedDB\https_launcher.store.epicgames.com_0.indexeddb.leveldb\000038.ldb" /f
-del "C:\Users\%username%\AppData\Local\EpicGamesLauncher\Saved\webcache_4430\Session Storage\LOG.old" /f
-del "C:\Users\%username%\AppData\Local\NVIDIA Corporation\GfeSDK\FortniteClient-Win64-Shipping_12856.log" /f
-del "C:\Users\%username%\AppData\Local\Temp\171cac9.tmp" /f
-del "C:\Users\%username%\AppData\Local\UnrealEngine\Common\Analytics\8E1D46DBC38F4A789939D781E1B91520" /f
-del "C:\Users\%username%\AppData\Local\CrashReportClient\Saved\Config\WindowsEditor\Engine.ini" /f
-del "C:\Users\%username%\AppData\Local\CrashReportClient\Saved\Logs\CrashReportClient.log" /f
-rmdir /q /s "C:\Users\%username%\AppData\Local\FortniteGame\"
-del "C:\Windows\Prefetch\BESERVICE.EXE-622E150D.pf" /f
-del "C:\Windows\Prefetch\CRASHREPORTCLIENT.EXE-C297728D.pf" /f
-del "C:\Windows\Prefetch\EASYANTICHEAT_SETUP.EXE-CF3441CE.pf" /f
-del "C:\Windows\Prefetch\FORTNITECLIENT-WIN64-SHIPPING-42C11B98.pf" /f
-del "C:\Windows\Prefetch\FORTNITECLIENT-WIN64-SHIPPING-5EAA410A.pf" /f
-del "C:\Windows\Prefetch\FORTNITELAUNCHER.EXE-AF00A2B5.pf" /f
-del "C:\Windows\Prefetch\RUNDLL32.EXE-F264FACF.pf" /f
-del "C:\Program Files (x86)\EasyAntiCheat\EasyAntiCheat.exe" /f
-rmdir /q /s "C:\Users\%username%\AppData\Local\EpicGamesLauncher\Saved\"
-rmdir /q /s "C:\Program Files (x86)\Common Files\BattlEye"
-rmdir /q /s "C:\Users\%username%\AppData\Local\AMD\CN\GameReport"
-del "C:\Users\%username%\AppData\Local\AMD\CN\GameReport\FortniteClient-Win64-Shipping.exe" /f
-rmdir /q /s "C:\Users\%username%\AppData\Local\AMD\cl.cache"
-rmdir /q /s "C:\Users\%username%\AppData\Local\D3DSCache\e4548a4577c56a84"
-rmdir /q /s "C:\Users\%username%\AppData\Local\NVIDIA Corporation\GfeSDK"
-rmdir /q /s "C:\Users\%username%\AppData\Local\UnrealEngine\5.0"
-rmdir /q /s "C:\Users\%username%\AppData\Local\CrashReportClient"
-rmdir /q /s "C:\Users\%username%\AppData\Local\FortniteGame"
+vssadmin delete shadows /all /quiet
+reg delete "hkey_local_machine\system\currentcontrolset\services\easyanticheat" /va /f
+reg delete "hkey_current_user\software\microsoft\windows\currentversion\run" /v epicgameslauncher /f
+reg delete "hklm\system\currentcontrolset\services\beservice" /va /f
+reg delete "hklm\system\controlset001\services\beservice" /va /f
+del "c:\program files (x86)\common files\battleye\beservice.exe" /f
+del "c:\program files (x86)\common files\battleye\beservice_fn.exe" /f
+del "c:\users\%username%\appdata\local\amd\cn\gamereport\fortniteclient-win64-shipping.exe\gpa.bin" /f
+del "c:\users\%username%\appdata\local\amd\dxcache\92b1da15789e5451b49097cdafa85ec0f45214d6b0df9e8d.bin" /f
+del "c:\users\%username%\appdata\local\amd\dxcache\92b1da15789e5451e900a9bc20b57cd2f45214d6b0df9e8d.bin" /f
+del "c:\users\%username%\appdata\local\amd\cl.cache\x64\version 2.1 amd-app (3380.6).ellesmere.cache" /f
+del "c:\users\%username%\appdata\local\d3dscache\e4548a4577c56a84\52264c4c-172f-41b9-91b8-7f0c3b1e9021_ven_1002&dev_67df&subsys_c580&rev_e7.idx" /f
+del "c:\users\%username%\appdata\local\d3dscache\e4548a4577c56a84\52264c4c-172f-41b9-91b8-7f0c3b1e9021_ven_1002&dev_67df&subsys_c580&rev_e7.lock" /f
+del "c:\users\%username%\appdata\local\d3dscache\e4548a4577c56a84\52264c4c-172f-41b9-91b8-7f0c3b1e9021_ven_1002&dev_67df&subsys_c580&rev_e7.val" /f
+rmdir /q /s "c:\users\%username%\appdata\local\epicgameslauncher\saved\webcache_4430\cache\f_00010e'
+del "c:\users\%username%\appdata\local\epicgameslauncher\saved\webcache_4430\indexeddb\https_launcher.store.epicgames.com_0.indexeddb.leveldb\000036.log" /f
+del "c:\users\%username%\appdata\local\epicgameslauncher\saved\webcache_4430\indexeddb\https_launcher.store.epicgames.com_0.indexeddb.leveldb\000038.ldb" /f
+del "c:\users\%username%\appdata\local\epicgameslauncher\saved\webcache_4430\session storage\log.old" /f
+del "c:\users\%username%\appdata\local\nvidia corporation\gfesdk\fortniteclient-win64-shipping_12856.log" /f
+del "c:\users\%username%\appdata\local\temp\171cac9.tmp" /f
+del "c:\users\%username%\appdata\local\unrealengine\common\analytics\8e1d46dbc38f4a789939d781e1b91520" /f
+del "c:\users\%username%\appdata\local\crashreportclient\saved\config\windowseditor\engine.ini" /f
+del "c:\users\%username%\appdata\local\crashreportclient\saved\logs\crashreportclient.log" /f
+rmdir /q /s "c:\users\%username%\appdata\local\fortnitegame\"
+del "c:\windows\prefetch\beservice.exe-622e150d.pf" /f
+del "c:\windows\prefetch\crashreportclient.exe-c297728d.pf" /f
+del "c:\windows\prefetch\easyanticheat_setup.exe-cf3441ce.pf" /f
+del "c:\windows\prefetch\fortniteclient-win64-shipping-42c11b98.pf" /f
+del "c:\windows\prefetch\fortniteclient-win64-shipping-5eaa410a.pf" /f
+del "c:\windows\prefetch\fortnitelauncher.exe-af00a2b5.pf" /f
+del "c:\windows\prefetch\rundll32.exe-f264facf.pf" /f
+del "c:\program files (x86)\easyanticheat\easyanticheat.exe" /f
+rmdir /q /s "c:\users\%username%\appdata\local\epicgameslauncher\saved\"
+rmdir /q /s "c:\program files (x86)\common files\battleye"
+rmdir /q /s "c:\users\%username%\appdata\local\amd\cn\gamereport"
+del "c:\users\%username%\appdata\local\amd\cn\gamereport\fortniteclient-win64-shipping.exe" /f
+rmdir /q /s "c:\users\%username%\appdata\local\amd\cl.cache"
+rmdir /q /s "c:\users\%username%\appdata\local\d3dscache\e4548a4577c56a84"
+rmdir /q /s "c:\users\%username%\appdata\local\nvidia corporation\gfesdk"
+rmdir /q /s "c:\users\%username%\appdata\local\unrealengine\5.0"
+rmdir /q /s "c:\users\%username%\appdata\local\crashreportclient"
+rmdir /q /s "c:\users\%username%\appdata\local\fortnitegame"
 del "%userprofile%\.config\legendary\version.json" /f
 del "%userprofile%\.config\legendary\installed.json" /f
 del "%userprofile%\.config\legendary\config.ini" /f
@@ -51,721 +50,525 @@ del "%userprofile%\.config\legendary\aliases.json" /f
 rmdir /q /s "%userprofile%\.config\legendary\tmp"
 rmdir /q /s "%userprofile%\.config\legendary\metadata"
 rmdir /q /s "%userprofile%\.config\legendary\manifests"
-reg delete "HKEY_CURRENT_USER\Software\Epic Games\Unreal Engine\Hardware Survey" /f
-reg delete "HKEY_CURRENT_USER\Software\Epic Games\Unreal Engine\Identifiers" /f
-reg delete "HKU\S-1-5-21-860440266-1445122309-108474356-1001\Software\Epic Games\Unreal Engine\Identifiers" /va /f
-reg delete "HKU\S-1-5-21-860440266-1445122309-108474356-1001\Software\Epic Games\Unreal Engine\Hardware Survey" /va /f
-reg delete "HKEY_CURRENT_USER\Software\Epic Games" /f
-reg delete "HKU\S-1-5-21-860440266-1445122309-108474356-1001\Software\Epic Games" /f
-REG ADD HKLM\SYSTEM\CurrentControlSet\Control\ComputerName\ComputerName /v ComputerName /t REG_SZ /d %random% /f
-REG ADD HKLM\SYSTEM\CurrentControlSet\Control\ComputerName\ActiveComputerName /v ComputerName /t REG_SZ /d %random% /f
-reg delete "HKEY_CURRENT_USER\Software\Epic Games" /f
-reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\RADAR\HeapLeakDetection\DiagnosedApplications\VALORANT-Win64-Shipping.exe" /f
-reg delete "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\UserAssist\{FA99DFC7-6AC2-453A-A5E2-5E2AFF4507BD}\Count" /f
-reg delete "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\UserAssist\{F4E57C4B-2036-45F0-A9AB-443BCFE33D9F}\Count" /f
-reg delete "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\UserAssist\{F2A1CB5A-E3CC-4A2E-AF9D-505A7009D442}\Count" /f
-reg delete "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\UserAssist\{CEBFF5CD-ACE2-4F4F-9178-9926F41749EA}\Count" /f
-reg delete "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\UserAssist\{CAA59E3C-4792-41A5-9909-6A6A8D32490E}\Count" /f
-reg delete "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\UserAssist\{BCB48336-4DDD-48FF-BB0B-D3190DACB3E2}\Count" /f
-reg delete "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\UserAssist\{B267E3AD-A825-4A09-82B9-EEC22AA3B847}\Count" /f
-reg delete "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\UserAssist\{A3D53349-6E61-4557-8FC7-0028EDCEEBF6}\Count" /f
-reg delete "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\UserAssist\{9E04CAB2-CC14-11DF-BB8C-A2F1DED72085}\Count" /f
-reg delete "HKEY_CLASSES_ROOT\riotclient" /f
-reg delete "HKEY_CURRENT_USER\Software\WOW6432Node\Epic Games" /f
-reg delete "HKEY_CURRENT_USER\Software\Classes\com.epicgames.launcher" /f
-reg delete "HKEY_USERS\S-1-5-21-2097722829-2509645790-3642206209-1001\Software\Epic Games" /f
-reg delete "HKEY_CURRENT_USER\Software\Epic Games" /f
-reg delete "HKEY_CURRENT_USER\Software\Epic Games\Unreal Engine\Identifiers" /f
-reg delete "HKEY_CURRENT_USER\Software\Epic Games\Unreal Engine\Hardware Survey" /f
-reg delete "HKEY_LOCAL_MACHINE\SYSTEM\HardwareConfig" /f
-reg delete "HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control" /v SystemStartOptions /f
-reg delete "HKEY_CLASSES_ROOT\com.epicgames.launcher" /f
-reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Classes\com.epicgames.launcher" /f
-reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Epic Games" /f
-reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\EpicGames" /f
-reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\EpicGames" /f
-reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Epic Games" /f
-reg delete "HKEY_CURRENT_USER\SOFTWARE\Epic Games" /f
-reg delete "HKEY_CURRENT_USER\SOFTWARE\EpicGames" /f
-reg delete "HKEY_CURRENT_USER\Software\Classes\Installer\Dependencies" /v MSICache /f
-reg delete "HKEY_CURRENT_USER\Software\Microsoft\Direct3D" /v WHQLClass /f
-reg delete "HKEY_CURRENT_USER\Software\Epic Games\Unreal Engine" /f
-reg delete "HKEY_LOCAL_MACHINE\Hardware\Description\System\CentralProcessor\0" /v ProcessorNameString /f
-reg delete "HKEY_LOCAL_MACHINE\Software\Epic Games" /f
-reg delete "HKLM\SOFTWARE\Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\AppModel\PackageRepository\Packages\Microsoft.XboxGameOverlay_1.41.24001.0_neutral_split.scale-100_8wekyb3d8bbwe" /f
-reg delete "HKLM\SOFTWARE\Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\AppModel\PackageRepository\Packages\Microsoft.XboxGameOverlay_1.41.24001.0_neutral_~_8wekyb3d8bbwe" /f
-reg delete "HKLM\SOFTWARE\Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\AppModel\PackageRepository\Packages\Microsoft.XboxGameOverlay_1.41.24001.0_x64__8wekyb3d8bbwe" /f
-reg delete "HKLM\SOFTWARE\Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\AppModel\PackageRepository\Packages\Microsoft.XboxGameOverlay_1.41.24001.0_x64__8wekyb3d8bbwe\Microsoft.XboxGameOverlay_8wekyb3d8bbwe!App" /f
-reg delete "HKLM\SOFTWARE\Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\AppModel\PackageRepository\Packages\Microsoft.XboxGameOverlay_1.41.24001.0_x64__8wekyb3d8bbwe\Microsoft.XboxGameOverlay_8wekyb3d8bbwe!App\windows.protocol" /f
-reg delete "HKLM\SOFTWARE\Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\AppModel\PackageRepository\Packages\Microsoft.XboxGameOverlay_1.41.24001.0_x64__8wekyb3d8bbwe\Microsoft.XboxGameOverlay_8wekyb3d8bbwe!App\windows.protocol\ms-gamebarservices" /f
-reg delete "HKLM\SOFTWARE\Microsoft\RADAR\HeapLeakDetection\DiagnosedApplications\FortniteClient-Win64-Shipping.exe" /f
-reg delete "HKLM\SOFTWARE\Microsoft\SecurityManager\CapAuthz\ApplicationsEx\Microsoft.XboxGameOverlay_1.41.24001.0_x64__8wekyb3d8bbwe" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Application\Data\93" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Application\Index\Package\181" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Application\Index\Package\181\93" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Application\Index\PackageAndPackageRelativeApplicationId\181^App" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Application\Index\PackageAndPackageRelativeApplicationId\181^App\93" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\ApplicationUser\Data\ac" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\ApplicationUser\Data\ad" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\ApplicationUser\Index\UserAndApplication\3^93" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\ApplicationUser\Index\UserAndApplication\3^93\ac" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\ApplicationUser\Index\UserAndApplication\4^93" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\ApplicationUser\Index\UserAndApplication\4^93\ad" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Package\Data\180" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Package\Data\181" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Package\Data\182" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Package\Index\PackageFamily\4e\180" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Package\Index\PackageFamily\4e\181" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Package\Index\PackageFamily\4e\182" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Package\Index\PackageFullName\Microsoft.XboxGameOverlay_1.41.24001.0_neutral_split.scale-100_8wekyb3d8bbwe" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Package\Index\PackageFullName\Microsoft.XboxGameOverlay_1.41.24001.0_neutral_split.scale-100_8wekyb3d8bbwe\182" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Package\Index\PackageFullName\Microsoft.XboxGameOverlay_1.41.24001.0_neutral_~_8wekyb3d8bbwe" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Package\Index\PackageFullName\Microsoft.XboxGameOverlay_1.41.24001.0_neutral_~_8wekyb3d8bbwe\180" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Package\Index\PackageFullName\Microsoft.XboxGameOverlay_1.41.24001.0_x64__8wekyb3d8bbwe" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Package\Index\PackageFullName\Microsoft.XboxGameOverlay_1.41.24001.0_x64__8wekyb3d8bbwe\181" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\PackageUser\Data\1a80" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\PackageUser\Data\1a81" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\PackageUser\Data\1a82" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\PackageUser\Data\1a83" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\PackageUser\Data\1a84" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\PackageUser\Index\User\3\1a80" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\PackageUser\Index\User\3\1a81" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\PackageUser\Index\User\3\1a82" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\PackageUser\Index\User\4\1a83" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\PackageUser\Index\User\4\1a84" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\PackageUser\Index\UserAndPackage\3^180" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\PackageUser\Index\UserAndPackage\3^180\1a80" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\PackageUser\Index\UserAndPackage\3^181" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\PackageUser\Index\UserAndPackage\3^181\1a81" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\PackageUser\Index\UserAndPackage\3^182" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\PackageUser\Index\UserAndPackage\3^182\1a82" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\PackageUser\Index\UserAndPackage\4^180" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\PackageUser\Index\UserAndPackage\4^180\1a83" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\PackageUser\Index\UserAndPackage\4^181" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\PackageUser\Index\UserAndPackage\4^181\1a84" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Applications\Microsoft.XboxGameOverlay_1.41.24001.0_neutral_~_8wekyb3d8bbwe" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Applications\Microsoft.XboxGameOverlay_1.41.24001.0_neutral_~_8wekyb3d8bbwe\Microsoft.VCLibs.140.00_14.0.27323.0_x64__8wekyb3d8bbwe" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Applications\Microsoft.XboxGameOverlay_1.41.24001.0_neutral_~_8wekyb3d8bbwe\Microsoft.VCLibs.140.00_14.0.27323.0_x86__8wekyb3d8bbwe" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\S-1-5-21-2532382528-581214834-2534474248-1001\Microsoft.XboxGameOverlay_1.41.24001.0_neutral_~_8wekyb3d8bbwe" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\S-1-5-21-2532382528-581214834-2534474248-1001\Microsoft.XboxGameOverlay_1.41.24001.0_neutral_~_8wekyb3d8bbwe\Microsoft.VCLibs.140.00_14.0.27323.0_x64__8wekyb3d8bbwe" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\S-1-5-21-2532382528-581214834-2534474248-1001\Microsoft.XboxGameOverlay_1.41.24001.0_neutral_~_8wekyb3d8bbwe\Microsoft.VCLibs.140.00_14.0.27323.0_x86__8wekyb3d8bbwe" /f
-reg delete "HKLM\SOFTWARE\WOW6432Node\Microsoft\SecurityManager\CapAuthz\ApplicationsEx\Microsoft.XboxGameOverlay_1.41.24001.0_x64__8wekyb3d8bbwe" /f
-reg delete "HKLM\SOFTWARE\WOW6432Node\EasyAntiCheat" /f
-reg delete "HKLM\SYSTEM\ControlSet001\Services\EasyAntiCheat" /f
-reg delete "HKLM\SYSTEM\ControlSet001\Services\EasyAntiCheat\Security" /f
-reg delete "HKLM\SYSTEM\CurrentControlSet\Services\EasyAntiCheat" /f
-reg delete "HKLM\SYSTEM\CurrentControlSet\Services\EasyAntiCheat\Security" /f
-reg delete "HKU\.DEFAULT\Software\Microsoft\SystemCertificates\TrustedPublisher" /f
-reg delete "HKU\.DEFAULT\Software\Microsoft\SystemCertificates\TrustedPublisher\Certificates" /f
-reg delete "HKU\.DEFAULT\Software\Microsoft\SystemCertificates\TrustedPublisher\CRLs" /f
-reg delete "HKU\.DEFAULT\Software\Microsoft\SystemCertificates\TrustedPublisher\CTLs" /f
-reg delete "HKU\.DEFAULT\Software\Policies\Microsoft\SystemCertificates\TrustedPublisher" /f
-reg delete "HKU\.DEFAULT\Software\Policies\Microsoft\SystemCertificates\TrustedPublisher\Certificates" /f
-reg delete "HKU\.DEFAULT\Software\Policies\Microsoft\SystemCertificates\TrustedPublisher\CRLs" /f
-reg delete "HKU\.DEFAULT\Software\Policies\Microsoft\SystemCertificates\TrustedPublisher\CTLs" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Internet Explorer\LowRegistry\Audio\PolicyConfig\PropertyStore\5e4eddc4_0" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Internet Explorer\LowRegistry\Audio\PolicyConfig\PropertyStore\5e4eddc4_0\{219ED5A0-9CBF-4F3A-B927-37C9E5C5F14F}" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\Streams\0" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\1\ApplicationViewManagement\W32:00000000000205B6" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\1\ApplicationViewManagement\W32:00000000000403D6" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\1\ApplicationViewManagement\W32:00000000000405DE" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\1\ApplicationViewManagement\W32:0000000000060286" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\1\ApplicationViewManagement\W32:000000000009042E" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\1\ApplicationViewManagement\W32:00000000000A03B4" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\1\ApplicationViewManagement\W32:00000000000A0430" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\1\ApplicationViewManagement\W32:00000000000B0532" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\1\ApplicationViewManagement\W32:00000000000B05D6" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\1\ApplicationViewManagement\W32:00000000000C0430" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\1\ApplicationViewManagement\W32:00000000000C0586" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\1\ApplicationViewManagement\W32:00000000000E03D2" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\1\ApplicationViewManagement\W32:00000000000E0406" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\1\ApplicationViewManagement\W32:0000000000100430" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\1\ApplicationViewManagement\W32:00000000001103EE" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\1\ApplicationViewManagement\W32:000000000011041E" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\1\ApplicationViewManagement\W32:000000000012047E" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\1\ApplicationViewManagement\W32:00000000001303EE" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\1\ApplicationViewManagement\W32:00000000001304F2" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\1\ApplicationViewManagement\W32:000000000014041E" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\1\ApplicationViewManagement\W32:00000000001703E6" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\1\ApplicationViewManagement\W32:0000000000170440" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\1\ApplicationViewManagement\W32:00000000001704FC" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\StreamMRU" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Classes\Local Settings\MrtCache\C:%5CProgram Files%5CWindowsApps%5CMicrosoft.XboxGamingOverlay_2.26.28001.0_x64__8wekyb3d8bbwe%5Cmicrosoft.system.package.metadata%5CS-1-5-21-2532382528-581214834-2534474248-1001-MergedResources-2.pri" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Classes\Local Settings\MrtCache\C:%5CProgram Files%5CWindowsApps%5CMicrosoft.XboxGamingOverlay_2.26.28001.0_x64__8wekyb3d8bbwe%5Cmicrosoft.system.package.metadata%5CS-1-5-21-2532382528-581214834-2534474248-1001-MergedResources-2.pri\1d50f44cf1a0499" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Classes\Local Settings\MrtCache\C:%5CProgram Files%5CWindowsApps%5CMicrosoft.XboxGamingOverlay_2.26.28001.0_x64__8wekyb3d8bbwe%5Cmicrosoft.system.package.metadata%5CS-1-5-21-2532382528-581214834-2534474248-1001-MergedResources-2.pri\1d50f44cf1a0499\87f345c2" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Classes\discord-432980957394370572" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Classes\discord-432980957394370572\DefaultIcon" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Classes\discord-432980957394370572\shell" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Classes\discord-432980957394370572\shell\open" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Classes\discord-432980957394370572\shell\open\command" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\System\GameConfigStore\Children\03ce6902-ff58-41de-ab92-36fcaf27a580" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\System\GameConfigStore\Parents\fd13f746e7d2d69760b017363f621255c9b49ac8" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001_Classes\Local Settings\MrtCache\C:%5CProgram Files%5CWindowsApps%5CMicrosoft.XboxGamingOverlay_2.26.28001.0_x64__8wekyb3d8bbwe%5Cmicrosoft.system.package.metadata%5CS-1-5-21-2532382528-581214834-2534474248-1001-MergedResources-2.pri" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001_Classes\Local Settings\MrtCache\C:%5CProgram Files%5CWindowsApps%5CMicrosoft.XboxGamingOverlay_2.26.28001.0_x64__8wekyb3d8bbwe%5Cmicrosoft.system.package.metadata%5CS-1-5-21-2532382528-581214834-2534474248-1001-MergedResources-2.pri\1d50f44cf1a0499" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001_Classes\Local Settings\MrtCache\C:%5CProgram Files%5CWindowsApps%5CMicrosoft.XboxGamingOverlay_2.26.28001.0_x64__8wekyb3d8bbwe%5Cmicrosoft.system.package.metadata%5CS-1-5-21-2532382528-581214834-2534474248-1001-MergedResources-2.pri\1d50f44cf1a0499\87f345c2" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001_Classes\discord-432980957394370572" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001_Classes\discord-432980957394370572\DefaultIcon" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001_Classes\discord-432980957394370572\shell" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001_Classes\discord-432980957394370572\shell\open" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001_Classes\discord-432980957394370572\shell\open\command" /f
-reg delete "HKU\S-1-5-18\Software\Microsoft\SystemCertificates\TrustedPublisher" /f
-reg delete "HKU\S-1-5-18\Software\Microsoft\SystemCertificates\TrustedPublisher\Certificates" /f
-reg delete "HKU\S-1-5-18\Software\Microsoft\SystemCertificates\TrustedPublisher\CRLs" /f
-reg delete "HKU\S-1-5-18\Software\Microsoft\SystemCertificates\TrustedPublisher\CTLs" /f
-reg delete "HKU\S-1-5-18\Software\Policies\Microsoft\SystemCertificates\TrustedPublisher" /f
-reg delete "HKU\S-1-5-18\Software\Policies\Microsoft\SystemCertificates\TrustedPublisher\Certificates" /f
-reg delete "HKU\S-1-5-18\Software\Policies\Microsoft\SystemCertificates\TrustedPublisher\CRLs" /f
-reg delete "HKU\S-1-5-18\Software\Policies\Microsoft\SystemCertificates\TrustedPublisher\CTLs" /f
-RMDIR /S /Q "C:\Users\%username%\AppData\Local\Microsoft\Windows\Temporary Internet Files"
-RMDIR /S /Q "C:\Windows\logs\CBS"
-RMDIR /S /Q "C:\Windows\Temp"
-RMDIR /S /Q "C:\Windows\System32\config\systemprofile\AppData\Local\ScreenTime"
-RMDIR /S /Q "C:\Windows\System32\config\systemprofile\AppData\Local\Microsoft\Vault\UserProfileRoaming"
-RMDIR /S /Q "C:\Windows\System32\config\systemprofile\AppData\Local\D3DSCache"
-RMDIR /S /Q "C:\Windows\System32\config\TxR"
-RMDIR /S /Q "C:\Windows\System32\WDI\LogFiles\StartpInfo"
-RMDIR /S /Q "C:\Windows\System32\WDI\LogFiles"
-RMDIR /S /Q "C:\Windows\SoftwareDistribution\"
-RMDIR /S /Q "C:\Windows\UserviceProfiles\NetworkService\AppData\Local\Microsoft\Windows\deliveryOptimization\Logs"
-RMDIR /S /Q "C:\Windows\UserviceProfiles\NetworkService\AppData\Local\Microsoft\Windows\DeliveryOptimization\State"
-RMDIR /S /Q "C:\Users\%username%\AppData\Roaming\Microsoft\Protect"
-RMDIR /S /Q "C:\Users\%username%\AppData\Local\VirtalStore"
-RMDIR /S /Q "C:\Users\%username%\AppData\Local\UnrealEngine"
-RMDIR /S /Q "C:\Users\%username%\AppData\Local\Temp"
-RMDIR /S /Q "C:\Users\%username%\AppData\Local\Packages\Microsoft.Windows.Search_cw5n1h2txyewy\LocalState\DeviceSearchCache"
-RMDIR /S /Q "C:\Users\%username%\AppData\Local\Packages\Microsoft.Windows.Search_cw5n1h2txyewy\LocalState\ConstraintIndex"
-RMDIR /S /Q "C:\Users\%username%\AppData\Local\Microsoft\Windows\WebCache"
-RMDIR /S /Q "C:\Users\%username%\AppData\Local\Microsoft\Windows\WER"
-RMDIR /S /Q "C:\Users\%username%\AppData\Local\Microsoft\Windows\INetCookies"
-RMDIR /S /Q "C:\Users\%username%\AppData\Local\Microsoft\Windows\INetCache"
-RMDIR /S /Q "C:\Users\%username%\AppData\Local\Microsoft\Windows\IEDownloadHistory"
-RMDIR /S /Q "C:\Users\%username%\AppData\Local\Microsoft\Windows\IECompataCache"
-RMDIR /S /Q "C:\Users\%username%\AppData\Local\Microsoft\Windows\IECompatCache"
-RMDIR /S /Q "C:\Users\%username%\AppData\Local\Microsoft\Windows\Caches"
-RMDIR /S /Q "C:\Users\%username%\AppData\Local\Microsoft\Terminal Server Client\Cache"
-RMDIR /S /Q "C:\Users\%username%\AppData\Local\Microsoft\Internet Explorer\CacheStorage"
-RMDIR /S /Q "C:\Users\%username%\AppData\Local\D3DSCache"
-RMDIR /S /Q "C:\Users\%username%\AppData\Local\CrashDmps"
-RMDIR /S /Q "C:\Users\%username%\AppData\Local\ConnectedDevicesPlatform"
-RMDIR /S /Q "C:\ProgramData\NVIDIA Corporation\NV_Cache"
-RMDIR /S /Q "C:\ProgramData\NVIDIA Corporation\Drs\nvAppTimestamps"
-RMDIR /S /Q "C:\ProgramData\Microsoft\Windows\WER"
-RMDIR /S /Q "C:\PerfLogs"
-RMDIR /S /Q "C:\Documents and Settings\%username%\AppData\Local\Application Data\Microsoft\Windows\Caches"
-RMDIR /S /Q "%localappdata%\Microsoft\Windows\Caches"
-RMDIR /S /Q "C:\Users\%username%\AppData\Local\VALORANT"
-RMDIR /S /Q "C:\ProgramData\Riot Games\Metadata\Riot Client"
-RMDIR /S /Q "C:\ProgramData\Riot Games\Metadata\valorant.live"
-RMDIR /S /Q "%systemdrive%\ProgramData\Microsoft\Windows\WER"
-RMDIR /S /Q "%systemdrive%\Users\Public\Shared Files"
-RMDIR /S /Q "%systemdrive%\System Volume Information\IndexerVolumeGuid"
-RMDIR /S /Q "%systemdrive%\Users\Public\Libraries"
-RMDIR /S /Q "%systemdrive%\MSOCache"
-del /S /Q "C:\ProgramData\Riot Games\machine.cfg"
-del "C:\Riot Games\VALORANT\live\Manifest_NonFSFiles_Win64.txt" /f /q
-del "C:\Riot Games\VALORANT\live\Engine\Binaries\ThirdParty\CEF3\Win64\icdtl.dat" /f /q
-del "C:\Riot Games\Riot Client\X\natives_blob.bin" /f /q
-del "C:\Riot Games\Riot Client\X\icdtl.dat" /f /q
-del "C:\Riot Games\Riot Client\X\Plgins\plgin-manifest.json" /f /q
-del /s /q "C:\Windows\vgkbootstats.dat"
-del /s /q /f "%systemdrive%\$Recycle.bin"
-del /s /q "D:\System Volume Information\tracking.log"
-del /s /q "C:\Windows\win.ini"
-del /s /q "C:\Windows\memory.dmp"
-del /s /q "C:\Windows\WindowsUpdate.log"
-del /s /q "C:\Windows\System32\LogFiles\WMI\Wifi.etl"
-del /s /q "C:\Windows\System32\LogFiles\WMI\RadioMgr.etl"
-del /s /q "C:\Windows\System32\LogFiles\WMI\NtfsLog.etl"
-del /s /q "C:\Windows\System32\LogFiles\WMI\NetCore.etl"
-del /s /q "C:\Windows\System32\LogFiles\WMI\Microsoft-Windows-Rdp-Graphics-RdpIdd-Trace.etl"
-del /s /q "C:\Windows\System32\LogFiles\WMI\LwtNetLog.etl"
-del /s /q "C:\Windows\UserviceProfiles\NetworkService\NTSER.DAT"
-del /s /q "C:\Windows\UserviceProfiles\LocalService\AppData\Local\Microsoft\Windows\qwavecache.dat"
-del /s /q "C:\Windows\Logs\DISM\dism.log"
-del /s /q "C:\Windows\DirectX.log"
-del /s /q "C:\Users\%username%\ntser.dat.LOG2"
-del /s /q "C:\Users\%username%\ntser.dat.LOG1"
-del /s /q "C:\Users\%username%\\AppData\Local\Microsoft\Windows\INetCache\IE\container.dat"
-del /s /q "C:\Users\%username%\NTSER.DAT"
-del /s /q "C:\Users\%username%\AppData\Local\UnrealEngine\4.23\Saved\Config\WindowsClient\Manifest.ini"
-del /s /q "C:\Users\%username%\AppData\Local\Microsoft\Windows\INetCache\IE\container.dat"
-del /s /q "C:\Users\%username%\AppData\Local\Microsoft\Vault\UserProfileRoaming\Latest.dat"
-del /s /q "C:\Users\%username%\AppData\Local\Microsoft\OneDrive\logs\Common\DeviceHealthSummaryConfigration.ini"
-del /s /q "C:\Users\%username%\AppData\Local\IconCache.db"
-del /s /q "C:\Users\%username%\AppData\Local\AC\INetCookies\ESE\container.dat"
-del /s /q "C:\System Volume Information\tracking.log"
-del /s /q "C:\ProgramData\Microsoft\Windows\DeviceMetadataCache\dmrc.idx"
-del /s /q "C:\Config.Msi"
-del /s /q "C:\Windows\System32\restore\MachineGuid.txt"
-del /s /q "%systemdrive%\Users\Public\Libraries\collection.dat"
-del /s /q "%systemdrive%\System Volume Information\WPSettings.dat"
-del /s /q "%systemdrive%\System Volume Information\tracking.log"
-del /s /q "%systemdrive%\Windows\INF\setpapi.dev.log"
-del /s /q "%systemdrive%\Windows\INF\setpapi.setp.log"
-del /s /q "%systemdrive%\ProgramData\ntser.pol"
-del /s /q "%systemdrive%\Users\Defalt\NTSER.DAT"
-del /s /q "%systemdrive%\Recovery\ntser.sys"
-rd /q /s %systemdrive%\$Recycle.Bin
-rd /q /s d:\$Recycle.Bin
-rd /q /s e:\$Recycle.Bin
-rd /q /s f:\$Recycle.Bin
-REG ADD HKLM\SYSTEM\CurrentControlSet\Control\ComputerName\ComputerName /v ComputerName /t REG_SZ /d %random%-%random% /f
-REG ADD HKLM\SYSTEM\CurrentControlSet\Control\ComputerName\ActiveComputerName /v ComputerName /t REG_SZ /d %random%-%random% /f
-REG ADD HKLM\SYSTEM\HardwareConfig /v LastConfig /t REG_SZ /d {eac%random%} /f
-REG ADD HKLM\SYSTEM\CurrentControlSet\Control\IDConfigDB\Hardware" "Profiles\0001 /v HwProfileGuid /t REG_SZ /d {%random%-%random%-%random%-%random%-%random%} /f
-REG ADD HKLM\SYSTEM\CurrentControlSet\Control\IDConfigDB\Hardware" "Profiles\0001 /v GUID /t REG_SZ /d {%random%-%random%-%random%-%random%-%random%} /f
-REG ADD HKLM\SOFTWARE\Microsoft\Windows" "NT\CurrentVersion /v BuildGUID /t REG_SZ /d %random%-%random% /f
-SET subkey1=%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%
-SET subkey1=%subkey1:0=a%
-SET subkey1=%subkey1:1=b%
-SET subkey1=%subkey1:2=c%
-REG ADD HKLM\SOFTWARE\Microsoft\Windows" "NT\CurrentVersion /v BuildGUIDEx /t REG_BINARY /d %subkey1% /f
-REG ADD HKLM\SOFTWARE\Microsoft\Windows" "NT\CurrentVersion /v RegisteredOwner /t REG_SZ /d %random%-%random% /f
-REG ADD HKLM\SOFTWARE\Microsoft\Windows" "NT\CurrentVersion /v RegisteredOrganization /t REG_SZ /d %random%-%random% /f
-REG ADD HKLM\SOFTWARE\Microsoft\Cryptography /v GUID /t REG_SZ /d %random%-%random%-%random%-%random%-%random% /f
-REG ADD HKLM\SOFTWARE\Microsoft\Cryptography /v MachineGuid /t REG_SZ /d %random%-%random%-%random%-%random%-%random% /f
-REG ADD HKLM\SOFTWARE\Microsoft\Windows" "NT\CurrentVersion /v ProductId /t REG_SZ /d %random%-%random%-%random%-%random% /f
-REG ADD HKLM\SOFTWARE\Microsoft\Windows" "NT\CurrentVersion /v InstallDate /t REG_SZ /d %random% /f
-REG ADD HKLM\SYSTEM\CurrentControlSet\Control\SystemInformation /v ComputerHardwareId /t REG_SZ /d {%random%-%random%-%random%-%random%} /f
-REG ADD "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography" /v MachineGuid /t REG_SZ /d %Hex8%-%Hex1%-%Hex0%-%Hex1%-%Hex10% /f>nul 2>&1
-REG ADD "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion" /v BuildGUID /t REG_SZ /d %Hex8%-%Hex1%-%Hex0%-%Hex1%-%Hex10% /f>nul 2>&1
-REG ADD "HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\Class\{4d36e967-e325-11ce-bfc1-08002be10318}\Configuration\Variables\BusDeviceDesc" /v PropertyGuid /t REG_SZ /d {%Hex8%-%Hex1%-%Hex0%-%Hex1%-%Hex10%} /f>nul 2>&1
-REG ADD "HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\Class\{4d36e968-e325-11ce-bfc1-08002be10318}\Configuration\Variables\DeviceDesc" /v PropertyGuid /t REG_SZ /d {%Hex8%-%Hex1%-%Hex0%-%Hex1%-%Hex10%} /f>nul 2>&1
-REG ADD "HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\Class\{4d36e968-e325-11ce-bfc1-08002be10318}\Configuration\Variables\Driver" /v PropertyGuid /t REG_SZ /d {%Hex8%-%Hex1%-%Hex0%-%Hex1%-%Hex10%} /f>nul 2>&1W
-REG ADD "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SystemInformation" /v ComputerHardwareId /t REG_SZ /d {%Hex8%-%Hex1%-%Hex0%-%Hex1%-%Hex10%} /f>nul 2>&1
-REG ADD "HKLM\Software\Microsoft\Windows NT\CurrentVersion" /v InstallDate /t REG_SZ /d %random% /f
-REG ADD "HKLM\Software\Microsoft\Windows NT\CurrentVersion" /v ProductId /t REG_SZ /d %random% /f
-REG ADD HKLM\SOFTWARE\Microsoft\Cryptography /v GUID /t REG_SZ /d %Hex1%-%Hex8%-%Hex1%-%Hex0%-%Hex10% /f
-REG ADD HKLM\SOFTWARE\Microsoft\Windows" "NT\CurrentVersion /v RegisteredOrganization /t REG_SZ /d FS%random% /f
-REG ADD HKLM\SOFTWARE\Microsoft\Windows" "NT\CurrentVersion /v RegisteredOwner /t REG_SZ /d FS%random% /f
-REG ADD HKLM\SYSTEM\CurrentControlSet\Control\ComputerName\ActiveComputerName /v ComputerName /t REG_SZ /d %random% /f
-REG ADD HKLM\SYSTEM\CurrentControlSet\Control\ComputerName\ComputerName /v ComputerName /t REG_SZ /d %random% /f
-REG ADD HKLM\SYSTEM\CurrentControlSet\Control\SystemInformation /v ComputerHardwareId /t REG_SZ /d {%random%-s%random%-%random%-%random%-%random%} /f
-REG ADD HKLM\SYSTEM\HardwareConfig /v LastConfig /t REG_SZ /d {fefefee%random%-%random%-%random%-%random%} /f
-REG ADD HKLM\Software\Microsoft\Windows NT\CurrentVersion /v InstallDate /t REG_SZ /d %random% /f
-REG ADD HKLM\Software\Microsoft\Windows NT\CurrentVersion /v ProductId /t REG_SZ /d %random% /f
-REG ADD HKLM\System\CurrentControlSet\Control\SystemInformation /v ComputerHardwareId /t REG_SZ /d %random% /f
-REG ADD HKLM\System\CurrentControlSet\Control\WMI\Security /v 671a8285-4edb-4cae-99fe-69a15c48c0bc /t REG_SZ /d %random% /f
-REG ADD HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion" "WindowsUpdate /v SusClientId /t REG_SZ /d {%random%-%random%-%random%-%random%-%random%} /f
-REG ADD HKLM\SYSTEM\CurrentControlSet\Control\ComputerName\ComputerName /v ComputerName /t REG_SZ /d PizzaXYZ-%random% /f
-REG ADD HKLM\SYSTEM\CurrentControlSet\Control\ComputerName\ActiveComputerName /v ComputerName /t REG_SZ /d PizzaXYZ-%random% /f
-REG ADD HKLM\SYSTEM\CurrentControlSet\Control\IDConfigDB\Hardware" "Profiles\0001 /v HwProfileGuid /t REG_SZ /d {PizzaXYZ-%random%-%random%-%random%-%random%} /f
-REG ADD HKLM\SYSTEM\CurrentControlSet\Control\IDConfigDB\Hardware" "Profiles\0001 /v GUID /t REG_SZ /d {PizzaXYZ-%random%-%random%-%random%-%random%} /f
-REG ADD HKLM\SOFTWARE\Microsoft\Windows" "NT\CurrentVersion /v BuildGUID /t REG_SZ /d PizzaXYZ-%random% /f
-REG ADD HKLM\SOFTWARE\Microsoft\Windows" "NT\CurrentVersion /v RegisteredOwner /t REG_SZ /d PizzaXYZ-%random% /f
-REG ADD HKLM\SOFTWARE\Microsoft\Windows" "NT\CurrentVersion /v RegisteredOrganization /t REG_SZ /d PizzaXYZ-%random% /f
-REG ADD HKLM\SOFTWARE\Microsoft\Cryptography /v GUID /t REG_SZ /d PizzaXYZ-%random%-%random%-%random%-%random% /f
-REG ADD HKLM\SOFTWARE\Microsoft\Cryptography /v MachineGuid /t REG_SZ /d PizzaXYZ-%random%-%random%-%random%-%random% /f
-REG ADD HKLM\SYSTEM\CurrentControlSet\Control\SystemInformation /v ComputerHardwareId /t REG_SZ /d {toxic-s%random%-%random%-%random%-%random%} /f
-REG ADD HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion" "WindowsUpdate /v SusClientId /t REG_SZ /d {PizzaXYZ-%random%-%random%-%random%-%random%} /f
-reg delete "HKLM\SOFTWARE\Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\AppModel\PackageRepository\Extensions\ProgIDs\AppXm8fs0gj5h36ynw4kq0x3gqnz6ecr1kvy\Microsoft.XboxGameOverlay_1.41.24001.0_x64__8wekyb3d8bbwe: (NULL!)" /f
-reg delete "HKLM\SOFTWARE\Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\AppModel\PackageRepository\Extensions\windows.protocol\ms-gamebarservices\AppXm8fs0gj5h36ynw4kq0x3gqnz6ecr1kvy\Microsoft.XboxGameOverlay_1.41.24001.0_x64__8wekyb3d8bbwe: (NULL!)" /f
-reg delete "HKLM\SOFTWARE\Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\AppModel\PackageRepository\Packages\Microsoft.XboxGameOverlay_1.41.24001.0_neutral_split.scale-100_8wekyb3d8bbwe\Path: "C:\Program Files\WindowsApps\Microsoft.XboxGameOverlay_1.41.24001.0_neutral_split.scale-100_8wekyb3d8bbwe"" /f
-reg delete "HKLM\SOFTWARE\Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\AppModel\PackageRepository\Packages\Microsoft.XboxGameOverlay_1.41.24001.0_neutral_~_8wekyb3d8bbwe\Path: "C:\Program Files\WindowsApps\Microsoft.XboxGameOverlay_1.41.24001.0_neutral_~_8wekyb3d8bbwe"" /f
-reg delete "HKLM\SOFTWARE\Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\AppModel\PackageRepository\Packages\Microsoft.XboxGameOverlay_1.41.24001.0_x64__8wekyb3d8bbwe\Path: "C:\Program Files\WindowsApps\Microsoft.XboxGameOverlay_1.41.24001.0_x64__8wekyb3d8bbwe"" /f
-reg delete "HKLM\SOFTWARE\Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\AppModel\PackageRepository\Packages\Microsoft.XboxGameOverlay_1.41.24001.0_x64__8wekyb3d8bbwe\Microsoft.XboxGameOverlay_8wekyb3d8bbwe!App\windows.protocol\ms-gamebarservices\ACID: "App.AppXe655y38cadddpg1xd2b5k915wndhg5gm.mca"" /f
-reg delete "HKLM\SOFTWARE\Microsoft\RADAR\HeapLeakDetection\DiagnosedApplications\FortniteClient-Win64-Shipping.exe\LastDetectionTime:  F9 8F FD B6 8D 13 D5 01" /f
-reg delete "HKLM\SOFTWARE\Microsoft\SecurityManager\CapAuthz\ApplicationsEx\Microsoft.XboxGameOverlay_1.41.24001.0_x64__8wekyb3d8bbwe\AppPackageType: 0x00000000" /f
-reg delete "HKLM\SOFTWARE\Microsoft\SecurityManager\CapAuthz\ApplicationsEx\Microsoft.XboxGameOverlay_1.41.24001.0_x64__8wekyb3d8bbwe\PackageSid: "S-1-15-2-1823635404-1364722122-2170562666-1762391777-2399050872-3465541734-3732476201"" /f
-reg delete "HKLM\SOFTWARE\Microsoft\SecurityManager\CapAuthz\ApplicationsEx\Microsoft.XboxGameOverlay_1.41.24001.0_x64__8wekyb3d8bbwe\EnterpriseID: 0x00000000" /f
-reg delete "HKLM\SOFTWARE\Microsoft\SecurityManager\CapAuthz\ApplicationsEx\Microsoft.XboxGameOverlay_1.41.24001.0_x64__8wekyb3d8bbwe\CapSids:  0A 00 00 00 01 02 00 00 00 00 00 0F 03 00 00 00 01 00 00 00 01 0A 00 00 00 00 00 0F 03 00 00 00 00 04 00 00 E8 41 FE 65 15 CB 86 8E 43 2C E1 30 42 2A B3 51 4E 9C 0E 17 B4 1B 89 09 98 DA 44 8D 13 6A 0C B3 01 0A 00 00 00 00 00 0F 03 00 00 00 00 04 00 00 E4 29 72 AE 52 A9 2E 19 C4 FB 6C 51 9E 00 25 50 5B 64 A6 6F A4 D2 D0 57 D2 DB D7 37 F2 B0 85 AC 01 0A 00 00 00 00 00 0F 03 00 00 00 00 04 00 00 0B 44 35 CF 44 6C 30 B5 4C 90 DA 15 DB 4C 09 94 5A 08 A5 69 F0 DC C5 65 02 4A 7B B9 A8 2C DA C2 01 0A 00 00 00 00 00 0F 03 00 00 00 00 04 00 00 3C DA 35 57 2A 15 FA C8 02 C1 BC 52 65 2B D8 EC C8 8E 72 9B 62 79 A8 20 65 1E 06 07 AF 02 70 0C 01 0A 00 00 00 00 00 0F 03 00 00 00 00 04 00 00 CE 22 45 27 27 B8 EA 12 11 8A 20 EF 09 19 FD 6B B8 B4 A0 D6 03 10 5B DD D6 CF 74 85 60 22 D2 CD 01 0A 00 00 00 00 00 0F 03 00 00 00 00 04 00 00 0A D5 CA 1A 96 05 1C F5 5E 2C 0C CE 2A E" /f
-reg delete "8 F3 66 B9 86 13 95 5D 1A 40 0A 7F 52 A9 BA B2 23 04 83 01 0A 00 00 00 00 00 0F 03 00 00 00 00 04 00 00 38 B0 4E D5 42 5B 15 DF 75 ED 77 00 0E 5B 16 73 C1 5E D2 AF 68 BF 75 AD 38 35 1D 6A 1E 9A 12 F7 01 0A 00 00 00 00 00 0F 03 00 00 00 00 04 00 00 AF 37 E5 A2 58 AD 48 66 53 E6 1F 53 B9 42 0E EA 34 9C E5 B6 48 3A DB 78 9F 5C A7 33 FE 7E 97 1A 01 08 00 00 00 00 00 0F 03 00 00 00 CC 77 B2 6C CA 01 58 51 6A 28 60 81 E1 F6 0B 69 78 9C FE 8E 66 F8 8F CE 29 11 79 DE 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00" /f
+reg delete "hkey_current_user\software\epic games\unreal engine\hardware survey" /f
+reg delete "hkey_current_user\software\epic games\unreal engine\identifiers" /f
+reg delete "hku\s-1-5-21-860440266-1445122309-108474356-1001\software\epic games\unreal engine\identifiers" /va /f
+reg delete "hku\s-1-5-21-860440266-1445122309-108474356-1001\software\epic games\unreal engine\hardware survey" /va /f
+reg delete "hkey_current_user\software\epic games" /f
+reg delete "hku\s-1-5-21-860440266-1445122309-108474356-1001\software\epic games" /f
+reg add hklm\system\currentcontrolset\control\computername\computername /v computername /t reg_sz /d %random% /f
+reg add hklm\system\currentcontrolset\control\computername\activecomputername /v computername /t reg_sz /d %random% /f
+reg delete "hkey_local_machine\software\microsoft\radar\heapleakdetection\diagnosedapplications\valorant-win64-shipping.exe" /f
+reg delete "hkey_current_user\software\microsoft\windows\currentversion\explorer\userassist\{fa99dfc7-6ac2-453a-a5e2-5e2aff4507bd}\count" /f
+reg delete "hkey_current_user\software\microsoft\windows\currentversion\explorer\userassist\{f4e57c4b-2036-45f0-a9ab-443bcfe33d9f}\count" /f
+reg delete "hkey_current_user\software\microsoft\windows\currentversion\explorer\userassist\{f2a1cb5a-e3cc-4a2e-af9d-505a7009d442}\count" /f
+reg delete "hkey_current_user\software\microsoft\windows\currentversion\explorer\userassist\{cebff5cd-ace2-4f4f-9178-9926f41749ea}\count" /f
+reg delete "hkey_current_user\software\microsoft\windows\currentversion\explorer\userassist\{caa59e3c-4792-41a5-9909-6a6a8d32490e}\count" /f
+reg delete "hkey_current_user\software\microsoft\windows\currentversion\explorer\userassist\{bcb48336-4ddd-48ff-bb0b-d3190dacb3e2}\count" /f
+reg delete "hkey_current_user\software\microsoft\windows\currentversion\explorer\userassist\{b267e3ad-a825-4a09-82b9-eec22aa3b847}\count" /f
+reg delete "hkey_current_user\software\microsoft\windows\currentversion\explorer\userassist\{a3d53349-6e61-4557-8fc7-0028edceebf6}\count" /f
+reg delete "hkey_current_user\software\microsoft\windows\currentversion\explorer\userassist\{9e04cab2-cc14-11df-bb8c-a2f1ded72085}\count" /f
+reg delete "hkey_classes_root\riotclient" /f
+reg delete "hkey_current_user\software\wow6432node\epic games" /f
+reg delete "hkey_current_user\software\classes\com.epicgames.launcher" /f
+reg delete "hkey_users\s-1-5-21-2097722829-2509645790-3642206209-1001\software\epic games" /f
+reg delete "hkey_local_machine\system\hardwareconfig" /f
+reg delete "hkey_local_machine\system\currentcontrolset\control" /v systemstartoptions /f
+reg delete "hkey_classes_root\com.epicgames.launcher" /f
+reg delete "hkey_local_machine\software\classes\com.epicgames.launcher" /f
+reg delete "hkey_local_machine\software\wow6432node\epic games" /f
+reg delete "hkey_local_machine\software\wow6432node\epicgames" /f
+reg delete "hkey_local_machine\software\epicgames" /f
+reg delete "hkey_local_machine\software\epic games" /f
+reg delete "hkey_current_user\software\epicgames" /f
+reg delete "hkey_current_user\software\classes\installer\dependencies" /v msicache /f
+reg delete "hkey_current_user\software\microsoft\direct3d" /v whqlclass /f
+reg delete "hkey_current_user\software\epic games\unreal engine" /f
+reg delete "hkey_local_machine\hardware\description\system\centralprocessor\0" /v processornamestring /f
+reg delete "hklm\software\classes\local settings\software\microsoft\windows\currentversion\appmodel\packagerepository\packages\microsoft.xboxgameoverlay_1.41.24001.0_neutral_split.scale-100_8wekyb3d8bbwe" /f
+reg delete "hklm\software\classes\local settings\software\microsoft\windows\currentversion\appmodel\packagerepository\packages\microsoft.xboxgameoverlay_1.41.24001.0_neutral_~_8wekyb3d8bbwe" /f
+reg delete "hklm\software\classes\local settings\software\microsoft\windows\currentversion\appmodel\packagerepository\packages\microsoft.xboxgameoverlay_1.41.24001.0_x64__8wekyb3d8bbwe" /f
+reg delete "hklm\software\classes\local settings\software\microsoft\windows\currentversion\appmodel\packagerepository\packages\microsoft.xboxgameoverlay_1.41.24001.0_x64__8wekyb3d8bbwe\microsoft.xboxgameoverlay_8wekyb3d8bbwe!app" /f
+reg delete "hklm\software\classes\local settings\software\microsoft\windows\currentversion\appmodel\packagerepository\packages\microsoft.xboxgameoverlay_1.41.24001.0_x64__8wekyb3d8bbwe\microsoft.xboxgameoverlay_8wekyb3d8bbwe!app\windows.protocol" /f
+reg delete "hklm\software\classes\local settings\software\microsoft\windows\currentversion\appmodel\packagerepository\packages\microsoft.xboxgameoverlay_1.41.24001.0_x64__8wekyb3d8bbwe\microsoft.xboxgameoverlay_8wekyb3d8bbwe!app\windows.protocol\ms-gamebarservices" /f
+reg delete "hklm\software\microsoft\radar\heapleakdetection\diagnosedapplications\fortniteclient-win64-shipping.exe" /f
+reg delete "hklm\software\microsoft\securitymanager\capauthz\applicationsex\microsoft.xboxgameoverlay_1.41.24001.0_x64__8wekyb3d8bbwe" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\application\data\93" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\application\index\package\181" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\application\index\package\181\93" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\application\index\packageandpackagerelativeapplicationid\181^app" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\application\index\packageandpackagerelativeapplicationid\181^app\93" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\applicationuser\data\ac" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\applicationuser\data\ad" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\applicationuser\index\userandapplication\3^93" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\applicationuser\index\userandapplication\3^93\ac" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\applicationuser\index\userandapplication\4^93" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\applicationuser\index\userandapplication\4^93\ad" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\package\data\180" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\package\data\181" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\package\data\182" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\package\index\packagefamily\4e\180" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\package\index\packagefamily\4e\181" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\package\index\packagefamily\4e\182" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\package\index\packagefullname\microsoft.xboxgameoverlay_1.41.24001.0_neutral_split.scale-100_8wekyb3d8bbwe" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\package\index\packagefullname\microsoft.xboxgameoverlay_1.41.24001.0_neutral_split.scale-100_8wekyb3d8bbwe\182" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\package\index\packagefullname\microsoft.xboxgameoverlay_1.41.24001.0_neutral_~_8wekyb3d8bbwe" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\package\index\packagefullname\microsoft.xboxgameoverlay_1.41.24001.0_neutral_~_8wekyb3d8bbwe\180" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\package\index\packagefullname\microsoft.xboxgameoverlay_1.41.24001.0_x64__8wekyb3d8bbwe" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\package\index\packagefullname\microsoft.xboxgameoverlay_1.41.24001.0_x64__8wekyb3d8bbwe\181" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\packageuser\data\1a80" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\packageuser\data\1a81" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\packageuser\data\1a82" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\packageuser\data\1a83" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\packageuser\data\1a84" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\packageuser\index\user\3\1a80" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\packageuser\index\user\3\1a81" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\packageuser\index\user\3\1a82" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\packageuser\index\user\4\1a83" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\packageuser\index\user\4\1a84" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\packageuser\index\userandpackage\3^180" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\packageuser\index\userandpackage\3^180\1a80" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\packageuser\index\userandpackage\3^181" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\packageuser\index\userandpackage\3^181\1a81" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\packageuser\index\userandpackage\3^182" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\packageuser\index\userandpackage\3^182\1a82" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\packageuser\index\userandpackage\4^180" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\packageuser\index\userandpackage\4^180\1a83" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\packageuser\index\userandpackage\4^181" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\packageuser\index\userandpackage\4^181\1a84" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appx\appxalluserstore\applications\microsoft.xboxgameoverlay_1.41.24001.0_neutral_~_8wekyb3d8bbwe" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appx\appxalluserstore\applications\microsoft.xboxgameoverlay_1.41.24001.0_neutral_~_8wekyb3d8bbwe\microsoft.vclibs.140.00_14.0.27323.0_x64__8wekyb3d8bbwe" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appx\appxalluserstore\applications\microsoft.xboxgameoverlay_1.41.24001.0_neutral_~_8wekyb3d8bbwe\microsoft.vclibs.140.00_14.0.27323.0_x86__8wekyb3d8bbwe" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appx\appxalluserstore\s-1-5-21-2532382528-581214834-2534474248-1001\microsoft.xboxgameoverlay_1.41.24001.0_neutral_~_8wekyb3d8bbwe" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appx\appxalluserstore\s-1-5-21-2532382528-581214834-2534474248-1001\microsoft.xboxgameoverlay_1.41.24001.0_neutral_~_8wekyb3d8bbwe\microsoft.vclibs.140.00_14.0.27323.0_x64__8wekyb3d8bbwe" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appx\appxalluserstore\s-1-5-21-2532382528-581214834-2534474248-1001\microsoft.xboxgameoverlay_1.41.24001.0_neutral_~_8wekyb3d8bbwe\microsoft.vclibs.140.00_14.0.27323.0_x86__8wekyb3d8bbwe" /f
+reg delete "hklm\software\wow6432node\microsoft\securitymanager\capauthz\applicationsex\microsoft.xboxgameoverlay_1.41.24001.0_x64__8wekyb3d8bbwe" /f
+reg delete "hklm\software\wow6432node\easyanticheat" /f
+reg delete "hklm\system\controlset001\services\easyanticheat" /f
+reg delete "hklm\system\controlset001\services\easyanticheat\security" /f
+reg delete "hklm\system\currentcontrolset\services\easyanticheat" /f
+reg delete "hklm\system\currentcontrolset\services\easyanticheat\security" /f
+reg delete "hku\.default\software\microsoft\systemcertificates\trustedpublisher" /f
+reg delete "hku\.default\software\microsoft\systemcertificates\trustedpublisher\certificates" /f
+reg delete "hku\.default\software\microsoft\systemcertificates\trustedpublisher\crls" /f
+reg delete "hku\.default\software\microsoft\systemcertificates\trustedpublisher\ctls" /f
+reg delete "hku\.default\software\policies\microsoft\systemcertificates\trustedpublisher" /f
+reg delete "hku\.default\software\policies\microsoft\systemcertificates\trustedpublisher\certificates" /f
+reg delete "hku\.default\software\policies\microsoft\systemcertificates\trustedpublisher\crls" /f
+reg delete "hku\.default\software\policies\microsoft\systemcertificates\trustedpublisher\ctls" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\software\microsoft\internet explorer\lowregistry\audio\policyconfig\propertystore\5e4eddc4_0" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\software\microsoft\internet explorer\lowregistry\audio\policyconfig\propertystore\5e4eddc4_0\{219ed5a0-9cbf-4f3a-b927-37c9e5c5f14f}" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\software\microsoft\windows\currentversion\explorer\streams\0" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\software\microsoft\windows\currentversion\explorer\sessioninfo\1\applicationviewmanagement\w32:00000000000205b6" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\software\microsoft\windows\currentversion\explorer\sessioninfo\1\applicationviewmanagement\w32:00000000000403d6" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\software\microsoft\windows\currentversion\explorer\sessioninfo\1\applicationviewmanagement\w32:00000000000405de" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\software\microsoft\windows\currentversion\explorer\sessioninfo\1\applicationviewmanagement\w32:0000000000060286" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\software\microsoft\windows\currentversion\explorer\sessioninfo\1\applicationviewmanagement\w32:000000000009042e" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\software\microsoft\windows\currentversion\explorer\sessioninfo\1\applicationviewmanagement\w32:00000000000a03b4" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\software\microsoft\windows\currentversion\explorer\sessioninfo\1\applicationviewmanagement\w32:00000000000a0430" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\software\microsoft\windows\currentversion\explorer\sessioninfo\1\applicationviewmanagement\w32:00000000000b0532" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\software\microsoft\windows\currentversion\explorer\sessioninfo\1\applicationviewmanagement\w32:00000000000b05d6" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\software\microsoft\windows\currentversion\explorer\sessioninfo\1\applicationviewmanagement\w32:00000000000c0430" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\software\microsoft\windows\currentversion\explorer\sessioninfo\1\applicationviewmanagement\w32:00000000000c0586" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\software\microsoft\windows\currentversion\explorer\sessioninfo\1\applicationviewmanagement\w32:00000000000e03d2" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\software\microsoft\windows\currentversion\explorer\sessioninfo\1\applicationviewmanagement\w32:00000000000e0406" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\software\microsoft\windows\currentversion\explorer\sessioninfo\1\applicationviewmanagement\w32:0000000000100430" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\software\microsoft\windows\currentversion\explorer\sessioninfo\1\applicationviewmanagement\w32:00000000001103ee" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\software\microsoft\windows\currentversion\explorer\sessioninfo\1\applicationviewmanagement\w32:000000000011041e" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\software\microsoft\windows\currentversion\explorer\sessioninfo\1\applicationviewmanagement\w32:000000000012047e" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\software\microsoft\windows\currentversion\explorer\sessioninfo\1\applicationviewmanagement\w32:00000000001303ee" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\software\microsoft\windows\currentversion\explorer\sessioninfo\1\applicationviewmanagement\w32:00000000001304f2" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\software\microsoft\windows\currentversion\explorer\sessioninfo\1\applicationviewmanagement\w32:000000000014041e" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\software\microsoft\windows\currentversion\explorer\sessioninfo\1\applicationviewmanagement\w32:00000000001703e6" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\software\microsoft\windows\currentversion\explorer\sessioninfo\1\applicationviewmanagement\w32:0000000000170440" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\software\microsoft\windows\currentversion\explorer\sessioninfo\1\applicationviewmanagement\w32:00000000001704fc" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\software\microsoft\windows\currentversion\explorer\streammru" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\software\classes\local settings\mrtcache\c:%5cprogram files%5cwindowsapps%5cmicrosoft.xboxgamingoverlay_2.26.28001.0_x64__8wekyb3d8bbwe%5cmicrosoft.system.package.metadata%5cs-1-5-21-2532382528-581214834-2534474248-1001-mergedresources-2.pri" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\software\classes\local settings\mrtcache\c:%5cprogram files%5cwindowsapps%5cmicrosoft.xboxgamingoverlay_2.26.28001.0_x64__8wekyb3d8bbwe%5cmicrosoft.system.package.metadata%5cs-1-5-21-2532382528-581214834-2534474248-1001-mergedresources-2.pri\1d50f44cf1a0499" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\software\classes\local settings\mrtcache\c:%5cprogram files%5cwindowsapps%5cmicrosoft.xboxgamingoverlay_2.26.28001.0_x64__8wekyb3d8bbwe%5cmicrosoft.system.package.metadata%5cs-1-5-21-2532382528-581214834-2534474248-1001-mergedresources-2.pri\1d50f44cf1a0499\87f345c2" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\system\gameconfigstore\children\03ce6902-ff58-41de-ab92-36fcaf27a580" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\system\gameconfigstore\parents\fd13f746e7d2d69760b017363f621255c9b49ac8" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001_classes\local settings\mrtcache\c:%5cprogram files%5cwindowsapps%5cmicrosoft.xboxgamingoverlay_2.26.28001.0_x64__8wekyb3d8bbwe%5cmicrosoft.system.package.metadata%5cs-1-5-21-2532382528-581214834-2534474248-1001-mergedresources-2.pri" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001_classes\local settings\mrtcache\c:%5cprogram files%5cwindowsapps%5cmicrosoft.xboxgamingoverlay_2.26.28001.0_x64__8wekyb3d8bbwe%5cmicrosoft.system.package.metadata%5cs-1-5-21-2532382528-581214834-2534474248-1001-mergedresources-2.pri\1d50f44cf1a0499" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001_classes\local settings\mrtcache\c:%5cprogram files%5cwindowsapps%5cmicrosoft.xboxgamingoverlay_2.26.28001.0_x64__8wekyb3d8bbwe%5cmicrosoft.system.package.metadata%5cs-1-5-21-2532382528-581214834-2534474248-1001-mergedresources-2.pri\1d50f44cf1a0499\87f345c2" /f
+reg delete "hku\s-1-5-18\software\microsoft\systemcertificates\trustedpublisher" /f
+reg delete "hku\s-1-5-18\software\microsoft\systemcertificates\trustedpublisher\certificates" /f
+reg delete "hku\s-1-5-18\software\microsoft\systemcertificates\trustedpublisher\crls" /f
+reg delete "hku\s-1-5-18\software\microsoft\systemcertificates\trustedpublisher\ctls" /f
+reg delete "hku\s-1-5-18\software\policies\microsoft\systemcertificates\trustedpublisher" /f
+reg delete "hku\s-1-5-18\software\policies\microsoft\systemcertificates\trustedpublisher\certificates" /f
+reg delete "hku\s-1-5-18\software\policies\microsoft\systemcertificates\trustedpublisher\crls" /f
+reg delete "hku\s-1-5-18\software\policies\microsoft\systemcertificates\trustedpublisher\ctls" /f
+rmdir /s /q "c:\users\%username%\appdata\local\microsoft\windows\temporary internet files"
+rmdir /s /q "c:\windows\logs\cbs"
+rmdir /s /q "c:\windows\temp"
+rmdir /s /q "c:\windows\system32\config\systemprofile\appdata\local\screentime"
+rmdir /s /q "c:\windows\system32\config\systemprofile\appdata\local\microsoft\vault\userprofileroaming"
+rmdir /s /q "c:\windows\system32\config\systemprofile\appdata\local\d3dscache"
+rmdir /s /q "c:\windows\system32\config\txr"
+rmdir /s /q "c:\windows\system32\wdi\logfiles\startpinfo"
+rmdir /s /q "c:\windows\system32\wdi\logfiles"
+rmdir /s /q "c:\windows\softwaredistribution\"
+rmdir /s /q "c:\windows\userviceprofiles\networkservice\appdata\local\microsoft\windows\deliveryoptimization\logs"
+rmdir /s /q "c:\windows\userviceprofiles\networkservice\appdata\local\microsoft\windows\deliveryoptimization\state"
+rmdir /s /q "c:\users\%username%\appdata\roaming\microsoft\protect"
+rmdir /s /q "c:\users\%username%\appdata\local\virtalstore"
+rmdir /s /q "c:\users\%username%\appdata\local\unrealengine"
+rmdir /s /q "c:\users\%username%\appdata\local\temp"
+rmdir /s /q "c:\users\%username%\appdata\local\packages\microsoft.windows.search_cw5n1h2txyewy\localstate\devicesearchcache"
+rmdir /s /q "c:\users\%username%\appdata\local\packages\microsoft.windows.search_cw5n1h2txyewy\localstate\constraintindex"
+rmdir /s /q "c:\users\%username%\appdata\local\microsoft\windows\webcache"
+rmdir /s /q "c:\users\%username%\appdata\local\microsoft\windows\wer"
+rmdir /s /q "c:\users\%username%\appdata\local\microsoft\windows\inetcookies"
+rmdir /s /q "c:\users\%username%\appdata\local\microsoft\windows\inetcache"
+rmdir /s /q "c:\users\%username%\appdata\local\microsoft\windows\iedownloadhistory"
+rmdir /s /q "c:\users\%username%\appdata\local\microsoft\windows\iecompatacache"
+rmdir /s /q "c:\users\%username%\appdata\local\microsoft\windows\iecompatcache"
+rmdir /s /q "c:\users\%username%\appdata\local\microsoft\windows\caches"
+rmdir /s /q "c:\users\%username%\appdata\local\microsoft\terminal server client\cache"
+rmdir /s /q "c:\users\%username%\appdata\local\microsoft\internet explorer\cachestorage"
+rmdir /s /q "c:\users\%username%\appdata\local\d3dscache"
+rmdir /s /q "c:\users\%username%\appdata\local\crashdmps"
+rmdir /s /q "c:\users\%username%\appdata\local\connecteddevicesplatform"
+rmdir /s /q "c:\programdata\nvidia corporation\nv_cache"
+rmdir /s /q "c:\programdata\nvidia corporation\drs\nvapptimestamps"
+rmdir /s /q "c:\programdata\microsoft\windows\wer"
+rmdir /s /q "c:\perflogs"
+rmdir /s /q "c:\documents and settings\%username%\appdata\local\application data\microsoft\windows\caches"
+rmdir /s /q "%localappdata%\microsoft\windows\caches"
+rmdir /s /q "c:\users\%username%\appdata\local\valorant"
+rmdir /s /q "c:\programdata\riot games\metadata\riot client"
+rmdir /s /q "c:\programdata\riot games\metadata\valorant.live"
+rmdir /s /q "%systemdrive%\programdata\microsoft\windows\wer"
+rmdir /s /q "%systemdrive%\users\public\shared files"
+rmdir /s /q "%systemdrive%\system volume information\indexervolumeguid"
+rmdir /s /q "%systemdrive%\users\public\libraries"
+rmdir /s /q "%systemdrive%\msocache"
+del /s /q "c:\programdata\riot games\machine.cfg"
+del "c:\riot games\valorant\live\manifest_nonfsfiles_win64.txt" /f /q
+del "c:\riot games\valorant\live\engine\binaries\thirdparty\cef3\win64\icdtl.dat" /f /q
+del "c:\riot games\riot client\x\natives_blob.bin" /f /q
+del "c:\riot games\riot client\x\icdtl.dat" /f /q
+del "c:\riot games\riot client\x\plgins\plgin-manifest.json" /f /q
+del /s /q "c:\windows\vgkbootstats.dat"
+del /s /q /f "%systemdrive%\$recycle.bin"
+del /s /q "d:\system volume information\tracking.log"
+del /s /q "c:\windows\win.ini"
+del /s /q "c:\windows\memory.dmp"
+del /s /q "c:\windows\windowsupdate.log"
+del /s /q "c:\windows\system32\logfiles\wmi\wifi.etl"
+del /s /q "c:\windows\system32\logfiles\wmi\radiomgr.etl"
+del /s /q "c:\windows\system32\logfiles\wmi\ntfslog.etl"
+del /s /q "c:\windows\system32\logfiles\wmi\netcore.etl"
+del /s /q "c:\windows\system32\logfiles\wmi\microsoft-windows-rdp-graphics-rdpidd-trace.etl"
+del /s /q "c:\windows\system32\logfiles\wmi\lwtnetlog.etl"
+del /s /q "c:\windows\userviceprofiles\networkservice\ntser.dat"
+del /s /q "c:\windows\userviceprofiles\localservice\appdata\local\microsoft\windows\qwavecache.dat"
+del /s /q "c:\windows\logs\dism\dism.log"
+del /s /q "c:\windows\directx.log"
+del /s /q "c:\users\%username%\ntser.dat.log2"
+del /s /q "c:\users\%username%\ntser.dat.log1"
+del /s /q "c:\users\%username%\\appdata\local\microsoft\windows\inetcache\ie\container.dat"
+del /s /q "c:\users\%username%\ntser.dat"
+del /s /q "c:\users\%username%\appdata\local\unrealengine\4.23\saved\config\windowsclient\manifest.ini"
+del /s /q "c:\users\%username%\appdata\local\microsoft\windows\inetcache\ie\container.dat"
+del /s /q "c:\users\%username%\appdata\local\microsoft\vault\userprofileroaming\latest.dat"
+del /s /q "c:\users\%username%\appdata\local\microsoft\onedrive\logs\common\devicehealthsummaryconfigration.ini"
+del /s /q "c:\users\%username%\appdata\local\iconcache.db"
+del /s /q "c:\users\%username%\appdata\local\ac\inetcookies\ese\container.dat"
+del /s /q "c:\system volume information\tracking.log"
+del /s /q "c:\programdata\microsoft\windows\devicemetadatacache\dmrc.idx"
+del /s /q "c:\config.msi"
+del /s /q "c:\windows\system32\restore\machineguid.txt"
+del /s /q "%systemdrive%\users\public\libraries\collection.dat"
+del /s /q "%systemdrive%\system volume information\wpsettings.dat"
+del /s /q "%systemdrive%\system volume information\tracking.log"
+del /s /q "%systemdrive%\windows\inf\setpapi.dev.log"
+del /s /q "%systemdrive%\windows\inf\setpapi.setp.log"
+del /s /q "%systemdrive%\programdata\ntser.pol"
+del /s /q "%systemdrive%\users\defalt\ntser.dat"
+del /s /q "%systemdrive%\recovery\ntser.sys"
+rd /q /s %systemdrive%\$recycle.bin
+rd /q /s d:\$recycle.bin
+rd /q /s e:\$recycle.bin
+rd /q /s f:\$recycle.bin
+reg add hklm\system\currentcontrolset\control\computername\computername /v computername /t reg_sz /d %random%-%random% /f
+reg add hklm\system\currentcontrolset\control\computername\activecomputername /v computername /t reg_sz /d %random%-%random% /f
+reg add hklm\system\hardwareconfig /v lastconfig /t reg_sz /d {eac%random%} /f
+reg add hklm\system\currentcontrolset\control\idconfigdb\hardware" "profiles\0001 /v hwprofileguid /t reg_sz /d {%random%-%random%-%random%-%random%-%random%} /f
+reg add hklm\system\currentcontrolset\control\idconfigdb\hardware" "profiles\0001 /v guid /t reg_sz /d {%random%-%random%-%random%-%random%-%random%} /f
+reg add hklm\software\microsoft\windows" "nt\currentversion /v buildguid /t reg_sz /d %random%-%random% /f
+set subkey1=%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%%random%
+set subkey1=%subkey1:0=a%
+set subkey1=%subkey1:1=b%
+set subkey1=%subkey1:2=c%
+reg add hklm\software\microsoft\windows" "nt\currentversion /v buildguidex /t reg_binary /d %subkey1% /f
+reg add hklm\software\microsoft\windows" "nt\currentversion /v registeredowner /t reg_sz /d %random%-%random% /f
+reg add hklm\software\microsoft\windows" "nt\currentversion /v registeredorganization /t reg_sz /d %random%-%random% /f
+reg add hklm\software\microsoft\cryptography /v guid /t reg_sz /d %random%-%random%-%random%-%random%-%random% /f
+reg add hklm\software\microsoft\cryptography /v machineguid /t reg_sz /d %random%-%random%-%random%-%random%-%random% /f
+reg add hklm\software\microsoft\windows" "nt\currentversion /v productid /t reg_sz /d %random%-%random%-%random%-%random% /f
+reg add hklm\software\microsoft\windows" "nt\currentversion /v installdate /t reg_sz /d %random% /f
+reg add hklm\system\currentcontrolset\control\systeminformation /v computerhardwareid /t reg_sz /d {%random%-%random%-%random%-%random%} /f
+reg add "hkey_local_machine\software\microsoft\cryptography" /v machineguid /t reg_sz /d %hex8%-%hex1%-%hex0%-%hex1%-%hex10% /f>nul 2>&1
+reg add "hkey_local_machine\software\microsoft\windows nt\currentversion" /v buildguid /t reg_sz /d %hex8%-%hex1%-%hex0%-%hex1%-%hex10% /f>nul 2>&1
+reg add "hkey_local_machine\system\controlset001\control\class\{4d36e967-e325-11ce-bfc1-08002be10318}\configuration\variables\busdevicedesc" /v propertyguid /t reg_sz /d {%hex8%-%hex1%-%hex0%-%hex1%-%hex10%} /f>nul 2>&1
+reg add "hkey_local_machine\system\controlset001\control\class\{4d36e968-e325-11ce-bfc1-08002be10318}\configuration\variables\devicedesc" /v propertyguid /t reg_sz /d {%hex8%-%hex1%-%hex0%-%hex1%-%hex10%} /f>nul 2>&1
+reg add "hkey_local_machine\system\controlset001\control\class\{4d36e968-e325-11ce-bfc1-08002be10318}\configuration\variables\driver" /v propertyguid /t reg_sz /d {%hex8%-%hex1%-%hex0%-%hex1%-%hex10%} /f>nul 2>&1w
+reg add "hkey_local_machine\system\currentcontrolset\control\systeminformation" /v computerhardwareid /t reg_sz /d {%hex8%-%hex1%-%hex0%-%hex1%-%hex10%} /f>nul 2>&1
+reg add "hklm\software\microsoft\windows nt\currentversion" /v installdate /t reg_sz /d %random% /f
+reg add "hklm\software\microsoft\windows nt\currentversion" /v productid /t reg_sz /d %random% /f
+reg add hklm\software\microsoft\cryptography /v guid /t reg_sz /d %hex1%-%hex8%-%hex1%-%hex0%-%hex10% /f
+reg add hklm\software\microsoft\windows" "nt\currentversion /v registeredorganization /t reg_sz /d fs%random% /f
+reg add hklm\software\microsoft\windows" "nt\currentversion /v registeredowner /t reg_sz /d fs%random% /f
+reg add hklm\system\currentcontrolset\control\systeminformation /v computerhardwareid /t reg_sz /d {%random%-s%random%-%random%-%random%-%random%} /f
+reg add hklm\system\hardwareconfig /v lastconfig /t reg_sz /d {fefefee%random%-%random%-%random%-%random%} /f
+reg add hklm\software\microsoft\windows nt\currentversion /v installdate /t reg_sz /d %random% /f
+reg add hklm\software\microsoft\windows nt\currentversion /v productid /t reg_sz /d %random% /f
+reg add hklm\system\currentcontrolset\control\systeminformation /v computerhardwareid /t reg_sz /d %random% /f
+reg add hklm\system\currentcontrolset\control\wmi\security /v 671a8285-4edb-4cae-99fe-69a15c48c0bc /t reg_sz /d %random% /f
+reg add hklm\software\microsoft\windows\currentversion" "windowsupdate /v susclientid /t reg_sz /d {%random%-%random%-%random%-%random%-%random%} /f
+reg add hklm\system\currentcontrolset\control\computername\computername /v computername /t reg_sz /d pizzaxyz-%random% /f
+reg add hklm\system\currentcontrolset\control\computername\activecomputername /v computername /t reg_sz /d pizzaxyz-%random% /f
+reg add hklm\system\currentcontrolset\control\idconfigdb\hardware" "profiles\0001 /v hwprofileguid /t reg_sz /d {pizzaxyz-%random%-%random%-%random%-%random%} /f
+reg add hklm\system\currentcontrolset\control\idconfigdb\hardware" "profiles\0001 /v guid /t reg_sz /d {pizzaxyz-%random%-%random%-%random%-%random%} /f
+reg add hklm\software\microsoft\windows" "nt\currentversion /v buildguid /t reg_sz /d pizzaxyz-%random% /f
+reg add hklm\software\microsoft\windows" "nt\currentversion /v registeredowner /t reg_sz /d pizzaxyz-%random% /f
+reg add hklm\software\microsoft\windows" "nt\currentversion /v registeredorganization /t reg_sz /d pizzaxyz-%random% /f
+reg add hklm\software\microsoft\cryptography /v guid /t reg_sz /d pizzaxyz-%random%-%random%-%random%-%random% /f
+reg add hklm\software\microsoft\cryptography /v machineguid /t reg_sz /d pizzaxyz-%random%-%random%-%random%-%random% /f
+reg add hklm\system\currentcontrolset\control\systeminformation /v computerhardwareid /t reg_sz /d {toxic-s%random%-%random%-%random%-%random%} /f
+reg add hklm\software\microsoft\windows\currentversion" "windowsupdate /v susclientid /t reg_sz /d {pizzaxyz-%random%-%random%-%random%-%random%} /f
+reg delete "hklm\software\classes\local settings\software\microsoft\windows\currentversion\appmodel\packagerepository\extensions\progids\appxm8fs0gj5h36ynw4kq0x3gqnz6ecr1kvy\microsoft.xboxgameoverlay_1.41.24001.0_x64__8wekyb3d8bbwe: (null!)" /f
+reg delete "hklm\software\classes\local settings\software\microsoft\windows\currentversion\appmodel\packagerepository\extensions\windows.protocol\ms-gamebarservices\appxm8fs0gj5h36ynw4kq0x3gqnz6ecr1kvy\microsoft.xboxgameoverlay_1.41.24001.0_x64__8wekyb3d8bbwe: (null!)" /f
+reg delete "hklm\software\classes\local settings\software\microsoft\windows\currentversion\appmodel\packagerepository\packages\microsoft.xboxgameoverlay_1.41.24001.0_neutral_split.scale-100_8wekyb3d8bbwe\path: "c:\program files\windowsapps\microsoft.xboxgameoverlay_1.41.24001.0_neutral_split.scale-100_8wekyb3d8bbwe"" /f
+reg delete "hklm\software\classes\local settings\software\microsoft\windows\currentversion\appmodel\packagerepository\packages\microsoft.xboxgameoverlay_1.41.24001.0_neutral_~_8wekyb3d8bbwe\path: "c:\program files\windowsapps\microsoft.xboxgameoverlay_1.41.24001.0_neutral_~_8wekyb3d8bbwe"" /f
+reg delete "hklm\software\classes\local settings\software\microsoft\windows\currentversion\appmodel\packagerepository\packages\microsoft.xboxgameoverlay_1.41.24001.0_x64__8wekyb3d8bbwe\path: "c:\program files\windowsapps\microsoft.xboxgameoverlay_1.41.24001.0_x64__8wekyb3d8bbwe"" /f
+reg delete "hklm\software\classes\local settings\software\microsoft\windows\currentversion\appmodel\packagerepository\packages\microsoft.xboxgameoverlay_1.41.24001.0_x64__8wekyb3d8bbwe\microsoft.xboxgameoverlay_8wekyb3d8bbwe!app\windows.protocol\ms-gamebarservices\acid: "app.appxe655y38cadddpg1xd2b5k915wndhg5gm.mca"" /f
+reg delete "hklm\software\microsoft\radar\heapleakdetection\diagnosedapplications\fortniteclient-win64-shipping.exe\lastdetectiontime:  f9 8f fd b6 8d 13 d5 01" /f
+reg delete "hklm\software\microsoft\securitymanager\capauthz\applicationsex\microsoft.xboxgameoverlay_1.41.24001.0_x64__8wekyb3d8bbwe\apppackagetype: 0x00000000" /f
+reg delete "hklm\software\microsoft\securitymanager\capauthz\applicationsex\microsoft.xboxgameoverlay_1.41.24001.0_x64__8wekyb3d8bbwe\packagesid: "s-1-15-2-1823635404-1364722122-2170562666-1762391777-2399050872-3465541734-3732476201"" /f
+reg delete "hklm\software\microsoft\securitymanager\capauthz\applicationsex\microsoft.xboxgameoverlay_1.41.24001.0_x64__8wekyb3d8bbwe\enterpriseid: 0x00000000" /f
+reg delete "hklm\software\microsoft\securitymanager\capauthz\applicationsex\microsoft.xboxgameoverlay_1.41.24001.0_x64__8wekyb3d8bbwe\capsids:  0a 00 00 00 01 02 00 00 00 00 00 0f 03 00 00 00 01 00 00 00 01 0a 00 00 00 00 00 0f 03 00 00 00 00 04 00 00 e8 41 fe 65 15 cb 86 8e 43 2c e1 30 42 2a b3 51 4e 9c 0e 17 b4 1b 89 09 98 da 44 8d 13 6a 0c b3 01 0a 00 00 00 00 00 0f 03 00 00 00 00 04 00 00 e4 29 72 ae 52 a9 2e 19 c4 fb 6c 51 9e 00 25 50 5b 64 a6 6f a4 d2 d0 57 d2 db d7 37 f2 b0 85 ac 01 0a 00 00 00 00 00 0f 03 00 00 00 00 04 00 00 0b 44 35 cf 44 6c 30 b5 4c 90 da 15 db 4c 09 94 5a 08 a5 69 f0 dc c5 65 02 4a 7b b9 a8 2c da c2 01 0a 00 00 00 00 00 0f 03 00 00 00 00 04 00 00 3c da 35 57 2a 15 fa c8 02 c1 bc 52 65 2b d8 ec c8 8e 72 9b 62 79 a8 20 65 1e 06 07 af 02 70 0c 01 0a 00 00 00 00 00 0f 03 00 00 00 00 04 00 00 ce 22 45 27 27 b8 ea 12 11 8a 20 ef 09 19 fd 6b b8 b4 a0 d6 03 10 5b dd d6 cf 74 85 60 22 d2 cd 01 0a 00 00 00 00 00 0f 03 00 00 00 00 04 00 00 0a d5 ca 1a 96 05 1c f5 5e 2c 0c ce 2a e" /f
+reg delete "8 f3 66 b9 86 13 95 5d 1a 40 0a 7f 52 a9 ba b2 23 04 83 01 0a 00 00 00 00 00 0f 03 00 00 00 00 04 00 00 38 b0 4e d5 42 5b 15 df 75 ed 77 00 0e 5b 16 73 c1 5e d2 af 68 bf 75 ad 38 35 1d 6a 1e 9a 12 f7 01 0a 00 00 00 00 00 0f 03 00 00 00 00 04 00 00 af 37 e5 a2 58 ad 48 66 53 e6 1f 53 b9 42 0e ea 34 9c e5 b6 48 3a db 78 9f 5c a7 33 fe 7e 97 1a 01 08 00 00 00 00 00 0f 03 00 00 00 cc 77 b2 6c ca 01 58 51 6a 28 60 81 e1 f6 0b 69 78 9c fe 8e 66 f8 8f ce 29 11 79 de 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00" /f
 reg delete " 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00" /f
-reg delete "HKLM\SOFTWARE\Microsoft\SecurityManager\CapAuthz\ApplicationsEx\Microsoft.XboxGameOverlay_1.41.24001.0_x64__8wekyb3d8bbwe\ApplicationFlags: 0x00000000" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\Origins\kz2LMQg4+pNfXggv65DcWFQ9SiekWR4B4WMWT+pcqbU: 0x00000002" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\Origins\4JSyFFDDKUMXDyK2USgAjbiksFnqOb3f8RPZBPSpEfU: 0x00000002" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\Origins\62bDlCzxB/xxIWLkQdDRYcAqhmZhNOMUtjhRkAgTvkQ: 0x00000002" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Application\Data\93\Package: 0x00000181" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Application\Data\93\Index: 0x00000000" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Application\Data\93\Flags: 0x00000000" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Application\Data\93\PackageRelativeApplicationId: "App"" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Application\Data\93\ApplicationUserModelId: "Microsoft.XboxGameOverlay_8wekyb3d8bbwe!App"" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Application\Data\93\Executable: "GameBar.exe"" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Application\Data\93\Entrypoint: "GameBar.App"" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Application\Data\93\StartPage: (NULL!)" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Application\Data\93\_IndexKeys:  50 61 63 6B 61 67 65 5C 31 38 31 5C 39 33 00 50 61 63 6B 61 67 65 41 6E 64 50 61 63 6B 61 67 65 52 65 6C 61 74 69 76 65 41 70 70 6C 69 63 61 74 69 6F 6E 49 64 5C 31 38 31 5E 41 70 70 00 00" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\ApplicationUser\Data\ac\Application: 0x00000093" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\ApplicationUser\Data\ac\User: 0x00000003" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\ApplicationUser\Data\ac\ApplicationUserModelId: "Microsoft.XboxGameOverlay_8wekyb3d8bbwe!App"" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\ApplicationUser\Data\ac\_IndexKeys:  55 73 65 72 41 6E 64 41 70 70 6C 69 63 61 74 69 6F 6E 5C 33 5E 39 33 00 55 73 65 72 41 6E 64 41 70 70 6C 69 63 61 74 69 6F 6E 55 73 65 72 4D 6F 64 65 6C 49 64 5C 33 5E 4D 69 63 72 6F 73 6F 66 74 2E 58 62 6F 78 47 61 6D 65 4F 76 65 72 6C 61 79 5F 38 77 65 6B 79 62 33 64 38 62 62 77 65 21 41 70 70 00 00" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\ApplicationUser\Data\ad\Application: 0x00000093" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\ApplicationUser\Data\ad\User: 0x00000004" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\ApplicationUser\Data\ad\ApplicationUserModelId: "Microsoft.XboxGameOverlay_8wekyb3d8bbwe!App"" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\ApplicationUser\Data\ad\_IndexKeys:  55 73 65 72 41 6E 64 41 70 70 6C 69 63 61 74 69 6F 6E 5C 34 5E 39 33 00 55 73 65 72 41 6E 64 41 70 70 6C 69 63 61 74 69 6F 6E 55 73 65 72 4D 6F 64 65 6C 49 64 5C 34 5E 4D 69 63 72 6F 73 6F 66 74 2E 58 62 6F 78 47 61 6D 65 4F 76 65 72 6C 61 79 5F 38 77 65 6B 79 62 33 64 38 62 62 77 65 21 41 70 70 00 00" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Package\Data\180\PackageFullName: "Microsoft.XboxGameOverlay_1.41.24001.0_neutral_~_8wekyb3d8bbwe"" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Package\Data\180\PackageFamily: 0x0000004E" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Package\Data\180\PackageType: 0x00000008" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Package\Data\180\Flags: 0x00000000" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Package\Data\180\PackageOrigin: 0x00000003" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Package\Data\180\Volume: 0x00000001" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Package\Data\180\InstalledLocation: "C:\Program Files\WindowsApps\Microsoft.XboxGameOverlay_1.41.24001.0_neutral_~_8wekyb3d8bbwe"" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Package\Data\180\_IndexKeys:  50 61 63 6B 61 67 65 46 61 6D 69 6C 79 5C 34 65 5C 31 38 30 00 50 61 63 6B 61 67 65 46 75 6C 6C 4E 61 6D 65 5C 4D 69 63 72 6F 73 6F 66 74 2E 58 62 6F 78 47 61 6D 65 4F 76 65 72 6C 61 79 5F 31 2E 34 31 2E 32 34 30 30 31 2E 30 5F 6E 65 75 74 72 61 6C 5F 7E 5F 38 77 65 6B 79 62 33 64 38 62 62 77 65 00 00" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Package\Data\181\PackageFullName: "Microsoft.XboxGameOverlay_1.41.24001.0_x64__8wekyb3d8bbwe"" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Package\Data\181\PackageFamily: 0x0000004E" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Package\Data\181\PackageType: 0x00000001" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Package\Data\181\Flags: 0x00000000" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Package\Data\181\PackageOrigin: 0x00000003" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Package\Data\181\Volume: 0x00000001" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Package\Data\181\InstalledLocation: "C:\Program Files\WindowsApps\Microsoft.XboxGameOverlay_1.41.24001.0_x64__8wekyb3d8bbwe"" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Package\Data\181\_IndexKeys:  50 61 63 6B 61 67 65 46 61 6D 69 6C 79 5C 34 65 5C 31 38 31 00 50 61 63 6B 61 67 65 46 75 6C 6C 4E 61 6D 65 5C 4D 69 63 72 6F 73 6F 66 74 2E 58 62 6F 78 47 61 6D 65 4F 76 65 72 6C 61 79 5F 31 2E 34 31 2E 32 34 30 30 31 2E 30 5F 78 36 34 5F 5F 38 77 65 6B 79 62 33 64 38 62 62 77 65 00 00" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Package\Data\182\PackageFullName: "Microsoft.XboxGameOverlay_1.41.24001.0_neutral_split.scale-100_8wekyb3d8bbwe"" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Package\Data\182\PackageFamily: 0x0000004E" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Package\Data\182\PackageType: 0x00000004" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Package\Data\182\Flags: 0x00000000" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Package\Data\182\PackageOrigin: 0x00000003" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Package\Data\182\Volume: 0x00000001" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Package\Data\182\InstalledLocation: "C:\Program Files\WindowsApps\Microsoft.XboxGameOverlay_1.41.24001.0_neutral_split.scale-100_8wekyb3d8bbwe"" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Package\Data\182\_IndexKeys:  50 61 63 6B 61 67 65 46 61 6D 69 6C 79 5C 34 65 5C 31 38 32 00 50 61 63 6B 61 67 65 46 75 6C 6C 4E 61 6D 65 5C 4D 69 63 72 6F 73 6F 66 74 2E 58 62 6F 78 47 61 6D 65 4F 76 65 72 6C 61 79 5F 31 2E 34 31 2E 32 34 30 30 31 2E 30 5F 6E 65 75 74 72 61 6C 5F 73 70 6C 69 74 2E 73 63 61 6C 65 2D 31 30 30 5F 38 77 65 6B 79 62 33 64 38 62 62 77 65 00 00" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\PackageUser\Data\1a80\Package: 0x00000180" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\PackageUser\Data\1a80\User: 0x00000003" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\PackageUser\Data\1a80\_IndexKeys:  55 73 65 72 5C 33 5C 31 61 38 30 00 55 73 65 72 41 6E 64 50 61 63 6B 61 67 65 5C 33 5E 31 38 30 00 00" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\PackageUser\Data\1a81\Package: 0x00000181" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\PackageUser\Data\1a81\User: 0x00000003" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\PackageUser\Data\1a81\_IndexKeys:  55 73 65 72 5C 33 5C 31 61 38 31 00 55 73 65 72 41 6E 64 50 61 63 6B 61 67 65 5C 33 5E 31 38 31 00 00" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\PackageUser\Data\1a82\Package: 0x00000182" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\PackageUser\Data\1a82\User: 0x00000003" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\PackageUser\Data\1a82\_IndexKeys:  55 73 65 72 5C 33 5C 31 61 38 32 00 55 73 65 72 41 6E 64 50 61 63 6B 61 67 65 5C 33 5E 31 38 32 00 00" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\PackageUser\Data\1a83\Package: 0x00000180" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\PackageUser\Data\1a83\User: 0x00000004" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\PackageUser\Data\1a83\_IndexKeys:  55 73 65 72 5C 34 5C 31 61 38 33 00 55 73 65 72 41 6E 64 50 61 63 6B 61 67 65 5C 34 5E 31 38 30 00 00" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\PackageUser\Data\1a84\Package: 0x00000181" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\PackageUser\Data\1a84\User: 0x00000004" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\PackageUser\Data\1a84\_IndexKeys:  55 73 65 72 5C 34 5C 31 61 38 34 00 55 73 65 72 41 6E 64 50 61 63 6B 61 67 65 5C 34 5E 31 38 31 00 00" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Applications\Microsoft.XboxGameOverlay_1.41.24001.0_neutral_~_8wekyb3d8bbwe\Path: "C:\Program Files\WindowsApps\Microsoft.XboxGameOverlay_1.41.24001.0_neutral_~_8wekyb3d8bbwe\AppxMetadata\AppxBundleManifest.xml"" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Applications\Microsoft.XboxGameOverlay_1.41.24001.0_neutral_~_8wekyb3d8bbwe\Microsoft.VCLibs.140.00_14.0.27323.0_x64__8wekyb3d8bbwe\Path: "C:\Program Files\WindowsApps\Microsoft.VCLibs.140.00_14.0.27323.0_x64__8wekyb3d8bbwe\AppxManifest.xml"" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Applications\Microsoft.XboxGameOverlay_1.41.24001.0_neutral_~_8wekyb3d8bbwe\Microsoft.VCLibs.140.00_14.0.27323.0_x86__8wekyb3d8bbwe\Path: "C:\Program Files\WindowsApps\Microsoft.VCLibs.140.00_14.0.27323.0_x86__8wekyb3d8bbwe\AppxManifest.xml"" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\S-1-5-21-2532382528-581214834-2534474248-1001\Microsoft.XboxGameOverlay_1.41.24001.0_neutral_~_8wekyb3d8bbwe\Path: "C:\Program Files\WindowsApps\Microsoft.XboxGameOverlay_1.41.24001.0_neutral_~_8wekyb3d8bbwe\AppxMetadata\AppxBundleManifest.xml"" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\S-1-5-21-2532382528-581214834-2534474248-1001\Microsoft.XboxGameOverlay_1.41.24001.0_neutral_~_8wekyb3d8bbwe\LastReturnValue: 0x00000000" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\S-1-5-21-2532382528-581214834-2534474248-1001\Microsoft.XboxGameOverlay_1.41.24001.0_neutral_~_8wekyb3d8bbwe\NumberOfAttempts: 0x00000001" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\S-1-5-21-2532382528-581214834-2534474248-1001\Microsoft.XboxGameOverlay_1.41.24001.0_neutral_~_8wekyb3d8bbwe\Microsoft.VCLibs.140.00_14.0.27323.0_x64__8wekyb3d8bbwe\Path: "C:\Program Files\WindowsApps\Microsoft.VCLibs.140.00_14.0.27323.0_x64__8wekyb3d8bbwe\AppxManifest.xml"" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\S-1-5-21-2532382528-581214834-2534474248-1001\Microsoft.XboxGameOverlay_1.41.24001.0_neutral_~_8wekyb3d8bbwe\Microsoft.VCLibs.140.00_14.0.27323.0_x86__8wekyb3d8bbwe\Path: "C:\Program Files\WindowsApps\Microsoft.VCLibs.140.00_14.0.27323.0_x86__8wekyb3d8bbwe\AppxManifest.xml"" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\VolatileNotifications\41C64E6DA3D39855:  01 00 04 80 00 00 00 00 00 00 00 00 00 00 00 00 14 00 00 00 02 00 1C 00 01 00 00 00 00 00 14 00 03 00 00 00 01 01 00 00 00 00 00 05 0B 00 00 00 04 00 00 00" /f
-reg delete "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\VolatileNotifications\41C64E6DA3CF4055:  01 00 04 80 00 00 00 00 00 00 00 00 00 00 00 00 14 00 00 00 02 00 1C 00 01 00 00 00 00 00 14 00 03 00 00 00 01 01 00 00 00 00 00 05 0B 00 00 00 04 00 00 00" /f
-reg delete "HKLM\SOFTWARE\WOW6432Node\Google\Update\UsageStats\Daily\Counts\cup_ecdsa_http_failure:  01 00 00 00 00 00 00 00" /f
-reg delete "HKLM\SOFTWARE\WOW6432Node\Microsoft\SecurityManager\CapAuthz\ApplicationsEx\Microsoft.XboxGameOverlay_1.41.24001.0_x64__8wekyb3d8bbwe\AppPackageType: 0x00000000" /f
-reg delete "HKLM\SOFTWARE\WOW6432Node\Microsoft\SecurityManager\CapAuthz\ApplicationsEx\Microsoft.XboxGameOverlay_1.41.24001.0_x64__8wekyb3d8bbwe\PackageSid: "S-1-15-2-1823635404-1364722122-2170562666-1762391777-2399050872-3465541734-3732476201"" /f
-reg delete "HKLM\SOFTWARE\WOW6432Node\Microsoft\SecurityManager\CapAuthz\ApplicationsEx\Microsoft.XboxGameOverlay_1.41.24001.0_x64__8wekyb3d8bbwe\EnterpriseID: 0x00000000" /f
-reg delete "HKLM\SOFTWARE\WOW6432Node\Microsoft\SecurityManager\CapAuthz\ApplicationsEx\Microsoft.XboxGameOverlay_1.41.24001.0_x64__8wekyb3d8bbwe\CapSids:  0A 00 00 00 01 02 00 00 00 00 00 0F 03 00 00 00 01 00 00 00 01 0A 00 00 00 00 00 0F 03 00 00 00 00 04 00 00 E8 41 FE 65 15 CB 86 8E 43 2C E1 30 42 2A B3 51 4E 9C 0E 17 B4 1B 89 09 98 DA 44 8D 13 6A 0C B3 01 0A 00 00 00 00 00 0F 03 00 00 00 00 04 00 00 E4 29 72 AE 52 A9 2E 19 C4 FB 6C 51 9E 00 25 50 5B 64 A6 6F A4 D2 D0 57 D2 DB D7 37 F2 B0 85 AC 01 0A 00 00 00 00 00 0F 03 00 00 00 00 04 00 00 0B 44 35 CF 44 6C 30 B5 4C 90 DA 15 DB 4C 09 94 5A 08 A5 69 F0 DC C5 65 02 4A 7B B9 A8 2C DA C2 01 0A 00 00 00 00 00 0F 03 00 00 00 00 04 00 00 3C DA 35 57 2A 15 FA C8 02 C1 BC 52 65 2B D8 EC C8 8E 72 9B 62 79 A8 20 65 1E 06 07 AF 02 70 0C 01 0A 00 00 00 00 00 0F 03 00 00 00 00 04 00 00 CE 22 45 27 27 B8 EA 12 11 8A 20 EF 09 19 FD 6B B8 B4 A0 D6 03 10 5B DD D6 CF 74 85 60 22 D2 CD 01 0A 00 00 00 00 00 0F 03 00 00 00 00 04 00 00 0A D5 CA 1A 96 05 1C F5 5E 2" /f
-reg delete "C 0C CE 2A E8 F3 66 B9 86 13 95 5D 1A 40 0A 7F 52 A9 BA B2 23 04 83 01 0A 00 00 00 00 00 0F 03 00 00 00 00 04 00 00 38 B0 4E D5 42 5B 15 DF 75 ED 77 00 0E 5B 16 73 C1 5E D2 AF 68 BF 75 AD 38 35 1D 6A 1E 9A 12 F7 01 0A 00 00 00 00 00 0F 03 00 00 00 00 04 00 00 AF 37 E5 A2 58 AD 48 66 53 E6 1F 53 B9 42 0E EA 34 9C E5 B6 48 3A DB 78 9F 5C A7 33 FE 7E 97 1A 01 08 00 00 00 00 00 0F 03 00 00 00 CC 77 B2 6C CA 01 58 51 6A 28 60 81 E1 F6 0B 69 78 9C FE 8E 66 F8 8F CE 29 11 79 DE 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00" /f
+reg delete "hklm\software\microsoft\securitymanager\capauthz\applicationsex\microsoft.xboxgameoverlay_1.41.24001.0_x64__8wekyb3d8bbwe\applicationflags: 0x00000000" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\origins\kz2lmqg4+pnfxggv65dcwfq9siekwr4b4wmwt+pcqbu: 0x00000002" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\origins\4jsyffddkumxdyk2usgajbiksfnqob3f8rpzbpspefu: 0x00000002" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\origins\62bdlczxb/xxiwlkqddrycaqhmzhnomutjhrkagtvkq: 0x00000002" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\application\data\93\package: 0x00000181" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\application\data\93\index: 0x00000000" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\application\data\93\flags: 0x00000000" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\application\data\93\packagerelativeapplicationid: "app"" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\application\data\93\applicationusermodelid: "microsoft.xboxgameoverlay_8wekyb3d8bbwe!app"" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\application\data\93\executable: "gamebar.exe"" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\application\data\93\entrypoint: "gamebar.app"" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\application\data\93\startpage: (null!)" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\application\data\93\_indexkeys:  50 61 63 6b 61 67 65 5c 31 38 31 5c 39 33 00 50 61 63 6b 61 67 65 41 6e 64 50 61 63 6b 61 67 65 52 65 6c 61 74 69 76 65 41 70 70 6c 69 63 61 74 69 6f 6e 49 64 5c 31 38 31 5e 41 70 70 00 00" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\applicationuser\data\ac\application: 0x00000093" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\applicationuser\data\ac\user: 0x00000003" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\applicationuser\data\ac\applicationusermodelid: "microsoft.xboxgameoverlay_8wekyb3d8bbwe!app"" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\applicationuser\data\ac\_indexkeys:  55 73 65 72 41 6e 64 41 70 70 6c 69 63 61 74 69 6f 6e 5c 33 5e 39 33 00 55 73 65 72 41 6e 64 41 70 70 6c 69 63 61 74 69 6f 6e 55 73 65 72 4d 6f 64 65 6c 49 64 5c 33 5e 4d 69 63 72 6f 73 6f 66 74 2e 58 62 6f 78 47 61 6d 65 4f 76 65 72 6c 61 79 5f 38 77 65 6b 79 62 33 64 38 62 62 77 65 21 41 70 70 00 00" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\applicationuser\data\ad\application: 0x00000093" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\applicationuser\data\ad\user: 0x00000004" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\applicationuser\data\ad\applicationusermodelid: "microsoft.xboxgameoverlay_8wekyb3d8bbwe!app"" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\applicationuser\data\ad\_indexkeys:  55 73 65 72 41 6e 64 41 70 70 6c 69 63 61 74 69 6f 6e 5c 34 5e 39 33 00 55 73 65 72 41 6e 64 41 70 70 6c 69 63 61 74 69 6f 6e 55 73 65 72 4d 6f 64 65 6c 49 64 5c 34 5e 4d 69 63 72 6f 73 6f 66 74 2e 58 62 6f 78 47 61 6d 65 4f 76 65 72 6c 61 79 5f 38 77 65 6b 79 62 33 64 38 62 62 77 65 21 41 70 70 00 00" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\package\data\180\packagefullname: "microsoft.xboxgameoverlay_1.41.24001.0_neutral_~_8wekyb3d8bbwe"" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\package\data\180\packagefamily: 0x0000004e" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\package\data\180\packagetype: 0x00000008" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\package\data\180\flags: 0x00000000" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\package\data\180\packageorigin: 0x00000003" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\package\data\180\volume: 0x00000001" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\package\data\180\installedlocation: "c:\program files\windowsapps\microsoft.xboxgameoverlay_1.41.24001.0_neutral_~_8wekyb3d8bbwe"" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\package\data\180\_indexkeys:  50 61 63 6b 61 67 65 46 61 6d 69 6c 79 5c 34 65 5c 31 38 30 00 50 61 63 6b 61 67 65 46 75 6c 6c 4e 61 6d 65 5c 4d 69 63 72 6f 73 6f 66 74 2e 58 62 6f 78 47 61 6d 65 4f 76 65 72 6c 61 79 5f 31 2e 34 31 2e 32 34 30 30 31 2e 30 5f 6e 65 75 74 72 61 6c 5f 7e 5f 38 77 65 6b 79 62 33 64 38 62 62 77 65 00 00" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\package\data\181\packagefullname: "microsoft.xboxgameoverlay_1.41.24001.0_x64__8wekyb3d8bbwe"" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\package\data\181\packagefamily: 0x0000004e" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\package\data\181\packagetype: 0x00000001" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\package\data\181\flags: 0x00000000" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\package\data\181\packageorigin: 0x00000003" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\package\data\181\volume: 0x00000001" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\package\data\181\installedlocation: "c:\program files\windowsapps\microsoft.xboxgameoverlay_1.41.24001.0_x64__8wekyb3d8bbwe"" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\package\data\181\_indexkeys:  50 61 63 6b 61 67 65 46 61 6d 69 6c 79 5c 34 65 5c 31 38 31 00 50 61 63 6b 61 67 65 46 75 6c 6c 4e 61 6d 65 5c 4d 69 63 72 6f 73 6f 66 74 2e 58 62 6f 78 47 61 6d 65 4f 76 65 72 6c 61 79 5f 31 2e 34 31 2e 32 34 30 30 31 2e 30 5f 78 36 34 5f 5f 38 77 65 6b 79 62 33 64 38 62 62 77 65 00 00" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\package\data\182\packagefullname: "microsoft.xboxgameoverlay_1.41.24001.0_neutral_split.scale-100_8wekyb3d8bbwe"" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\package\data\182\packagefamily: 0x0000004e" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\package\data\182\packagetype: 0x00000004" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\package\data\182\flags: 0x00000000" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\package\data\182\packageorigin: 0x00000003" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\package\data\182\volume: 0x00000001" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\package\data\182\installedlocation: "c:\program files\windowsapps\microsoft.xboxgameoverlay_1.41.24001.0_neutral_split.scale-100_8wekyb3d8bbwe"" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\package\data\182\_indexkeys:  50 61 63 6b 61 67 65 46 61 6d 69 6c 79 5c 34 65 5c 31 38 32 00 50 61 63 6b 61 67 65 46 75 6c 6c 4e 61 6d 65 5c 4d 69 63 72 6f 73 6f 66 74 2e 58 62 6f 78 47 61 6d 65 4f 76 65 72 6c 61 79 5f 31 2e 34 31 2e 32 34 30 30 31 2e 30 5f 6e 65 75 74 72 61 6c 5f 73 70 6c 69 74 2e 73 63 61 6c 65 2d 31 30 30 5f 38 77 65 6b 79 62 33 64 38 62 62 77 65 00 00" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\packageuser\data\1a80\package: 0x00000180" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\packageuser\data\1a80\user: 0x00000003" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\packageuser\data\1a80\_indexkeys:  55 73 65 72 5c 33 5c 31 61 38 30 00 55 73 65 72 41 6e 64 50 61 63 6b 61 67 65 5c 33 5e 31 38 30 00 00" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\packageuser\data\1a81\package: 0x00000181" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\packageuser\data\1a81\user: 0x00000003" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\packageuser\data\1a81\_indexkeys:  55 73 65 72 5c 33 5c 31 61 38 31 00 55 73 65 72 41 6e 64 50 61 63 6b 61 67 65 5c 33 5e 31 38 31 00 00" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\packageuser\data\1a82\package: 0x00000182" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\packageuser\data\1a82\user: 0x00000003" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\packageuser\data\1a82\_indexkeys:  55 73 65 72 5c 33 5c 31 61 38 32 00 55 73 65 72 41 6e 64 50 61 63 6b 61 67 65 5c 33 5e 31 38 32 00 00" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\packageuser\data\1a83\package: 0x00000180" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\packageuser\data\1a83\user: 0x00000004" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\packageuser\data\1a83\_indexkeys:  55 73 65 72 5c 34 5c 31 61 38 33 00 55 73 65 72 41 6e 64 50 61 63 6b 61 67 65 5c 34 5e 31 38 30 00 00" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\packageuser\data\1a84\package: 0x00000181" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\packageuser\data\1a84\user: 0x00000004" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appmodel\staterepository\cache\packageuser\data\1a84\_indexkeys:  55 73 65 72 5c 34 5c 31 61 38 34 00 55 73 65 72 41 6e 64 50 61 63 6b 61 67 65 5c 34 5e 31 38 31 00 00" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appx\appxalluserstore\applications\microsoft.xboxgameoverlay_1.41.24001.0_neutral_~_8wekyb3d8bbwe\path: "c:\program files\windowsapps\microsoft.xboxgameoverlay_1.41.24001.0_neutral_~_8wekyb3d8bbwe\appxmetadata\appxbundlemanifest.xml"" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appx\appxalluserstore\applications\microsoft.xboxgameoverlay_1.41.24001.0_neutral_~_8wekyb3d8bbwe\microsoft.vclibs.140.00_14.0.27323.0_x64__8wekyb3d8bbwe\path: "c:\program files\windowsapps\microsoft.vclibs.140.00_14.0.27323.0_x64__8wekyb3d8bbwe\appxmanifest.xml"" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appx\appxalluserstore\applications\microsoft.xboxgameoverlay_1.41.24001.0_neutral_~_8wekyb3d8bbwe\microsoft.vclibs.140.00_14.0.27323.0_x86__8wekyb3d8bbwe\path: "c:\program files\windowsapps\microsoft.vclibs.140.00_14.0.27323.0_x86__8wekyb3d8bbwe\appxmanifest.xml"" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appx\appxalluserstore\s-1-5-21-2532382528-581214834-2534474248-1001\microsoft.xboxgameoverlay_1.41.24001.0_neutral_~_8wekyb3d8bbwe\path: "c:\program files\windowsapps\microsoft.xboxgameoverlay_1.41.24001.0_neutral_~_8wekyb3d8bbwe\appxmetadata\appxbundlemanifest.xml"" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appx\appxalluserstore\s-1-5-21-2532382528-581214834-2534474248-1001\microsoft.xboxgameoverlay_1.41.24001.0_neutral_~_8wekyb3d8bbwe\lastreturnvalue: 0x00000000" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appx\appxalluserstore\s-1-5-21-2532382528-581214834-2534474248-1001\microsoft.xboxgameoverlay_1.41.24001.0_neutral_~_8wekyb3d8bbwe\numberofattempts: 0x00000001" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appx\appxalluserstore\s-1-5-21-2532382528-581214834-2534474248-1001\microsoft.xboxgameoverlay_1.41.24001.0_neutral_~_8wekyb3d8bbwe\microsoft.vclibs.140.00_14.0.27323.0_x64__8wekyb3d8bbwe\path: "c:\program files\windowsapps\microsoft.vclibs.140.00_14.0.27323.0_x64__8wekyb3d8bbwe\appxmanifest.xml"" /f
+reg delete "hklm\software\microsoft\windows\currentversion\appx\appxalluserstore\s-1-5-21-2532382528-581214834-2534474248-1001\microsoft.xboxgameoverlay_1.41.24001.0_neutral_~_8wekyb3d8bbwe\microsoft.vclibs.140.00_14.0.27323.0_x86__8wekyb3d8bbwe\path: "c:\program files\windowsapps\microsoft.vclibs.140.00_14.0.27323.0_x86__8wekyb3d8bbwe\appxmanifest.xml"" /f
+reg delete "hklm\software\microsoft\windows nt\currentversion\volatilenotifications\41c64e6da3d39855:  01 00 04 80 00 00 00 00 00 00 00 00 00 00 00 00 14 00 00 00 02 00 1c 00 01 00 00 00 00 00 14 00 03 00 00 00 01 01 00 00 00 00 00 05 0b 00 00 00 04 00 00 00" /f
+reg delete "hklm\software\microsoft\windows nt\currentversion\volatilenotifications\41c64e6da3cf4055:  01 00 04 80 00 00 00 00 00 00 00 00 00 00 00 00 14 00 00 00 02 00 1c 00 01 00 00 00 00 00 14 00 03 00 00 00 01 01 00 00 00 00 00 05 0b 00 00 00 04 00 00 00" /f
+reg delete "hklm\software\wow6432node\google\update\usagestats\daily\counts\cup_ecdsa_http_failure:  01 00 00 00 00 00 00 00" /f
+reg delete "hklm\software\wow6432node\microsoft\securitymanager\capauthz\applicationsex\microsoft.xboxgameoverlay_1.41.24001.0_x64__8wekyb3d8bbwe\apppackagetype: 0x00000000" /f
+reg delete "hklm\software\wow6432node\microsoft\securitymanager\capauthz\applicationsex\microsoft.xboxgameoverlay_1.41.24001.0_x64__8wekyb3d8bbwe\packagesid: "s-1-15-2-1823635404-1364722122-2170562666-1762391777-2399050872-3465541734-3732476201"" /f
+reg delete "hklm\software\wow6432node\microsoft\securitymanager\capauthz\applicationsex\microsoft.xboxgameoverlay_1.41.24001.0_x64__8wekyb3d8bbwe\enterpriseid: 0x00000000" /f
+reg delete "hklm\software\wow6432node\microsoft\securitymanager\capauthz\applicationsex\microsoft.xboxgameoverlay_1.41.24001.0_x64__8wekyb3d8bbwe\capsids:  0a 00 00 00 01 02 00 00 00 00 00 0f 03 00 00 00 01 00 00 00 01 0a 00 00 00 00 00 0f 03 00 00 00 00 04 00 00 e8 41 fe 65 15 cb 86 8e 43 2c e1 30 42 2a b3 51 4e 9c 0e 17 b4 1b 89 09 98 da 44 8d 13 6a 0c b3 01 0a 00 00 00 00 00 0f 03 00 00 00 00 04 00 00 e4 29 72 ae 52 a9 2e 19 c4 fb 6c 51 9e 00 25 50 5b 64 a6 6f a4 d2 d0 57 d2 db d7 37 f2 b0 85 ac 01 0a 00 00 00 00 00 0f 03 00 00 00 00 04 00 00 0b 44 35 cf 44 6c 30 b5 4c 90 da 15 db 4c 09 94 5a 08 a5 69 f0 dc c5 65 02 4a 7b b9 a8 2c da c2 01 0a 00 00 00 00 00 0f 03 00 00 00 00 04 00 00 3c da 35 57 2a 15 fa c8 02 c1 bc 52 65 2b d8 ec c8 8e 72 9b 62 79 a8 20 65 1e 06 07 af 02 70 0c 01 0a 00 00 00 00 00 0f 03 00 00 00 00 04 00 00 ce 22 45 27 27 b8 ea 12 11 8a 20 ef 09 19 fd 6b b8 b4 a0 d6 03 10 5b dd d6 cf 74 85 60 22 d2 cd 01 0a 00 00 00 00 00 0f 03 00 00 00 00 04 00 00 0a d5 ca 1a 96 05 1c f5 5e 2" /f
+reg delete "c 0c ce 2a e8 f3 66 b9 86 13 95 5d 1a 40 0a 7f 52 a9 ba b2 23 04 83 01 0a 00 00 00 00 00 0f 03 00 00 00 00 04 00 00 38 b0 4e d5 42 5b 15 df 75 ed 77 00 0e 5b 16 73 c1 5e d2 af 68 bf 75 ad 38 35 1d 6a 1e 9a 12 f7 01 0a 00 00 00 00 00 0f 03 00 00 00 00 04 00 00 af 37 e5 a2 58 ad 48 66 53 e6 1f 53 b9 42 0e ea 34 9c e5 b6 48 3a db 78 9f 5c a7 33 fe 7e 97 1a 01 08 00 00 00 00 00 0f 03 00 00 00 cc 77 b2 6c ca 01 58 51 6a 28 60 81 e1 f6 0b 69 78 9c fe 8e 66 f8 8f ce 29 11 79 de 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00" /f
 reg delete " 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00" /f
-reg delete "HKLM\SOFTWARE\WOW6432Node\Microsoft\SecurityManager\CapAuthz\ApplicationsEx\Microsoft.XboxGameOverlay_1.41.24001.0_x64__8wekyb3d8bbwe\ApplicationFlags: 0x00000000" /f
-reg delete "HKLM\SOFTWARE\WOW6432Node\EasyAntiCheat\GamesInstalled: "217;"" /f
-reg delete "HKLM\SYSTEM\ControlSet001\Control\hivelist\\REGISTRY\WC\Silo19faac47-bee9-becb-79a7-b4e6e1bfd862software:  5C 44 65 76 69 63 65 5C 48 61 72 64 64 69 73 6B 56 6F 6C 75 6D 65 33 5C 50 72 6F 67 72 61 6D 44 61 74 61 5C 50 61 63 6B 61 67 65 73 5C 4D 69 63 72 6F 73 6F 66 74 2E 53 6B 79 70 65 41 70 70 5F 6B 7A 66 38 71 78 66 33 38 7A 67 35 63 5C 53 2D 31 2D 35 2D 32 31 2D 32 35 33 32 33 38 32 35 32 38 2D 35 38 31 32 31 34 38 33 34 2D 32 35 33 34 34 37 34 32 34 38 2D 31 30 30 31 5C 53 79 73 74 65 6D 41 70 70 44 61 74 61 5C 48 65 6C 69 75 6D 5C 43 61 63 68 65 5C 35 63 38 63 62 62 36 61 61 37 65 61 31 34 32 34 2E 64 61 74 00 00" /f
-reg delete "HKLM\SYSTEM\ControlSet001\Control\hivelist\\REGISTRY\WC\Silo19faac47-bee9-becb-79a7-b4e6e1bfd862user_sid:  5C 44 65 76 69 63 65 5C 48 61 72 64 64 69 73 6B 56 6F 6C 75 6D 65 33 5C 50 72 6F 67 72 61 6D 44 61 74 61 5C 50 61 63 6B 61 67 65 73 5C 4D 69 63 72 6F 73 6F 66 74 2E 53 6B 79 70 65 41 70 70 5F 6B 7A 66 38 71 78 66 33 38 7A 67 35 63 5C 53 2D 31 2D 35 2D 32 31 2D 32 35 33 32 33 38 32 35 32 38 2D 35 38 31 32 31 34 38 33 34 2D 32 35 33 34 34 37 34 32 34 38 2D 31 30 30 31 5C 53 79 73 74 65 6D 41 70 70 44 61 74 61 5C 48 65 6C 69 75 6D 5C 55 73 65 72 2E 64 61 74 00 00" /f
-reg delete "HKLM\SYSTEM\ControlSet001\Control\hivelist\\REGISTRY\WC\Silo19faac47-bee9-becb-79a7-b4e6e1bfd862user_classes:  5C 44 65 76 69 63 65 5C 48 61 72 64 64 69 73 6B 56 6F 6C 75 6D 65 33 5C 50 72 6F 67 72 61 6D 44 61 74 61 5C 50 61 63 6B 61 67 65 73 5C 4D 69 63 72 6F 73 6F 66 74 2E 53 6B 79 70 65 41 70 70 5F 6B 7A 66 38 71 78 66 33 38 7A 67 35 63 5C 53 2D 31 2D 35 2D 32 31 2D 32 35 33 32 33 38 32 35 32 38 2D 35 38 31 32 31 34 38 33 34 2D 32 35 33 34 34 37 34 32 34 38 2D 31 30 30 31 5C 53 79 73 74 65 6D 41 70 70 44 61 74 61 5C 48 65 6C 69 75 6D 5C 55 73 65 72 43 6C 61 73 73 65 73 2E 64 61 74 00 00" /f
-reg delete "HKLM\SYSTEM\ControlSet001\Control\hivelist\\REGISTRY\WC\Siloe6b4a779-bfe1-62d8-47ac-fa19e9becbbecom:  5C 44 65 76 69 63 65 5C 48 61 72 64 64 69 73 6B 56 6F 6C 75 6D 65 33 5C 50 72 6F 67 72 61 6D 44 61 74 61 5C 50 61 63 6B 61 67 65 73 5C 4D 69 63 72 6F 73 6F 66 74 2E 53 6B 79 70 65 41 70 70 5F 6B 7A 66 38 71 78 66 33 38 7A 67 35 63 5C 53 2D 31 2D 35 2D 32 31 2D 32 35 33 32 33 38 32 35 32 38 2D 35 38 31 32 31 34 38 33 34 2D 32 35 33 34 34 37 34 32 34 38 2D 31 30 30 31 5C 53 79 73 74 65 6D 41 70 70 44 61 74 61 5C 48 65 6C 69 75 6D 5C 43 61 63 68 65 5C 35 63 38 63 62 62 36 61 61 37 65 61 31 34 32 34 5F 43 4F 4D 31 35 2E 64 61 74 00 00" /f
-reg delete "HKLM\SYSTEM\ControlSet001\Control\hivelist\\REGISTRY\WC\Silo19faac47-bee9-becb-79a7-b4e6e1bfd862com:  5C 44 65 76 69 63 65 5C 48 61 72 64 64 69 73 6B 56 6F 6C 75 6D 65 33 5C 50 72 6F 67 72 61 6D 44 61 74 61 5C 50 61 63 6B 61 67 65 73 5C 4D 69 63 72 6F 73 6F 66 74 2E 53 6B 79 70 65 41 70 70 5F 6B 7A 66 38 71 78 66 33 38 7A 67 35 63 5C 53 2D 31 2D 35 2D 32 31 2D 32 35 33 32 33 38 32 35 32 38 2D 35 38 31 32 31 34 38 33 34 2D 32 35 33 34 34 37 34 32 34 38 2D 31 30 30 31 5C 53 79 73 74 65 6D 41 70 70 44 61 74 61 5C 48 65 6C 69 75 6D 5C 43 61 63 68 65 5C 35 63 38 63 62 62 36 61 61 37 65 61 31 34 32 34 2E 64 61 74 00 00" /f
-reg delete "HKLM\SYSTEM\ControlSet001\Services\bam\State\UserSettings\S-1-5-21-2532382528-581214834-2534474248-1001\\Device\HarddiskVolume3\Program Files\Epic Games\Fortnite\FortniteGame\Binaries\Win64\FortniteClient-Win64-Shipping_EAC.exe:  B1 8A B0 E9 8D 13 D5 01 00 00 00 00 00 00 00 00 00 00 00 00 02 00 00 00" /f
-reg delete "HKLM\SYSTEM\ControlSet001\Services\bam\State\UserSettings\S-1-5-21-2532382528-581214834-2534474248-1001\\Device\HarddiskVolume3\Program Files\Epic Games\Fortnite\FortniteGame\Binaries\Win64\EasyAntiCheat\EasyAntiCheat_Setup.exe:  73 D5 4B 11 8D 13 D5 01 00 00 00 00 00 00 00 00 00 00 00 00 02 00 00 00" /f
-reg delete "HKLM\SYSTEM\ControlSet001\Services\bam\State\UserSettings\S-1-5-21-2532382528-581214834-2534474248-1001\\Device\HarddiskVolume3\Program Files\Epic Games\Fortnite\FortniteGame\Binaries\Win64\FortniteClient-Win64-Shipping.exe:  E7 CB 84 E9 8D 13 D5 01 00 00 00 00 00 00 00 00 00 00 00 00 02 00 00 00" /f
-reg delete "HKLM\SYSTEM\ControlSet001\Services\EasyAntiCheat\Type: 0x00000010" /f
-reg delete "HKLM\SYSTEM\ControlSet001\Services\EasyAntiCheat\Start: 0x00000003" /f
-reg delete "HKLM\SYSTEM\ControlSet001\Services\EasyAntiCheat\ErrorControl: 0x00000001" /f
-reg delete "HKLM\SYSTEM\ControlSet001\Services\EasyAntiCheat\ImagePath: ""C:\Program Files (x86)\EasyAntiCheat\EasyAntiCheat.exe""" /f
-reg delete "HKLM\SYSTEM\ControlSet001\Services\EasyAntiCheat\DisplayName: "EasyAntiCheat"" /f
-reg delete "HKLM\SYSTEM\ControlSet001\Services\EasyAntiCheat\WOW64: 0x0000014C" /f
-reg delete "HKLM\SYSTEM\ControlSet001\Services\EasyAntiCheat\ObjectName: "LocalSystem"" /f
-reg delete "HKLM\SYSTEM\ControlSet001\Services\EasyAntiCheat\Description: "Provides integrated security and services for online multiplayer games."" /f
-reg delete "HKLM\SYSTEM\ControlSet001\Services\EasyAntiCheat\Security\Security:  01 00 14 80 A0 00 00 00 AC 00 00 00 14 00 00 00 30 00 00 00 02 00 1C 00 01 00 00 00 02 80 14 00 FF 01 0F 00 01 01 00 00 00 00 00 01 00 00 00 00 02 00 70 00 05 00 00 00 00 00 14 00 30 00 02 00 01 01 00 00 00 00 00 01 00 00 00 00 00 00 14 00 FD 01 02 00 01 01 00 00 00 00 00 05 12 00 00 00 00 00 18 00 FF 01 0F 00 01 02 00 00 00 00 00 05 20 00 00 00 20 02 00 00 00 00 14 00 8D 01 02 00 01 01 00 00 00 00 00 05 04 00 00 00 00 00 14 00 8D 01 02 00 01 01 00 00 00 00 00 05 06 00 00 00 01 01 00 00 00 00 00 05 12 00 00 00 01 01 00 00 00 00 00 05 12 00 00 00" /f
-reg delete "HKLM\SYSTEM\CurrentControlSet\Control\hivelist\\REGISTRY\WC\Silo19faac47-bee9-becb-79a7-b4e6e1bfd862software:  5C 44 65 76 69 63 65 5C 48 61 72 64 64 69 73 6B 56 6F 6C 75 6D 65 33 5C 50 72 6F 67 72 61 6D 44 61 74 61 5C 50 61 63 6B 61 67 65 73 5C 4D 69 63 72 6F 73 6F 66 74 2E 53 6B 79 70 65 41 70 70 5F 6B 7A 66 38 71 78 66 33 38 7A 67 35 63 5C 53 2D 31 2D 35 2D 32 31 2D 32 35 33 32 33 38 32 35 32 38 2D 35 38 31 32 31 34 38 33 34 2D 32 35 33 34 34 37 34 32 34 38 2D 31 30 30 31 5C 53 79 73 74 65 6D 41 70 70 44 61 74 61 5C 48 65 6C 69 75 6D 5C 43 61 63 68 65 5C 35 63 38 63 62 62 36 61 61 37 65 61 31 34 32 34 2E 64 61 74 00 00" /f
-reg delete "HKLM\SYSTEM\CurrentControlSet\Control\hivelist\\REGISTRY\WC\Silo19faac47-bee9-becb-79a7-b4e6e1bfd862user_sid:  5C 44 65 76 69 63 65 5C 48 61 72 64 64 69 73 6B 56 6F 6C 75 6D 65 33 5C 50 72 6F 67 72 61 6D 44 61 74 61 5C 50 61 63 6B 61 67 65 73 5C 4D 69 63 72 6F 73 6F 66 74 2E 53 6B 79 70 65 41 70 70 5F 6B 7A 66 38 71 78 66 33 38 7A 67 35 63 5C 53 2D 31 2D 35 2D 32 31 2D 32 35 33 32 33 38 32 35 32 38 2D 35 38 31 32 31 34 38 33 34 2D 32 35 33 34 34 37 34 32 34 38 2D 31 30 30 31 5C 53 79 73 74 65 6D 41 70 70 44 61 74 61 5C 48 65 6C 69 75 6D 5C 55 73 65 72 2E 64 61 74 00 00" /f
-reg delete "HKLM\SYSTEM\CurrentControlSet\Control\hivelist\\REGISTRY\WC\Silo19faac47-bee9-becb-79a7-b4e6e1bfd862user_classes:  5C 44 65 76 69 63 65 5C 48 61 72 64 64 69 73 6B 56 6F 6C 75 6D 65 33 5C 50 72 6F 67 72 61 6D 44 61 74 61 5C 50 61 63 6B 61 67 65 73 5C 4D 69 63 72 6F 73 6F 66 74 2E 53 6B 79 70 65 41 70 70 5F 6B 7A 66 38 71 78 66 33 38 7A 67 35 63 5C 53 2D 31 2D 35 2D 32 31 2D 32 35 33 32 33 38 32 35 32 38 2D 35 38 31 32 31 34 38 33 34 2D 32 35 33 34 34 37 34 32 34 38 2D 31 30 30 31 5C 53 79 73 74 65 6D 41 70 70 44 61 74 61 5C 48 65 6C 69 75 6D 5C 55 73 65 72 43 6C 61 73 73 65 73 2E 64 61 74 00 00" /f
-reg delete "HKLM\SYSTEM\CurrentControlSet\Control\hivelist\\REGISTRY\WC\Siloe6b4a779-bfe1-62d8-47ac-fa19e9becbbecom:  5C 44 65 76 69 63 65 5C 48 61 72 64 64 69 73 6B 56 6F 6C 75 6D 65 33 5C 50 72 6F 67 72 61 6D 44 61 74 61 5C 50 61 63 6B 61 67 65 73 5C 4D 69 63 72 6F 73 6F 66 74 2E 53 6B 79 70 65 41 70 70 5F 6B 7A 66 38 71 78 66 33 38 7A 67 35 63 5C 53 2D 31 2D 35 2D 32 31 2D 32 35 33 32 33 38 32 35 32 38 2D 35 38 31 32 31 34 38 33 34 2D 32 35 33 34 34 37 34 32 34 38 2D 31 30 30 31 5C 53 79 73 74 65 6D 41 70 70 44 61 74 61 5C 48 65 6C 69 75 6D 5C 43 61 63 68 65 5C 35 63 38 63 62 62 36 61 61 37 65 61 31 34 32 34 5F 43 4F 4D 31 35 2E 64 61 74 00 00" /f
-reg delete "HKLM\SYSTEM\CurrentControlSet\Control\hivelist\\REGISTRY\WC\Silo19faac47-bee9-becb-79a7-b4e6e1bfd862com:  5C 44 65 76 69 63 65 5C 48 61 72 64 64 69 73 6B 56 6F 6C 75 6D 65 33 5C 50 72 6F 67 72 61 6D 44 61 74 61 5C 50 61 63 6B 61 67 65 73 5C 4D 69 63 72 6F 73 6F 66 74 2E 53 6B 79 70 65 41 70 70 5F 6B 7A 66 38 71 78 66 33 38 7A 67 35 63 5C 53 2D 31 2D 35 2D 32 31 2D 32 35 33 32 33 38 32 35 32 38 2D 35 38 31 32 31 34 38 33 34 2D 32 35 33 34 34 37 34 32 34 38 2D 31 30 30 31 5C 53 79 73 74 65 6D 41 70 70 44 61 74 61 5C 48 65 6C 69 75 6D 5C 43 61 63 68 65 5C 35 63 38 63 62 62 36 61 61 37 65 61 31 34 32 34 2E 64 61 74 00 00" /f
-reg delete "HKLM\SYSTEM\CurrentControlSet\Services\bam\State\UserSettings\S-1-5-21-2532382528-581214834-2534474248-1001\\Device\HarddiskVolume3\Program Files\Epic Games\Fortnite\FortniteGame\Binaries\Win64\FortniteClient-Win64-Shipping_EAC.exe:  B1 8A B0 E9 8D 13 D5 01 00 00 00 00 00 00 00 00 00 00 00 00 02 00 00 00" /f
-reg delete "HKLM\SYSTEM\CurrentControlSet\Services\bam\State\UserSettings\S-1-5-21-2532382528-581214834-2534474248-1001\\Device\HarddiskVolume3\Program Files\Epic Games\Fortnite\FortniteGame\Binaries\Win64\EasyAntiCheat\EasyAntiCheat_Setup.exe:  73 D5 4B 11 8D 13 D5 01 00 00 00 00 00 00 00 00 00 00 00 00 02 00 00 00" /f
-reg delete "HKLM\SYSTEM\CurrentControlSet\Services\bam\State\UserSettings\S-1-5-21-2532382528-581214834-2534474248-1001\\Device\HarddiskVolume3\Program Files\Epic Games\Fortnite\FortniteGame\Binaries\Win64\FortniteClient-Win64-Shipping.exe:  E7 CB 84 E9 8D 13 D5 01 00 00 00 00 00 00 00 00 00 00 00 00 02 00 00 00" /f
-reg delete "HKLM\SYSTEM\CurrentControlSet\Services\EasyAntiCheat\Type: 0x00000010" /f
-reg delete "HKLM\SYSTEM\CurrentControlSet\Services\EasyAntiCheat\Start: 0x00000003" /f
-reg delete "HKLM\SYSTEM\CurrentControlSet\Services\EasyAntiCheat\ErrorControl: 0x00000001" /f
-reg delete "HKLM\SYSTEM\CurrentControlSet\Services\EasyAntiCheat\ImagePath: ""C:\Program Files (x86)\EasyAntiCheat\EasyAntiCheat.exe""" /f
-reg delete "HKLM\SYSTEM\CurrentControlSet\Services\EasyAntiCheat\DisplayName: "EasyAntiCheat"" /f
-reg delete "HKLM\SYSTEM\CurrentControlSet\Services\EasyAntiCheat\WOW64: 0x0000014C" /f
-reg delete "HKLM\SYSTEM\CurrentControlSet\Services\EasyAntiCheat\ObjectName: "LocalSystem"" /f
-reg delete "HKLM\SYSTEM\CurrentControlSet\Services\EasyAntiCheat\Description: "Provides integrated security and services for online multiplayer games."" /f
-reg delete "HKLM\SYSTEM\CurrentControlSet\Services\EasyAntiCheat\Security\Security:  01 00 14 80 A0 00 00 00 AC 00 00 00 14 00 00 00 30 00 00 00 02 00 1C 00 01 00 00 00 02 80 14 00 FF 01 0F 00 01 01 00 00 00 00 00 01 00 00 00 00 02 00 70 00 05 00 00 00 00 00 14 00 30 00 02 00 01 01 00 00 00 00 00 01 00 00 00 00 00 00 14 00 FD 01 02 00 01 01 00 00 00 00 00 05 12 00 00 00 00 00 18 00 FF 01 0F 00 01 02 00 00 00 00 00 05 20 00 00 00 20 02 00 00 00 00 14 00 8D 01 02 00 01 01 00 00 00 00 00 05 04 00 00 00 00 00 14 00 8D 01 02 00 01 01 00 00 00 00 00 05 06 00 00 00 01 01 00 00 00 00 00 05 12 00 00 00 01 01 00 00 00 00 00 05 12 00 00 00" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Internet Explorer\LowRegistry\Audio\PolicyConfig\PropertyStore\5e4eddc4_0\{219ED5A0-9CBF-4F3A-B927-37C9E5C5F14F}\3:  04 00 00 00 00 00 00 00 00 00 80 3F 00 00 00 00 00 00 00 00 00 00 00 00" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Internet Explorer\LowRegistry\Audio\PolicyConfig\PropertyStore\5e4eddc4_0\{219ED5A0-9CBF-4F3A-B927-37C9E5C5F14F}\4:  04 20 00 00 00 00 00 00 18 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 80 3F 00 00 80 3F" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Internet Explorer\LowRegistry\Audio\PolicyConfig\PropertyStore\5e4eddc4_0\{219ED5A0-9CBF-4F3A-B927-37C9E5C5F14F}\5:  0B 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\RecentDocs\110:  3F 00 54 00 69 00 74 00 6C 00 65 00 49 00 64 00 3D 00 31 00 38 00 32 00 30 00 32 00 35 00 30 00 37 00 38 00 38 00 26 00 50 00 72 00 6F 00 63 00 65 00 73 00 73 00 49 00 64 00 3D 00 36 00 31 00 39 00 36 00 26 00 57 00 69 00 6E 00 64 00 6F 00 77 00 49 00 64 00 3D 00 32 00 36 00 33 00 31 00 32 00 36 00 00 00 3A 01 32 00 00 00 00 00 00 00 00 00 00 00 6D 73 2D 67 61 6D 69 6E 67 6F 76 65 72 6C 61 79 2D 2D 73 74 61 72 74 75 70 74 69 70 73 2D 54 69 74 6C 65 49 64 3D 31 38 32 30 32 35 30 37 38 38 26 50 72 6F 63 65 73 73 49 64 3D 36 31 39 36 26 57 69 6E 64 6F 77 49 64 3D 32 36 33 31 32 36 2E 6C 6E 6B 00 D8 00 09 00 04 00 EF BE 00 00 00 00 00 00 00 00 2E 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 6D 00 73 00 2D 00 67 00 61 00 6D 00 69 00 6E 00 67 00 6F 00 76 00 65 00 72 00 6C 00 61 00 79 00 2D 00 2D 00 73 00 74 00 61 00 72 00 74 00 75 00 " /f
-reg delete "70 00 74 00 69 00 70 00 73 00 2D 00 54 00 69 00 74 00 6C 00 65 00 49 00 64 00 3D 00 31 00 38 00 32 00 30 00 32 00 35 00 30 00 37 00 38 00 38 00 26 00 50 00 72 00 6F 00 63 00 65 00 73 00 73 00 49 00 64 00 3D 00 36 00 31 00 39 00 36 00 26 00 57 00 69 00 6E 00 64 00 6F 00 77 00 49 00 64 00 3D 00 32 00 36 00 33 00 31 00 32 00 36 00 2E 00 6C 00 6E 00 6B 00 00 00 62 00 00 00" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\Streams\0\ViewView2:  1C 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 F1 F1 F1 F1 14 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 03 00 00 FC 02 00 00 31 53 50 53 05 D5 CD D5 9C 2E 1B 10 93 97 08 00 2B 2C F9 AE 83 00 00 00 22 00 00 00 00 47 00 72 00 6F 00 75 00 70 00 42 00 79 00 4B 00 65 00 79 00 3A 00 46 00 4D 00 54 00 49 00 44 00 00 00 08 00 00 00 4E 00 00 00 7B 00 30 00 30 00 30 00 30 00 30 00 30 00 30 00 30 00 2D 00 30 00 30 00 30 00 30 00 2D 00 30 00 30 00 30 00 30 00 2D 00 30 00 30 00 30 00 30 00 2D 00 30 00 30 00 30 00 30 00 30 00 30 00 30 00 30 00 30 00 30 00 30 00 30 00 7D 00 00 00 00 00 33 00 00 00 22 00 00 00 00 47 00 72 00 6F 00 75 00 70 00 42 00 79 00 44 00 69 00 72 00 65 00 63 00 74 00 69 00 6F 00 6E 00 00 00 13 00 00 00 01 00 00 00 5B 00 00 00 0A 00 00 00 00 53 00 6F 00 72 00 74 00 00 00 42 00 00 00 1E 00 00 00 70 00 72 00 6F 00 70 0" /f
-reg delete "0 34 00 32 00 39 00 34 00 39 00 36 00 37 00 32 00 39 00 35 00 00 00 00 00 1C 00 00 00 01 00 00 00 30 F1 25 B7 EF 47 1A 10 A5 F1 02 60 8C 9E EB AC 0A 00 00 00 01 00 00 00 25 00 00 00 14 00 00 00 00 47 00 72 00 6F 00 75 00 70 00 56 00 69 00 65 00 77 00 00 00 0B 00 00 00 00 00 00 00 1B 00 00 00 0A 00 00 00 00 4D 00 6F 00 64 00 65 00 00 00 13 00 00 00 04 00 00 00 23 00 00 00 12 00 00 00 00 49 00 63 00 6F 00 6E 00 53 00 69 00 7A 00 65 00 00 00 13 00 00 00 10 00 00 00 ED 00 00 00 10 00 00 00 00 43 00 6F 00 6C 00 49 00 6E 00 66 00 6F 00 00 00 42 00 00 00 1E 00 00 00 70 00 72 00 6F 00 70 00 34 00 32 00 39 00 34 00 39 00 36 00 37 00 32 00 39 00 35 00 00 00 00 00 A8 00 00 00 FD DF DF FD 10 00 00 00 00 00 00 00 00 00 00 00 06 00 00 00 18 00 00 00 30 F1 25 B7 EF 47 1A 10 A5 F1 02 60 8C 9E EB AC 0A 00 00 00 F0 00 00 00 33 4B 17 9B FF 40 D2 11 A2 7E 00 C0 4F C3 08 71 02 00 00 00 F0 00 00 00 33 4B 17 9B FF 40 D2 11 A2 7E 00 C0 4F C3 08 71 03 00 00 00 A0 00 00 00 30 F1 25 B7 EF 47 1A 10 A5 F1 02 60 8C" /f
-reg delete " 9E EB AC 0C 00 00 00 50 00 00 00 A6 6A 63 28 3D 95 D2 11 B5 D6 00 C0 4F D9 18 D0 0B 00 00 00 78 00 00 00 30 F1 25 B7 EF 47 1A 10 A5 F1 02 60 8C 9E EB AC 0E 00 00 00 78 00 00 00 2F 00 00 00 1E 00 00 00 00 47 00 72 00 6F 00 75 00 70 00 42 00 79 00 4B 00 65 00 79 00 3A 00 50 00 49 00 44 00 00 00 13 00 00 00 00 00 00 00 1F 00 00 00 0E 00 00 00 00 46 00 46 00 6C 00 61 00 67 00 73 00 00 00 13 00 00 00 11 00 20 01 31 00 00 00 20 00 00 00 00 4C 00 6F 00 67 00 69 00 63 00 61 00 6C 00 56 00 69 00 65 00 77 00 4D 00 6F 00 64 00 65 00 00 00 13 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\UserAssist\{CEBFF5CD-ACE2-4F4F-9178-9926F41749EA}\Count\{6Q809377-6NS0-444O-8957-N3773S02200R}\Rcvp Tnzrf\Sbegavgr\SbegavgrTnzr\Ovanevrf\Jva64\SbegavgrPyvrag-Jva64-Fuvccvat_RNP.rkr:  01 00 00 00 00 00 00 00 02 00 00 00 FB 2C 00 00 00 00 80 BF 00 00 80 BF 00 00 80 BF 00 00 80 BF 00 00 80 BF 00 00 80 BF 00 00 80 BF 00 00 80 BF 00 00 80 BF 00 00 80 BF FF FF FF FF 00 00 00 00 00 00 00 00 00 00 00 00" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\UserAssist\{CEBFF5CD-ACE2-4F4F-9178-9926F41749EA}\Count\{6Q809377-6NS0-444O-8957-N3773S02200R}\Rcvp Tnzrf\Sbegavgr\SbegavgrTnzr\Ovanevrf\Jva64\RnflNagvPurng\RnflNagvPurng_Frghc.rkr:  01 00 00 00 00 00 00 00 01 00 00 00 35 0C 00 00 00 00 80 BF 00 00 80 BF 00 00 80 BF 00 00 80 BF 00 00 80 BF 00 00 80 BF 00 00 80 BF 00 00 80 BF 00 00 80 BF 00 00 80 BF FF FF FF FF 00 00 00 00 00 00 00 00 00 00 00 00" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\UserAssist\{CEBFF5CD-ACE2-4F4F-9178-9926F41749EA}\Count\{6Q809377-6NS0-444O-8957-N3773S02200R}\Rcvp Tnzrf\Sbegavgr\SbegavgrTnzr\Ovanevrf\Jva64\SbegavgrPyvrag-Jva64-Fuvccvat.rkr:  01 00 00 00 00 00 00 00 04 00 00 00 AF B4 02 00 00 00 80 BF 00 00 80 BF 00 00 80 BF 00 00 80 BF 00 00 80 BF 00 00 80 BF 00 00 80 BF 00 00 80 BF 00 00 80 BF 00 00 80 BF FF FF FF FF 00 00 00 00 00 00 00 00 00 00 00 00" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\1\ApplicationViewManagement\W32:0000000000020552\CloakType:  04 00 00 00 30 30 54 43 00 00 00 00" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\1\ApplicationViewManagement\W32:00000000000703C4\CloakType:  04 00 00 00 30 30 54 43 00 00 00 00" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\1\ApplicationViewManagement\W32:00000000000205B6\VirtualDesktop:  10 00 00 00 30 30 44 56 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\1\ApplicationViewManagement\W32:00000000000403D6\VirtualDesktop:  10 00 00 00 30 30 44 56 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\1\ApplicationViewManagement\W32:00000000000405DE\VirtualDesktop:  10 00 00 00 30 30 44 56 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\1\ApplicationViewManagement\W32:0000000000060286\VirtualDesktop:  10 00 00 00 30 30 44 56 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\1\ApplicationViewManagement\W32:000000000009042E\VirtualDesktop:  10 00 00 00 30 30 44 56 8A 14 1B 02 6F DF F6 46 96 A2 BA 8C 49 3E 6C EE" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\1\ApplicationViewManagement\W32:000000000009042E\CloakType:  04 00 00 00 30 30 54 43 02 00 00 00" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\1\ApplicationViewManagement\W32:00000000000A03B4\VirtualDesktop:  10 00 00 00 30 30 44 56 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\1\ApplicationViewManagement\W32:00000000000A0430\VirtualDesktop:  10 00 00 00 30 30 44 56 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\1\ApplicationViewManagement\W32:00000000000B0532\VirtualDesktop:  10 00 00 00 30 30 44 56 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\1\ApplicationViewManagement\W32:00000000000B05D6\VirtualDesktop:  10 00 00 00 30 30 44 56 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\1\ApplicationViewManagement\W32:00000000000C0430\VirtualDesktop:  10 00 00 00 30 30 44 56 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\1\ApplicationViewManagement\W32:00000000000C0586\VirtualDesktop:  10 00 00 00 30 30 44 56 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\1\ApplicationViewManagement\W32:00000000000E03D2\VirtualDesktop:  10 00 00 00 30 30 44 56 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\1\ApplicationViewManagement\W32:00000000000E0406\VirtualDesktop:  10 00 00 00 30 30 44 56 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\1\ApplicationViewManagement\W32:0000000000100430\VirtualDesktop:  10 00 00 00 30 30 44 56 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\1\ApplicationViewManagement\W32:0000000000100430\CloakType:  04 00 00 00 30 30 54 43 02 00 00 00" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\1\ApplicationViewManagement\W32:00000000001103EE\VirtualDesktop:  10 00 00 00 30 30 44 56 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\1\ApplicationViewManagement\W32:000000000011041E\VirtualDesktop:  10 00 00 00 30 30 44 56 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\1\ApplicationViewManagement\W32:000000000012047E\VirtualDesktop:  10 00 00 00 30 30 44 56 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\1\ApplicationViewManagement\W32:00000000001303EE\VirtualDesktop:  10 00 00 00 30 30 44 56 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\1\ApplicationViewManagement\W32:00000000001304F2\VirtualDesktop:  10 00 00 00 30 30 44 56 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\1\ApplicationViewManagement\W32:000000000014041E\VirtualDesktop:  10 00 00 00 30 30 44 56 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\1\ApplicationViewManagement\W32:00000000001703E6\VirtualDesktop:  10 00 00 00 30 30 44 56 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\1\ApplicationViewManagement\W32:0000000000170440\VirtualDesktop:  10 00 00 00 30 30 44 56 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\1\ApplicationViewManagement\W32:00000000001704FC\VirtualDesktop:  10 00 00 00 30 30 44 56 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\1\VirtualDesktops\CurrentVirtualDesktop:  B5 05 CB 90 C0 9D AF 44 93 6E 8E 33 22 0E 1E 9A" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\StreamMRU\MRUListEx:  00 00 00 00 FF FF FF FF" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\StreamMRU\0:  14 00 1F 78 40 F0 5F 64 81 50 1B 10 9F 08 00 AA 00 2F 95 4E 00 00" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Search\JumplistData\Microsoft.XboxGamingOverlay_8wekyb3d8bbwe!App:  6F 70 0D 53 8D 13 D5 01" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Compatibility Assistant\Store\C:\Program Files\WindowsApps\Microsoft.SkypeApp_14.44.40.1000_x64__kzf8qxf38zg5c\SkypeBridge\SkypeBridge.exe:  53 41 43 50 01 00 00 00 00 00 00 00 07 00 00 00 28 00 00 00 00 EA 08 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 0A 73 20 00 00 67 07 7C BA C5 4C D4 01 00 00 00 00 00 00 00 00" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Compatibility Assistant\Store\C:\Program Files\Epic Games\Fortnite\FortniteGame\Binaries\Win64\EasyAntiCheat\EasyAntiCheat_Setup.exe:  53 41 43 50 01 00 00 00 00 00 00 00 07 00 00 00 28 00 00 00 70 42 0C 00 0E EB 0C 00 01 00 00 00 00 00 00 00 00 00 03 06 00 01 00 00 67 07 7C BA C5 4C D4 01 00 00 00 00 00 00 00 00 02 00 00 00 28 00 00 00 00 00 00 00 00 00 00 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 83 0C 00 00 00 00 00 00 01 00 00 00 01 00 00 00" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Classes\Local Settings\MrtCache\C:%5CProgram Files%5CWindowsApps%5CMicrosoft.XboxGamingOverlay_2.26.28001.0_x64__8wekyb3d8bbwe%5Cmicrosoft.system.package.metadata%5CS-1-5-21-2532382528-581214834-2534474248-1001-MergedResources-2.pri\1d50f44cf1a0499\87f345c2\LanguageList:  5F 65 6E 2D 55 53 5F 73 74 61 6E 64 61 72 64 5F 31 32 35 5F 55 53 5F 4C 54 52 5F 6C 69 67 68 74 5F 44 65 73 6B 74 6F 70" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Classes\Local Settings\MrtCache\C:%5CProgram Files%5CWindowsApps%5CMicrosoft.XboxGamingOverlay_2.26.28001.0_x64__8wekyb3d8bbwe%5Cmicrosoft.system.package.metadata%5CS-1-5-21-2532382528-581214834-2534474248-1001-MergedResources-2.pri\1d50f44cf1a0499\87f345c2\{Microsoft.XboxGamingOverlay_2.26.28001.0_x64__8wekyb3d8bbwe?ms-resource://Microsoft.XboxGamingOverlay/resources/GameBar}: "Game bar"" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Classes\Local Settings\MuiCache\ab\52C64B7E\C:\Program Files\Common Files\System\wab32res.dll,-4602: "Contact file"" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Classes\Local Settings\MuiCache\ab\52C64B7E\C:\Program Files (x86)\Common Files\Microsoft Shared\MSEnv\1033\\VSLauncherUI.dll,-1002: "Open in &Visual Studio"" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Classes\Local Settings\MuiCache\ab\52C64B7E\C:\Program Files\Windows NT\Accessories\WORDPAD.EXE,-190: "Rich Text Document"" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Classes\Local Settings\MuiCache\ab\52C64B7E\C:\Windows\system32\zipfldr.dll,-10195: "Compressed (zipped) Folder"" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Classes\Local Settings\MuiCache\ab\52C64B7E\C:\Program Files\Common Files\system\wab32res.dll,-10203: "Contact"" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Classes\Local Settings\MuiCache\ab\52C64B7E\C:\Windows\System32\ieframe.dll,-5723: "The Internet"" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Classes\Local Settings\MuiCache\ab\52C64B7E\windows.storage.dll,-21826: "Captures"" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Classes\discord-432980957394370572\: "URL:Run game 432980957394370572 protocol"" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Classes\discord-432980957394370572\DefaultIcon\: "C:\Program Files\Epic Games\Fortnite\FortniteGame\Binaries\Win64\FortniteClient-Win64-Shipping.exe"" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Classes\discord-432980957394370572\shell\open\command\: "C:\Program Files\Epic Games\Fortnite\FortniteGame\Binaries\Win64\FortniteClient-Win64-Shipping.exe"" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\System\GameConfigStore\Children\03ce6902-ff58-41de-ab92-36fcaf27a580\Type: 0x00000001" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\System\GameConfigStore\Children\03ce6902-ff58-41de-ab92-36fcaf27a580\Revision: 0x00000749" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\System\GameConfigStore\Children\03ce6902-ff58-41de-ab92-36fcaf27a580\Flags: 0x00000011" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\System\GameConfigStore\Children\03ce6902-ff58-41de-ab92-36fcaf27a580\Parent:  01 00 00 00 D0 8C 9D DF 01 15 D1 11 8C 7A 00 C0 4F C2 97 EB 01 00 00 00 A9 48 EF 2C 9D EA 8A 45 91 31 67 B0 84 6F ED 8E 04 00 00 00 02 00 00 00 00 00 10 66 00 00 00 01 00 00 20 00 00 00 82 D1 6E 25 51 7D 17 35 CD F0 77 83 27 49 33 1E 70 8C F1 D7 46 38 72 D7 40 2A 5F 42 6A 59 0C C9 00 00 00 00 0E 80 00 00 00 02 00 00 20 00 00 00 48 23 FD 1D BA 99 97 F2 A0 43 88 45 76 67 D6 3F 2B DA EC 90 EC 6F 5E DD A0 EA 21 92 49 AD 9E 61 50 00 00 00 D1 42 B5 C4 26 4E 83 5C 1B 68 1D BB CA 94 7A 7B 8A C3 2C CA 9A 43 58 16 4A 9F DF 7D E3 68 1D C2 16 C9 B7 96 1A 0B 6C 63 3C 2B B7 84 1C E4 53 57 B9 60 91 CD 3A 74 27 EC 3F 33 E3 3C D6 CB 52 72 D7 16 D7 92 07 32 9B D6 23 C2 13 26 61 E1 6B 86 40 00 00 00 5D 4F 6F 1A 74 1E 5A 09 65 37 FC C8 B3 38 02 62 1D 39 AD 9E 31 59 AC E0 6F 83 6D EC EF 1C 90 1D 61 73 75 41 23 6C 60 B9 33 7E 03 B6 6B 0B 17 15 74 18 97 E8 0E 9B F2 DF 1D D1 72 3C EA" /f
-reg delete " C9 73 F7" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\System\GameConfigStore\Children\03ce6902-ff58-41de-ab92-36fcaf27a580\GameDVR_GameGUID: "284ea1b3-f5e7-4133-b521-74a8d9ae997e"" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\System\GameConfigStore\Children\03ce6902-ff58-41de-ab92-36fcaf27a580\TitleId: "1820250788"" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\System\GameConfigStore\Children\03ce6902-ff58-41de-ab92-36fcaf27a580\MatchedExeFullPath:  43 3A 5C 50 72 6F 67 72 61 6D 20 46 69 6C 65 73 5C 45 70 69 63 20 47 61 6D 65 73 5C 46 6F 72 74 6E 69 74 65 5C 46 6F 72 74 6E 69 74 65 47 61 6D 65 5C 42 69 6E 61 72 69 65 73 5C 57 69 6E 36 34 5C 46 6F 72 74 6E 69 74 65 43 6C 69 65 6E 74 2D 57 69 6E 36 34 2D 53 68 69 70 70 69 6E 67 2E 65 78 65" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\System\GameConfigStore\Children\03ce6902-ff58-41de-ab92-36fcaf27a580\LastAccessed:  50 3B 6E 52 8D 13 D5 01" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\System\GameConfigStore\Parents\fd13f746e7d2d69760b017363f621255c9b49ac8\Children: "03ce6902-ff58-41de-ab92-36fcaf27a580"" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001_Classes\Local Settings\MrtCache\C:%5CProgram Files%5CWindowsApps%5CMicrosoft.XboxGamingOverlay_2.26.28001.0_x64__8wekyb3d8bbwe%5Cmicrosoft.system.package.metadata%5CS-1-5-21-2532382528-581214834-2534474248-1001-MergedResources-2.pri\1d50f44cf1a0499\87f345c2\LanguageList:  5F 65 6E 2D 55 53 5F 73 74 61 6E 64 61 72 64 5F 31 32 35 5F 55 53 5F 4C 54 52 5F 6C 69 67 68 74 5F 44 65 73 6B 74 6F 70" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001_Classes\Local Settings\MrtCache\C:%5CProgram Files%5CWindowsApps%5CMicrosoft.XboxGamingOverlay_2.26.28001.0_x64__8wekyb3d8bbwe%5Cmicrosoft.system.package.metadata%5CS-1-5-21-2532382528-581214834-2534474248-1001-MergedResources-2.pri\1d50f44cf1a0499\87f345c2\{Microsoft.XboxGamingOverlay_2.26.28001.0_x64__8wekyb3d8bbwe?ms-resource://Microsoft.XboxGamingOverlay/resources/GameBar}: "Game bar"" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001_Classes\Local Settings\MuiCache\ab\52C64B7E\C:\Program Files\Common Files\System\wab32res.dll,-4602: "Contact file"" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001_Classes\Local Settings\MuiCache\ab\52C64B7E\C:\Program Files (x86)\Common Files\Microsoft Shared\MSEnv\1033\\VSLauncherUI.dll,-1002: "Open in &Visual Studio"" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001_Classes\Local Settings\MuiCache\ab\52C64B7E\C:\Program Files\Windows NT\Accessories\WORDPAD.EXE,-190: "Rich Text Document"" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001_Classes\Local Settings\MuiCache\ab\52C64B7E\C:\Windows\system32\zipfldr.dll,-10195: "Compressed (zipped) Folder"" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001_Classes\Local Settings\MuiCache\ab\52C64B7E\C:\Program Files\Common Files\system\wab32res.dll,-10203: "Contact"" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001_Classes\Local Settings\MuiCache\ab\52C64B7E\C:\Windows\System32\ieframe.dll,-5723: "The Internet"" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001_Classes\Local Settings\MuiCache\ab\52C64B7E\windows.storage.dll,-21826: "Captures"" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001_Classes\discord-432980957394370572\: "URL:Run game 432980957394370572 protocol"" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001_Classes\discord-432980957394370572\DefaultIcon\: "C:\Program Files\Epic Games\Fortnite\FortniteGame\Binaries\Win64\FortniteClient-Win64-Shipping.exe"" /f
-reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001_Classes\discord-432980957394370572\shell\open\command\: "C:\Program Files\Epic Games\Fortnite\FortniteGame\Binaries\Win64\FortniteClient-Win64-Shipping.exe"" /f
-REG DELETE "HKCU\Software\Electronic Arts\EA Core\Staging\194908\ergc" /f
-REG DELETE "HKCU\Software\Electronic Arts" /f
-REG DELETE "HKLM\SOFTWARE\Respawn\Apex\Product GUID" /f
-REG DELETE "HKLM\SOFTWARE\Classes\origin" /f
-REG DELETE "HKLM\SOFTWARE\Classes\origin2" /f
-REG DELETE "HKCR\origin" /f
-REG DELETE "HKCR\origin2" /f
-REG DELETE "HKCR\Applications\Origin.exe" /f  
-REG DELETE "HKLM\SOFTWARE\Classes\Applications\Origin.exe" /f 
-REG DELETE "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\RecentDocs\.Origin" /f
-REG DELETE "HKLM\SYSTEM\ControlSet001\Services\Origin Client Service" /f 
-REG DELETE "HKLM\SYSTEM\ControlSet001\Services\Origin Web Helper Service" /f 
-REG DELETE "HKLM\SYSTEM\CurrentControlSet\Services\Origin Client Service" /f 
-REG DELETE "HKLM\SYSTEM\CurrentControlSet\Services\Origin Web Helper Service" /f 
-REG DELETE "HKLM\SOFTWARE\Microsoft\RADAR\HeapLeakDetection\DiagnosedApplications\Origin.exe" /f  
-REG DELETE "HKCR\Applications\Origin.exe" /f 
-REG DELETE "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\RecentDocs\.Origin" /f     
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Application\Data\93" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Application\Index\Package\181" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Application\Index\Package\181\93" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Application\Index\PackageAndPackageRelativeApplicationId\181^App" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Application\Index\PackageAndPackageRelativeApplicationId\181^App\93" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\ApplicationUser\Data\ac" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\ApplicationUser\Data\ad" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\ApplicationUser\Index\UserAndApplication\3^93" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\ApplicationUser\Index\UserAndApplication\3^93\ac" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\ApplicationUser\Index\UserAndApplication\4^93" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\ApplicationUser\Index\UserAndApplication\4^93\ad" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Package\Data\180" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Package\Data\181" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Package\Data\182" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Package\Index\PackageFamily\4e\180" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\PackageUser\Data\1a82" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\PackageUser\Data\1a83" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\PackageUser\Data\1a84" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\PackageUser\Index\User\3\1a80" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\PackageUser\Index\User\3\1a81" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\PackageUser\Index\User\3\1a82" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\PackageUser\Index\User\4\1a83" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\PackageUser\Index\User\4\1a84" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\PackageUser\Index\UserAndPackage\3^180" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\PackageUser\Index\UserAndPackage\3^180\1a80" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\PackageUser\Index\UserAndPackage\3^181" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\PackageUser\Index\UserAndPackage\3^181\1a81" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\PackageUser\Index\UserAndPackage\3^182" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\PackageUser\Index\UserAndPackage\3^182\1a82" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\PackageUser\Index\UserAndPackage\4^180" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\PackageUser\Index\UserAndPackage\4^180\1a83" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\PackageUser\Index\UserAndPackage\4^181" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\PackageUser\Index\UserAndPackage\4^181\1a84" /f
-REG DELETE "HKLM\SOFTWARE\WOW6432Node\EasyAntiCheat" /f
-REG DELETE "HKLM\SYSTEM\ControlSet001\Services\EasyAntiCheat" /f
-REG DELETE "HKLM\SYSTEM\ControlSet001\Services\EasyAntiCheat\Security" /f
-REG DELETE "HKLM\SYSTEM\CurrentControlSet\Services\EasyAntiCheat" /f
-REG DELETE "HKLM\SYSTEM\CurrentControlSet\Services\EasyAntiCheat\Security" /f
-REG DELETE "HKCU\Software\Classes\Installer\Dependencies" /v MSICache /f
-REG DELETE "HKCU\Software\Microsoft\Direct3D" /v WHQLClass /f
-REG DELETE "HKLM\Hardware\Description\System\CentralProcessor\0" /v ProcessorNameString /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Package\Index\PackageFamily\4e\181" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Package\Index\PackageFamily\4e\182" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\PackageUser\Data\1a80" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\PackageUser\Data\1a81" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\Origins\kz2LMQg4+pNfXggv65DcWFQ9SiekWR4B4WMWT+pcqbU: 0x00000002" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\Origins\4JSyFFDDKUMXDyK2USgAjbiksFnqOb3f8RPZBPSpEfU: 0x00000002" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\Origins\62bDlCzxB/xxIWLkQdDRYcAqhmZhNOMUtjhRkAgTvkQ: 0x00000002" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Application\Data\93\Package: 0x00000181" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Application\Data\93\Index: 0x00000000" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Application\Data\93\Flags: 0x00000000" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Application\Data\93\PackageRelativeApplicationId: "App"" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Application\Data\93\ApplicationUserModelId: "Microsoft.XboxGameOverlay_8wekyb3d8bbwe!App"" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Application\Data\93\Executable: "GameBar.exe"" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Application\Data\93\Entrypoint: "GameBar.App"" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Application\Data\93\StartPage: (NULL!)" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Application\Data\93\_IndexKeys:  50 61 63 6B 61 67 65 5C 31 38 31 5C 39 33 00 50 61 63 6B 61 67 65 41 6E 64 50 61 63 6B 61 67 65 52 65 6C 61 74 69 76 65 41 70 70 6C 69 63 61 74 69 6F 6E 49 64 5C 31 38 31 5E 41 70 70 00 00" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\ApplicationUser\Data\ac\Application: 0x00000093" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\ApplicationUser\Data\ac\User: 0x00000003" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\ApplicationUser\Data\ac\ApplicationUserModelId: "Microsoft.XboxGameOverlay_8wekyb3d8bbwe!App"" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\ApplicationUser\Data\ac\_IndexKeys:  55 73 65 72 41 6E 64 41 70 70 6C 69 63 61 74 69 6F 6E 5C 33 5E 39 33 00 55 73 65 72 41 6E 64 41 70 70 6C 69 63 61 74 69 6F 6E 55 73 65 72 4D 6F 64 65 6C 49 64 5C 33 5E 4D 69 63 72 6F 73 6F 66 74 2E 58 62 6F 78 47 61 6D 65 4F 76 65 72 6C 61 79 5F 38 77 65 6B 79 62 33 64 38 62 62 77 65 21 41 70 70 00 00" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\ApplicationUser\Data\ad\Application: 0x00000093" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\ApplicationUser\Data\ad\User: 0x00000004" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\ApplicationUser\Data\ad\ApplicationUserModelId: "Microsoft.XboxGameOverlay_8wekyb3d8bbwe!App"" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\ApplicationUser\Data\ad\_IndexKeys:  55 73 65 72 41 6E 64 41 70 70 6C 69 63 61 74 69 6F 6E 5C 34 5E 39 33 00 55 73 65 72 41 6E 64 41 70 70 6C 69 63 61 74 69 6F 6E 55 73 65 72 4D 6F 64 65 6C 49 64 5C 34 5E 4D 69 63 72 6F 73 6F 66 74 2E 58 62 6F 78 47 61 6D 65 4F 76 65 72 6C 61 79 5F 38 77 65 6B 79 62 33 64 38 62 62 77 65 21 41 70 70 00 00" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Package\Data\180\PackageFullName: "Microsoft.XboxGameOverlay_1.41.24001.0_neutral_~_8wekyb3d8bbwe"" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Package\Data\180\PackageFamily: 0x0000004E" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Package\Data\180\PackageType: 0x00000008" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Package\Data\180\Flags: 0x00000000" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Package\Data\180\PackageOrigin: 0x00000003" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Package\Data\180\Volume: 0x00000001" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Package\Data\180\InstalledLocation: "C:\Program Files\WindowsApps\Microsoft.XboxGameOverlay_1.41.24001.0_neutral_~_8wekyb3d8bbwe"" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Package\Data\180\_IndexKeys:  50 61 63 6B 61 67 65 46 61 6D 69 6C 79 5C 34 65 5C 31 38 30 00 50 61 63 6B 61 67 65 46 75 6C 6C 4E 61 6D 65 5C 4D 69 63 72 6F 73 6F 66 74 2E 58 62 6F 78 47 61 6D 65 4F 76 65 72 6C 61 79 5F 31 2E 34 31 2E 32 34 30 30 31 2E 30 5F 6E 65 75 74 72 61 6C 5F 7E 5F 38 77 65 6B 79 62 33 64 38 62 62 77 65 00 00" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Package\Data\181\PackageFullName: "Microsoft.XboxGameOverlay_1.41.24001.0_x64__8wekyb3d8bbwe"" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Package\Data\181\PackageFamily: 0x0000004E" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Package\Data\181\PackageType: 0x00000001" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Package\Data\181\Flags: 0x00000000" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Package\Data\181\PackageOrigin: 0x00000003" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Package\Data\181\Volume: 0x00000001" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Package\Data\181\InstalledLocation: "C:\Program Files\WindowsApps\Microsoft.XboxGameOverlay_1.41.24001.0_x64__8wekyb3d8bbwe"" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Package\Data\181\_IndexKeys:  50 61 63 6B 61 67 65 46 61 6D 69 6C 79 5C 34 65 5C 31 38 31 00 50 61 63 6B 61 67 65 46 75 6C 6C 4E 61 6D 65 5C 4D 69 63 72 6F 73 6F 66 74 2E 58 62 6F 78 47 61 6D 65 4F 76 65 72 6C 61 79 5F 31 2E 34 31 2E 32 34 30 30 31 2E 30 5F 78 36 34 5F 5F 38 77 65 6B 79 62 33 64 38 62 62 77 65 00 00" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Package\Data\182\PackageFullName: "Microsoft.XboxGameOverlay_1.41.24001.0_neutral_split.scale-100_8wekyb3d8bbwe"" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Package\Data\182\PackageFamily: 0x0000004E" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Package\Data\182\PackageType: 0x00000004" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Package\Data\182\Flags: 0x00000000" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Package\Data\182\PackageOrigin: 0x00000003" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Package\Data\182\Volume: 0x00000001" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Package\Data\182\InstalledLocation: "C:\Program Files\WindowsApps\Microsoft.XboxGameOverlay_1.41.24001.0_neutral_split.scale-100_8wekyb3d8bbwe"" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\Package\Data\182\_IndexKeys:  50 61 63 6B 61 67 65 46 61 6D 69 6C 79 5C 34 65 5C 31 38 32 00 50 61 63 6B 61 67 65 46 75 6C 6C 4E 61 6D 65 5C 4D 69 63 72 6F 73 6F 66 74 2E 58 62 6F 78 47 61 6D 65 4F 76 65 72 6C 61 79 5F 31 2E 34 31 2E 32 34 30 30 31 2E 30 5F 6E 65 75 74 72 61 6C 5F 73 70 6C 69 74 2E 73 63 61 6C 65 2D 31 30 30 5F 38 77 65 6B 79 62 33 64 38 62 62 77 65 00 00" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\PackageUser\Data\1a80\Package: 0x00000180" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\PackageUser\Data\1a80\User: 0x00000003" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\PackageUser\Data\1a80\_IndexKeys:  55 73 65 72 5C 33 5C 31 61 38 30 00 55 73 65 72 41 6E 64 50 61 63 6B 61 67 65 5C 33 5E 31 38 30 00 00" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\PackageUser\Data\1a81\Package: 0x00000181" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\PackageUser\Data\1a81\User: 0x00000003" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\PackageUser\Data\1a81\_IndexKeys:  55 73 65 72 5C 33 5C 31 61 38 31 00 55 73 65 72 41 6E 64 50 61 63 6B 61 67 65 5C 33 5E 31 38 31 00 00" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\PackageUser\Data\1a82\Package: 0x00000182" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\PackageUser\Data\1a82\User: 0x00000003" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\PackageUser\Data\1a82\_IndexKeys:  55 73 65 72 5C 33 5C 31 61 38 32 00 55 73 65 72 41 6E 64 50 61 63 6B 61 67 65 5C 33 5E 31 38 32 00 00" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\PackageUser\Data\1a83\Package: 0x00000180" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\PackageUser\Data\1a83\User: 0x00000004" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\PackageUser\Data\1a83\_IndexKeys:  55 73 65 72 5C 34 5C 31 61 38 33 00 55 73 65 72 41 6E 64 50 61 63 6B 61 67 65 5C 34 5E 31 38 30 00 00" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\PackageUser\Data\1a84\Package: 0x00000181" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\PackageUser\Data\1a84\User: 0x00000004" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StateRepository\Cache\PackageUser\Data\1a84\_IndexKeys:  55 73 65 72 5C 34 5C 31 61 38 34 00 55 73 65 72 41 6E 64 50 61 63 6B 61 67 65 5C 34 5E 31 38 31 00 00" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\VolatileNotifications\41C64E6DA3D39855:  01 00 04 80 00 00 00 00 00 00 00 00 00 00 00 00 14 00 00 00 02 00 1C 00 01 00 00 00 00 00 14 00 03 00 00 00 01 01 00 00 00 00 00 05 0B 00 00 00 04 00 00 00" /f
-REG DELETE "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\VolatileNotifications\41C64E6DA3CF4055:  01 00 04 80 00 00 00 00 00 00 00 00 00 00 00 00 14 00 00 00 02 00 1C 00 01 00 00 00 00 00 14 00 03 00 00 00 01 01 00 00 00 00 00 05 0B 00 00 00 04 00 00 00" /f
-REG DELETE "HKLM\SYSTEM\ControlSet001\Control\hivelist\\REGISTRY\WC\Silo19faac47-bee9-becb-79a7-b4e6e1bfd862software:  5C 44 65 76 69 63 65 5C 48 61 72 64 64 69 73 6B 56 6F 6C 75 6D 65 33 5C 50 72 6F 67 72 61 6D 44 61 74 61 5C 50 61 63 6B 61 67 65 73 5C 4D 69 63 72 6F 73 6F 66 74 2E 53 6B 79 70 65 41 70 70 5F 6B 7A 66 38 71 78 66 33 38 7A 67 35 63 5C 53 2D 31 2D 35 2D 32 31 2D 32 35 33 32 33 38 32 35 32 38 2D 35 38 31 32 31 34 38 33 34 2D 32 35 33 34 34 37 34 32 34 38 2D 31 30 30 31 5C 53 79 73 74 65 6D 41 70 70 44 61 74 61 5C 48 65 6C 69 75 6D 5C 43 61 63 68 65 5C 35 63 38 63 62 62 36 61 61 37 65 61 31 34 32 34 2E 64 61 74 00 00" /f
-REG DELETE "HKLM\SYSTEM\ControlSet001\Control\hivelist\\REGISTRY\WC\Silo19faac47-bee9-becb-79a7-b4e6e1bfd862user_sid:  5C 44 65 76 69 63 65 5C 48 61 72 64 64 69 73 6B 56 6F 6C 75 6D 65 33 5C 50 72 6F 67 72 61 6D 44 61 74 61 5C 50 61 63 6B 61 67 65 73 5C 4D 69 63 72 6F 73 6F 66 74 2E 53 6B 79 70 65 41 70 70 5F 6B 7A 66 38 71 78 66 33 38 7A 67 35 63 5C 53 2D 31 2D 35 2D 32 31 2D 32 35 33 32 33 38 32 35 32 38 2D 35 38 31 32 31 34 38 33 34 2D 32 35 33 34 34 37 34 32 34 38 2D 31 30 30 31 5C 53 79 73 74 65 6D 41 70 70 44 61 74 61 5C 48 65 6C 69 75 6D 5C 55 73 65 72 2E 64 61 74 00 00" /f
-REG DELETE "HKLM\SYSTEM\ControlSet001\Control\hivelist\\REGISTRY\WC\Silo19faac47-bee9-becb-79a7-b4e6e1bfd862user_classes:  5C 44 65 76 69 63 65 5C 48 61 72 64 64 69 73 6B 56 6F 6C 75 6D 65 33 5C 50 72 6F 67 72 61 6D 44 61 74 61 5C 50 61 63 6B 61 67 65 73 5C 4D 69 63 72 6F 73 6F 66 74 2E 53 6B 79 70 65 41 70 70 5F 6B 7A 66 38 71 78 66 33 38 7A 67 35 63 5C 53 2D 31 2D 35 2D 32 31 2D 32 35 33 32 33 38 32 35 32 38 2D 35 38 31 32 31 34 38 33 34 2D 32 35 33 34 34 37 34 32 34 38 2D 31 30 30 31 5C 53 79 73 74 65 6D 41 70 70 44 61 74 61 5C 48 65 6C 69 75 6D 5C 55 73 65 72 43 6C 61 73 73 65 73 2E 64 61 74 00 00" /f
-REG DELETE "HKLM\SYSTEM\ControlSet001\Control\hivelist\\REGISTRY\WC\Siloe6b4a779-bfe1-62d8-47ac-fa19e9becbbecom:  5C 44 65 76 69 63 65 5C 48 61 72 64 64 69 73 6B 56 6F 6C 75 6D 65 33 5C 50 72 6F 67 72 61 6D 44 61 74 61 5C 50 61 63 6B 61 67 65 73 5C 4D 69 63 72 6F 73 6F 66 74 2E 53 6B 79 70 65 41 70 70 5F 6B 7A 66 38 71 78 66 33 38 7A 67 35 63 5C 53 2D 31 2D 35 2D 32 31 2D 32 35 33 32 33 38 32 35 32 38 2D 35 38 31 32 31 34 38 33 34 2D 32 35 33 34 34 37 34 32 34 38 2D 31 30 30 31 5C 53 79 73 74 65 6D 41 70 70 44 61 74 61 5C 48 65 6C 69 75 6D 5C 43 61 63 68 65 5C 35 63 38 63 62 62 36 61 61 37 65 61 31 34 32 34 5F 43 4F 4D 31 35 2E 64 61 74 00 00" /f
-REG DELETE "HKLM\SYSTEM\ControlSet001\Control\hivelist\\REGISTRY\WC\Silo19faac47-bee9-becb-79a7-b4e6e1bfd862com:  5C 44 65 76 69 63 65 5C 48 61 72 64 64 69 73 6B 56 6F 6C 75 6D 65 33 5C 50 72 6F 67 72 61 6D 44 61 74 61 5C 50 61 63 6B 61 67 65 73 5C 4D 69 63 72 6F 73 6F 66 74 2E 53 6B 79 70 65 41 70 70 5F 6B 7A 66 38 71 78 66 33 38 7A 67 35 63 5C 53 2D 31 2D 35 2D 32 31 2D 32 35 33 32 33 38 32 35 32 38 2D 35 38 31 32 31 34 38 33 34 2D 32 35 33 34 34 37 34 32 34 38 2D 31 30 30 31 5C 53 79 73 74 65 6D 41 70 70 44 61 74 61 5C 48 65 6C 69 75 6D 5C 43 61 63 68 65 5C 35 63 38 63 62 62 36 61 61 37 65 61 31 34 32 34 2E 64 61 74 00 00" /f
-REG DELETE "HKLM\SYSTEM\ControlSet001\Services\bam\State\UserType: 0x00000010" /f
-REG DELETE "HKLM\SYSTEM\ControlSet001\Services\EasyAntiCheat\Security\Security:  01 00 14 80 A0 00 00 00 AC 00 00 00 14 00 00 00 30 00 00 00 02 00 1C 00 01 00 00 00 02 80 14 00 FF 01 0F 00 01 01 00 00 00 00 00 01 00 00 00 00 02 00 70 00 05 00 00 00 00 00 14 00 30 00 02 00 01 01 00 00 00 00 00 01 00 00 00 00 00 00 14 00 FD 01 02 00 01 01 00 00 00 00 00 05 12 00 00 00 00 00 18 00 FF 01 0F 00 01 02 00 00 00 00 00 05 20 00 00 00 20 02 00 00 00 00 14 00 8D 01 02 00 01 01 00 00 00 00 00 05 04 00 00 00 00 00 14 00 8D 01 02 00 01 01 00 00 00 00 00 05 06 00 00 00 01 01 00 00 00 00 00 05 12 00 00 00 01 01 00 00 00 00 00 05 12 00 00 00" /f
-REG DELETE "HKLM\SYSTEM\CurrentControlSet\Control\hivelist\\REGISTRY\WC\Silo19faac47-bee9-becb-79a7-b4e6e1bfd862software:  5C 44 65 76 69 63 65 5C 48 61 72 64 64 69 73 6B 56 6F 6C 75 6D 65 33 5C 50 72 6F 67 72 61 6D 44 61 74 61 5C 50 61 63 6B 61 67 65 73 5C 4D 69 63 72 6F 73 6F 66 74 2E 53 6B 79 70 65 41 70 70 5F 6B 7A 66 38 71 78 66 33 38 7A 67 35 63 5C 53 2D 31 2D 35 2D 32 31 2D 32 35 33 32 33 38 32 35 32 38 2D 35 38 31 32 31 34 38 33 34 2D 32 35 33 34 34 37 34 32 34 38 2D 31 30 30 31 5C 53 79 73 74 65 6D 41 70 70 44 61 74 61 5C 48 65 6C 69 75 6D 5C 43 61 63 68 65 5C 35 63 38 63 62 62 36 61 61 37 65 61 31 34 32 34 2E 64 61 74 00 00" /f
-REG DELETE "HKLM\SYSTEM\CurrentControlSet\Control\hivelist\\REGISTRY\WC\Silo19faac47-bee9-becb-79a7-b4e6e1bfd862user_sid:  5C 44 65 76 69 63 65 5C 48 61 72 64 64 69 73 6B 56 6F 6C 75 6D 65 33 5C 50 72 6F 67 72 61 6D 44 61 74 61 5C 50 61 63 6B 61 67 65 73 5C 4D 69 63 72 6F 73 6F 66 74 2E 53 6B 79 70 65 41 70 70 5F 6B 7A 66 38 71 78 66 33 38 7A 67 35 63 5C 53 2D 31 2D 35 2D 32 31 2D 32 35 33 32 33 38 32 35 32 38 2D 35 38 31 32 31 34 38 33 34 2D 32 35 33 34 34 37 34 32 34 38 2D 31 30 30 31 5C 53 79 73 74 65 6D 41 70 70 44 61 74 61 5C 48 65 6C 69 75 6D 5C 55 73 65 72 2E 64 61 74 00 00" /f
-REG DELETE "HKLM\SYSTEM\CurrentControlSet\Control\hivelist\\REGISTRY\WC\Silo19faac47-bee9-becb-79a7-b4e6e1bfd862user_classes:  5C 44 65 76 69 63 65 5C 48 61 72 64 64 69 73 6B 56 6F 6C 75 6D 65 33 5C 50 72 6F 67 72 61 6D 44 61 74 61 5C 50 61 63 6B 61 67 65 73 5C 4D 69 63 72 6F 73 6F 66 74 2E 53 6B 79 70 65 41 70 70 5F 6B 7A 66 38 71 78 66 33 38 7A 67 35 63 5C 53 2D 31 2D 35 2D 32 31 2D 32 35 33 32 33 38 32 35 32 38 2D 35 38 31 32 31 34 38 33 34 2D 32 35 33 34 34 37 34 32 34 38 2D 31 30 30 31 5C 53 79 73 74 65 6D 41 70 70 44 61 74 61 5C 48 65 6C 69 75 6D 5C 55 73 65 72 43 6C 61 73 73 65 73 2E 64 61 74 00 00" /f
-REG DELETE "HKLM\SYSTEM\CurrentControlSet\Control\hivelist\\REGISTRY\WC\Siloe6b4a779-bfe1-62d8-47ac-fa19e9becbbecom:  5C 44 65 76 69 63 65 5C 48 61 72 64 64 69 73 6B 56 6F 6C 75 6D 65 33 5C 50 72 6F 67 72 61 6D 44 61 74 61 5C 50 61 63 6B 61 67 65 73 5C 4D 69 63 72 6F 73 6F 66 74 2E 53 6B 79 70 65 41 70 70 5F 6B 7A 66 38 71 78 66 33 38 7A 67 35 63 5C 53 2D 31 2D 35 2D 32 31 2D 32 35 33 32 33 38 32 35 32 38 2D 35 38 31 32 31 34 38 33 34 2D 32 35 33 34 34 37 34 32 34 38 2D 31 30 30 31 5C 53 79 73 74 65 6D 41 70 70 44 61 74 61 5C 48 65 6C 69 75 6D 5C 43 61 63 68 65 5C 35 63 38 63 62 62 36 61 61 37 65 61 31 34 32 34 5F 43 4F 4D 31 35 2E 64 61 74 00 00" /f
-REG DELETE "HKLM\SYSTEM\CurrentControlSet\Control\hivelist\\REGISTRY\WC\Silo19faac47-bee9-becb-79a7-b4e6e1bfd862com:  5C 44 65 76 69 63 65 5C 48 61 72 64 64 69 73 6B 56 6F 6C 75 6D 65 33 5C 50 72 6F 67 72 61 6D 44 61 74 61 5C 50 61 63 6B 61 67 65 73 5C 4D 69 63 72 6F 73 6F 66 74 2E 53 6B 79 70 65 41 70 70 5F 6B 7A 66 38 71 78 66 33 38 7A 67 35 63 5C 53 2D 31 2D 35 2D 32 31 2D 32 35 33 32 33 38 32 35 32 38 2D 35 38 31 32 31 34 38 33 34 2D 32 35 33 34 34 37 34 32 34 38 2D 31 30 30 31 5C 53 79 73 74 65 6D 41 70 70 44 61 74 61 5C 48 65 6C 69 75 6D 5C 43 61 63 68 65 5C 35 63 38 63 62 62 36 61 61 37 65 61 31 34 32 34 2E 64 61 74 00 00" /f
-REG DELETE "HKLM\SYSTEM\ControlSet001\Services\EasyAntiCheat\Type: 0x00000010" /f
-REG DELETE "HKLM\SYSTEM\ControlSet001\Services\EasyAntiCheat\Start: 0x00000003" /f
-REG DELETE "HKLM\SYSTEM\ControlSet001\Services\EasyAntiCheat\ErrorControl: 0x00000001" /f
-REG DELETE "HKLM\SYSTEM\ControlSet001\Services\EasyAntiCheat\ImagePath: ""C:\Program Files (x86)\EasyAntiCheat\EasyAntiCheat.exe""" /f
-REG DELETE "HKLM\SYSTEM\ControlSet001\Services\EasyAntiCheat\DisplayName: "EasyAntiCheat"" /f
-REG DELETE "HKLM\SYSTEM\ControlSet001\Services\EasyAntiCheat\WOW64: 0x0000014C" /f
-REG DELETE "HKLM\SYSTEM\ControlSet001\Services\EasyAntiCheat\ObjectName: "LocalSystem"" /f
-REG DELETE "HKU\.DEFAULT\Software\Microsoft\SystemCertificates\TrustedPublisher" /f
-REG DELETE "HKU\.DEFAULT\Software\Microsoft\SystemCertificates\TrustedPublisher\Certificates" /f
-REG DELETE "HKU\.DEFAULT\Software\Microsoft\SystemCertificates\TrustedPublisher\CRLs" /f
-REG DELETE "HKU\.DEFAULT\Software\Microsoft\SystemCertificates\TrustedPublisher\CTLs" /f
-REG DELETE "HKU\.DEFAULT\Software\Policies\Microsoft\SystemCertificates\TrustedPublisher" /f
-REG DELETE "HKU\.DEFAULT\Software\Policies\Microsoft\SystemCertificates\TrustedPublisher\Certificates" /f
-REG DELETE "HKU\.DEFAULT\Software\Policies\Microsoft\SystemCertificates\TrustedPublisher\CRLs" /f
-REG DELETE "HKU\.DEFAULT\Software\Policies\Microsoft\SystemCertificates\TrustedPublisher\CTLs" /f
-REG DELETE "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\Streams\0" /f
-REG DELETE "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\1\ApplicationViewManagement\W32:00000000000205B6" /f
-REG DELETE "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\1\ApplicationViewManagement\W32:00000000000403D6" /f
-REG DELETE "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\1\ApplicationViewManagement\W32:00000000000405DE" /f
-REG DELETE "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\1\ApplicationViewManagement\W32:0000000000060286" /f
-REG DELETE "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\1\ApplicationViewManagement\W32:000000000009042E" /f
-REG DELETE "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\1\ApplicationViewManagement\W32:00000000000A03B4" /f
-REG DELETE "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\1\ApplicationViewManagement\W32:00000000000A0430" /f
-REG DELETE "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\1\ApplicationViewManagement\W32:00000000000B0532" /f
-REG DELETE "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\1\ApplicationViewManagement\W32:00000000000B05D6" /f
-REG DELETE "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\1\ApplicationViewManagement\W32:00000000000C0430" /f
-REG DELETE "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\1\ApplicationViewManagement\W32:00000000000C0586" /f
-REG DELETE "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\1\ApplicationViewManagement\W32:00000000000E03D2" /f
-REG DELETE "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\1\ApplicationViewManagement\W32:00000000000E0406" /f
-REG DELETE "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\1\ApplicationViewManagement\W32:0000000000100430" /f
-REG DELETE "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\1\ApplicationViewManagement\W32:00000000001103EE" /f
-REG DELETE "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\1\ApplicationViewManagement\W32:000000000011041E" /f
-REG DELETE "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\1\ApplicationViewManagement\W32:000000000012047E" /f
-REG DELETE "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\1\ApplicationViewManagement\W32:00000000001303EE" /f
-REG DELETE "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\1\ApplicationViewManagement\W32:00000000001304F2" /f
-REG DELETE "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\1\ApplicationViewManagement\W32:000000000014041E" /f
-REG DELETE "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\1\ApplicationViewManagement\W32:00000000001703E6" /f
-REG DELETE "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\1\ApplicationViewManagement\W32:0000000000170440" /f
-REG DELETE "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\1\ApplicationViewManagement\W32:00000000001704FC" /f
-REG DELETE "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\StreamMRU" /f
-REG DELETE "HKU\S-1-5-21-2532382528-581214834-2534474248-1001\Software\Classes\Local Settings\MrtCache\C:%5CProgram Files%5CWindowsApps%5CMicrosoft.XboxGamingOverlay_2.26.28001.0_x64__8wekyb3d8bbwe%5Cmicrosoft.system.package.metadata%5CS-1-5-21-2532382528-581214834-2534474248-1001-MergedResources-2.pri" /f
-REG DELETE "HKU\S-1-5-18\Software\Microsoft\SystemCertificates\TrustedPublisher" /f
-REG DELETE "HKU\S-1-5-18\Software\Microsoft\SystemCertificates\TrustedPublisher\Certificates" /f
-REG DELETE "HKU\S-1-5-18\Software\Microsoft\SystemCertificates\TrustedPublisher\CRLs" /f
-REG DELETE "HKU\S-1-5-18\Software\Microsoft\SystemCertificates\TrustedPublisher\CTLs" /f
-REG DELETE "HKU\S-1-5-18\Software\Policies\Microsoft\SystemCertificates\TrustedPublisher" /f
-REG DELETE "HKU\S-1-5-18\Software\Policies\Microsoft\SystemCertificates\TrustedPublisher\Certificates" /f
-REG DELETE "HKU\S-1-5-18\Software\Policies\Microsoft\SystemCertificates\TrustedPublisher\CRLs" /f
-REG DELETE "HKU\S-1-5-18\Software\Policies\Microsoft\SystemCertificates\TrustedPublisher\CTLs" /f  
-REG DELETE "HKEY_CURRENT_USER\Software\Classes\Installer\Dependencies" /v MSICache /f
-reg delete HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run /va /f 
-reg add HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run /v ctfmon.exe /d C:\WINDOWS\system32\ctfmon.exe 
-reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Shared Tools\MSConfig\startupreg" /f 
-reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Shared Tools\MSConfig\startupreg\IMJPMIG8.1" 
-reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Shared Tools\MSConfig\startupreg\IMJPMIG8.1" /v command /d ""C:\WINDOWS\IME\imjp8_1\IMJPMIG.EXE" /Spoil /RemAdvDef /Migration32" 
-reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Shared Tools\MSConfig\startupreg\IMJPMIG8.1" /v hkey /d HKLM 
-reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Shared Tools\MSConfig\startupreg\IMJPMIG8.1" /v inimapping /d 0 
-reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Shared Tools\MSConfig\startupreg\IMJPMIG8.1" /v item /d IMJPMIG 
-reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Shared Tools\MSConfig\startupreg\IMJPMIG8.1" /v key /d SOFTWARE\Microsoft\Windows\CurrentVersion\Run 
-reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Shared Tools\MSConfig\startupreg\PHIME2002A" 
-reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Shared Tools\MSConfig\startupreg\PHIME2002A" /v command /d "C:\WINDOWS\system32\IME\TINTLGNT\TINTSETP.EXE /IMEName" 
-reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Shared Tools\MSConfig\startupreg\PHIME2002A" /v hkey /d HKLM 
-reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Shared Tools\MSConfig\startupreg\PHIME2002A" /v inimapping /d 0 
-reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Shared Tools\MSConfig\startupreg\PHIME2002A" /v item /d TINTSETP 
-reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Shared Tools\MSConfig\startupreg\PHIME2002A" /v key /d SOFTWARE\Microsoft\Windows\CurrentVersion\Run 
-reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Shared Tools\MSConfig\startupreg\PHIME2002ASync" 
-reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Shared Tools\MSConfig\startupreg\PHIME2002ASync" /v command /d ""C:\WINDOWS\IME\imjp8_1\IMJPMIG.EXE" /Spoil /RemAdvDef /Migration32" 
-reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Shared Tools\MSConfig\startupreg\PHIME2002ASync" /v hkey /d HKLM 
-reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Shared Tools\MSConfig\startupreg\PHIME2002ASync" /v inimapping /d 0 
-reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Shared Tools\MSConfig\startupreg\PHIME2002ASync" /v item /d TINTSETP 
-reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Shared Tools\MSConfig\startupreg\PHIME2002ASync" /v key /d SOFTWARE\Microsoft\Windows\CurrentVersion\Run
+reg delete "hklm\software\wow6432node\microsoft\securitymanager\capauthz\applicationsex\microsoft.xboxgameoverlay_1.41.24001.0_x64__8wekyb3d8bbwe\applicationflags: 0x00000000" /f
+reg delete "hklm\software\wow6432node\easyanticheat\gamesinstalled: "217;"" /f
+reg delete "hklm\system\controlset001\control\hivelist\\registry\wc\silo19faac47-bee9-becb-79a7-b4e6e1bfd862software:  5c 44 65 76 69 63 65 5c 48 61 72 64 64 69 73 6b 56 6f 6c 75 6d 65 33 5c 50 72 6f 67 72 61 6d 44 61 74 61 5c 50 61 63 6b 61 67 65 73 5c 4d 69 63 72 6f 73 6f 66 74 2e 53 6b 79 70 65 41 70 70 5f 6b 7a 66 38 71 78 66 33 38 7a 67 35 63 5c 53 2d 31 2d 35 2d 32 31 2d 32 35 33 32 33 38 32 35 32 38 2d 35 38 31 32 31 34 38 33 34 2d 32 35 33 34 34 37 34 32 34 38 2d 31 30 30 31 5c 53 79 73 74 65 6d 41 70 70 44 61 74 61 5c 48 65 6c 69 75 6d 5c 43 61 63 68 65 5c 35 63 38 63 62 62 36 61 61 37 65 61 31 34 32 34 2e 64 61 74 00 00" /f
+reg delete "hklm\system\controlset001\control\hivelist\\registry\wc\silo19faac47-bee9-becb-79a7-b4e6e1bfd862user_sid:  5c 44 65 76 69 63 65 5c 48 61 72 64 64 69 73 6b 56 6f 6c 75 6d 65 33 5c 50 72 6f 67 72 61 6d 44 61 74 61 5c 50 61 63 6b 61 67 65 73 5c 4d 69 63 72 6f 73 6f 66 74 2e 53 6b 79 70 65 41 70 70 5f 6b 7a 66 38 71 78 66 33 38 7a 67 35 63 5c 53 2d 31 2d 35 2d 32 31 2d 32 35 33 32 33 38 32 35 32 38 2d 35 38 31 32 31 34 38 33 34 2d 32 35 33 34 34 37 34 32 34 38 2d 31 30 30 31 5c 53 79 73 74 65 6d 41 70 70 44 61 74 61 5c 48 65 6c 69 75 6d 5c 55 73 65 72 2e 64 61 74 00 00" /f
+reg delete "hklm\system\controlset001\control\hivelist\\registry\wc\silo19faac47-bee9-becb-79a7-b4e6e1bfd862user_classes:  5c 44 65 76 69 63 65 5c 48 61 72 64 64 69 73 6b 56 6f 6c 75 6d 65 33 5c 50 72 6f 67 72 61 6d 44 61 74 61 5c 50 61 63 6b 61 67 65 73 5c 4d 69 63 72 6f 73 6f 66 74 2e 53 6b 79 70 65 41 70 70 5f 6b 7a 66 38 71 78 66 33 38 7a 67 35 63 5c 53 2d 31 2d 35 2d 32 31 2d 32 35 33 32 33 38 32 35 32 38 2d 35 38 31 32 31 34 38 33 34 2d 32 35 33 34 34 37 34 32 34 38 2d 31 30 30 31 5c 53 79 73 74 65 6d 41 70 70 44 61 74 61 5c 48 65 6c 69 75 6d 5c 55 73 65 72 43 6c 61 73 73 65 73 2e 64 61 74 00 00" /f
+reg delete "hklm\system\controlset001\control\hivelist\\registry\wc\siloe6b4a779-bfe1-62d8-47ac-fa19e9becbbecom:  5c 44 65 76 69 63 65 5c 48 61 72 64 64 69 73 6b 56 6f 6c 75 6d 65 33 5c 50 72 6f 67 72 61 6d 44 61 74 61 5c 50 61 63 6b 61 67 65 73 5c 4d 69 63 72 6f 73 6f 66 74 2e 53 6b 79 70 65 41 70 70 5f 6b 7a 66 38 71 78 66 33 38 7a 67 35 63 5c 53 2d 31 2d 35 2d 32 31 2d 32 35 33 32 33 38 32 35 32 38 2d 35 38 31 32 31 34 38 33 34 2d 32 35 33 34 34 37 34 32 34 38 2d 31 30 30 31 5c 53 79 73 74 65 6d 41 70 70 44 61 74 61 5c 48 65 6c 69 75 6d 5c 43 61 63 68 65 5c 35 63 38 63 62 62 36 61 61 37 65 61 31 34 32 34 5f 43 4f 4d 31 35 2e 64 61 74 00 00" /f
+reg delete "hklm\system\controlset001\control\hivelist\\registry\wc\silo19faac47-bee9-becb-79a7-b4e6e1bfd862com:  5c 44 65 76 69 63 65 5c 48 61 72 64 64 69 73 6b 56 6f 6c 75 6d 65 33 5c 50 72 6f 67 72 61 6d 44 61 74 61 5c 50 61 63 6b 61 67 65 73 5c 4d 69 63 72 6f 73 6f 66 74 2e 53 6b 79 70 65 41 70 70 5f 6b 7a 66 38 71 78 66 33 38 7a 67 35 63 5c 53 2d 31 2d 35 2d 32 31 2d 32 35 33 32 33 38 32 35 32 38 2d 35 38 31 32 31 34 38 33 34 2d 32 35 33 34 34 37 34 32 34 38 2d 31 30 30 31 5c 53 79 73 74 65 6d 41 70 70 44 61 74 61 5c 48 65 6c 69 75 6d 5c 43 61 63 68 65 5c 35 63 38 63 62 62 36 61 61 37 65 61 31 34 32 34 2e 64 61 74 00 00" /f
+reg delete "hklm\system\controlset001\services\bam\state\usersettings\s-1-5-21-2532382528-581214834-2534474248-1001\\device\harddiskvolume3\program files\epic games\fortnite\fortnitegame\binaries\win64\fortniteclient-win64-shipping_eac.exe:  b1 8a b0 e9 8d 13 d5 01 00 00 00 00 00 00 00 00 00 00 00 00 02 00 00 00" /f
+reg delete "hklm\system\controlset001\services\bam\state\usersettings\s-1-5-21-2532382528-581214834-2534474248-1001\\device\harddiskvolume3\program files\epic games\fortnite\fortnitegame\binaries\win64\easyanticheat\easyanticheat_setup.exe:  73 d5 4b 11 8d 13 d5 01 00 00 00 00 00 00 00 00 00 00 00 00 02 00 00 00" /f
+reg delete "hklm\system\controlset001\services\bam\state\usersettings\s-1-5-21-2532382528-581214834-2534474248-1001\\device\harddiskvolume3\program files\epic games\fortnite\fortnitegame\binaries\win64\fortniteclient-win64-shipping.exe:  e7 cb 84 e9 8d 13 d5 01 00 00 00 00 00 00 00 00 00 00 00 00 02 00 00 00" /f
+reg delete "hklm\system\controlset001\services\easyanticheat\security\security:  01 00 14 80 a0 00 00 00 ac 00 00 00 14 00 00 00 30 00 00 00 02 00 1c 00 01 00 00 00 02 80 14 00 ff 01 0f 00 01 01 00 00 00 00 00 01 00 00 00 00 02 00 70 00 05 00 00 00 00 00 14 00 30 00 02 00 01 01 00 00 00 00 00 01 00 00 00 00 00 00 14 00 fd 01 02 00 01 01 00 00 00 00 00 05 12 00 00 00 00 00 18 00 ff 01 0f 00 01 02 00 00 00 00 00 05 20 00 00 00 20 02 00 00 00 00 14 00 8d 01 02 00 01 01 00 00 00 00 00 05 04 00 00 00 00 00 14 00 8d 01 02 00 01 01 00 00 00 00 00 05 06 00 00 00 01 01 00 00 00 00 00 05 12 00 00 00 01 01 00 00 00 00 00 05 12 00 00 00" /f
+reg delete "hklm\system\currentcontrolset\control\hivelist\\registry\wc\silo19faac47-bee9-becb-79a7-b4e6e1bfd862software:  5c 44 65 76 69 63 65 5c 48 61 72 64 64 69 73 6b 56 6f 6c 75 6d 65 33 5c 50 72 6f 67 72 61 6d 44 61 74 61 5c 50 61 63 6b 61 67 65 73 5c 4d 69 63 72 6f 73 6f 66 74 2e 53 6b 79 70 65 41 70 70 5f 6b 7a 66 38 71 78 66 33 38 7a 67 35 63 5c 53 2d 31 2d 35 2d 32 31 2d 32 35 33 32 33 38 32 35 32 38 2d 35 38 31 32 31 34 38 33 34 2d 32 35 33 34 34 37 34 32 34 38 2d 31 30 30 31 5c 53 79 73 74 65 6d 41 70 70 44 61 74 61 5c 48 65 6c 69 75 6d 5c 43 61 63 68 65 5c 35 63 38 63 62 62 36 61 61 37 65 61 31 34 32 34 2e 64 61 74 00 00" /f
+reg delete "hklm\system\currentcontrolset\control\hivelist\\registry\wc\silo19faac47-bee9-becb-79a7-b4e6e1bfd862user_sid:  5c 44 65 76 69 63 65 5c 48 61 72 64 64 69 73 6b 56 6f 6c 75 6d 65 33 5c 50 72 6f 67 72 61 6d 44 61 74 61 5c 50 61 63 6b 61 67 65 73 5c 4d 69 63 72 6f 73 6f 66 74 2e 53 6b 79 70 65 41 70 70 5f 6b 7a 66 38 71 78 66 33 38 7a 67 35 63 5c 53 2d 31 2d 35 2d 32 31 2d 32 35 33 32 33 38 32 35 32 38 2d 35 38 31 32 31 34 38 33 34 2d 32 35 33 34 34 37 34 32 34 38 2d 31 30 30 31 5c 53 79 73 74 65 6d 41 70 70 44 61 74 61 5c 48 65 6c 69 75 6d 5c 55 73 65 72 2e 64 61 74 00 00" /f
+reg delete "hklm\system\currentcontrolset\control\hivelist\\registry\wc\silo19faac47-bee9-becb-79a7-b4e6e1bfd862user_classes:  5c 44 65 76 69 63 65 5c 48 61 72 64 64 69 73 6b 56 6f 6c 75 6d 65 33 5c 50 72 6f 67 72 61 6d 44 61 74 61 5c 50 61 63 6b 61 67 65 73 5c 4d 69 63 72 6f 73 6f 66 74 2e 53 6b 79 70 65 41 70 70 5f 6b 7a 66 38 71 78 66 33 38 7a 67 35 63 5c 53 2d 31 2d 35 2d 32 31 2d 32 35 33 32 33 38 32 35 32 38 2d 35 38 31 32 31 34 38 33 34 2d 32 35 33 34 34 37 34 32 34 38 2d 31 30 30 31 5c 53 79 73 74 65 6d 41 70 70 44 61 74 61 5c 48 65 6c 69 75 6d 5c 55 73 65 72 43 6c 61 73 73 65 73 2e 64 61 74 00 00" /f
+reg delete "hklm\system\currentcontrolset\control\hivelist\\registry\wc\siloe6b4a779-bfe1-62d8-47ac-fa19e9becbbecom:  5c 44 65 76 69 63 65 5c 48 61 72 64 64 69 73 6b 56 6f 6c 75 6d 65 33 5c 50 72 6f 67 72 61 6d 44 61 74 61 5c 50 61 63 6b 61 67 65 73 5c 4d 69 63 72 6f 73 6f 66 74 2e 53 6b 79 70 65 41 70 70 5f 6b 7a 66 38 71 78 66 33 38 7a 67 35 63 5c 53 2d 31 2d 35 2d 32 31 2d 32 35 33 32 33 38 32 35 32 38 2d 35 38 31 32 31 34 38 33 34 2d 32 35 33 34 34 37 34 32 34 38 2d 31 30 30 31 5c 53 79 73 74 65 6d 41 70 70 44 61 74 61 5c 48 65 6c 69 75 6d 5c 43 61 63 68 65 5c 35 63 38 63 62 62 36 61 61 37 65 61 31 34 32 34 5f 43 4f 4d 31 35 2e 64 61 74 00 00" /f
+reg delete "hklm\system\currentcontrolset\control\hivelist\\registry\wc\silo19faac47-bee9-becb-79a7-b4e6e1bfd862com:  5c 44 65 76 69 63 65 5c 48 61 72 64 64 69 73 6b 56 6f 6c 75 6d 65 33 5c 50 72 6f 67 72 61 6d 44 61 74 61 5c 50 61 63 6b 61 67 65 73 5c 4d 69 63 72 6f 73 6f 66 74 2e 53 6b 79 70 65 41 70 70 5f 6b 7a 66 38 71 78 66 33 38 7a 67 35 63 5c 53 2d 31 2d 35 2d 32 31 2d 32 35 33 32 33 38 32 35 32 38 2d 35 38 31 32 31 34 38 33 34 2d 32 35 33 34 34 37 34 32 34 38 2d 31 30 30 31 5c 53 79 73 74 65 6d 41 70 70 44 61 74 61 5c 48 65 6c 69 75 6d 5c 43 61 63 68 65 5c 35 63 38 63 62 62 36 61 61 37 65 61 31 34 32 34 2e 64 61 74 00 00" /f
+reg delete "hklm\system\currentcontrolset\services\bam\state\usersettings\s-1-5-21-2532382528-581214834-2534474248-1001\\device\harddiskvolume3\program files\epic games\fortnite\fortnitegame\binaries\win64\fortniteclient-win64-shipping_eac.exe:  b1 8a b0 e9 8d 13 d5 01 00 00 00 00 00 00 00 00 00 00 00 00 02 00 00 00" /f
+reg delete "hklm\system\currentcontrolset\services\bam\state\usersettings\s-1-5-21-2532382528-581214834-2534474248-1001\\device\harddiskvolume3\program files\epic games\fortnite\fortnitegame\binaries\win64\easyanticheat\easyanticheat_setup.exe:  73 d5 4b 11 8d 13 d5 01 00 00 00 00 00 00 00 00 00 00 00 00 02 00 00 00" /f
+reg delete "hklm\system\currentcontrolset\services\bam\state\usersettings\s-1-5-21-2532382528-581214834-2534474248-1001\\device\harddiskvolume3\program files\epic games\fortnite\fortnitegame\binaries\win64\fortniteclient-win64-shipping.exe:  e7 cb 84 e9 8d 13 d5 01 00 00 00 00 00 00 00 00 00 00 00 00 02 00 00 00" /f
+reg delete "hklm\system\currentcontrolset\services\easyanticheat\security\security:  01 00 14 80 a0 00 00 00 ac 00 00 00 14 00 00 00 30 00 00 00 02 00 1c 00 01 00 00 00 02 80 14 00 ff 01 0f 00 01 01 00 00 00 00 00 01 00 00 00 00 02 00 70 00 05 00 00 00 00 00 14 00 30 00 02 00 01 01 00 00 00 00 00 01 00 00 00 00 00 00 14 00 fd 01 02 00 01 01 00 00 00 00 00 05 12 00 00 00 00 00 18 00 ff 01 0f 00 01 02 00 00 00 00 00 05 20 00 00 00 20 02 00 00 00 00 14 00 8d 01 02 00 01 01 00 00 00 00 00 05 04 00 00 00 00 00 14 00 8d 01 02 00 01 01 00 00 00 00 00 05 06 00 00 00 01 01 00 00 00 00 00 05 12 00 00 00 01 01 00 00 00 00 00 05 12 00 00 00" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\software\microsoft\internet explorer\lowregistry\audio\policyconfig\propertystore\5e4eddc4_0\{219ed5a0-9cbf-4f3a-b927-37c9e5c5f14f}\3:  04 00 00 00 00 00 00 00 00 00 80 3f 00 00 00 00 00 00 00 00 00 00 00 00" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\software\microsoft\internet explorer\lowregistry\audio\policyconfig\propertystore\5e4eddc4_0\{219ed5a0-9cbf-4f3a-b927-37c9e5c5f14f}\4:  04 20 00 00 00 00 00 00 18 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 80 3f 00 00 80 3f" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\software\microsoft\internet explorer\lowregistry\audio\policyconfig\propertystore\5e4eddc4_0\{219ed5a0-9cbf-4f3a-b927-37c9e5c5f14f}\5:  0b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\software\microsoft\windows\currentversion\explorer\recentdocs\110:  3f 00 54 00 69 00 74 00 6c 00 65 00 49 00 64 00 3d 00 31 00 38 00 32 00 30 00 32 00 35 00 30 00 37 00 38 00 38 00 26 00 50 00 72 00 6f 00 63 00 65 00 73 00 73 00 49 00 64 00 3d 00 36 00 31 00 39 00 36 00 26 00 57 00 69 00 6e 00 64 00 6f 00 77 00 49 00 64 00 3d 00 32 00 36 00 33 00 31 00 32 00 36 00 00 00 3a 01 32 00 00 00 00 00 00 00 00 00 00 00 6d 73 2d 67 61 6d 69 6e 67 6f 76 65 72 6c 61 79 2d 2d 73 74 61 72 74 75 70 74 69 70 73 2d 54 69 74 6c 65 49 64 3d 31 38 32 30 32 35 30 37 38 38 26 50 72 6f 63 65 73 73 49 64 3d 36 31 39 36 26 57 69 6e 64 6f 77 49 64 3d 32 36 33 31 32 36 2e 6c 6e 6b 00 d8 00 09 00 04 00 ef be 00 00 00 00 00 00 00 00 2e 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 6d 00 73 00 2d 00 67 00 61 00 6d 00 69 00 6e 00 67 00 6f 00 76 00 65 00 72 00 6c 00 61 00 79 00 2d 00 2d 00 73 00 74 00 61 00 72 00 74 00 75 00 " /f
+reg delete "70 00 74 00 69 00 70 00 73 00 2d 00 54 00 69 00 74 00 6c 00 65 00 49 00 64 00 3d 00 31 00 38 00 32 00 30 00 32 00 35 00 30 00 37 00 38 00 38 00 26 00 50 00 72 00 6f 00 63 00 65 00 73 00 73 00 49 00 64 00 3d 00 36 00 31 00 39 00 36 00 26 00 57 00 69 00 6e 00 64 00 6f 00 77 00 49 00 64 00 3d 00 32 00 36 00 33 00 31 00 32 00 36 00 2e 00 6c 00 6e 00 6b 00 00 00 62 00 00 00" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\software\microsoft\windows\currentversion\explorer\streams\0\viewview2:  1c 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 f1 f1 f1 f1 14 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 03 00 00 fc 02 00 00 31 53 50 53 05 d5 cd d5 9c 2e 1b 10 93 97 08 00 2b 2c f9 ae 83 00 00 00 22 00 00 00 00 47 00 72 00 6f 00 75 00 70 00 42 00 79 00 4b 00 65 00 79 00 3a 00 46 00 4d 00 54 00 49 00 44 00 00 00 08 00 00 00 4e 00 00 00 7b 00 30 00 30 00 30 00 30 00 30 00 30 00 30 00 30 00 2d 00 30 00 30 00 30 00 30 00 2d 00 30 00 30 00 30 00 30 00 2d 00 30 00 30 00 30 00 30 00 2d 00 30 00 30 00 30 00 30 00 30 00 30 00 30 00 30 00 30 00 30 00 30 00 30 00 7d 00 00 00 00 00 33 00 00 00 22 00 00 00 00 47 00 72 00 6f 00 75 00 70 00 42 00 79 00 44 00 69 00 72 00 65 00 63 00 74 00 69 00 6f 00 6e 00 00 00 13 00 00 00 01 00 00 00 5b 00 00 00 0a 00 00 00 00 53 00 6f 00 72 00 74 00 00 00 42 00 00 00 1e 00 00 00 70 00 72 00 6f 00 70 0" /f
+reg delete "0 34 00 32 00 39 00 34 00 39 00 36 00 37 00 32 00 39 00 35 00 00 00 00 00 1c 00 00 00 01 00 00 00 30 f1 25 b7 ef 47 1a 10 a5 f1 02 60 8c 9e eb ac 0a 00 00 00 01 00 00 00 25 00 00 00 14 00 00 00 00 47 00 72 00 6f 00 75 00 70 00 56 00 69 00 65 00 77 00 00 00 0b 00 00 00 00 00 00 00 1b 00 00 00 0a 00 00 00 00 4d 00 6f 00 64 00 65 00 00 00 13 00 00 00 04 00 00 00 23 00 00 00 12 00 00 00 00 49 00 63 00 6f 00 6e 00 53 00 69 00 7a 00 65 00 00 00 13 00 00 00 10 00 00 00 ed 00 00 00 10 00 00 00 00 43 00 6f 00 6c 00 49 00 6e 00 66 00 6f 00 00 00 42 00 00 00 1e 00 00 00 70 00 72 00 6f 00 70 00 34 00 32 00 39 00 34 00 39 00 36 00 37 00 32 00 39 00 35 00 00 00 00 00 a8 00 00 00 fd df df fd 10 00 00 00 00 00 00 00 00 00 00 00 06 00 00 00 18 00 00 00 30 f1 25 b7 ef 47 1a 10 a5 f1 02 60 8c 9e eb ac 0a 00 00 00 f0 00 00 00 33 4b 17 9b ff 40 d2 11 a2 7e 00 c0 4f c3 08 71 02 00 00 00 f0 00 00 00 33 4b 17 9b ff 40 d2 11 a2 7e 00 c0 4f c3 08 71 03 00 00 00 a0 00 00 00 30 f1 25 b7 ef 47 1a 10 a5 f1 02 60 8c" /f
+reg delete " 9e eb ac 0c 00 00 00 50 00 00 00 a6 6a 63 28 3d 95 d2 11 b5 d6 00 c0 4f d9 18 d0 0b 00 00 00 78 00 00 00 30 f1 25 b7 ef 47 1a 10 a5 f1 02 60 8c 9e eb ac 0e 00 00 00 78 00 00 00 2f 00 00 00 1e 00 00 00 00 47 00 72 00 6f 00 75 00 70 00 42 00 79 00 4b 00 65 00 79 00 3a 00 50 00 49 00 44 00 00 00 13 00 00 00 00 00 00 00 1f 00 00 00 0e 00 00 00 00 46 00 46 00 6c 00 61 00 67 00 73 00 00 00 13 00 00 00 11 00 20 01 31 00 00 00 20 00 00 00 00 4c 00 6f 00 67 00 69 00 63 00 61 00 6c 00 56 00 69 00 65 00 77 00 4d 00 6f 00 64 00 65 00 00 00 13 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\software\microsoft\windows\currentversion\explorer\userassist\{cebff5cd-ace2-4f4f-9178-9926f41749ea}\count\{6q809377-6ns0-444o-8957-n3773s02200r}\rcvp tnzrf\sbegavgr\sbegavgrtnzr\ovanevrf\jva64\sbegavgrpyvrag-jva64-fuvccvat_rnp.rkr:  01 00 00 00 00 00 00 00 02 00 00 00 fb 2c 00 00 00 00 80 bf 00 00 80 bf 00 00 80 bf 00 00 80 bf 00 00 80 bf 00 00 80 bf 00 00 80 bf 00 00 80 bf 00 00 80 bf 00 00 80 bf ff ff ff ff 00 00 00 00 00 00 00 00 00 00 00 00" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\software\microsoft\windows\currentversion\explorer\userassist\{cebff5cd-ace2-4f4f-9178-9926f41749ea}\count\{6q809377-6ns0-444o-8957-n3773s02200r}\rcvp tnzrf\sbegavgr\sbegavgrtnzr\ovanevrf\jva64\rnflnagvpurng\rnflnagvpurng_frghc.rkr:  01 00 00 00 00 00 00 00 01 00 00 00 35 0c 00 00 00 00 80 bf 00 00 80 bf 00 00 80 bf 00 00 80 bf 00 00 80 bf 00 00 80 bf 00 00 80 bf 00 00 80 bf 00 00 80 bf 00 00 80 bf ff ff ff ff 00 00 00 00 00 00 00 00 00 00 00 00" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\software\microsoft\windows\currentversion\explorer\userassist\{cebff5cd-ace2-4f4f-9178-9926f41749ea}\count\{6q809377-6ns0-444o-8957-n3773s02200r}\rcvp tnzrf\sbegavgr\sbegavgrtnzr\ovanevrf\jva64\sbegavgrpyvrag-jva64-fuvccvat.rkr:  01 00 00 00 00 00 00 00 04 00 00 00 af b4 02 00 00 00 80 bf 00 00 80 bf 00 00 80 bf 00 00 80 bf 00 00 80 bf 00 00 80 bf 00 00 80 bf 00 00 80 bf 00 00 80 bf 00 00 80 bf ff ff ff ff 00 00 00 00 00 00 00 00 00 00 00 00" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\software\microsoft\windows\currentversion\explorer\sessioninfo\1\applicationviewmanagement\w32:0000000000020552\cloaktype:  04 00 00 00 30 30 54 43 00 00 00 00" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\software\microsoft\windows\currentversion\explorer\sessioninfo\1\applicationviewmanagement\w32:00000000000703c4\cloaktype:  04 00 00 00 30 30 54 43 00 00 00 00" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\software\microsoft\windows\currentversion\explorer\sessioninfo\1\applicationviewmanagement\w32:00000000000205b6\virtualdesktop:  10 00 00 00 30 30 44 56 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\software\microsoft\windows\currentversion\explorer\sessioninfo\1\applicationviewmanagement\w32:00000000000403d6\virtualdesktop:  10 00 00 00 30 30 44 56 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\software\microsoft\windows\currentversion\explorer\sessioninfo\1\applicationviewmanagement\w32:00000000000405de\virtualdesktop:  10 00 00 00 30 30 44 56 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\software\microsoft\windows\currentversion\explorer\sessioninfo\1\applicationviewmanagement\w32:0000000000060286\virtualdesktop:  10 00 00 00 30 30 44 56 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\software\microsoft\windows\currentversion\explorer\sessioninfo\1\applicationviewmanagement\w32:000000000009042e\virtualdesktop:  10 00 00 00 30 30 44 56 8a 14 1b 02 6f df f6 46 96 a2 ba 8c 49 3e 6c ee" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\software\microsoft\windows\currentversion\explorer\sessioninfo\1\applicationviewmanagement\w32:000000000009042e\cloaktype:  04 00 00 00 30 30 54 43 02 00 00 00" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\software\microsoft\windows\currentversion\explorer\sessioninfo\1\applicationviewmanagement\w32:00000000000a03b4\virtualdesktop:  10 00 00 00 30 30 44 56 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\software\microsoft\windows\currentversion\explorer\sessioninfo\1\applicationviewmanagement\w32:00000000000a0430\virtualdesktop:  10 00 00 00 30 30 44 56 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\software\microsoft\windows\currentversion\explorer\sessioninfo\1\applicationviewmanagement\w32:00000000000b0532\virtualdesktop:  10 00 00 00 30 30 44 56 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\software\microsoft\windows\currentversion\explorer\sessioninfo\1\applicationviewmanagement\w32:00000000000b05d6\virtualdesktop:  10 00 00 00 30 30 44 56 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\software\microsoft\windows\currentversion\explorer\sessioninfo\1\applicationviewmanagement\w32:00000000000c0430\virtualdesktop:  10 00 00 00 30 30 44 56 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\software\microsoft\windows\currentversion\explorer\sessioninfo\1\applicationviewmanagement\w32:00000000000c0586\virtualdesktop:  10 00 00 00 30 30 44 56 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\software\microsoft\windows\currentversion\explorer\sessioninfo\1\applicationviewmanagement\w32:00000000000e03d2\virtualdesktop:  10 00 00 00 30 30 44 56 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\software\microsoft\windows\currentversion\explorer\sessioninfo\1\applicationviewmanagement\w32:00000000000e0406\virtualdesktop:  10 00 00 00 30 30 44 56 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\software\microsoft\windows\currentversion\explorer\sessioninfo\1\applicationviewmanagement\w32:0000000000100430\virtualdesktop:  10 00 00 00 30 30 44 56 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\software\microsoft\windows\currentversion\explorer\sessioninfo\1\applicationviewmanagement\w32:0000000000100430\cloaktype:  04 00 00 00 30 30 54 43 02 00 00 00" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\software\microsoft\windows\currentversion\explorer\sessioninfo\1\applicationviewmanagement\w32:00000000001103ee\virtualdesktop:  10 00 00 00 30 30 44 56 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\software\microsoft\windows\currentversion\explorer\sessioninfo\1\applicationviewmanagement\w32:000000000011041e\virtualdesktop:  10 00 00 00 30 30 44 56 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\software\microsoft\windows\currentversion\explorer\sessioninfo\1\applicationviewmanagement\w32:000000000012047e\virtualdesktop:  10 00 00 00 30 30 44 56 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\software\microsoft\windows\currentversion\explorer\sessioninfo\1\applicationviewmanagement\w32:00000000001303ee\virtualdesktop:  10 00 00 00 30 30 44 56 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\software\microsoft\windows\currentversion\explorer\sessioninfo\1\applicationviewmanagement\w32:00000000001304f2\virtualdesktop:  10 00 00 00 30 30 44 56 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\software\microsoft\windows\currentversion\explorer\sessioninfo\1\applicationviewmanagement\w32:000000000014041e\virtualdesktop:  10 00 00 00 30 30 44 56 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\software\microsoft\windows\currentversion\explorer\sessioninfo\1\applicationviewmanagement\w32:00000000001703e6\virtualdesktop:  10 00 00 00 30 30 44 56 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\software\microsoft\windows\currentversion\explorer\sessioninfo\1\applicationviewmanagement\w32:0000000000170440\virtualdesktop:  10 00 00 00 30 30 44 56 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\software\microsoft\windows\currentversion\explorer\sessioninfo\1\applicationviewmanagement\w32:00000000001704fc\virtualdesktop:  10 00 00 00 30 30 44 56 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\software\microsoft\windows\currentversion\explorer\sessioninfo\1\virtualdesktops\currentvirtualdesktop:  b5 05 cb 90 c0 9d af 44 93 6e 8e 33 22 0e 1e 9a" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\software\microsoft\windows\currentversion\explorer\streammru\mrulistex:  00 00 00 00 ff ff ff ff" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\software\microsoft\windows\currentversion\explorer\streammru\0:  14 00 1f 78 40 f0 5f 64 81 50 1b 10 9f 08 00 aa 00 2f 95 4e 00 00" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\software\microsoft\windows\currentversion\search\jumplistdata\microsoft.xboxgamingoverlay_8wekyb3d8bbwe!app:  6f 70 0d 53 8d 13 d5 01" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\software\microsoft\windows nt\currentversion\appcompatflags\compatibility assistant\store\c:\program files\windowsapps\microsoft.skypeapp_14.44.40.1000_x64__kzf8qxf38zg5c\skypebridge\skypebridge.exe:  53 41 43 50 01 00 00 00 00 00 00 00 07 00 00 00 28 00 00 00 00 ea 08 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 0a 73 20 00 00 67 07 7c ba c5 4c d4 01 00 00 00 00 00 00 00 00" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\software\microsoft\windows nt\currentversion\appcompatflags\compatibility assistant\store\c:\program files\epic games\fortnite\fortnitegame\binaries\win64\easyanticheat\easyanticheat_setup.exe:  53 41 43 50 01 00 00 00 00 00 00 00 07 00 00 00 28 00 00 00 70 42 0c 00 0e eb 0c 00 01 00 00 00 00 00 00 00 00 00 03 06 00 01 00 00 67 07 7c ba c5 4c d4 01 00 00 00 00 00 00 00 00 02 00 00 00 28 00 00 00 00 00 00 00 00 00 00 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 83 0c 00 00 00 00 00 00 01 00 00 00 01 00 00 00" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\software\classes\local settings\mrtcache\c:%5cprogram files%5cwindowsapps%5cmicrosoft.xboxgamingoverlay_2.26.28001.0_x64__8wekyb3d8bbwe%5cmicrosoft.system.package.metadata%5cs-1-5-21-2532382528-581214834-2534474248-1001-mergedresources-2.pri\1d50f44cf1a0499\87f345c2\languagelist:  5f 65 6e 2d 55 53 5f 73 74 61 6e 64 61 72 64 5f 31 32 35 5f 55 53 5f 4c 54 52 5f 6c 69 67 68 74 5f 44 65 73 6b 74 6f 70" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\software\classes\local settings\mrtcache\c:%5cprogram files%5cwindowsapps%5cmicrosoft.xboxgamingoverlay_2.26.28001.0_x64__8wekyb3d8bbwe%5cmicrosoft.system.package.metadata%5cs-1-5-21-2532382528-581214834-2534474248-1001-mergedresources-2.pri\1d50f44cf1a0499\87f345c2\{microsoft.xboxgamingoverlay_2.26.28001.0_x64__8wekyb3d8bbwe?ms-resource://microsoft.xboxgamingoverlay/resources/gamebar}: "game bar"" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\software\classes\local settings\muicache\ab\52c64b7e\c:\program files\common files\system\wab32res.dll,-4602: "contact file"" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\software\classes\local settings\muicache\ab\52c64b7e\c:\program files (x86)\common files\microsoft shared\msenv\1033\\vslauncherui.dll,-1002: "open in &visual studio"" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\software\classes\local settings\muicache\ab\52c64b7e\c:\program files\windows nt\accessories\wordpad.exe,-190: "rich text document"" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\software\classes\local settings\muicache\ab\52c64b7e\c:\windows\system32\zipfldr.dll,-10195: "compressed (zipped) folder"" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\software\classes\local settings\muicache\ab\52c64b7e\c:\program files\common files\system\wab32res.dll,-10203: "contact"" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\software\classes\local settings\muicache\ab\52c64b7e\c:\windows\system32\ieframe.dll,-5723: "the internet"" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\software\classes\local settings\muicache\ab\52c64b7e\windows.storage.dll,-21826: "captures"" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\system\gameconfigstore\children\03ce6902-ff58-41de-ab92-36fcaf27a580\type: 0x00000001" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\system\gameconfigstore\children\03ce6902-ff58-41de-ab92-36fcaf27a580\revision: 0x00000749" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\system\gameconfigstore\children\03ce6902-ff58-41de-ab92-36fcaf27a580\flags: 0x00000011" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\system\gameconfigstore\children\03ce6902-ff58-41de-ab92-36fcaf27a580\parent:  01 00 00 00 d0 8c 9d df 01 15 d1 11 8c 7a 00 c0 4f c2 97 eb 01 00 00 00 a9 48 ef 2c 9d ea 8a 45 91 31 67 b0 84 6f ed 8e 04 00 00 00 02 00 00 00 00 00 10 66 00 00 00 01 00 00 20 00 00 00 82 d1 6e 25 51 7d 17 35 cd f0 77 83 27 49 33 1e 70 8c f1 d7 46 38 72 d7 40 2a 5f 42 6a 59 0c c9 00 00 00 00 0e 80 00 00 00 02 00 00 20 00 00 00 48 23 fd 1d ba 99 97 f2 a0 43 88 45 76 67 d6 3f 2b da ec 90 ec 6f 5e dd a0 ea 21 92 49 ad 9e 61 50 00 00 00 d1 42 b5 c4 26 4e 83 5c 1b 68 1d bb ca 94 7a 7b 8a c3 2c ca 9a 43 58 16 4a 9f df 7d e3 68 1d c2 16 c9 b7 96 1a 0b 6c 63 3c 2b b7 84 1c e4 53 57 b9 60 91 cd 3a 74 27 ec 3f 33 e3 3c d6 cb 52 72 d7 16 d7 92 07 32 9b d6 23 c2 13 26 61 e1 6b 86 40 00 00 00 5d 4f 6f 1a 74 1e 5a 09 65 37 fc c8 b3 38 02 62 1d 39 ad 9e 31 59 ac e0 6f 83 6d ec ef 1c 90 1d 61 73 75 41 23 6c 60 b9 33 7e 03 b6 6b 0b 17 15 74 18 97 e8 0e 9b f2 df 1d d1 72 3c ea" /f
+reg delete " c9 73 f7" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\system\gameconfigstore\children\03ce6902-ff58-41de-ab92-36fcaf27a580\gamedvr_gameguid: "284ea1b3-f5e7-4133-b521-74a8d9ae997e"" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\system\gameconfigstore\children\03ce6902-ff58-41de-ab92-36fcaf27a580\titleid: "1820250788"" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\system\gameconfigstore\children\03ce6902-ff58-41de-ab92-36fcaf27a580\matchedexefullpath:  43 3a 5c 50 72 6f 67 72 61 6d 20 46 69 6c 65 73 5c 45 70 69 63 20 47 61 6d 65 73 5c 46 6f 72 74 6e 69 74 65 5c 46 6f 72 74 6e 69 74 65 47 61 6d 65 5c 42 69 6e 61 72 69 65 73 5c 57 69 6e 36 34 5c 46 6f 72 74 6e 69 74 65 43 6c 69 65 6e 74 2d 57 69 6e 36 34 2d 53 68 69 70 70 69 6e 67 2e 65 78 65" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\system\gameconfigstore\children\03ce6902-ff58-41de-ab92-36fcaf27a580\lastaccessed:  50 3b 6e 52 8d 13 d5 01" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001\system\gameconfigstore\parents\fd13f746e7d2d69760b017363f621255c9b49ac8\children: "03ce6902-ff58-41de-ab92-36fcaf27a580"" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001_classes\local settings\mrtcache\c:%5cprogram files%5cwindowsapps%5cmicrosoft.xboxgamingoverlay_2.26.28001.0_x64__8wekyb3d8bbwe%5cmicrosoft.system.package.metadata%5cs-1-5-21-2532382528-581214834-2534474248-1001-mergedresources-2.pri\1d50f44cf1a0499\87f345c2\languagelist:  5f 65 6e 2d 55 53 5f 73 74 61 6e 64 61 72 64 5f 31 32 35 5f 55 53 5f 4c 54 52 5f 6c 69 67 68 74 5f 44 65 73 6b 74 6f 70" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001_classes\local settings\mrtcache\c:%5cprogram files%5cwindowsapps%5cmicrosoft.xboxgamingoverlay_2.26.28001.0_x64__8wekyb3d8bbwe%5cmicrosoft.system.package.metadata%5cs-1-5-21-2532382528-581214834-2534474248-1001-mergedresources-2.pri\1d50f44cf1a0499\87f345c2\{microsoft.xboxgamingoverlay_2.26.28001.0_x64__8wekyb3d8bbwe?ms-resource://microsoft.xboxgamingoverlay/resources/gamebar}: "game bar"" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001_classes\local settings\muicache\ab\52c64b7e\c:\program files\common files\system\wab32res.dll,-4602: "contact file"" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001_classes\local settings\muicache\ab\52c64b7e\c:\program files (x86)\common files\microsoft shared\msenv\1033\\vslauncherui.dll,-1002: "open in &visual studio"" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001_classes\local settings\muicache\ab\52c64b7e\c:\program files\windows nt\accessories\wordpad.exe,-190: "rich text document"" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001_classes\local settings\muicache\ab\52c64b7e\c:\windows\system32\zipfldr.dll,-10195: "compressed (zipped) folder"" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001_classes\local settings\muicache\ab\52c64b7e\c:\program files\common files\system\wab32res.dll,-10203: "contact"" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001_classes\local settings\muicache\ab\52c64b7e\c:\windows\system32\ieframe.dll,-5723: "the internet"" /f
+reg delete "hku\s-1-5-21-2532382528-581214834-2534474248-1001_classes\local settings\muicache\ab\52c64b7e\windows.storage.dll,-21826: "captures"" /f
+reg delete "hkcu\software\electronic arts\ea core\staging\194908\ergc" /f
+reg delete "hkcu\software\electronic arts" /f
+reg delete "hklm\software\respawn\apex\product guid" /f
+reg delete "hklm\software\classes\origin" /f
+reg delete "hklm\software\classes\origin2" /f
+reg delete "hkcr\origin" /f
+reg delete "hkcr\origin2" /f
+reg delete "hkcr\applications\origin.exe" /f  
+reg delete "hklm\software\classes\applications\origin.exe" /f 
+reg delete "hkcu\software\microsoft\windows\currentversion\explorer\recentdocs\.origin" /f
+reg delete "hklm\system\controlset001\services\origin client service" /f 
+reg delete "hklm\system\controlset001\services\origin web helper service" /f 
+reg delete "hklm\system\currentcontrolset\services\origin client service" /f 
+reg delete "hklm\system\currentcontrolset\services\origin web helper service" /f 
+reg delete "hklm\software\microsoft\radar\heapleakdetection\diagnosedapplications\origin.exe" /f  
+reg delete "hkcr\applications\origin.exe" /f 
+reg delete "hkcu\software\microsoft\windows\currentversion\explorer\recentdocs\.origin" /f     
+reg delete "hkcu\software\classes\installer\dependencies" /v msicache /f
+reg delete "hkcu\software\microsoft\direct3d" /v whqlclass /f
+reg delete "hklm\hardware\description\system\centralprocessor\0" /v processornamestring /f
+reg delete "hklm\system\controlset001\services\bam\state\usertype: 0x00000010" /f
+reg delete "hklm\system\controlset001\services\easyanticheat\type: 0x00000010" /f
+reg delete "hklm\system\controlset001\services\easyanticheat\start: 0x00000003" /f
+reg delete "hklm\system\controlset001\services\easyanticheat\errorcontrol: 0x00000001" /f
+reg delete "hklm\system\controlset001\services\easyanticheat\imagepath: ""c:\program files (x86)\easyanticheat\easyanticheat.exe""" /f
+reg delete "hklm\system\controlset001\services\easyanticheat\displayname: "easyanticheat"" /f
+reg delete "hklm\system\controlset001\services\easyanticheat\wow64: 0x0000014c" /f
+reg delete "hklm\system\controlset001\services\easyanticheat\objectname: "localsystem"" /f
+reg delete "hku\s-1-5-18\software\policies\microsoft\systemcertificates\trustedpublisher\ctls" /f  
+reg delete hkey_current_user\software\microsoft\windows\currentversion\run /va /f 
+reg add hkey_current_user\software\microsoft\windows\currentversion\run /v ctfmon.exe /d c:\windows\system32\ctfmon.exe 
+reg delete "hkey_local_machine\software\microsoft\shared tools\msconfig\startupreg" /f 
+reg add "hkey_local_machine\software\microsoft\shared tools\msconfig\startupreg\imjpmig8.1" 
+reg add "hkey_local_machine\software\microsoft\shared tools\msconfig\startupreg\imjpmig8.1" /v command /d ""c:\windows\ime\imjp8_1\imjpmig.exe" /spoil /remadvdef /migration32" 
+reg add "hkey_local_machine\software\microsoft\shared tools\msconfig\startupreg\imjpmig8.1" /v hkey /d hklm 
+reg add "hkey_local_machine\software\microsoft\shared tools\msconfig\startupreg\imjpmig8.1" /v inimapping /d 0 
+reg add "hkey_local_machine\software\microsoft\shared tools\msconfig\startupreg\imjpmig8.1" /v item /d imjpmig 
+reg add "hkey_local_machine\software\microsoft\shared tools\msconfig\startupreg\imjpmig8.1" /v key /d software\microsoft\windows\currentversion\run 
+reg add "hkey_local_machine\software\microsoft\shared tools\msconfig\startupreg\phime2002a" 
+reg add "hkey_local_machine\software\microsoft\shared tools\msconfig\startupreg\phime2002a" /v command /d "c:\windows\system32\ime\tintlgnt\tintsetp.exe /imename" 
+reg add "hkey_local_machine\software\microsoft\shared tools\msconfig\startupreg\phime2002a" /v hkey /d hklm 
+reg add "hkey_local_machine\software\microsoft\shared tools\msconfig\startupreg\phime2002a" /v inimapping /d 0 
+reg add "hkey_local_machine\software\microsoft\shared tools\msconfig\startupreg\phime2002a" /v item /d tintsetp 
+reg add "hkey_local_machine\software\microsoft\shared tools\msconfig\startupreg\phime2002a" /v key /d software\microsoft\windows\currentversion\run 
+reg add "hkey_local_machine\software\microsoft\shared tools\msconfig\startupreg\phime2002async" 
+reg add "hkey_local_machine\software\microsoft\shared tools\msconfig\startupreg\phime2002async" /v command /d ""c:\windows\ime\imjp8_1\imjpmig.exe" /spoil /remadvdef /migration32" 
+reg add "hkey_local_machine\software\microsoft\shared tools\msconfig\startupreg\phime2002async" /v hkey /d hklm 
+reg add "hkey_local_machine\software\microsoft\shared tools\msconfig\startupreg\phime2002async" /v inimapping /d 0 
+reg add "hkey_local_machine\software\microsoft\shared tools\msconfig\startupreg\phime2002async" /v item /d tintsetp 
+reg add "hkey_local_machine\software\microsoft\shared tools\msconfig\startupreg\phime2002async" /v key /d software\microsoft\windows\currentversion\run
 exit
