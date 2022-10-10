@@ -1,4 +1,11 @@
 @echo off
+title MasculineUnban - Cleaner - Checking if compatiable
+AMIDEWIN.exe /SU | find /i "Error"
+if not errorlevel 1 (
+   echo warning amidewin isnt compatiable or had some error with your motherboard
+   echo you will probably get kicked if u launch fn
+   pause
+)
 title MasculineUnban - Cleaner - Stage 1 / 10 - Taskkill fn and delete some basics
 taskkill /f /im EasyAntiCheat_Setup.exe
 taskkill /f /im FortniteLauncher.exe
