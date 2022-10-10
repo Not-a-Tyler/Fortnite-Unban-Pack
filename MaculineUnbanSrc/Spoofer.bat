@@ -19,7 +19,7 @@ start /wait /b  DeviceCleanupCmd.exe * -s
 DriveCleanup.exe
 echo just wait... 
 del "C:\Users\%username%\AppData\Local\Temp.*"
-mkdir C:\Windows\temp
+mkdir "C:\Windows\temp"
 mkdir "C:\Users\%username%\AppData\Local\Temp"
 set try=1
 

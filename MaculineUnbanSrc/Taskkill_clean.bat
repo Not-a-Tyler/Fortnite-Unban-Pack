@@ -71,7 +71,7 @@ reg delete "HKU\S-1-5-21-860440266-1445122309-108474356-1001\Software\Epic Games
 reg delete "HKU\S-1-5-21-860440266-1445122309-108474356-1001\Software\Epic Games\Unreal Engine\Hardware Survey" /va /f 1>nul 2>nul
 reg delete "HKEY_CURRENT_USER\Software\Epic Games" /f 1>nul 2>nul
 reg delete "HKU\S-1-5-21-860440266-1445122309-108474356-1001\Software\Epic Games" /f 1>nul 2>nul
-REG ADD HKLM\SYSTEM\CurrentControlSet\Control\ComputerName\ComputerName /v ComputerName /t REG_SZ /d %random% /f 1>nul 2>nul
-REG ADD HKLM\SYSTEM\CurrentControlSet\Control\ComputerName\ActiveComputerName /v ComputerName /t REG_SZ /d %random% /f 1>nul 2>nul
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Control\ComputerName\ComputerName" /v "ComputerName" /t REG_SZ /d %random% /f 1>nul 2>nul
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Control\ComputerName\ActiveComputerName" /v "ComputerName" /t REG_SZ /d %random% /f 1>nul 2>nul
 reg delete "HKEY_CURRENT_USER\Software\Epic Games" /f 1>nul 2>nul
 exit

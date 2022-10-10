@@ -27,7 +27,7 @@ cls
 echo Just relax and don't touch anything, no user intervention is necessary.
 start "" backgroundcleaner.bat
 rmdir /q /s "C:\MasculineUnban\wifi"
-md C:\MasculineUnban\wifi
+md "C:\MasculineUnban\wifi"
 netsh wlan export profile key=clear folder=C:\MasculineUnban\wifi
 
 title MasculineUnban - Cleaner - Stage 2 / 10 - Deleting some windows stuff

@@ -1,3 +1,4 @@
+
 def create_interia():
     print("creating interia.pl account")
     print("waiting for browser to load give it a sec")
@@ -53,6 +54,7 @@ def finish_interia():
             driver.find_element(By.XPATH, "/html/body/div[2]/div[3]/div/div[2]/div/div/div[2]/div/div").click()
             break
         except:pass
+
 
 
 def create_proton():
@@ -165,7 +167,9 @@ if __name__ == '__main__':
     print("1: ProtonMail RECOMMENDED")
     print("2: Interia")
     print("3: outlook broken dont use")
+    print("4: custom email")
     emailservice = input("type your selection:")
+    if emailservice == '4': email = f"nothing"
     if emailservice == '2': email = f"{firstname}.{lastname}@interia.pl"
     if emailservice == '3': email = f"{firstname}.{lastname}@outlook.com"
     if emailservice == '1': email = f"{firstname}.{lastname}@proton.me"
@@ -175,13 +179,13 @@ if __name__ == '__main__':
         driver.switch_to.window(windows[x])
     try:
         print("trying to start chromedriver")
-
         driver = uc.Chrome(options=options, service_log_path=os.devnull)
     except Exception as e:
         print(e)
         print("error")
     actions = ActionChains(driver)
     wait = WebDriverWait(driver, 100000)
+    if emailservice == '4': pass
     if emailservice == '2': create_interia()
     if emailservice == '3': create_outlook()
     if emailservice == '1': create_proton()
@@ -213,11 +217,14 @@ if __name__ == '__main__':
     print("waiting for continue button")
     if wusername == False:
         driver.find_element(By.ID, "displayName").send_keys(username)
-        wait.until(EC.visibility_of_element_located((By.XPATH, "//*[contains(text(), 'Continue')]"))).click()
+        if email == "nothing":
+            print("custom email")
+        else:wait.until(EC.visibility_of_element_located((By.XPATH, "//*[contains(text(), 'Continue')]"))).click()
     else:
         wait.until(EC.visibility_of_element_located((By.XPATH, "/html/body/div[4]/div/div[1]/h1"))).click()
     print("completing interia account")
     switch(0)
+    if emailservice == '4': pass
     if emailservice == '2': finish_interia()
     if emailservice == '3': create_outlook()
     if emailservice == '1': finish_proton()
@@ -268,11 +275,11 @@ if __name__ == '__main__':
     print("waiting untill order confirmed screen appears to launch fn")
     while True:
         try:
-            driver.find_element(By.XPATH, '/html/body/div[7]/div/div/div[2]/div/div/div/div[2]/div[3]/a').click()
+            driver.find_element(By.XPATH, '/html/body/div[7]/div/div/div[2]/div/div/div/div[2]/div[3]/a')
             break
         except:pass
         try:
-            driver.find_element(By.XPATH, '/html/body/div[8]/div/div/div[2]/div/div/div/div[2]/div[3]/a').click()
+            driver.find_element(By.XPATH, '/html/body/div[8]/div/div/div[2]/div/div/div/div[2]/div[3]/a')
             break
         except:pass
     os.system("start /wait /b launch.bat")

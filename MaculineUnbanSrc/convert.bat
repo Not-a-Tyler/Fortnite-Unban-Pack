@@ -65,10 +65,10 @@ title MasculineUnban b2 - loading
 %extd% /resizewindow "%result%" 0 0 1129 520
 %extd% /center
 ::save current directory so gen knows where to put saved_accounts.txt
-del %userprofile%\AppData\Roaming\test.txt /f
-echo %cd% >> %userprofile%\AppData\Roaming\test.txt
-set /p cddir=<%userprofile%\AppData\Roaming\test.txt
-cd %userprofile%\AppData\Roaming\MaculineUnbanSrc
+del "%userprofile%\AppData\Roaming\test.txt" /f
+echo "%cd%" >> "%userprofile%\AppData\Roaming\test.txt"
+set /p cddir=<"%userprofile%\AppData\Roaming\test.txt"
+cd "%userprofile%\AppData\Roaming\MaculineUnbanSrc"
 del output.txt /f
 del install_brave.exe /f
 del pythin.exe /f
@@ -85,7 +85,7 @@ if [%1]==[] goto noarg
 goto %1
 :noarg
 
-md C:\MasculineUnban
+md "C:\MasculineUnban"
 cls
 
 
@@ -125,12 +125,12 @@ IF ERRORLEVEL 1 GOTO spoof
 
 :checkspoof
 set /A result=value
-del output.txt /f1>nul 2>nul
+del output.txt /f
 wmic diskdrive get serialnumber >output.txt
 for /f %%i in ("output.txt") do set size=%%~zi
 if %size% gtr 6 %extd% /messagebox Error "You are not spoofed. Do you want to spoof?" 4
 if "%result%"=="6" (goto spoof)
-del output.txt /f1>nul 2>nul
+del output.txt /f
 goto :eof
 
 
@@ -207,12 +207,12 @@ GOTO start
 
 :spoof
 set /A result=value
-del output.txt /f1>nul 2>nul
+del output.txt /f
 wmic diskdrive get serialnumber >output.txt
 for /f %%i in ("output.txt") do set size=%%~zi
 if %size% lss 7 %extd% /messagebox Error "Your already spoofed spoofing again may break shit but click yes to respoof" 4
 if "%result%"=="7" (goto start)
-del output.txt /f1>nul 2>nul
+del output.txt /f
 start "" /wait /b "Spoofer.bat" 
 GOTO start
 
@@ -236,21 +236,21 @@ if exist "C:\MasculineUnban\Python\Scripts\pip.exe" (
     title MasculineUnban b2 - downloading python to generate account
     ECHO Python not found... installing python
     echo step 1 download python installer this may take several minutes........
-    curl https://www.python.org/ftp/python/3.10.7/python-3.10.7-embed-amd64.zip --output C:\MasculineUnban\pythin.zip
+    curl https://www.python.org/ftp/python/3.10.7/python-3.10.7-embed-amd64.zip --output "C:\MasculineUnban\pythin.zip"
     echo step 2 download get-pip
     curl https://bootstrap.pypa.io/get-pip.py --output get-pip.py
     echo step 3 Extract python
-    powershell Expand-Archive C:\MasculineUnban\pythin.zip -DestinationPath C:\MasculineUnban\Python
-    del C:\MasculineUnban\Python\python310._pth /f
-    COPY /Y python310._pth C:\MasculineUnban\Python
+    powershell Expand-Archive "C:\MasculineUnban\pythin.zip" -DestinationPath "C:\MasculineUnban\Python"
+    del "C:\MasculineUnban\Python\python310._pth" /f
+    COPY /Y python310._pth "C:\MasculineUnban\Python"
     echo step 4 delete the python installer
-    del C:\MasculineUnban\pythin.zip
+    del "C:\MasculineUnban\pythin.zip"
     echo step 5 install pip
-    C:\MasculineUnban\Python\Python.exe get-pip.py
+    "C:\MasculineUnban\Python\Python.exe" get-pip.py
 )
 
 title MasculineUnban b2 - Fortnite Account Generator
-C:\MasculineUnban\Python\python.exe Gen.py
+"C:\MasculineUnban\Python\python.exe" Gen.py
 GOTO start
 
 :launch

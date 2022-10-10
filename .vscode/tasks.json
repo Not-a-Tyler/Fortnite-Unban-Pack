@@ -6,7 +6,7 @@
         {
             "label": "compile",
             "type": "shell",
-            "command": "C:\\Users\\user\\Desktop\\Fortnite-Unban-Pack\\compile.bat",
+            "command": ".\\compile.bat",
             "problemMatcher": [],
             "group": {
                 "kind": "build",
