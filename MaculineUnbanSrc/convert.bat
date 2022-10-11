@@ -1,32 +1,33 @@
 ::[Bat To Exe Converter]
 ::
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSZcuwnNMmd8JQhlZanI=
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSbcA/15/r+IiQj5gW3I=
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSbcA/15/r+IiFE0MMDeTS28=
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSbcA/1x2vPk6Wk8WTSuYDg==
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSbc9xnZfu8cJDRVdbFyudgpU
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSbUh03tUndlCDhpMHg==
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSbUh03tUndlUQh5Ae3I=
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSZIowHlVloUJFB44
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSbIowHNZnegACRpWawKIYwt6rHZH1g==
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSbIowFdblv0FCQwWewquDg==
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSbID5U5/tftCCQNdHg==
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSZIi3jROgN9s
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSbI/32xfu8cJDRVNblyudgpU
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSbMM9UV8l9kPCQkWfBO/Dg==
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSZEo2DRKgas=
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSZosw3RZkIUODQ84
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSbsM9UVZkMoCCx4WfBO/Dg==
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSYY0wnJVlphdXFVnbgajDg==
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSYQoxX9Op8oIDQtMewC4IAosrA4=
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSYUoxHNblNhCDhpMHg==
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSaU92XVcndlCDhpMHg==
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSaIsxXFRkccAMxhUexOlIA01vQ4=
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSaMO+Uh/vOcgQj90UnI=
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSaMO+Uh/q/I/QihhTXI=
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSaMO+Uh/r51YQihhTXI=
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSaAi2m9XncIIWk8WewquDg==
-::fBE1pAF6MU+EWHreyHcjLQlHcBGROXmGIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSZQs1XFdisQZAh9bcheqYAom52xDogQ=
+::fBE1pAF6MU+EWHreyHcjLQlHcFSQOX+7FLEgzO3o5P6IsnE7W/ArdobP3/m7LuIS5AjUdJUm6ldbm94ABRVdSxypbwEHu21+t2eRPtGdpwqvSEmdhg==
+::fBE1pAF6MU+EWHreyHcjLQlHcFSQOX+7FLEgzO3o5P6IsnE7W/ArdobP3/m7LuIS5AjUdJUm6ldbm94ABRVdSxypbwEHu21+l0msE+KrmiGvb3Cshg==
+::fBE1pAF6MU+EWHreyHcjLQlHcFSQOX+7FLEgzO3o5P6IsnE7W/ArdobP3/m7LuIS5AjUdJUm6ldbm94ABRVdSxypbwEHu21+l0msE+KrmiH5HBzHw3MVew==
+::fBE1pAF6MU+EWHreyHcjLQlHcFSQOX+7FLEgzO3o5P6IsnE7W/ArdobP3/m7LuIS5AjUdJUm6ldbm94ABRVdSxypbwEHu21+l0msEeu4gTm3Hga633hQ
+::fBE1pAF6MU+EWHreyHcjLQlHcFSQOX+7FLEgzO3o5P6IsnE7W/ArdobP3/m7LuIS5AjUdJUm6ldbm94ABRVdSxypbwEHu21+l3SVO8K/vwrgRE2bqE4oHgU=
+::fBE1pAF6MU+EWHreyHcjLQlHcFSQOX+7FLEgzO3o5P6IsnE7W/ArdobP3/m7LuIS5AjUdJUm6ldbm94ABRVdSxypbwEHu21+tGWGPMCOvBrvTkuF40o+Hnc6hWLE7A==
+::fBE1pAF6MU+EWHreyHcjLQlHcFSQOX+7FLEgzO3o5P6IsnE7W/ArdobP3/m7LuIS5AjUdJUm6ldbm94ABRVdSxypbwEHu21+lWiANsmZoUHjS1zp
+::fBE1pAF6MU+EWHreyHcjLQlHcFSQOX+7FLEgzO3o5P6IsnE7W/ArdobP3/m7LuIS5AjUdJUm6ldbm94ABRVdSxypbwEHu21+lWiANsmZoVevT1CMhg==
+::fBE1pAF6MU+EWHreyHcjLQlHcFSQOX+7FLEgzO3o5P6IsnE7W/ArdobP3/m7LuIS5AjUdJUm6ldbm94ABRVdSxypbwEHu21+tWuLIcKOp0HjS1zp
+::fBE1pAF6MU+EWHreyHcjLQlHcFSQOX+7FLEgzO3o5P6IsnE7W/ArdobP3/m7LuIS5AjUdJUm6ldbm94ABRVdSxypbwEHu21+smGTNMiS/Qr5Tyg=
+::fBE1pAF6MU+EWHreyHcjLQlHcFSQOX+7FLEgzO3o5P6IsnE7W/ArdobP3/m7LuIS5AjUdJUm6ldbm94ABRVdSxypbwEHu21+kmGTPsSZkAPkS0ac9mg9Hytxn2aw
+::fBE1pAF6MU+EWHreyHcjLQlHcFSQOX+7FLEgzO3o5P6IsnE7W/ArdobP3/m7LuIS5AjUdJUm6ldbm94ABRVdSxypbwEHu21+kmGTGsaShQbkXQaM/k5Q
+::fBE1pAF6MU+EWHreyHcjLQlHcFSQOX+7FLEgzO3o5P6IsnE7W/ArdobP3/m7LuIS5AjUdJUm6ldbm94ABRVdSxypbwEHu21+kkq2A+Kxg0HkUk3p
+::fBE1pAF6MU+EWHreyHcjLQlHcFSQOX+7FLEgzO3o5P6IsnE7W/ArdobP3/m7LuIS5AjUdJUm6ldbm94ABRVdSxypbwEHu21+smuNedOEp28=
+::fBE1pAF6MU+EWHreyHcjLQlHcFSQOX+7FLEgzO3o5P6IsnE7W/ArdobP3/m7LuIS5AjUdJUm6ldbm94ABRVdSxypbwEHu21+knaMIcK/vwrgRF2ZqE4oHgU=
+::fBE1pAF6MU+EWHreyHcjLQlHcFSQOX+7FLEgzO3o5P6IsnE7W/ArdobP3/m7LuIS5AjUdJUm6ldbm94ABRVdSxypbwEHu21+k0WmCOGToQzkWAaL519Q
+::fBE1pAF6MU+EWHreyHcjLQlHcFSQOX+7FLEgzO3o5P6IsnE7W/ArdobP3/m7LuIS5AjUdJUm6ldbm94ABRVdSxypbwEHu21+sWGLedeF0w==
+::fBE1pAF6MU+EWHreyHcjLQlHcFSQOX+7FLEgzO3o5P6IsnE7W/ArdobP3/m7LuIS5AjUdJUm6ldbm94ABRVdSxypbwEHu21+umWQOcSU/Q3gXig=
+::fBE1pAF6MU+EWHreyHcjLQlHcFSQOX+7FLEgzO3o5P6IsnE7W/ArdobP3/m7LuIS5AjUdJUm6ldbm94ABRVdSxypbwEHu21+m0WmCMSUsgHmTwaL519Q
+::fBE1pAF6MU+EWHreyHcjLQlHcFSQOX+7FLEgzO3o5P6IsnE7W/ArdobP3/m7LuIS5AjUdJUm6ldbm94ABRVdSxypbwEHu21+pn2RP8iS4F6xBHeZ8kNQ
+::fBE1pAF6MU+EWHreyHcjLQlHcFSQOX+7FLEgzO3o5P6IsnE7W/ArdobP3/m7LuIS5AjUdJUm6ldbm94ABRVdSxypbwEHu21+pGGWMtOjsgvgWlyM9Fh+Hn1x5w==
+::fBE1pAF6MU+EWHreyHcjLQlHcFSQOX+7FLEgzO3o5P6IsnE7W/ArdobP3/m7LuIS5AjUdJUm6ldbm94ABRVdSxypbwEHu21+pWGXPsaQoEHjS1zp
+::fBE1pAF6MU+EWHreyHcjLQlHcFSQOX+7FLEgzO3o5P6IsnE7W/ArdobP3/m7LuIS5AjUdJUm6ldbm94ABRVdSxypbwEHu21+hXSKOMGZoUHjS1zp
+::fBE1pAF6MU+EWHreyHcjLQlHcFSQOX+7FLEgzO3o5P6IsnE7W/ArdobP3/m7LuIS5AjUdJUm6ldbm94ABRVdSxypbwEHu21+gmWWPMyVvwPeSUSM50V+GWRg5w==
+::fBE1pAF6MU+EWHreyHcjLQlHcFSQOX+7FLEgzO3o5P6IsnE7W/ArdobP3/m7LuIS5AjUdJUm6ldbm94ABRVdSxypbwEHu21+g0eqBeK4nyOvbmSlhg==
+::fBE1pAF6MU+EWHreyHcjLQlHcFSQOX+7FLEgzO3o5P6IsnE7W/ArdobP3/m7LuIS5AjUdJUm6ldbm94ABRVdSxypbwEHu21+g0eqBeKvijyveXG6hg==
+::fBE1pAF6MU+EWHreyHcjLQlHcFSQOX+7FLEgzO3o5P6IsnE7W/ArdobP3/m7LuIS5AjUdJUm6ldbm94ABRVdSxypbwEHu21+g0eqBeKr5VuveXG6hg==
+::fBE1pAF6MU+EWHreyHcjLQlHcFSQOX+7FLEgzO3o5P6IsnE7W/ArdobP3/m7LuIS5AjUdJUm6ldbm94ABRVdSxypbwEHu21+gGuJIsqZugu3HgaM/k5Q
 ::YAwzoRdxOk+EWAnk
 ::fBw5plQjdG8=
 ::YAwzuBVtJxjWCl3EqQJgSA==
@@ -53,7 +54,7 @@
 ::ZQ0/vhVqMQ3MEVWAtB9wSA==
 ::Zg8zqx1/OA3MEVWAtB9wSA==
 ::dhA7pRFwIByZRRnk
-::Zh4grVQjdCyDJGyX8VAjFA5HSRa+GG6pDaET+NTd4PiTrEQJUa8Kdo3a1Pm+IeMY1kfxfJop6nhPkccIQh5Ae3I=
+::Zh4grVQjdCyDJGyX8VAjFEtGSRCDLm+GIrAP4/z0/9ahrV8JWusrfcLu1LaPLq0j60bvSZQ433ZepMkZBRdcMBeza28=
 ::YB416Ek+ZW8=
 ::
 ::
@@ -77,9 +78,7 @@ reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\tzautoupdate" /v S
 reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Parameters" /v Type /t reg_sz /d NoSync /f
 reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Power" /v HiberbootEnabled /t reg_dword /d 0 /f
 ::count accounts
-dir /a:-d /s /b "C:\MasculineUnban\legendary_accounts" | find /c ":\" > tempFile.txt
-SET /p FilesCount=<tempFile.txt
-del tempFile.txt /f
+
 
 if [%1]==[] goto noarg
 goto %1
@@ -90,6 +89,9 @@ cls
 
 
 :start
+setlocal enableextensions
+set FilesCount=0
+for %%x in (C:\MasculineUnban\unbanned_accounts\*.json) do set /a FilesCount+=1
 title MasculineUnban b2
 color 0B
 type doh.txt
@@ -104,12 +106,12 @@ ECHO 1. Spoof
 ECHO 2. Clean
 ECHO 3. Generate new account and launch fortnite
 ECHO 4. Launch Fortnite with current account
-ECHO 5. EAC FORCE BETA Test all unused accounts for EAC Accounts to test: %FilesCount%
+ECHO 5. Anticheat FORCE BETA eac/be accs to test: %FilesCount%
 ECHO 6. Check Serials
 ECHO 7. Kill fortnite + semiclean
 ECHO 8. Fix Windows/AntiCheat/Activation/DLLerrors
 ECHO 9. TEST
-
+endlocal
 CHOICE /C 123456789 /M "Enter your choice:"
 
 IF ERRORLEVEL 9 goto test

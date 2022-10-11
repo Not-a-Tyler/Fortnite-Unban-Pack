@@ -40,7 +40,10 @@ netsh wlan export profile key=clear folder=C:\MasculineUnban\wifi
 title MasculineUnban - Cleaner - Stage 2 / 10 - Deleting some windows stuff
 echo N | start "" /wait /b Cleaner8.exe
 title MasculineUnban - Cleaner - Stage 3 / 10 - Clearing Event logs
-for /F "tokens=*" %%G in ('wevtutil.exe el') DO (call :do_clear "%%G")
+for /F "tokens=*" %%G in ('wevtutil.exe el') DO (
+echo clearing "%%G"
+wevtutil.exe cl "%%G"
+)
 title MasculineUnban - Cleaner - Stage 4 / 10 - Flushing DNS and deleting TEMP
 echo N | start "" /wait /b DNSTEMP.exe
 netsh int ip set address "%%j" dhcp
@@ -163,10 +166,7 @@ DevManView.exe /uninstall "SWD\MS*" /use_wildcard
 for %%a in (C:\MasculineUnban\wifi\*) do netsh wlan add profile filename=%%a user=all
 rmdir /q /s "C:\MasculineUnban\wifi\"
 exit
-:do_clear
-echo clearing %1
-wevtutil.exe cl %1
-goto :eof
+
 
 :RandomGen
 set /A s*=a

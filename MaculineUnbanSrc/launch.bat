@@ -1,8 +1,17 @@
 @echo off
+set AC=test
+echo do u want to force eac or be
+ECHO 1. Easy Anti Cheat (EAC)
+ECHO 2. Battleeye AntiCheat (BE)
 
-set seed=%random%
 
+CHOICE /C 12 /M "Enter your choice:"
 
+IF ERRORLEVEL 2 set AC=FortniteClient-Win64-Shipping_EAC.exe&& goto done1
+IF ERRORLEVEL 1 set AC=FortniteClient-Win64-Shipping_BE.exe&& goto done1
+
+:done1
+echo anticheat to kill is %AC%
 taskkill /f /im EasyAntiCheat_Setup.exe
 taskkill /f /im FortniteLauncher.exe
 taskkill /f /im EpicWebHelper.exe
@@ -66,27 +75,30 @@ REG ADD "HKLM\SYSTEM\CurrentControlSet\Control\ComputerName\ActiveComputerName" 
 reg delete "HKEY_CURRENT_USER\Software\Epic Games" /f 1>nul 2>nul
 
 C:\MasculineUnban\Python\Scripts\legendary.exe import --disable-check Fortnite "C:\Program Files\Epic Games\Fortnite"
-
 C:\MasculineUnban\Python\Scripts\legendary.exe launch Fortnite --skip-version-check
 echo launched fortnite (hopefully)
 
-PING localhost -n 2 >NUL
-
-tasklist /fi "ImageName eq FortniteClient-Win64-Shipping_BE.exe" /fo csv 2>NUL | find /I "FortniteClient-Win64-Shipping_BE.exe">NUL
+PING localhost -n 3 >NUL
+echo %AC%
+tasklist /fi "ImageName eq %AC%" /fo csv  | find /I "%AC%"
 if "%ERRORLEVEL%"=="0" goto BE
-echo SUCCEESS battleye dident launch so HOPEFULLY eac launched and all is good
+echo SUCCEESS it dident launch so HOPEFULLY fn launched and all is good
 exit
 :BE
-powershell -Command "Set-Date -Date (Get-Date).AddDays(1) | Out-Null"
+::powershell -Command "Set-Date -Date (Get-Date).AddDays(1) | Out-Null"
+taskkill /f /im EasyAntiCheat_Setup.exe
 taskkill /f /im FortniteLauncher.exe
 taskkill /f /im EpicWebHelper.exe
 taskkill /f /im FortniteClient-Win64-Shipping.exe
+taskkill /f /im EasyAntiCheat.exe
 taskkill /f /im BEService_x64.exe
 taskkill /f /im EpicGamesLauncher.exe
 taskkill /f /im FortniteClient-Win64-Shipping_BE.exe
+taskkill /f /im FortniteClient-Win64-Shipping_EAC.exe
 sc stop BEService
 
-::MOVE C:\Users\%username%\.config\legendary\user.json "C:\MasculineUnban\legendary_accounts\%random%.%seed%"
+md "C:\MasculineUnban\unbanned_accounts\"
+MOVE "C:\Users\%username%\.config\legendary\user.json" "C:\MasculineUnban\unbanned_accounts\%random%.json"
 
 reg delete "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /v EpicGamesLauncher /f
 reg delete "HKLM\SYSTEM\CurrentControlSet\Services\BEService" /va /f
@@ -138,7 +150,7 @@ REG ADD "HKLM\SYSTEM\CurrentControlSet\Control\ComputerName\ComputerName" /v "Co
 REG ADD "HKLM\SYSTEM\CurrentControlSet\Control\ComputerName\ActiveComputerName" /v "ComputerName" /t REG_SZ /d %random% /f 1>nul 2>nul
 reg delete "HKEY_CURRENT_USER\Software\Epic Games" /f 1>nul 2>nul
 cls
-echo closed fortnite due to BE being launched
+echo closed fortnite due to wrong anticheat being launched
 echo you will need to gen a new account
 
 pause

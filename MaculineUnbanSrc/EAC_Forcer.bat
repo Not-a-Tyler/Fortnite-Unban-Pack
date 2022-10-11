@@ -1,20 +1,23 @@
 @echo off
-title MasculineUnban - EAC Forcer BETA
-set seed=%random%
+set AC=test
+echo do u want to force eac or be
+ECHO 1. Easy Anti Cheat (EAC)
+ECHO 2. Battleeye AntiCheat (BE)
 
 
+CHOICE /C 12 /M "Enter your choice:"
 
-FOR /R "C:\MasculineUnban\legendary_accounts\" %%g IN (*) DO ( 
-   (Echo "%%g" | FIND /I ".%seed%" 1>NUL) || (
-       echo %%g
-       CALL :check %%g
-   )
+IF ERRORLEVEL 2 set AC=FortniteClient-Win64-Shipping_EAC.exe&& goto done1
+IF ERRORLEVEL 1 set AC=FortniteClient-Win64-Shipping_BE.exe&& goto done1
+
+:done1
+echo anticheat to kill is %AC%
+
+FOR /R "C:\MasculineUnban\unbanned_accounts\" %%g IN (*) DO ( 
+   echo %%g
+   CALL :check %%g
 )
 echo out of loop
-pause
-echo failed
-:done
-echo done
 pause
 exit
 
@@ -74,32 +77,47 @@ REG ADD "HKLM\SYSTEM\CurrentControlSet\Control\ComputerName\ComputerName" /v "Co
 REG ADD "HKLM\SYSTEM\CurrentControlSet\Control\ComputerName\ActiveComputerName" /v "ComputerName" /t REG_SZ /d %random% /f 1>nul 2>nul
 reg delete "HKEY_CURRENT_USER\Software\Epic Games" /f 1>nul 2>nul
 
-powershell -Command "Set-Date -Date (Get-Date).AddDays(1) | Out-Null"
+::powershell -Command "Set-Date -Date (Get-Date).AddDays(1) | Out-Null"
 
 rmdir /q /s "C:\Users\%username%\.config\legendary"
 md "C:\Users\%username%\.config\legendary"
 echo attempting to move
 echo movin %~1
-MOVE %~1 "C:\Users\%username%\.config\legendary\user.json"
+MOVE "%~1" "C:\Users\%username%\.config\legendary\user.json"
 
 echo launching
-legendary import --disable-check Fortnite "C:\Users\user\Games\Fortnite"
-legendary launch Fortnite --skip-version-check
+C:\MasculineUnban\Python\Scripts\legendary.exe import --disable-check Fortnite "C:\Program Files\Epic Games\Fortnite"
+C:\MasculineUnban\Python\Scripts\legendary.exe launch Fortnite --skip-version-check
 echo launched (hopefully)
 
-PING localhost -n 2 >NUL
+PING localhost -n 5 >NUL
 
-tasklist /fi "ImageName eq FortniteClient-Win64-Shipping_BE.exe" /fo csv 2>NUL | find /I "FortniteClient-Win64-Shipping_BE.exe">NUL
+tasklist /fi "ImageName eq %ac%" /fo csv  | find /I "%ac%"
 if "%ERRORLEVEL%"=="0" goto BE
+echo hopefully eac lauinched
 exit
 :BE
 
+taskkill /f /im EasyAntiCheat_Setup.exe
 taskkill /f /im FortniteLauncher.exe
 taskkill /f /im EpicWebHelper.exe
 taskkill /f /im FortniteClient-Win64-Shipping.exe
+taskkill /f /im EasyAntiCheat.exe
 taskkill /f /im BEService_x64.exe
 taskkill /f /im EpicGamesLauncher.exe
 taskkill /f /im FortniteClient-Win64-Shipping_BE.exe
+taskkill /f /im FortniteClient-Win64-Shipping_EAC.exe
 sc stop BEService
+md "C:\MasculineUnban\unbanned_accounts\"
+call :RandomGen
+MOVE "C:\Users\%username%\.config\legendary\user.json" "C:\MasculineUnban\unbanned_accounts\!rand!%random%.json"
+goto :eof
 
-MOVE C:\Users\%username%\.config\legendary\user.json "C:\MasculineUnban\legendary_accounts\%random%.%seed%"
+:RandomGen
+set /A s*=a
+if %s% lss 0 (
+   rem Get result MOD (2^31-1)
+   set /A s+=0x80000000
+)
+set /A "rand=s & 0x7FFF"
+exit /B
