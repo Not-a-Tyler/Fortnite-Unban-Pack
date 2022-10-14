@@ -1,12 +1,14 @@
 @echo off
+title MasculineUnban - Fortnite Launcher
 set AC=test
 echo do u want to force eac or be
 ECHO 1. Easy Anti Cheat (EAC)
 ECHO 2. Battleeye AntiCheat (BE)
+Echo 3. Either
 
 
-CHOICE /C 12 /M "Enter your choice:"
-
+CHOICE /C 123 /M "Enter your choice:"
+IF ERRORLEVEL 3 set AC=testtest&& goto done1
 IF ERRORLEVEL 2 set AC=FortniteClient-Win64-Shipping_EAC.exe&& goto done1
 IF ERRORLEVEL 1 set AC=FortniteClient-Win64-Shipping_BE.exe&& goto done1
 
@@ -29,7 +31,7 @@ reg delete "HKLM\SYSTEM\CurrentControlSet\Services\BEService" /va /f
 reg delete "HKLM\SYSTEM\ControlSet001\Services\BEService" /va /f
 reg delete "HKLM\SYSTEM\CurrentControlSet\Services\BEService" /va /f
 del "C:\Program Files (x86)\Common Files\BattlEye\BEService.exe" /f
-del "C:\Program Files (x86)\Common Files\BattlEye\BEService_fn.exe" /f
+del "C:\Program Files (x86)\Common Files\BBattlEye\BEService_fn.exe" /f
 del "C:\Users\%username%\AppData\Local\AMD\CN\GameReport\FortniteClient-Win64-Shipping.exe\gpa.bin" /f
 del "C:\Users\%username%\AppData\Local\AMD\DxCache\92b1da15789e5451b49097cdafa85ec0f45214d6b0df9e8d.bin" /f
 del "C:\Users\%username%\AppData\Local\AMD\DxCache\92b1da15789e5451e900a9bc20b57cd2f45214d6b0df9e8d.bin" /f
@@ -75,6 +77,7 @@ REG ADD "HKLM\SYSTEM\CurrentControlSet\Control\ComputerName\ActiveComputerName" 
 reg delete "HKEY_CURRENT_USER\Software\Epic Games" /f 1>nul 2>nul
 
 C:\MasculineUnban\Python\Scripts\legendary.exe import --disable-check Fortnite "C:\Program Files\Epic Games\Fortnite"
+del 
 C:\MasculineUnban\Python\Scripts\legendary.exe launch Fortnite --skip-version-check
 echo launched fortnite (hopefully)
 
@@ -95,7 +98,8 @@ taskkill /f /im BEService_x64.exe
 taskkill /f /im EpicGamesLauncher.exe
 taskkill /f /im FortniteClient-Win64-Shipping_BE.exe
 taskkill /f /im FortniteClient-Win64-Shipping_EAC.exe
-sc stop BEService
+sc stop BEService 1>nul 2>nul
+sc stop EasyAntiCheat 1>nul 2>nul
 
 md "C:\MasculineUnban\unbanned_accounts\"
 MOVE "C:\Users\%username%\.config\legendary\user.json" "C:\MasculineUnban\unbanned_accounts\%random%.json"

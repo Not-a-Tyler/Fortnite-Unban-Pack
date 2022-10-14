@@ -1,4 +1,5 @@
 @echo off
+title MasculineUnban - Forcer BETA
 set AC=test
 echo do u want to force eac or be
 ECHO 1. Easy Anti Cheat (EAC)
@@ -107,7 +108,8 @@ taskkill /f /im BEService_x64.exe
 taskkill /f /im EpicGamesLauncher.exe
 taskkill /f /im FortniteClient-Win64-Shipping_BE.exe
 taskkill /f /im FortniteClient-Win64-Shipping_EAC.exe
-sc stop BEService
+sc stop BEService 1>nul 2>nul
+sc stop EasyAntiCheat 1>nul 2>nul
 md "C:\MasculineUnban\unbanned_accounts\"
 call :RandomGen
 MOVE "C:\Users\%username%\.config\legendary\user.json" "C:\MasculineUnban\unbanned_accounts\!rand!%random%.json"

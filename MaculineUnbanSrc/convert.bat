@@ -159,16 +159,6 @@ set /A "rand=s & 0x7FFF"
 exit /B
 
 :test
-setlocal EnableDelayedExpansion
-set /A a=16807, s=40
-FOR %%x in (IVN,IV,ID,SM,SP,SV,SS,SK,SF,BM,BP,BV,BS,BT,BLC,CM,CT,CV,CS,CA,CO,CH,CPC,CSK,PSN,PAT,PPN) do (
-call :RandomGen
-echo !rand!
-start /b /wait AMIDEWINx64.EXE /%%x MASCULINE!rand!-%%x-!rand!
-)
-
-setlocal DisableDelayedExpansion
-
 goto start
 
 FOR %%x in (IVN,IV,ID,SM,SP,SV,SS,SK,SF,BM,BP,BV,BS,BT,BLC,CM,CT,CV,CS,CA,CO,CH,CPC,CSK,PSN,PAT,PPN) do (start /b /wait amidewin.bat %%x AMIDEWIN.EXE)
@@ -238,7 +228,7 @@ if exist "C:\MasculineUnban\Python\Scripts\pip.exe" (
     title MasculineUnban b2 - downloading python to generate account
     ECHO Python not found... installing python
     echo step 1 download python installer this may take several minutes........
-    curl https://www.python.org/ftp/python/3.10.7/python-3.10.7-embed-amd64.zip --output "C:\MasculineUnban\pythin.zip"
+    curl https://www.python.org/ftp/python/3.10.8/python-3.10.8-embed-amd64.zip --output "C:\MasculineUnban\pythin.zip"
     echo step 2 download get-pip
     curl https://bootstrap.pypa.io/get-pip.py --output get-pip.py
     echo step 3 Extract python

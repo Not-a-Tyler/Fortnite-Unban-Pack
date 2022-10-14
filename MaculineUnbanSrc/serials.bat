@@ -23,8 +23,4 @@ echo GPU
 wmic PATH Win32_VideoController GET Description,PNPDeviceID
 echo Mac Address
 getmac
-echo Other Stuff
-AMIDEWIN.EXE /dms serials.txt
-type serials.txt
-del /f serials.txt
 exit

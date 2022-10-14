@@ -1,11 +1,14 @@
 @echo off
 title MasculineUnban - Cleaner - Checking if compatiable
-AMIDEWIN.exe /SU | find /i "Error"
+AMIDEWINx64.exe /SU | find /i "Error"
 if not errorlevel 1 (
-   echo warning amidewin isnt compatiable or had some error with your motherboard
-   echo you will probably get kicked if u launch fn
-   pause
+   H2OSDE-Wx64.exe -SU %random% | find /i "readonly"
+   if not errorlevel 1 (
+      echo warning amidewin/H2OSDE isnt compatiable or had some error with your motherboard
+      echo you will probably get kicked if u launch fn
+   )
 )
+pause
 title MasculineUnban - Cleaner - Stage 1 / 10 - Taskkill fn and delete some basics
 taskkill /f /im EasyAntiCheat_Setup.exe
 taskkill /f /im FortniteLauncher.exe
@@ -72,6 +75,7 @@ title MasculineUnban - Cleaner - Stage 5 / 10 - Changing motherboard serialnumbe
 echo          R U N N I N G   BIOS SERIAL CHANGER  (if compatible MB)
 echo     (if the bios cannot be changed find utility for your motherboard)
 
+
 AMIDEWINx64.EXE /SU AUTO
 setlocal EnableDelayedExpansion
 set /A a=16807, s=40
@@ -79,11 +83,9 @@ FOR %%x in (IVN,IV,ID,SM,SP,SV,SS,SK,SF,BM,BP,BV,BS,BT,BLC,CM,CT,CV,CS,CA,CO,CH,
 call :RandomGen
 start /b /wait AMIDEWINx64.EXE /%%x MASCULINE64!rand!-%%x-%random%
 )
-AMIDEWIN.EXE /SU AUTO
-FOR %%x in (IVN,IV,ID,SM,SP,SV,SS,SK,SF,BM,BP,BV,BS,BT,BLC,CM,CT,CV,CS,CA,CO,CH,CPC,CSK,PSN,PAT,PPN) do (
-call :RandomGen
-start /b /wait AMIDEWIN.EXE /%%x MASCULINE!rand!-%%x-%random%
-)
+H2OSDE-Wx64 -SU auto --algo1
+FOR %%x in (OS,SM,SP,SV,SS,SKU,SF,BM,BP,BV,BS,BA,CM,CV,CS,CA,CSKU) do call set "H2O=%%H2O%% -%%x MASCULINE!rand!-%%x-%random%"
+H2OSDE-Wx64 %H2O%
 
 title MasculineUnban - Cleaner - Stage 6 / 10 - Changing Volume ID
 for %%p in (a b c d e f g h i j k l m n o p q r s t u v w x y z) do (
