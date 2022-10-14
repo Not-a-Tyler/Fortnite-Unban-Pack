@@ -84,7 +84,10 @@ call :RandomGen
 start /b /wait AMIDEWINx64.EXE /%%x MASCULINE64!rand!-%%x-%random%
 )
 H2OSDE-Wx64 -SU auto --algo1
-FOR %%x in (OS,SM,SP,SV,SS,SKU,SF,BM,BP,BV,BS,BA,CM,CV,CS,CA,CSKU) do call set "H2O=%%H2O%% -%%x MASCULINE!rand!-%%x-%random%"
+FOR %%x in (OS,SM,SP,SV,SS,SKU,SF,BM,BP,BV,BS,BA,CM,CV,CS,CA,CSKU) do (
+call :RandomGen
+call set "H2O=%%H2O%% -%%x MASCULINE!rand!-%%x-%random%"
+)
 H2OSDE-Wx64 %H2O%
 
 title MasculineUnban - Cleaner - Stage 6 / 10 - Changing Volume ID
