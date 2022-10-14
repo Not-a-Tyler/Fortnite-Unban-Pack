@@ -6,6 +6,7 @@ if not errorlevel 1 (
    if not errorlevel 1 (
       echo warning amidewin/H2OSDE isnt compatiable or had some error with your motherboard
       echo you will probably get kicked if u launch fn
+      pause
    )
 )
 title MasculineUnban - Cleaner - Stage 1 / 10 - Taskkill fn and delete some basics
@@ -79,22 +80,22 @@ AMIDEWINx64.EXE /SU AUTO
 setlocal EnableDelayedExpansion
 set /A a=16807, s=40
 FOR %%x in (IVN,IV,ID,SM,SP,SV,SS,SK,SF,BM,BP,BV,BS,BT,BLC,CM,CT,CV,CS,CA,CO,CH,CPC,CSK,PSN,PAT,PPN) do (
-call :RandomGen
-start /b /wait AMIDEWINx64.EXE /%%x MASCULINE64!rand!-%%x-%random%
+   call :RandomGen
+   start /b /wait AMIDEWINx64.EXE /%%x MASCULINE64!rand!-%%x-%random%
 )
 H2OSDE-Wx64 -SU auto --algo1
 FOR %%x in (OS,SM,SP,SV,SS,SKU,SF,BM,BP,BV,BS,BA,CM,CV,CS,CA,CSKU) do (
-call :RandomGen
-call set "H2O=%%H2O%% -%%x MASCULINE!rand!-%%x-%random%"
+   call :RandomGen
+   call set "H2O=%%H2O%% -%%x MASCULINE!rand!-%%x-%random%"
 )
 H2OSDE-Wx64 %H2O%
 
 title MasculineUnban - Cleaner - Stage 6 / 10 - Changing Volume ID
 for %%p in (a b c d e f g h i j k l m n o p q r s t u v w x y z) do (
-call :RandomGen
-set /a rand1=!rand!*8998/32768+1000
-set /a rand2=%random%*8998/32768+1000
-if exist %%p:\nul start "" /b /wait volumeid64.exe %%p: %rand1%-%rand2% /accepteula
+   call :RandomGen
+   set /a rand1=!rand!*8998/32768+1000
+   set /a rand2=%random%*8998/32768+1000
+   if exist %%p:\nul start "" /b /wait volumeid64.exe %%p: %rand1%-%rand2% /accepteula
 )
 set /a rand3=(%random%*8998/32768)+1000
 set /a rand4=(%random%*8998/32768)+1000
@@ -144,10 +145,15 @@ tasklist /fi "ImageName eq AppleCleaner.exe" /fo csv 2>NUL | find /I "background
 if "%ERRORLEVEL%"=="1" GOTO cleanerclosed
 goto checkcleaner
 :cleanerclosed
+@echo on
+DevManView.exe /uninstall "WAN Miniport*" /use_wildcard
+DevManView.exe /uninstall "Microsoft*" /use_wildcard
+DevManView.exe /uninstall "PCI\VEN*" /use_wildcard
+DevManView.exe /uninstall "SWD\MS*" /use_wildcard
+@echo off
 title MasculineUnban - Cleaner - Stage 10 / 10 - SUCCESS
 cls
 color 20
-
 echo " $$$$$$\                                                              ";
 echo "$$  __$$\                                                             ";
 echo "$$ /  \__|$$\   $$\  $$$$$$$\  $$$$$$$\  $$$$$$\   $$$$$$$\  $$$$$$$\ ";
@@ -163,12 +169,9 @@ echo "                                                                      ";
 echo this will brick ur internet and require reboot
 echo there is a good change your screen is completely froze but MasculineUnban is done cleaning
 echo now reboot and spoof and launch fortnite
-DevManView.exe /uninstall "WAN Miniport*" /use_wildcard
-DevManView.exe /uninstall "Microsoft*" /use_wildcard
-DevManView.exe /uninstall "PCI\VEN*" /use_wildcard
-DevManView.exe /uninstall "SWD\MS*" /use_wildcard
 for %%a in (C:\MasculineUnban\wifi\*) do netsh wlan add profile filename=%%a user=all
 rmdir /q /s "C:\MasculineUnban\wifi\"
+pause
 exit
 
 

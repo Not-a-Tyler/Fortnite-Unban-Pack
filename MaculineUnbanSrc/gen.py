@@ -245,8 +245,9 @@ if __name__ == '__main__':
     print(f"sid is {authcode}")
     random = random.randint(1,10000)
     print("deleting any old accounts if present")
+    os.system("md C:\\MasculineUnban\\unbanned_accounts\\")
     os.system("md C:\\MasculineUnban\\likely_banned\\")
-    os.system("MOVE 'C:\\Users\\%username%\\.config\\legendary\\user.json' 'C:\\MasculineUnban\\likely_banned\\%random%.json'")
+    os.system('MOVE "C:\\Users\\%username%\\.config\\legendary\\user.json" "C:\\MasculineUnban\\likely_banned\\%random%.json"')
     os.system('rmdir /q /s "C:\\Users\\%username%\\.config\\legendary"')
     print("trying to login")
     os.system(f"C:\MasculineUnban\Python\Scripts\legendary.exe auth --code {authcode}")
@@ -284,4 +285,10 @@ if __name__ == '__main__':
             driver.find_element(By.XPATH, '/html/body/div[8]/div/div/div[2]/div/div/div/div[2]/div[3]/a')
             break
         except:pass
-    os.system("start /wait /b launch.bat")
+    driver.close()
+    print("do you want ot save the account for later or laucnh fortnite with it")
+    print("1: save account for eac forcer later")
+    print("2: launch fortnite with account")
+    inpoot = input()
+    if inpoot == '1' : os.system('MOVE "C:\\Users\\%username%\\.config\\legendary\\user.json" "C:\\MasculineUnban\\unbanned_accounts\\%random%.json"')
+    if inpoot == '2' : os.system("start /wait /b launch.bat")
