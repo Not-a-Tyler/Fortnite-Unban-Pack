@@ -8,7 +8,6 @@ if not errorlevel 1 (
       echo you will probably get kicked if u launch fn
    )
 )
-pause
 title MasculineUnban - Cleaner - Stage 1 / 10 - Taskkill fn and delete some basics
 taskkill /f /im EasyAntiCheat_Setup.exe
 taskkill /f /im FortniteLauncher.exe
