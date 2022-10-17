@@ -25,7 +25,10 @@ taskkill /f /im FortniteClient-Win64-Shipping_BE.exe
 taskkill /f /im FortniteClient-Win64-Shipping_EAC.exe
 sc stop BEService 1>nul 2>nul
 sc stop EasyAntiCheat 1>nul 2>nul
-
+start "" /min "MAC_change.bat"
+echo %time%
+timeout 7 > NUL
+echo %time%
 reg delete "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /v EpicGamesLauncher /f
 reg delete "HKLM\SYSTEM\CurrentControlSet\Services\BEService" /va /f
 reg delete "HKLM\SYSTEM\ControlSet001\Services\BEService" /va /f
@@ -76,8 +79,9 @@ REG ADD "HKLM\SYSTEM\CurrentControlSet\Control\ComputerName\ComputerName" /v "Co
 REG ADD "HKLM\SYSTEM\CurrentControlSet\Control\ComputerName\ActiveComputerName" /v "ComputerName" /t REG_SZ /d %random% /f 1>nul 2>nul
 reg delete "HKEY_CURRENT_USER\Software\Epic Games" /f 1>nul 2>nul
 
-C:\MasculineUnban\Python\Scripts\legendary.exe import --disable-check Fortnite "C:\Program Files\Epic Games\Fortnite"
-del 
+
+if exist C:\Program Files\Epic Games\Fortnite (C:\MasculineUnban\Python\Scripts\legendary.exe import --disable-check Fortnite "C:\Program Files\Epic Games\Fortnite")
+if exist "%userprofile%\Games\Fortnite" (C:\MasculineUnban\Python\Scripts\legendary.exe import --disable-check Fortnite "%userprofile%\Games\Fortnite")
 C:\MasculineUnban\Python\Scripts\legendary.exe launch Fortnite --skip-version-check
 echo launched fortnite (hopefully)
 

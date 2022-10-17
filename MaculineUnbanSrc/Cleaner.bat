@@ -1,4 +1,6 @@
 @echo off
+set /A a=16807, s=40
+for /F "tokens=2 delims=." %%a in ("%time%") do if "%%a" neq "00" set /A s=1%%a %% 100
 title MasculineUnban - Cleaner - Checking if compatiable
 AMIDEWINx64.exe /SU | find /i "Error"
 if not errorlevel 1 (
@@ -44,17 +46,15 @@ title MasculineUnban - Cleaner - Stage 2 / 10 - Deleting some windows stuff
 echo N | start "" /wait /b Cleaner8.exe
 title MasculineUnban - Cleaner - Stage 3 / 10 - Clearing Event logs
 for /F "tokens=*" %%G in ('wevtutil.exe el') DO (
-echo clearing "%%G"
-wevtutil.exe cl "%%G"
+   echo clearing "%%G"
+   wevtutil.exe cl "%%G"
 )
 title MasculineUnban - Cleaner - Stage 4 / 10 - Flushing DNS and deleting TEMP
 echo N | start "" /wait /b DNSTEMP.exe
 netsh int ip set address "%%j" dhcp
-netsh winsock reset
 netsh advfirewall reset
 sc stop vg
 echo Reset Firewall Settings
-netsh advfirewall reset
 netsh int ip set dns "%%j" dhcp 
 netsh interface set interface name="%%j" admin=enabled 
 certutil -URLCache * delete 
@@ -64,11 +64,13 @@ netsh int ipv6 reset
 ipconfig /release
 ipconfig /renew
 ipconfig /flushdns
-netsh advfirewall reset
-netsh winsock reset
 netsh int ip reset
 netsh winsock reset 
-netsh advfirewall reset
+netsh winsock reset catalog
+netsh int ip reset
+netsh int reset all
+
+
 
 
 title MasculineUnban - Cleaner - Stage 5 / 10 - Changing motherboard serialnumbers
@@ -79,9 +81,9 @@ echo     (if the bios cannot be changed find utility for your motherboard)
 AMIDEWINx64.EXE /SU AUTO
 setlocal EnableDelayedExpansion
 set /A a=16807, s=40
-FOR %%x in (IVN,IV,ID,SM,SP,SV,SS,SK,SF,BM,BP,BV,BS,BT,BLC,CM,CT,CV,CS,CA,CO,CH,CPC,CSK,PSN,PAT,PPN) do (
+FOR %%x in (SM,SP,SV,SS,SK,SF,BM,BP,BV,BS,BT,BLC,CM,CT,CV,CS,CA,CO,CH,CPC,CSK,PSN,PAT,PPN) do (
    call :RandomGen
-   start /b /wait AMIDEWINx64.EXE /%%x MASCULINE64!rand!-%%x-%random%
+   start /b /wait AMIDEWINx64.EXE /%%x Test!rand!-%%x-%random%
 )
 H2OSDE-Wx64 -SU auto --algo1
 FOR %%x in (OS,SM,SP,SV,SS,SKU,SF,BM,BP,BV,BS,BA,CM,CV,CS,CA,CSKU) do (
@@ -98,7 +100,8 @@ for %%p in (a b c d e f g h i j k l m n o p q r s t u v w x y z) do (
    if exist %%p:\nul start "" /b /wait volumeid64.exe %%p: %rand1%-%rand2% /accepteula
 )
 set /a rand3=(%random%*8998/32768)+1000
-set /a rand4=(%random%*8998/32768)+1000
+call :RandomGen
+set /a rand4=(!rand!*8998/32768)+1000
 start "" /b /wait volumeid64.exe C: %rand4%-%rand3% /accepteula
 
 title MasculineUnban - Cleaner - Stage 7 / 10 - Cleaning drives + Devices
@@ -134,17 +137,18 @@ title MasculineUnban - Cleaner - Stage 9 / 10 - Waiting for user to get done wit
 cls
 echo waiting for you to close applecleaner to finish cleaning
 start "" AppleCleaner.exe
-:checkapple
+:checkcleaner
 tasklist /fi "ImageName eq AppleCleaner.exe" /fo csv 2>NUL | find /I "AppleCleaner.exe">NUL
 if "%ERRORLEVEL%"=="1" GOTO appleclosed
-goto checkapple
-:appleclosed
-echo apple cleaner finished
-:checkcleaner
-tasklist /fi "ImageName eq AppleCleaner.exe" /fo csv 2>NUL | find /I "backgroundcleaner.bat">NUL
-if "%ERRORLEVEL%"=="1" GOTO cleanerclosed
 goto checkcleaner
-:cleanerclosed
+:appleclosed
+echo %time%
+timeout 2 > NUL
+echo %time%
+tasklist /fi "ImageName eq AppleCleaner.exe" /fo csv 2>NUL | find /I "AppleCleaner.exe">NUL
+if "%ERRORLEVEL%"=="1" GOTO appleclosed1
+goto checkcleaner
+:appleclosed1
 @echo on
 DevManView.exe /uninstall "WAN Miniport*" /use_wildcard
 DevManView.exe /uninstall "Microsoft*" /use_wildcard
@@ -174,12 +178,8 @@ rmdir /q /s "C:\MasculineUnban\wifi\"
 pause
 exit
 
-
 :RandomGen
 set /A s*=a
-if %s% lss 0 (
-   rem Get result MOD (2^31-1)
-   set /A s+=0x80000000
-)
+if %s% lss 0 (set /A s+=0x80000000)
 set /A "rand=s & 0x7FFF"
-exit /B
+goto :eof

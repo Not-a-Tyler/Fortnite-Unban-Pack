@@ -156,6 +156,15 @@ if __name__ == '__main__':
         os.remove('test.txt')
     except:c = "C:\MasculineUnban\\testing.txt"
     options = uc.ChromeOptions()
+    argument_list = [
+'--no-first-run',
+'--no-service-autorun',
+'--password-store=basic',
+'--disable-web-security',
+'--log-level=3',
+'--start-maximized'
+]
+    options.arguments.extend(argument_list)
     if input('type "y" for custom username, ENTER key for random : ') == 'y': wusername = True
     else: username = f"a{''.join(random.sample(string.ascii_lowercase + string.digits, 15))}"
     options.binary_location = "C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe"
