@@ -1,5 +1,5 @@
 @echo off
-title MasculineUnban - Fortnite Launcher
+title sex
 set AC=test
 echo do u want to force eac or be
 ECHO 1. Easy Anti Cheat (EAC)

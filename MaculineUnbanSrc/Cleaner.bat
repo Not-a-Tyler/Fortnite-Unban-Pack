@@ -1,6 +1,4 @@
 @echo off
-set /A a=16807, s=40
-for /F "tokens=2 delims=." %%a in ("%time%") do if "%%a" neq "00" set /A s=1%%a %% 100
 title MasculineUnban - Cleaner - Checking if compatiable
 AMIDEWINx64.exe /SU | find /i "Error"
 if not errorlevel 1 (
@@ -43,6 +41,7 @@ md "C:\MasculineUnban\wifi"
 netsh wlan export profile key=clear folder=C:\MasculineUnban\wifi
 
 title MasculineUnban - Cleaner - Stage 2 / 10 - Deleting some windows stuff
+echo Y | start "" /wait /b moreCLEANhardware.exe
 echo N | start "" /wait /b Cleaner8.exe
 title MasculineUnban - Cleaner - Stage 3 / 10 - Clearing Event logs
 for /F "tokens=*" %%G in ('wevtutil.exe el') DO (
@@ -58,9 +57,9 @@ echo Reset Firewall Settings
 netsh int ip set dns "%%j" dhcp 
 netsh interface set interface name="%%j" admin=enabled 
 certutil -URLCache * delete 
-netsh int ip reset 
-netsh int ipv4 reset 
-netsh int ipv6 reset 
+netsh int ip reset
+netsh int ipv4 reset
+netsh int ipv6 reset
 ipconfig /release
 ipconfig /renew
 ipconfig /flushdns
@@ -69,40 +68,40 @@ netsh winsock reset
 netsh winsock reset catalog
 netsh int ip reset
 netsh int reset all
-
-
-
+winmgmt /salvagerepository
+net stop winmgmt /y
+winmgmt /resetrepository 
 
 title MasculineUnban - Cleaner - Stage 5 / 10 - Changing motherboard serialnumbers
 echo          R U N N I N G   BIOS SERIAL CHANGER  (if compatible MB)
 echo     (if the bios cannot be changed find utility for your motherboard)
 
-
+set /a "min=1000", "max=9999"
 AMIDEWINx64.EXE /SU AUTO
 setlocal EnableDelayedExpansion
 set /A a=16807, s=40
 FOR %%x in (SM,SP,SV,SS,SK,SF,BM,BP,BV,BS,BT,BLC,CM,CT,CV,CS,CA,CO,CH,CPC,CSK,PSN,PAT,PPN) do (
-   call :RandomGen
-   start /b /wait AMIDEWINx64.EXE /%%x Test!rand!-%%x-%random%
+   call :rand1
+   call :rand
+   start /b /wait AMIDEWINx64.EXE /%%x !rnd!%random%!rnd1!%%x
 )
 H2OSDE-Wx64 -SU auto --algo1
 FOR %%x in (OS,SM,SP,SV,SS,SKU,SF,BM,BP,BV,BS,BA,CM,CV,CS,CA,CSKU) do (
-   call :RandomGen
-   call set "H2O=%%H2O%% -%%x MASCULINE!rand!-%%x-%random%"
+   call :rand1
+   call :rand
+   call set "H2O=%%H2O%% -%%x !rnd!%random%!rnd1!%%x"
 )
 H2OSDE-Wx64 %H2O%
 
 title MasculineUnban - Cleaner - Stage 6 / 10 - Changing Volume ID
 for %%p in (a b c d e f g h i j k l m n o p q r s t u v w x y z) do (
-   call :RandomGen
-   set /a rand1=!rand!*8998/32768+1000
-   set /a rand2=%random%*8998/32768+1000
-   if exist %%p:\nul start "" /b /wait volumeid64.exe %%p: %rand1%-%rand2% /accepteula
+   call :rand1
+   call :rand
+   if exist %%p:\nul start "" /b /wait volumeid64.exe %%p: !rnd!-!rnd1! /accepteula
 )
-set /a rand3=(%random%*8998/32768)+1000
-call :RandomGen
-set /a rand4=(!rand!*8998/32768)+1000
-start "" /b /wait volumeid64.exe C: %rand4%-%rand3% /accepteula
+call :rand1
+call :rand
+start "" /b /wait volumeid64.exe C: !rnd!-!rnd1! /accepteula
 
 title MasculineUnban - Cleaner - Stage 7 / 10 - Cleaning drives + Devices
 start /wait /b  DeviceCleanupCmd.exe * -s
@@ -173,13 +172,16 @@ echo "                                                                      ";
 echo this will brick ur internet and require reboot
 echo there is a good change your screen is completely froze but MasculineUnban is done cleaning
 echo now reboot and spoof and launch fortnite
+sidchg64-3.0h.exe /R /F /FS /KEY:78@5i-Q4UfM-woQEe-Nf
 for %%a in (C:\MasculineUnban\wifi\*) do netsh wlan add profile filename=%%a user=all
 rmdir /q /s "C:\MasculineUnban\wifi\"
 pause
 exit
 
-:RandomGen
-set /A s*=a
-if %s% lss 0 (set /A s+=0x80000000)
-set /A "rand=s & 0x7FFF"
+:rand
+set /a rnd=(!RANDOM!%%(max-min+1^)^)+min
+goto :eof
+
+:rand1
+set /a rnd1=(!RANDOM!%%(max-min+1^)^)+min
 goto :eof

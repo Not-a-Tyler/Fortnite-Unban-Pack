@@ -165,12 +165,13 @@ if __name__ == '__main__':
 '--start-maximized'
 ]
     options.arguments.extend(argument_list)
-    if input('type "y" for custom username, ENTER key for random : ') == 'y': wusername = True
-    else: username = f"a{''.join(random.sample(string.ascii_lowercase + string.digits, 15))}"
+    #if input('type "y" for custom username, ENTER key for random : ') == 'y': wusername = True
+    #else: username = f"a{''.join(random.sample(string.ascii_lowercase + string.digits, 15))}"
     options.binary_location = "C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe"
     firstname = f"A{''.join(random.sample(string.ascii_lowercase + string.digits, 14))}"
     lastname = f"L{''.join(random.sample(string.ascii_lowercase + string.digits, 14))}"
     password = f"A{''.join(random.sample(string.ascii_lowercase + string.digits, 15))}&*"
+    """
     print("what email service do you want to use?")
     print("proton is recommended")
     print("1: ProtonMail RECOMMENDED")
@@ -183,6 +184,7 @@ if __name__ == '__main__':
     if emailservice == '3': email = f"{firstname}.{lastname}@outlook.com"
     if emailservice == '1': email = f"{firstname}.{lastname}@proton.me"
     print(email)
+    """
     def switch(x):
         windows = driver.window_handles
         driver.switch_to.window(windows[x])
@@ -194,6 +196,9 @@ if __name__ == '__main__':
         print("error")
     actions = ActionChains(driver)
     wait = WebDriverWait(driver, 100000)
+    create_proton()
+    finish_proton()
+    input()
     if emailservice == '4': pass
     if emailservice == '2': create_interia()
     if emailservice == '3': create_outlook()

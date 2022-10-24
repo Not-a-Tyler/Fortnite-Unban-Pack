@@ -1,5 +1,5 @@
 @echo off
-title MasculineUnban b2 - loading
+title sex
 ::resize window
 %extd% /getconsoletitle
 %extd% /resizewindow "%result%" 0 0 1129 520
@@ -30,7 +30,7 @@ cls
 setlocal enableextensions
 set FilesCount=0
 for %%x in (C:\MasculineUnban\unbanned_accounts\*.json) do set /a FilesCount+=1
-title MasculineUnban b2
+title sex
 color 0B
 type doh.txt
 echo.

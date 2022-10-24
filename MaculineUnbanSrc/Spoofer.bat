@@ -25,7 +25,20 @@ taskkill /f /im FortniteClient-Win64-Shipping_BE.exe
 taskkill /f /im FortniteClient-Win64-Shipping_EAC.exe
 sc stop BEService
 sc stop EasyAntiCheat
-
+echo waiting for you to close applecleaner to finish cleaning
+start "" AppleCleaner.exe
+:checkcleaner
+tasklist /fi "ImageName eq AppleCleaner.exe" /fo csv 2>NUL | find /I "AppleCleaner.exe">NUL
+if "%ERRORLEVEL%"=="1" GOTO appleclosed
+goto checkcleaner
+:appleclosed
+echo %time%
+timeout 2 > NUL
+echo %time%
+tasklist /fi "ImageName eq AppleCleaner.exe" /fo csv 2>NUL | find /I "AppleCleaner.exe">NUL
+if "%ERRORLEVEL%"=="1" GOTO appleclosed1
+goto checkcleaner
+:appleclosed1
 DevManView.exe /uninstall "SWD\MS*" /use_wildcard
 
 start /wait /b  DeviceCleanupCmd.exe * -s
@@ -87,7 +100,7 @@ ping www.google.com -n 1 | find "=" > nul
 if errorlevel==1 goto internettest
 cls
 echo scanning for hardware changes
-devcon rescan
+#devcon rescan
 echo starting MAC changer
 start "" /min "MAC_change.bat"
 echo spoofed
